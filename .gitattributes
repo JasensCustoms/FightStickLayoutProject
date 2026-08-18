@@ -1,0 +1,3 @@
+*.dxf text eol=crlf
+*.svg text eol=lf
+*.md  text eol=lf
