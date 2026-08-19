@@ -63,6 +63,8 @@ On top of the source layouts:
 - the 24 mm button variants, scaled 0.8 in both axes
 - for the all button layouts, extraction of the button pattern from the original
   working drawings and normalisation of hole sizes to 24.00 and 30.00 mm
+- the inner support variants, adding Sanwa OBSF snap in button ear relief slots
+  to every button hole
 - consistent units, origin, layer structure and file naming across the whole set
 
 That work is shared freely. Use it, modify it, cut panels from it, sell those

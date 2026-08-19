@@ -6,15 +6,15 @@ The founding set is converted from [slagcoin.com](https://www.slagcoin.com/joyst
 
 ![Layout formats](https://img.shields.io/badge/formats-DXF%20%2B%20SVG-blue)
 ![Units](https://img.shields.io/badge/units-millimetres-informational)
-![Layouts](https://img.shields.io/badge/layouts-133-success)
-![Files](https://img.shields.io/badge/files-266-lightgrey)
+![Layouts](https://img.shields.io/badge/layouts-266-success)
+![Files](https://img.shields.io/badge/files-532-lightgrey)
 
 Everything is drawn 1:1 in millimetres, ready to send to a laser, router or CNC. Two families:
 
 - **Joystick layouts**, 21 button arrangements, each supplied at 3 different lever positions and in both 30 mm and 24 mm button sizes, with the lever mounting hardware included.
 - **All button layouts**, 7 leverless panels, drawn as designed with their native mix of 24 mm and 30 mm holes.
 
-That comes to 133 layouts per format, 266 files.
+Every one of those also ships in an **inner support** version, where each button hole is merged with a relief slot for Sanwa OBSF snap in button ears. That comes to 266 layouts per format, 532 files.
 
 <img src="preview/_all_layouts.png" alt="All layouts" width="900">
 
@@ -42,6 +42,7 @@ The all button layouts come from a different place. They were created by [Jasens
 - [What is in every file](#what-is-in-every-file)
 - [Joystick spacing](#joystick-spacing)
 - [24 mm button versions](#24-mm-button-versions)
+- [Inner support versions](#inner-support-versions)
 - [Layout catalogue](#layout-catalogue)
   - [Japanese arcade standards](#japanese-arcade-standards)
   - [Vewlix family](#vewlix-family)
@@ -85,13 +86,13 @@ The all button layouts come from a different place. They were created by [Jasens
 ## What is in the box
 
 ```
-dxf/        133 layouts as .dxf   (R2010, millimetres, $INSUNITS = 4)
-svg/        the same 133 layouts as .svg  (1 user unit = 1 mm)
+dxf/        266 layouts as .dxf   (R2010, millimetres, $INSUNITS = 4)
+svg/        the same 266 layouts as .svg  (1 user unit = 1 mm)
 preview/    per layout PNG previews plus contact sheets and diagrams
 README.md   this file
 ```
 
-Joystick arrangements are built out to 6 files per format: 3 lever positions, each at 30 mm and 24 mm button sizes. The 21 of them come to 126 per format. All button layouts ship as a single file each, adding 7 more, for 133 per format and 266 in total.
+Joystick arrangements are built out to 6 files per format: 3 lever positions, each at 30 mm and 24 mm button sizes. The 21 of them come to 126 per format. All button layouts ship as a single file each, adding 7 more, for 133. Each of those then has an inner support twin, doubling the count to 266 per format and 532 in total.
 
 New layouts follow the same naming and layer conventions, so anything you script against the current set keeps working.
 
@@ -117,7 +118,12 @@ vewlix_s_82mm_spacing_24mm_buttons   both at once
 
 traditional_all_button     a leverless layout. No lever, so no spacing or
                            button size variants, just the one file.
+
+inner_support_traditional_all_button       any file, with Sanwa OBSF ear
+inner_support_vewlix_s_82mm_spacing        relief slots added on every button
 ```
+
+The `inner_support_` prefix goes on the front. Every other suffix keeps its meaning and its order.
 
 ---
 
@@ -136,6 +142,8 @@ There is no text, no title block and no border. Cut geometry only.
 | `JOYSTICK_BORE_35.25` | 3, green | 35.25 mm bore matching the mounting plate |
 | `GL_PLATE_HOLES` | 2, yellow | Lever mounting holes and slots |
 | `REFERENCE` | 8, grey | Centre crosshairs only, do not cut |
+
+On inner support files the button layers carry closed profiles rather than plain circles. No extra layer is added.
 
 All button layouts use a different set, since they have no lever and mix hole sizes: `BUTTONS_24`, `BUTTONS_30` and `REFERENCE`. See [All button layouts](#all-button-layouts).
 
@@ -229,6 +237,39 @@ These are not simply the same drawing with smaller holes punched in it. The whol
 
 ---
 
+## Inner support versions
+
+Every layout in the repository has an inner support twin, named by putting `inner_support_` in front of the ordinary file name.
+
+<img src="preview/_inner_support_explained.png" alt="Inner support ear slots" width="820">
+
+An inner support file is the complete original layout with every button hole replaced by a single closed profile: the hole unioned with a rectangular ear relief slot. The slot is centred on the hole and its long axis is rotated **30 degrees clockwise from vertical**, so it runs from roughly 7 o'clock up to 1 o'clock.
+
+| Button | Slot size | Sticks out past the hole |
+|---|---|---|
+| 30 mm | 6 mm wide x 35 mm long | 2.5 mm each end |
+| 24 mm | 5 mm wide x 29 mm long | 2.5 mm each end |
+
+**The slots are modelled on the retention ears of Sanwa OBSF snap in buttons.** Those buttons have a pair of sprung tabs on the body that need somewhere to sit. On a stacked panel the top sheet takes the plain hole and the sheet underneath, the inner support, needs the ear clearance cut into it as well.
+
+**One profile per button.** The circle and the slot are boolean unioned into a single closed outline, so there is exactly one contour to cut per button and no overlapping shapes to clean up. In DXF it is a closed `LWPOLYLINE` with true arc segments carried as bulges, not a polygon approximation. In SVG it is a closed `path` using `A` arc commands.
+
+**Buttons only.** Nothing is added to a joystick bore or to any mounting hole. The union is keyed off the button layers rather than off hole diameter, so the 24 mm `JOYSTICK_BORE_24` circle is never mistaken for a 24 mm button.
+
+Profiles stay on the same layer their circle was on, and every other entity in the file is identical to its standard counterpart.
+
+<img src="preview/_inner_support_example.png" alt="Standard versus inner support" width="900">
+
+Every layout has its own inner support preview in `preview/`, and each catalogue entry below shows it beside the standard version. Contact sheets for the whole family:
+
+<img src="preview/_inner_support_joystick.png" alt="Inner support, joystick layouts" width="900">
+
+<img src="preview/_inner_support_all_button.png" alt="Inner support, all button layouts" width="900">
+
+> **Why a union rather than two shapes.** Overlapping closed profiles are handled differently by different CAM packages, and getting it wrong leaves a floating sliver where the slot crosses the hole edge. A single merged contour removes the question.
+
+---
+
 ## Layout catalogue
 
 This section covers the joystick layouts. Leverless panels are in [All button layouts](#all-button-layouts).
@@ -245,7 +286,9 @@ The most used layouts on earth. Slanted rows that follow the natural arch of you
 
 ### Sega Astro City / Blast City P1
 
-<img src="preview/sega1_s.png" alt="sega1_s" width="760">
+<img src="preview/sega1_s.png" alt="sega1_s" width="380"> <img src="preview/inner_support_sega1_s.png" alt="inner_support_sega1_s" width="380">
+
+*Left: standard. Right: inner support, with the hole and its Sanwa OBSF ear relief merged into one profile.*
 
 > A precise diagram of the Sega layout used in Astro City, Blast City, Net City, and Versus City cabinets for player 1 or single player. This layout (or an almost identical one) is used in most arcade machines and controllers in Japan. It is very appropriate for quick, comfortable, and precise play. If you have not used a slanted layout like this, feel it; it may surprise you.
 >
@@ -257,16 +300,23 @@ If you have played on a Japanese candy cab, this is the muscle memory you alread
 
 **8 buttons**  |  stock lever at **59 mm**  |  closest button pitch 35.7 mm at 30 mm, 28.6 mm at 24 mm  |  cut envelope 222 x 99 mm
 
-| Lever spacing | 30 mm buttons | 24 mm buttons |
+More previews: [24 mm buttons](preview/sega1_s_24mm_buttons.png) &middot; [24 mm inner support](preview/inner_support_sega1_s_24mm_buttons.png)
+
+| Version | 30 mm buttons | 24 mm buttons |
 |---|---|---|
 | Stock | [dxf](dxf/sega1_s.dxf) &middot; [svg](svg/sega1_s.svg) | [dxf](dxf/sega1_s_24mm_buttons.dxf) &middot; [svg](svg/sega1_s_24mm_buttons.svg) |
+| Stock, inner support | [dxf](dxf/inner_support_sega1_s.dxf) &middot; [svg](svg/inner_support_sega1_s.svg) | [dxf](dxf/inner_support_sega1_s_24mm_buttons.dxf) &middot; [svg](svg/inner_support_sega1_s_24mm_buttons.svg) |
 | 82 mm | [dxf](dxf/sega1_s_82mm_spacing.dxf) &middot; [svg](svg/sega1_s_82mm_spacing.svg) | [dxf](dxf/sega1_s_82mm_spacing_24mm_buttons.dxf) &middot; [svg](svg/sega1_s_82mm_spacing_24mm_buttons.svg) |
+| 82 mm, inner support | [dxf](dxf/inner_support_sega1_s_82mm_spacing.dxf) &middot; [svg](svg/inner_support_sega1_s_82mm_spacing.svg) | [dxf](dxf/inner_support_sega1_s_82mm_spacing_24mm_buttons.dxf) &middot; [svg](svg/inner_support_sega1_s_82mm_spacing_24mm_buttons.svg) |
 | 95 mm | [dxf](dxf/sega1_s_95mm_spacing.dxf) &middot; [svg](svg/sega1_s_95mm_spacing.svg) | [dxf](dxf/sega1_s_95mm_spacing_24mm_buttons.dxf) &middot; [svg](svg/sega1_s_95mm_spacing_24mm_buttons.svg) |
+| 95 mm, inner support | [dxf](dxf/inner_support_sega1_s_95mm_spacing.dxf) &middot; [svg](svg/inner_support_sega1_s_95mm_spacing.svg) | [dxf](dxf/inner_support_sega1_s_95mm_spacing_24mm_buttons.dxf) &middot; [svg](svg/inner_support_sega1_s_95mm_spacing_24mm_buttons.svg) |
 
 
 ### Sega P2, non slanted
 
-<img src="preview/sega2_s.png" alt="sega2_s" width="760">
+<img src="preview/sega2_s.png" alt="sega2_s" width="380"> <img src="preview/inner_support_sega2_s.png" alt="inner_support_sega2_s" width="380">
+
+*Left: standard. Right: inner support, with the hole and its Sanwa OBSF ear relief merged into one profile.*
 
 > A precise diagram of the Sega layout for player 2. It is very close to a non-slanted version of the player 1, but has a few differently proportioned buttons; it can be tilted to something similar to the player 1 layout. A few alternate placements of the pinky buttons are noted.
 >
@@ -276,11 +326,16 @@ Straight columns instead of slanted ones. Easier to lay out, easier to fit in a 
 
 **8 buttons**  |  stock lever at **63 mm**  |  closest button pitch 35.9 mm at 30 mm, 28.7 mm at 24 mm  |  cut envelope 219 x 100 mm
 
-| Lever spacing | 30 mm buttons | 24 mm buttons |
+More previews: [24 mm buttons](preview/sega2_s_24mm_buttons.png) &middot; [24 mm inner support](preview/inner_support_sega2_s_24mm_buttons.png)
+
+| Version | 30 mm buttons | 24 mm buttons |
 |---|---|---|
 | Stock | [dxf](dxf/sega2_s.dxf) &middot; [svg](svg/sega2_s.svg) | [dxf](dxf/sega2_s_24mm_buttons.dxf) &middot; [svg](svg/sega2_s_24mm_buttons.svg) |
+| Stock, inner support | [dxf](dxf/inner_support_sega2_s.dxf) &middot; [svg](svg/inner_support_sega2_s.svg) | [dxf](dxf/inner_support_sega2_s_24mm_buttons.dxf) &middot; [svg](svg/inner_support_sega2_s_24mm_buttons.svg) |
 | 82 mm | [dxf](dxf/sega2_s_82mm_spacing.dxf) &middot; [svg](svg/sega2_s_82mm_spacing.svg) | [dxf](dxf/sega2_s_82mm_spacing_24mm_buttons.dxf) &middot; [svg](svg/sega2_s_82mm_spacing_24mm_buttons.svg) |
+| 82 mm, inner support | [dxf](dxf/inner_support_sega2_s_82mm_spacing.dxf) &middot; [svg](svg/inner_support_sega2_s_82mm_spacing.svg) | [dxf](dxf/inner_support_sega2_s_82mm_spacing_24mm_buttons.dxf) &middot; [svg](svg/inner_support_sega2_s_82mm_spacing_24mm_buttons.svg) |
 | 95 mm | [dxf](dxf/sega2_s_95mm_spacing.dxf) &middot; [svg](svg/sega2_s_95mm_spacing.svg) | [dxf](dxf/sega2_s_95mm_spacing_24mm_buttons.dxf) &middot; [svg](svg/sega2_s_95mm_spacing_24mm_buttons.svg) |
+| 95 mm, inner support | [dxf](dxf/inner_support_sega2_s_95mm_spacing.dxf) &middot; [svg](svg/inner_support_sega2_s_95mm_spacing.svg) | [dxf](dxf/inner_support_sega2_s_95mm_spacing_24mm_buttons.dxf) &middot; [svg](svg/inner_support_sega2_s_95mm_spacing_24mm_buttons.svg) |
 
 
 ---
@@ -292,7 +347,9 @@ The modern tournament standard. The top row is shifted right relative to the bot
 
 ### Vewlix, 7 button as drawn
 
-<img src="preview/vewlix_s.png" alt="vewlix_s" width="760">
+<img src="preview/vewlix_s.png" alt="vewlix_s" width="380"> <img src="preview/inner_support_vewlix_s.png" alt="inner_support_vewlix_s" width="380">
+
+*Left: standard. Right: inner support, with the hole and its Sanwa OBSF ear relief merged into one profile.*
 
 > This layout takes the arcade layout and shifts the top row a bit to the right. This is the precise layout used in Taito Vewlix cabinets. Note that the bottom index and middle finger buttons are closer than 36mm to one another; they will not work with nuts stocked with Sanwa screw-in buttons.
 >
@@ -304,16 +361,23 @@ This is Slagcoin's diagram traced literally, and the original only draws 7 holes
 
 **7 buttons**  |  stock lever at **59 mm**  |  closest button pitch 35.5 mm at 30 mm, 28.4 mm at 24 mm  |  cut envelope 225 x 91 mm
 
-| Lever spacing | 30 mm buttons | 24 mm buttons |
+More previews: [24 mm buttons](preview/vewlix_s_24mm_buttons.png) &middot; [24 mm inner support](preview/inner_support_vewlix_s_24mm_buttons.png)
+
+| Version | 30 mm buttons | 24 mm buttons |
 |---|---|---|
 | Stock | [dxf](dxf/vewlix_s.dxf) &middot; [svg](svg/vewlix_s.svg) | [dxf](dxf/vewlix_s_24mm_buttons.dxf) &middot; [svg](svg/vewlix_s_24mm_buttons.svg) |
+| Stock, inner support | [dxf](dxf/inner_support_vewlix_s.dxf) &middot; [svg](svg/inner_support_vewlix_s.svg) | [dxf](dxf/inner_support_vewlix_s_24mm_buttons.dxf) &middot; [svg](svg/inner_support_vewlix_s_24mm_buttons.svg) |
 | 82 mm | [dxf](dxf/vewlix_s_82mm_spacing.dxf) &middot; [svg](svg/vewlix_s_82mm_spacing.svg) | [dxf](dxf/vewlix_s_82mm_spacing_24mm_buttons.dxf) &middot; [svg](svg/vewlix_s_82mm_spacing_24mm_buttons.svg) |
+| 82 mm, inner support | [dxf](dxf/inner_support_vewlix_s_82mm_spacing.dxf) &middot; [svg](svg/inner_support_vewlix_s_82mm_spacing.svg) | [dxf](dxf/inner_support_vewlix_s_82mm_spacing_24mm_buttons.dxf) &middot; [svg](svg/inner_support_vewlix_s_82mm_spacing_24mm_buttons.svg) |
 | 95 mm | [dxf](dxf/vewlix_s_95mm_spacing.dxf) &middot; [svg](svg/vewlix_s_95mm_spacing.svg) | [dxf](dxf/vewlix_s_95mm_spacing_24mm_buttons.dxf) &middot; [svg](svg/vewlix_s_95mm_spacing_24mm_buttons.svg) |
+| 95 mm, inner support | [dxf](dxf/inner_support_vewlix_s_95mm_spacing.dxf) &middot; [svg](svg/inner_support_vewlix_s_95mm_spacing.svg) | [dxf](dxf/inner_support_vewlix_s_95mm_spacing_24mm_buttons.dxf) &middot; [svg](svg/inner_support_vewlix_s_95mm_spacing_24mm_buttons.svg) |
 
 
 ### Vewlix 4+4, 8 button
 
-<img src="preview/vewlix_s_8button.png" alt="vewlix_s_8button" width="760">
+<img src="preview/vewlix_s_8button.png" alt="vewlix_s_8button" width="380"> <img src="preview/inner_support_vewlix_s_8button.png" alt="inner_support_vewlix_s_8button" width="380">
+
+*Left: standard. Right: inner support, with the hole and its Sanwa OBSF ear relief merged into one profile.*
 
 > The added isolated small dots in the images represent alternate places for joysticks and buttons.
 >
@@ -327,16 +391,23 @@ Same layout as `vewlix_s` with the 8th hole added at the optional position Slagc
 
 **8 buttons**  |  stock lever at **59 mm**  |  closest button pitch 35.5 mm at 30 mm, 28.4 mm at 24 mm  |  cut envelope 225 x 91 mm
 
-| Lever spacing | 30 mm buttons | 24 mm buttons |
+More previews: [24 mm buttons](preview/vewlix_s_8button_24mm_buttons.png) &middot; [24 mm inner support](preview/inner_support_vewlix_s_8button_24mm_buttons.png)
+
+| Version | 30 mm buttons | 24 mm buttons |
 |---|---|---|
 | Stock | [dxf](dxf/vewlix_s_8button.dxf) &middot; [svg](svg/vewlix_s_8button.svg) | [dxf](dxf/vewlix_s_8button_24mm_buttons.dxf) &middot; [svg](svg/vewlix_s_8button_24mm_buttons.svg) |
+| Stock, inner support | [dxf](dxf/inner_support_vewlix_s_8button.dxf) &middot; [svg](svg/inner_support_vewlix_s_8button.svg) | [dxf](dxf/inner_support_vewlix_s_8button_24mm_buttons.dxf) &middot; [svg](svg/inner_support_vewlix_s_8button_24mm_buttons.svg) |
 | 82 mm | [dxf](dxf/vewlix_s_8button_82mm_spacing.dxf) &middot; [svg](svg/vewlix_s_8button_82mm_spacing.svg) | [dxf](dxf/vewlix_s_8button_82mm_spacing_24mm_buttons.dxf) &middot; [svg](svg/vewlix_s_8button_82mm_spacing_24mm_buttons.svg) |
+| 82 mm, inner support | [dxf](dxf/inner_support_vewlix_s_8button_82mm_spacing.dxf) &middot; [svg](svg/inner_support_vewlix_s_8button_82mm_spacing.svg) | [dxf](dxf/inner_support_vewlix_s_8button_82mm_spacing_24mm_buttons.dxf) &middot; [svg](svg/inner_support_vewlix_s_8button_82mm_spacing_24mm_buttons.svg) |
 | 95 mm | [dxf](dxf/vewlix_s_8button_95mm_spacing.dxf) &middot; [svg](svg/vewlix_s_8button_95mm_spacing.svg) | [dxf](dxf/vewlix_s_8button_95mm_spacing_24mm_buttons.dxf) &middot; [svg](svg/vewlix_s_8button_95mm_spacing_24mm_buttons.svg) |
+| 95 mm, inner support | [dxf](dxf/inner_support_vewlix_s_8button_95mm_spacing.dxf) &middot; [svg](svg/inner_support_vewlix_s_8button_95mm_spacing.svg) | [dxf](dxf/inner_support_vewlix_s_8button_95mm_spacing_24mm_buttons.dxf) &middot; [svg](svg/inner_support_vewlix_s_8button_95mm_spacing_24mm_buttons.svg) |
 
 
 ### Generic shift
 
-<img src="preview/shift36_s.png" alt="shift36_s" width="760">
+<img src="preview/shift36_s.png" alt="shift36_s" width="380"> <img src="preview/inner_support_shift36_s.png" alt="inner_support_shift36_s" width="380">
+
+*Left: standard. Right: inner support, with the hole and its Sanwa OBSF ear relief merged into one profile.*
 
 > This is a generic version of the Vewlix shifted layout. Note the top index and bottom middle finger buttons are closer together than the standard spacing and will not work with Sanwa nuts.
 >
@@ -348,11 +419,16 @@ The same shift concept, tidied up into round numbers, with a flat 36 mm column p
 
 **8 buttons**  |  stock lever at **95 mm**  |  closest button pitch 35.7 mm at 30 mm, 28.6 mm at 24 mm  |  cut envelope 261 x 99 mm
 
-| Lever spacing | 30 mm buttons | 24 mm buttons |
+More previews: [24 mm buttons](preview/shift36_s_24mm_buttons.png) &middot; [24 mm inner support](preview/inner_support_shift36_s_24mm_buttons.png)
+
+| Version | 30 mm buttons | 24 mm buttons |
 |---|---|---|
 | Stock | [dxf](dxf/shift36_s.dxf) &middot; [svg](svg/shift36_s.svg) | [dxf](dxf/shift36_s_24mm_buttons.dxf) &middot; [svg](svg/shift36_s_24mm_buttons.svg) |
+| Stock, inner support | [dxf](dxf/inner_support_shift36_s.dxf) &middot; [svg](svg/inner_support_shift36_s.svg) | [dxf](dxf/inner_support_shift36_s_24mm_buttons.dxf) &middot; [svg](svg/inner_support_shift36_s_24mm_buttons.svg) |
 | 82 mm | [dxf](dxf/shift36_s_82mm_spacing.dxf) &middot; [svg](svg/shift36_s_82mm_spacing.svg) | [dxf](dxf/shift36_s_82mm_spacing_24mm_buttons.dxf) &middot; [svg](svg/shift36_s_82mm_spacing_24mm_buttons.svg) |
+| 82 mm, inner support | [dxf](dxf/inner_support_shift36_s_82mm_spacing.dxf) &middot; [svg](svg/inner_support_shift36_s_82mm_spacing.svg) | [dxf](dxf/inner_support_shift36_s_82mm_spacing_24mm_buttons.dxf) &middot; [svg](svg/inner_support_shift36_s_82mm_spacing_24mm_buttons.svg) |
 | 95 mm | [dxf](dxf/shift36_s_95mm_spacing.dxf) &middot; [svg](svg/shift36_s_95mm_spacing.svg) | [dxf](dxf/shift36_s_95mm_spacing_24mm_buttons.dxf) &middot; [svg](svg/shift36_s_95mm_spacing_24mm_buttons.svg) |
+| 95 mm, inner support | [dxf](dxf/inner_support_shift36_s_95mm_spacing.dxf) &middot; [svg](svg/inner_support_shift36_s_95mm_spacing.svg) | [dxf](dxf/inner_support_shift36_s_95mm_spacing_24mm_buttons.dxf) &middot; [svg](svg/inner_support_shift36_s_95mm_spacing_24mm_buttons.svg) |
 
 
 ---
@@ -362,7 +438,9 @@ The same shift concept, tidied up into round numbers, with a flat 36 mm column p
 
 ### Hori transitioning
 
-<img src="preview/hori36_s.png" alt="hori36_s" width="760">
+<img src="preview/hori36_s.png" alt="hori36_s" width="380"> <img src="preview/inner_support_hori36_s.png" alt="inner_support_hori36_s" width="380">
+
+*Left: standard. Right: inner support, with the hole and its Sanwa OBSF ear relief merged into one profile.*
 
 > This is a transitioning layout used by Hori in some of their joysticks. Some dots are added to show where to put the joystick if only using the right six buttons. In most of their joysticks, they use the standard Japanese arcade layout.
 >
@@ -374,16 +452,23 @@ Starts stepped on the left and flattens out into a straight pair of rows on the 
 
 **8 buttons**  |  stock lever at **63.75 mm**  |  closest button pitch 36.0 mm at 30 mm, 28.8 mm at 24 mm  |  cut envelope 220 x 96 mm
 
-| Lever spacing | 30 mm buttons | 24 mm buttons |
+More previews: [24 mm buttons](preview/hori36_s_24mm_buttons.png) &middot; [24 mm inner support](preview/inner_support_hori36_s_24mm_buttons.png)
+
+| Version | 30 mm buttons | 24 mm buttons |
 |---|---|---|
 | Stock | [dxf](dxf/hori36_s.dxf) &middot; [svg](svg/hori36_s.svg) | [dxf](dxf/hori36_s_24mm_buttons.dxf) &middot; [svg](svg/hori36_s_24mm_buttons.svg) |
+| Stock, inner support | [dxf](dxf/inner_support_hori36_s.dxf) &middot; [svg](svg/inner_support_hori36_s.svg) | [dxf](dxf/inner_support_hori36_s_24mm_buttons.dxf) &middot; [svg](svg/inner_support_hori36_s_24mm_buttons.svg) |
 | 82 mm | [dxf](dxf/hori36_s_82mm_spacing.dxf) &middot; [svg](svg/hori36_s_82mm_spacing.svg) | [dxf](dxf/hori36_s_82mm_spacing_24mm_buttons.dxf) &middot; [svg](svg/hori36_s_82mm_spacing_24mm_buttons.svg) |
+| 82 mm, inner support | [dxf](dxf/inner_support_hori36_s_82mm_spacing.dxf) &middot; [svg](svg/inner_support_hori36_s_82mm_spacing.svg) | [dxf](dxf/inner_support_hori36_s_82mm_spacing_24mm_buttons.dxf) &middot; [svg](svg/inner_support_hori36_s_82mm_spacing_24mm_buttons.svg) |
 | 95 mm | [dxf](dxf/hori36_s_95mm_spacing.dxf) &middot; [svg](svg/hori36_s_95mm_spacing.svg) | [dxf](dxf/hori36_s_95mm_spacing_24mm_buttons.dxf) &middot; [svg](svg/hori36_s_95mm_spacing_24mm_buttons.svg) |
+| 95 mm, inner support | [dxf](dxf/inner_support_hori36_s_95mm_spacing.dxf) &middot; [svg](svg/inner_support_hori36_s_95mm_spacing.svg) | [dxf](dxf/inner_support_hori36_s_95mm_spacing_24mm_buttons.dxf) &middot; [svg](svg/inner_support_hori36_s_95mm_spacing_24mm_buttons.svg) |
 
 
 ### Hori transitioning, spaced rows
 
-<img src="preview/horis36_s.png" alt="horis36_s" width="760">
+<img src="preview/horis36_s.png" alt="horis36_s" width="380"> <img src="preview/inner_support_horis36_s.png" alt="inner_support_horis36_s" width="380">
+
+*Left: standard. Right: inner support, with the hole and its Sanwa OBSF ear relief merged into one profile.*
 
 > Same as the previous layout, but space is added between rows.
 >
@@ -393,11 +478,16 @@ Identical to `hori36_s` with the rows opened from 36 mm to 39 mm.
 
 **8 buttons**  |  stock lever at **63.75 mm**  |  closest button pitch 36.0 mm at 30 mm, 28.8 mm at 24 mm  |  cut envelope 220 x 100 mm
 
-| Lever spacing | 30 mm buttons | 24 mm buttons |
+More previews: [24 mm buttons](preview/horis36_s_24mm_buttons.png) &middot; [24 mm inner support](preview/inner_support_horis36_s_24mm_buttons.png)
+
+| Version | 30 mm buttons | 24 mm buttons |
 |---|---|---|
 | Stock | [dxf](dxf/horis36_s.dxf) &middot; [svg](svg/horis36_s.svg) | [dxf](dxf/horis36_s_24mm_buttons.dxf) &middot; [svg](svg/horis36_s_24mm_buttons.svg) |
+| Stock, inner support | [dxf](dxf/inner_support_horis36_s.dxf) &middot; [svg](svg/inner_support_horis36_s.svg) | [dxf](dxf/inner_support_horis36_s_24mm_buttons.dxf) &middot; [svg](svg/inner_support_horis36_s_24mm_buttons.svg) |
 | 82 mm | [dxf](dxf/horis36_s_82mm_spacing.dxf) &middot; [svg](svg/horis36_s_82mm_spacing.svg) | [dxf](dxf/horis36_s_82mm_spacing_24mm_buttons.dxf) &middot; [svg](svg/horis36_s_82mm_spacing_24mm_buttons.svg) |
+| 82 mm, inner support | [dxf](dxf/inner_support_horis36_s_82mm_spacing.dxf) &middot; [svg](svg/inner_support_horis36_s_82mm_spacing.svg) | [dxf](dxf/inner_support_horis36_s_82mm_spacing_24mm_buttons.dxf) &middot; [svg](svg/inner_support_horis36_s_82mm_spacing_24mm_buttons.svg) |
 | 95 mm | [dxf](dxf/horis36_s_95mm_spacing.dxf) &middot; [svg](svg/horis36_s_95mm_spacing.svg) | [dxf](dxf/horis36_s_95mm_spacing_24mm_buttons.dxf) &middot; [svg](svg/horis36_s_95mm_spacing_24mm_buttons.svg) |
+| 95 mm, inner support | [dxf](dxf/inner_support_horis36_s_95mm_spacing.dxf) &middot; [svg](svg/inner_support_horis36_s_95mm_spacing.svg) | [dxf](dxf/inner_support_horis36_s_95mm_spacing_24mm_buttons.dxf) &middot; [svg](svg/inner_support_horis36_s_95mm_spacing_24mm_buttons.svg) |
 
 
 ---
@@ -407,7 +497,9 @@ Identical to `hori36_s` with the rows opened from 36 mm to 39 mm.
 
 ### Clustered arcade
 
-<img src="preview/cluster36_s.png" alt="cluster36_s" width="760">
+<img src="preview/cluster36_s.png" alt="cluster36_s" width="380"> <img src="preview/inner_support_cluster36_s.png" alt="inner_support_cluster36_s" width="380">
+
+*Left: standard. Right: inner support, with the hole and its Sanwa OBSF ear relief merged into one profile.*
 
 > This layout uses the standard Japanese arcade design, but the proportions are set so the buttons fit together more evenly and closely. The buttons form equilateral triangles and a square.
 >
@@ -417,16 +509,23 @@ The Japanese arcade feel, but rationalised. The geometry is built out of equilat
 
 **8 buttons**  |  stock lever at **95 mm**  |  closest button pitch 36.0 mm at 30 mm, 28.8 mm at 24 mm  |  cut envelope 251 x 96 mm
 
-| Lever spacing | 30 mm buttons | 24 mm buttons |
+More previews: [24 mm buttons](preview/cluster36_s_24mm_buttons.png) &middot; [24 mm inner support](preview/inner_support_cluster36_s_24mm_buttons.png)
+
+| Version | 30 mm buttons | 24 mm buttons |
 |---|---|---|
 | Stock | [dxf](dxf/cluster36_s.dxf) &middot; [svg](svg/cluster36_s.svg) | [dxf](dxf/cluster36_s_24mm_buttons.dxf) &middot; [svg](svg/cluster36_s_24mm_buttons.svg) |
+| Stock, inner support | [dxf](dxf/inner_support_cluster36_s.dxf) &middot; [svg](svg/inner_support_cluster36_s.svg) | [dxf](dxf/inner_support_cluster36_s_24mm_buttons.dxf) &middot; [svg](svg/inner_support_cluster36_s_24mm_buttons.svg) |
 | 82 mm | [dxf](dxf/cluster36_s_82mm_spacing.dxf) &middot; [svg](svg/cluster36_s_82mm_spacing.svg) | [dxf](dxf/cluster36_s_82mm_spacing_24mm_buttons.dxf) &middot; [svg](svg/cluster36_s_82mm_spacing_24mm_buttons.svg) |
+| 82 mm, inner support | [dxf](dxf/inner_support_cluster36_s_82mm_spacing.dxf) &middot; [svg](svg/inner_support_cluster36_s_82mm_spacing.svg) | [dxf](dxf/inner_support_cluster36_s_82mm_spacing_24mm_buttons.dxf) &middot; [svg](svg/inner_support_cluster36_s_82mm_spacing_24mm_buttons.svg) |
 | 95 mm | [dxf](dxf/cluster36_s_95mm_spacing.dxf) &middot; [svg](svg/cluster36_s_95mm_spacing.svg) | [dxf](dxf/cluster36_s_95mm_spacing_24mm_buttons.dxf) &middot; [svg](svg/cluster36_s_95mm_spacing_24mm_buttons.svg) |
+| 95 mm, inner support | [dxf](dxf/inner_support_cluster36_s_95mm_spacing.dxf) &middot; [svg](svg/inner_support_cluster36_s_95mm_spacing.svg) | [dxf](dxf/inner_support_cluster36_s_95mm_spacing_24mm_buttons.dxf) &middot; [svg](svg/inner_support_cluster36_s_95mm_spacing_24mm_buttons.svg) |
 
 
 ### Clustered arcade, spaced rows
 
-<img src="preview/clusters36_s.png" alt="clusters36_s" width="760">
+<img src="preview/clusters36_s.png" alt="clusters36_s" width="380"> <img src="preview/inner_support_clusters36_s.png" alt="inner_support_clusters36_s" width="380">
+
+*Left: standard. Right: inner support, with the hole and its Sanwa OBSF ear relief merged into one profile.*
 
 > Same as the previous layout, but space is added between the rows.
 >
@@ -436,11 +535,16 @@ Identical to `cluster36_s` with the rows opened from 36 mm to 39 mm.
 
 **8 buttons**  |  stock lever at **95 mm**  |  closest button pitch 36.0 mm at 30 mm, 28.8 mm at 24 mm  |  cut envelope 251 x 100 mm
 
-| Lever spacing | 30 mm buttons | 24 mm buttons |
+More previews: [24 mm buttons](preview/clusters36_s_24mm_buttons.png) &middot; [24 mm inner support](preview/inner_support_clusters36_s_24mm_buttons.png)
+
+| Version | 30 mm buttons | 24 mm buttons |
 |---|---|---|
 | Stock | [dxf](dxf/clusters36_s.dxf) &middot; [svg](svg/clusters36_s.svg) | [dxf](dxf/clusters36_s_24mm_buttons.dxf) &middot; [svg](svg/clusters36_s_24mm_buttons.svg) |
+| Stock, inner support | [dxf](dxf/inner_support_clusters36_s.dxf) &middot; [svg](svg/inner_support_clusters36_s.svg) | [dxf](dxf/inner_support_clusters36_s_24mm_buttons.dxf) &middot; [svg](svg/inner_support_clusters36_s_24mm_buttons.svg) |
 | 82 mm | [dxf](dxf/clusters36_s_82mm_spacing.dxf) &middot; [svg](svg/clusters36_s_82mm_spacing.svg) | [dxf](dxf/clusters36_s_82mm_spacing_24mm_buttons.dxf) &middot; [svg](svg/clusters36_s_82mm_spacing_24mm_buttons.svg) |
+| 82 mm, inner support | [dxf](dxf/inner_support_clusters36_s_82mm_spacing.dxf) &middot; [svg](svg/inner_support_clusters36_s_82mm_spacing.svg) | [dxf](dxf/inner_support_clusters36_s_82mm_spacing_24mm_buttons.dxf) &middot; [svg](svg/inner_support_clusters36_s_82mm_spacing_24mm_buttons.svg) |
 | 95 mm | [dxf](dxf/clusters36_s_95mm_spacing.dxf) &middot; [svg](svg/clusters36_s_95mm_spacing.svg) | [dxf](dxf/clusters36_s_95mm_spacing_24mm_buttons.dxf) &middot; [svg](svg/clusters36_s_95mm_spacing_24mm_buttons.svg) |
+| 95 mm, inner support | [dxf](dxf/inner_support_clusters36_s_95mm_spacing.dxf) &middot; [svg](svg/inner_support_clusters36_s_95mm_spacing.svg) | [dxf](dxf/inner_support_clusters36_s_95mm_spacing_24mm_buttons.dxf) &middot; [svg](svg/inner_support_clusters36_s_95mm_spacing_24mm_buttons.svg) |
 
 
 ---
@@ -450,7 +554,9 @@ Identical to `cluster36_s` with the rows opened from 36 mm to 39 mm.
 
 ### Direct slant
 
-<img src="preview/slant36_s.png" alt="slant36_s" width="760">
+<img src="preview/slant36_s.png" alt="slant36_s" width="380"> <img src="preview/inner_support_slant36_s.png" alt="inner_support_slant36_s" width="380">
+
+*Left: standard. Right: inner support, with the hole and its Sanwa OBSF ear relief merged into one profile.*
 
 > The layout does a direct build of the slanted layout. It uses half-steps like those in the Hori layout.
 >
@@ -460,16 +566,23 @@ A clean, deliberate arch. It climbs to the middle finger column and then comes b
 
 **8 buttons**  |  stock lever at **95 mm**  |  closest button pitch 36.0 mm at 30 mm, 28.8 mm at 24 mm  |  cut envelope 250 x 96 mm
 
-| Lever spacing | 30 mm buttons | 24 mm buttons |
+More previews: [24 mm buttons](preview/slant36_s_24mm_buttons.png) &middot; [24 mm inner support](preview/inner_support_slant36_s_24mm_buttons.png)
+
+| Version | 30 mm buttons | 24 mm buttons |
 |---|---|---|
 | Stock | [dxf](dxf/slant36_s.dxf) &middot; [svg](svg/slant36_s.svg) | [dxf](dxf/slant36_s_24mm_buttons.dxf) &middot; [svg](svg/slant36_s_24mm_buttons.svg) |
+| Stock, inner support | [dxf](dxf/inner_support_slant36_s.dxf) &middot; [svg](svg/inner_support_slant36_s.svg) | [dxf](dxf/inner_support_slant36_s_24mm_buttons.dxf) &middot; [svg](svg/inner_support_slant36_s_24mm_buttons.svg) |
 | 82 mm | [dxf](dxf/slant36_s_82mm_spacing.dxf) &middot; [svg](svg/slant36_s_82mm_spacing.svg) | [dxf](dxf/slant36_s_82mm_spacing_24mm_buttons.dxf) &middot; [svg](svg/slant36_s_82mm_spacing_24mm_buttons.svg) |
+| 82 mm, inner support | [dxf](dxf/inner_support_slant36_s_82mm_spacing.dxf) &middot; [svg](svg/inner_support_slant36_s_82mm_spacing.svg) | [dxf](dxf/inner_support_slant36_s_82mm_spacing_24mm_buttons.dxf) &middot; [svg](svg/inner_support_slant36_s_82mm_spacing_24mm_buttons.svg) |
 | 95 mm | [dxf](dxf/slant36_s_95mm_spacing.dxf) &middot; [svg](svg/slant36_s_95mm_spacing.svg) | [dxf](dxf/slant36_s_95mm_spacing_24mm_buttons.dxf) &middot; [svg](svg/slant36_s_95mm_spacing_24mm_buttons.svg) |
+| 95 mm, inner support | [dxf](dxf/inner_support_slant36_s_95mm_spacing.dxf) &middot; [svg](svg/inner_support_slant36_s_95mm_spacing.svg) | [dxf](dxf/inner_support_slant36_s_95mm_spacing_24mm_buttons.dxf) &middot; [svg](svg/inner_support_slant36_s_95mm_spacing_24mm_buttons.svg) |
 
 
 ### Direct slant, spaced rows
 
-<img src="preview/slants36_s.png" alt="slants36_s" width="760">
+<img src="preview/slants36_s.png" alt="slants36_s" width="380"> <img src="preview/inner_support_slants36_s.png" alt="inner_support_slants36_s" width="380">
+
+*Left: standard. Right: inner support, with the hole and its Sanwa OBSF ear relief merged into one profile.*
 
 > Same as the previous layout, but space is added between rows.
 >
@@ -479,11 +592,16 @@ Identical to `slant36_s` with the rows opened from 36 mm to 39 mm.
 
 **8 buttons**  |  stock lever at **95 mm**  |  closest button pitch 36.1 mm at 30 mm, 28.9 mm at 24 mm  |  cut envelope 250 x 100 mm
 
-| Lever spacing | 30 mm buttons | 24 mm buttons |
+More previews: [24 mm buttons](preview/slants36_s_24mm_buttons.png) &middot; [24 mm inner support](preview/inner_support_slants36_s_24mm_buttons.png)
+
+| Version | 30 mm buttons | 24 mm buttons |
 |---|---|---|
 | Stock | [dxf](dxf/slants36_s.dxf) &middot; [svg](svg/slants36_s.svg) | [dxf](dxf/slants36_s_24mm_buttons.dxf) &middot; [svg](svg/slants36_s_24mm_buttons.svg) |
+| Stock, inner support | [dxf](dxf/inner_support_slants36_s.dxf) &middot; [svg](svg/inner_support_slants36_s.svg) | [dxf](dxf/inner_support_slants36_s_24mm_buttons.dxf) &middot; [svg](svg/inner_support_slants36_s_24mm_buttons.svg) |
 | 82 mm | [dxf](dxf/slants36_s_82mm_spacing.dxf) &middot; [svg](svg/slants36_s_82mm_spacing.svg) | [dxf](dxf/slants36_s_82mm_spacing_24mm_buttons.dxf) &middot; [svg](svg/slants36_s_82mm_spacing_24mm_buttons.svg) |
+| 82 mm, inner support | [dxf](dxf/inner_support_slants36_s_82mm_spacing.dxf) &middot; [svg](svg/inner_support_slants36_s_82mm_spacing.svg) | [dxf](dxf/inner_support_slants36_s_82mm_spacing_24mm_buttons.dxf) &middot; [svg](svg/inner_support_slants36_s_82mm_spacing_24mm_buttons.svg) |
 | 95 mm | [dxf](dxf/slants36_s_95mm_spacing.dxf) &middot; [svg](svg/slants36_s_95mm_spacing.svg) | [dxf](dxf/slants36_s_95mm_spacing_24mm_buttons.dxf) &middot; [svg](svg/slants36_s_95mm_spacing_24mm_buttons.svg) |
+| 95 mm, inner support | [dxf](dxf/inner_support_slants36_s_95mm_spacing.dxf) &middot; [svg](svg/inner_support_slants36_s_95mm_spacing.svg) | [dxf](dxf/inner_support_slants36_s_95mm_spacing_24mm_buttons.dxf) &middot; [svg](svg/inner_support_slants36_s_95mm_spacing_24mm_buttons.svg) |
 
 
 ---
@@ -493,7 +611,9 @@ Identical to `slant36_s` with the rows opened from 36 mm to 39 mm.
 
 ### Moderate / hybrid
 
-<img src="preview/hybrid36_s.png" alt="hybrid36_s" width="760">
+<img src="preview/hybrid36_s.png" alt="hybrid36_s" width="380"> <img src="preview/inner_support_hybrid36_s.png" alt="inner_support_hybrid36_s" width="380">
+
+*Left: standard. Right: inner support, with the hole and its Sanwa OBSF ear relief merged into one profile.*
 
 > This layout is somewhat of a mix between the standard player 1 and player 2 layouts. The curvature is not as defined.
 >
@@ -505,16 +625,23 @@ Halfway between the slanted P1 and the flat P2. A gentle step up on the index co
 
 **8 buttons**  |  stock lever at **95 mm**  |  closest button pitch 35.8 mm at 30 mm, 28.7 mm at 24 mm  |  cut envelope 253 x 96 mm
 
-| Lever spacing | 30 mm buttons | 24 mm buttons |
+More previews: [24 mm buttons](preview/hybrid36_s_24mm_buttons.png) &middot; [24 mm inner support](preview/inner_support_hybrid36_s_24mm_buttons.png)
+
+| Version | 30 mm buttons | 24 mm buttons |
 |---|---|---|
 | Stock | [dxf](dxf/hybrid36_s.dxf) &middot; [svg](svg/hybrid36_s.svg) | [dxf](dxf/hybrid36_s_24mm_buttons.dxf) &middot; [svg](svg/hybrid36_s_24mm_buttons.svg) |
+| Stock, inner support | [dxf](dxf/inner_support_hybrid36_s.dxf) &middot; [svg](svg/inner_support_hybrid36_s.svg) | [dxf](dxf/inner_support_hybrid36_s_24mm_buttons.dxf) &middot; [svg](svg/inner_support_hybrid36_s_24mm_buttons.svg) |
 | 82 mm | [dxf](dxf/hybrid36_s_82mm_spacing.dxf) &middot; [svg](svg/hybrid36_s_82mm_spacing.svg) | [dxf](dxf/hybrid36_s_82mm_spacing_24mm_buttons.dxf) &middot; [svg](svg/hybrid36_s_82mm_spacing_24mm_buttons.svg) |
+| 82 mm, inner support | [dxf](dxf/inner_support_hybrid36_s_82mm_spacing.dxf) &middot; [svg](svg/inner_support_hybrid36_s_82mm_spacing.svg) | [dxf](dxf/inner_support_hybrid36_s_82mm_spacing_24mm_buttons.dxf) &middot; [svg](svg/inner_support_hybrid36_s_82mm_spacing_24mm_buttons.svg) |
 | 95 mm | [dxf](dxf/hybrid36_s_95mm_spacing.dxf) &middot; [svg](svg/hybrid36_s_95mm_spacing.svg) | [dxf](dxf/hybrid36_s_95mm_spacing_24mm_buttons.dxf) &middot; [svg](svg/hybrid36_s_95mm_spacing_24mm_buttons.svg) |
+| 95 mm, inner support | [dxf](dxf/inner_support_hybrid36_s_95mm_spacing.dxf) &middot; [svg](svg/inner_support_hybrid36_s_95mm_spacing.svg) | [dxf](dxf/inner_support_hybrid36_s_95mm_spacing_24mm_buttons.dxf) &middot; [svg](svg/inner_support_hybrid36_s_95mm_spacing_24mm_buttons.svg) |
 
 
 ### Moderate / hybrid, spaced rows
 
-<img src="preview/hybrids36_s.png" alt="hybrids36_s" width="760">
+<img src="preview/hybrids36_s.png" alt="hybrids36_s" width="380"> <img src="preview/inner_support_hybrids36_s.png" alt="inner_support_hybrids36_s" width="380">
+
+*Left: standard. Right: inner support, with the hole and its Sanwa OBSF ear relief merged into one profile.*
 
 > Same as the previous layout, but space is added between rows.
 >
@@ -524,11 +651,16 @@ Identical to `hybrid36_s` with the rows opened from 36 mm to 39 mm.
 
 **8 buttons**  |  stock lever at **95 mm**  |  closest button pitch 35.8 mm at 30 mm, 28.7 mm at 24 mm  |  cut envelope 253 x 100 mm
 
-| Lever spacing | 30 mm buttons | 24 mm buttons |
+More previews: [24 mm buttons](preview/hybrids36_s_24mm_buttons.png) &middot; [24 mm inner support](preview/inner_support_hybrids36_s_24mm_buttons.png)
+
+| Version | 30 mm buttons | 24 mm buttons |
 |---|---|---|
 | Stock | [dxf](dxf/hybrids36_s.dxf) &middot; [svg](svg/hybrids36_s.svg) | [dxf](dxf/hybrids36_s_24mm_buttons.dxf) &middot; [svg](svg/hybrids36_s_24mm_buttons.svg) |
+| Stock, inner support | [dxf](dxf/inner_support_hybrids36_s.dxf) &middot; [svg](svg/inner_support_hybrids36_s.svg) | [dxf](dxf/inner_support_hybrids36_s_24mm_buttons.dxf) &middot; [svg](svg/inner_support_hybrids36_s_24mm_buttons.svg) |
 | 82 mm | [dxf](dxf/hybrids36_s_82mm_spacing.dxf) &middot; [svg](svg/hybrids36_s_82mm_spacing.svg) | [dxf](dxf/hybrids36_s_82mm_spacing_24mm_buttons.dxf) &middot; [svg](svg/hybrids36_s_82mm_spacing_24mm_buttons.svg) |
+| 82 mm, inner support | [dxf](dxf/inner_support_hybrids36_s_82mm_spacing.dxf) &middot; [svg](svg/inner_support_hybrids36_s_82mm_spacing.svg) | [dxf](dxf/inner_support_hybrids36_s_82mm_spacing_24mm_buttons.dxf) &middot; [svg](svg/inner_support_hybrids36_s_82mm_spacing_24mm_buttons.svg) |
 | 95 mm | [dxf](dxf/hybrids36_s_95mm_spacing.dxf) &middot; [svg](svg/hybrids36_s_95mm_spacing.svg) | [dxf](dxf/hybrids36_s_95mm_spacing_24mm_buttons.dxf) &middot; [svg](svg/hybrids36_s_95mm_spacing_24mm_buttons.svg) |
+| 95 mm, inner support | [dxf](dxf/inner_support_hybrids36_s_95mm_spacing.dxf) &middot; [svg](svg/inner_support_hybrids36_s_95mm_spacing.svg) | [dxf](dxf/inner_support_hybrids36_s_95mm_spacing_24mm_buttons.dxf) &middot; [svg](svg/inner_support_hybrids36_s_95mm_spacing_24mm_buttons.svg) |
 
 
 ---
@@ -538,7 +670,9 @@ Identical to `hybrid36_s` with the rows opened from 36 mm to 39 mm.
 
 ### Straight incline
 
-<img src="preview/incline36_s.png" alt="incline36_s" width="760">
+<img src="preview/incline36_s.png" alt="incline36_s" width="380"> <img src="preview/inner_support_incline36_s.png" alt="inner_support_incline36_s" width="380">
+
+*Left: standard. Right: inner support, with the hole and its Sanwa OBSF ear relief merged into one profile.*
 
 > This layout inclines straight until the pinky buttons.
 >
@@ -548,16 +682,23 @@ The most aggressive slant in the set. It climbs steadily column by column and th
 
 **8 buttons**  |  stock lever at **95 mm**  |  closest button pitch 35.8 mm at 30 mm, 28.7 mm at 24 mm  |  cut envelope 251 x 96 mm
 
-| Lever spacing | 30 mm buttons | 24 mm buttons |
+More previews: [24 mm buttons](preview/incline36_s_24mm_buttons.png) &middot; [24 mm inner support](preview/inner_support_incline36_s_24mm_buttons.png)
+
+| Version | 30 mm buttons | 24 mm buttons |
 |---|---|---|
 | Stock | [dxf](dxf/incline36_s.dxf) &middot; [svg](svg/incline36_s.svg) | [dxf](dxf/incline36_s_24mm_buttons.dxf) &middot; [svg](svg/incline36_s_24mm_buttons.svg) |
+| Stock, inner support | [dxf](dxf/inner_support_incline36_s.dxf) &middot; [svg](svg/inner_support_incline36_s.svg) | [dxf](dxf/inner_support_incline36_s_24mm_buttons.dxf) &middot; [svg](svg/inner_support_incline36_s_24mm_buttons.svg) |
 | 82 mm | [dxf](dxf/incline36_s_82mm_spacing.dxf) &middot; [svg](svg/incline36_s_82mm_spacing.svg) | [dxf](dxf/incline36_s_82mm_spacing_24mm_buttons.dxf) &middot; [svg](svg/incline36_s_82mm_spacing_24mm_buttons.svg) |
+| 82 mm, inner support | [dxf](dxf/inner_support_incline36_s_82mm_spacing.dxf) &middot; [svg](svg/inner_support_incline36_s_82mm_spacing.svg) | [dxf](dxf/inner_support_incline36_s_82mm_spacing_24mm_buttons.dxf) &middot; [svg](svg/inner_support_incline36_s_82mm_spacing_24mm_buttons.svg) |
 | 95 mm | [dxf](dxf/incline36_s_95mm_spacing.dxf) &middot; [svg](svg/incline36_s_95mm_spacing.svg) | [dxf](dxf/incline36_s_95mm_spacing_24mm_buttons.dxf) &middot; [svg](svg/incline36_s_95mm_spacing_24mm_buttons.svg) |
+| 95 mm, inner support | [dxf](dxf/inner_support_incline36_s_95mm_spacing.dxf) &middot; [svg](svg/inner_support_incline36_s_95mm_spacing.svg) | [dxf](dxf/inner_support_incline36_s_95mm_spacing_24mm_buttons.dxf) &middot; [svg](svg/inner_support_incline36_s_95mm_spacing_24mm_buttons.svg) |
 
 
 ### Straight incline, spaced rows
 
-<img src="preview/inclines36_s.png" alt="inclines36_s" width="760">
+<img src="preview/inclines36_s.png" alt="inclines36_s" width="380"> <img src="preview/inner_support_inclines36_s.png" alt="inner_support_inclines36_s" width="380">
+
+*Left: standard. Right: inner support, with the hole and its Sanwa OBSF ear relief merged into one profile.*
 
 > Same as the previous layout, but space is added between rows.
 >
@@ -567,11 +708,16 @@ Identical to `incline36_s` with the rows opened from 36 mm to 39 mm.
 
 **8 buttons**  |  stock lever at **95 mm**  |  closest button pitch 35.8 mm at 30 mm, 28.7 mm at 24 mm  |  cut envelope 251 x 100 mm
 
-| Lever spacing | 30 mm buttons | 24 mm buttons |
+More previews: [24 mm buttons](preview/inclines36_s_24mm_buttons.png) &middot; [24 mm inner support](preview/inner_support_inclines36_s_24mm_buttons.png)
+
+| Version | 30 mm buttons | 24 mm buttons |
 |---|---|---|
 | Stock | [dxf](dxf/inclines36_s.dxf) &middot; [svg](svg/inclines36_s.svg) | [dxf](dxf/inclines36_s_24mm_buttons.dxf) &middot; [svg](svg/inclines36_s_24mm_buttons.svg) |
+| Stock, inner support | [dxf](dxf/inner_support_inclines36_s.dxf) &middot; [svg](svg/inner_support_inclines36_s.svg) | [dxf](dxf/inner_support_inclines36_s_24mm_buttons.dxf) &middot; [svg](svg/inner_support_inclines36_s_24mm_buttons.svg) |
 | 82 mm | [dxf](dxf/inclines36_s_82mm_spacing.dxf) &middot; [svg](svg/inclines36_s_82mm_spacing.svg) | [dxf](dxf/inclines36_s_82mm_spacing_24mm_buttons.dxf) &middot; [svg](svg/inclines36_s_82mm_spacing_24mm_buttons.svg) |
+| 82 mm, inner support | [dxf](dxf/inner_support_inclines36_s_82mm_spacing.dxf) &middot; [svg](svg/inner_support_inclines36_s_82mm_spacing.svg) | [dxf](dxf/inner_support_inclines36_s_82mm_spacing_24mm_buttons.dxf) &middot; [svg](svg/inner_support_inclines36_s_82mm_spacing_24mm_buttons.svg) |
 | 95 mm | [dxf](dxf/inclines36_s_95mm_spacing.dxf) &middot; [svg](svg/inclines36_s_95mm_spacing.svg) | [dxf](dxf/inclines36_s_95mm_spacing_24mm_buttons.dxf) &middot; [svg](svg/inclines36_s_95mm_spacing_24mm_buttons.svg) |
+| 95 mm, inner support | [dxf](dxf/inner_support_inclines36_s_95mm_spacing.dxf) &middot; [svg](svg/inner_support_inclines36_s_95mm_spacing.svg) | [dxf](dxf/inner_support_inclines36_s_95mm_spacing_24mm_buttons.dxf) &middot; [svg](svg/inner_support_inclines36_s_95mm_spacing_24mm_buttons.svg) |
 
 
 ---
@@ -583,7 +729,9 @@ Slagcoin is openly not a fan of these, but they are historically important and s
 
 ### Square grid
 
-<img src="preview/matrix36_s.png" alt="matrix36_s" width="760">
+<img src="preview/matrix36_s.png" alt="matrix36_s" width="380"> <img src="preview/inner_support_matrix36_s.png" alt="inner_support_matrix36_s" width="380">
+
+*Left: standard. Right: inner support, with the hole and its Sanwa OBSF ear relief merged into one profile.*
 
 > This is a clustered grid layout. It has more of an appropriate spacing, but the squareness still does not suit the human hand very well. Additional dots are there for making a Neo Geo layout which is more appropriate for the human hand.
 >
@@ -593,16 +741,23 @@ A perfectly square 4 by 2 grid on a 36 mm pitch. Dead simple to drill, dead simp
 
 **8 buttons**  |  stock lever at **95 mm**  |  closest button pitch 36.0 mm at 30 mm, 28.8 mm at 24 mm  |  cut envelope 257 x 91 mm
 
-| Lever spacing | 30 mm buttons | 24 mm buttons |
+More previews: [24 mm buttons](preview/matrix36_s_24mm_buttons.png) &middot; [24 mm inner support](preview/inner_support_matrix36_s_24mm_buttons.png)
+
+| Version | 30 mm buttons | 24 mm buttons |
 |---|---|---|
 | Stock | [dxf](dxf/matrix36_s.dxf) &middot; [svg](svg/matrix36_s.svg) | [dxf](dxf/matrix36_s_24mm_buttons.dxf) &middot; [svg](svg/matrix36_s_24mm_buttons.svg) |
+| Stock, inner support | [dxf](dxf/inner_support_matrix36_s.dxf) &middot; [svg](svg/inner_support_matrix36_s.svg) | [dxf](dxf/inner_support_matrix36_s_24mm_buttons.dxf) &middot; [svg](svg/inner_support_matrix36_s_24mm_buttons.svg) |
 | 82 mm | [dxf](dxf/matrix36_s_82mm_spacing.dxf) &middot; [svg](svg/matrix36_s_82mm_spacing.svg) | [dxf](dxf/matrix36_s_82mm_spacing_24mm_buttons.dxf) &middot; [svg](svg/matrix36_s_82mm_spacing_24mm_buttons.svg) |
+| 82 mm, inner support | [dxf](dxf/inner_support_matrix36_s_82mm_spacing.dxf) &middot; [svg](svg/inner_support_matrix36_s_82mm_spacing.svg) | [dxf](dxf/inner_support_matrix36_s_82mm_spacing_24mm_buttons.dxf) &middot; [svg](svg/inner_support_matrix36_s_82mm_spacing_24mm_buttons.svg) |
 | 95 mm | [dxf](dxf/matrix36_s_95mm_spacing.dxf) &middot; [svg](svg/matrix36_s_95mm_spacing.svg) | [dxf](dxf/matrix36_s_95mm_spacing_24mm_buttons.dxf) &middot; [svg](svg/matrix36_s_95mm_spacing_24mm_buttons.svg) |
+| 95 mm, inner support | [dxf](dxf/inner_support_matrix36_s_95mm_spacing.dxf) &middot; [svg](svg/inner_support_matrix36_s_95mm_spacing.svg) | [dxf](dxf/inner_support_matrix36_s_95mm_spacing_24mm_buttons.dxf) &middot; [svg](svg/inner_support_matrix36_s_95mm_spacing_24mm_buttons.svg) |
 
 
 ### Square grid, spaced rows
 
-<img src="preview/matrixs36_s.png" alt="matrixs36_s" width="760">
+<img src="preview/matrixs36_s.png" alt="matrixs36_s" width="380"> <img src="preview/inner_support_matrixs36_s.png" alt="inner_support_matrixs36_s" width="380">
+
+*Left: standard. Right: inner support, with the hole and its Sanwa OBSF ear relief merged into one profile.*
 
 > Same as the previous layout, but space is added between the rows.
 >
@@ -612,16 +767,23 @@ Identical to `matrix36_s` with the rows opened from 36 mm to 39 mm.
 
 **8 buttons**  |  stock lever at **95 mm**  |  closest button pitch 36.0 mm at 30 mm, 28.8 mm at 24 mm  |  cut envelope 257 x 91 mm
 
-| Lever spacing | 30 mm buttons | 24 mm buttons |
+More previews: [24 mm buttons](preview/matrixs36_s_24mm_buttons.png) &middot; [24 mm inner support](preview/inner_support_matrixs36_s_24mm_buttons.png)
+
+| Version | 30 mm buttons | 24 mm buttons |
 |---|---|---|
 | Stock | [dxf](dxf/matrixs36_s.dxf) &middot; [svg](svg/matrixs36_s.svg) | [dxf](dxf/matrixs36_s_24mm_buttons.dxf) &middot; [svg](svg/matrixs36_s_24mm_buttons.svg) |
+| Stock, inner support | [dxf](dxf/inner_support_matrixs36_s.dxf) &middot; [svg](svg/inner_support_matrixs36_s.svg) | [dxf](dxf/inner_support_matrixs36_s_24mm_buttons.dxf) &middot; [svg](svg/inner_support_matrixs36_s_24mm_buttons.svg) |
 | 82 mm | [dxf](dxf/matrixs36_s_82mm_spacing.dxf) &middot; [svg](svg/matrixs36_s_82mm_spacing.svg) | [dxf](dxf/matrixs36_s_82mm_spacing_24mm_buttons.dxf) &middot; [svg](svg/matrixs36_s_82mm_spacing_24mm_buttons.svg) |
+| 82 mm, inner support | [dxf](dxf/inner_support_matrixs36_s_82mm_spacing.dxf) &middot; [svg](svg/inner_support_matrixs36_s_82mm_spacing.svg) | [dxf](dxf/inner_support_matrixs36_s_82mm_spacing_24mm_buttons.dxf) &middot; [svg](svg/inner_support_matrixs36_s_82mm_spacing_24mm_buttons.svg) |
 | 95 mm | [dxf](dxf/matrixs36_s_95mm_spacing.dxf) &middot; [svg](svg/matrixs36_s_95mm_spacing.svg) | [dxf](dxf/matrixs36_s_95mm_spacing_24mm_buttons.dxf) &middot; [svg](svg/matrixs36_s_95mm_spacing_24mm_buttons.svg) |
+| 95 mm, inner support | [dxf](dxf/inner_support_matrixs36_s_95mm_spacing.dxf) &middot; [svg](svg/inner_support_matrixs36_s_95mm_spacing.svg) | [dxf](dxf/inner_support_matrixs36_s_95mm_spacing_24mm_buttons.dxf) &middot; [svg](svg/inner_support_matrixs36_s_95mm_spacing_24mm_buttons.svg) |
 
 
 ### Capcom USA Street Fighter
 
-<img src="preview/american_s.png" alt="american_s" width="760">
+<img src="preview/american_s.png" alt="american_s" width="380"> <img src="preview/inner_support_american_s.png" alt="inner_support_american_s" width="380">
+
+*Left: standard. Right: inner support, with the hole and its Sanwa OBSF ear relief merged into one profile.*
 
 > This is the American Street Fighter layout given by Capcom USA. It has some strange wide-spacing and does not suit the structure of the human hand. I do not advocate squared layouts like this one and others.
 >
@@ -633,11 +795,16 @@ Slagcoin does not recommend it. It is here because it is history, and because if
 
 **6 buttons**  |  stock lever at **95 mm**  |  closest button pitch 34.9 mm at 30 mm, 27.9 mm at 24 mm  |  cut envelope 225 x 91 mm
 
-| Lever spacing | 30 mm buttons | 24 mm buttons |
+More previews: [24 mm buttons](preview/american_s_24mm_buttons.png) &middot; [24 mm inner support](preview/inner_support_american_s_24mm_buttons.png)
+
+| Version | 30 mm buttons | 24 mm buttons |
 |---|---|---|
 | Stock | [dxf](dxf/american_s.dxf) &middot; [svg](svg/american_s.svg) | [dxf](dxf/american_s_24mm_buttons.dxf) &middot; [svg](svg/american_s_24mm_buttons.svg) |
+| Stock, inner support | [dxf](dxf/inner_support_american_s.dxf) &middot; [svg](svg/inner_support_american_s.svg) | [dxf](dxf/inner_support_american_s_24mm_buttons.dxf) &middot; [svg](svg/inner_support_american_s_24mm_buttons.svg) |
 | 82 mm | [dxf](dxf/american_s_82mm_spacing.dxf) &middot; [svg](svg/american_s_82mm_spacing.svg) | [dxf](dxf/american_s_82mm_spacing_24mm_buttons.dxf) &middot; [svg](svg/american_s_82mm_spacing_24mm_buttons.svg) |
+| 82 mm, inner support | [dxf](dxf/inner_support_american_s_82mm_spacing.dxf) &middot; [svg](svg/inner_support_american_s_82mm_spacing.svg) | [dxf](dxf/inner_support_american_s_82mm_spacing_24mm_buttons.dxf) &middot; [svg](svg/inner_support_american_s_82mm_spacing_24mm_buttons.svg) |
 | 95 mm | [dxf](dxf/american_s_95mm_spacing.dxf) &middot; [svg](svg/american_s_95mm_spacing.svg) | [dxf](dxf/american_s_95mm_spacing_24mm_buttons.dxf) &middot; [svg](svg/american_s_95mm_spacing_24mm_buttons.svg) |
+| 95 mm, inner support | [dxf](dxf/inner_support_american_s_95mm_spacing.dxf) &middot; [svg](svg/inner_support_american_s_95mm_spacing.svg) | [dxf](dxf/inner_support_american_s_95mm_spacing_24mm_buttons.dxf) &middot; [svg](svg/inner_support_american_s_95mm_spacing_24mm_buttons.svg) |
 
 
 ---
@@ -649,7 +816,9 @@ These are not layouts to cut as they are. They are grids of candidate positions 
 
 ### Mesh template
 
-<img src="preview/mesh36_s.png" alt="mesh36_s" width="760">
+<img src="preview/mesh36_s.png" alt="mesh36_s" width="380"> <img src="preview/inner_support_mesh36_s.png" alt="inner_support_mesh36_s" width="380">
+
+*Left: standard. Right: inner support, with the hole and its Sanwa OBSF ear relief merged into one profile.*
 
 > Mesh template from which various layouts can be made.
 >
@@ -659,16 +828,23 @@ A honeycomb style offset grid. Columns alternate between three high and two high
 
 **13 buttons**  |  stock lever at **95 mm**  |  closest button pitch 36.0 mm at 30 mm, 28.8 mm at 24 mm  |  cut envelope 274 x 102 mm
 
-| Lever spacing | 30 mm buttons | 24 mm buttons |
+More previews: [24 mm buttons](preview/mesh36_s_24mm_buttons.png) &middot; [24 mm inner support](preview/inner_support_mesh36_s_24mm_buttons.png)
+
+| Version | 30 mm buttons | 24 mm buttons |
 |---|---|---|
 | Stock | [dxf](dxf/mesh36_s.dxf) &middot; [svg](svg/mesh36_s.svg) | [dxf](dxf/mesh36_s_24mm_buttons.dxf) &middot; [svg](svg/mesh36_s_24mm_buttons.svg) |
+| Stock, inner support | [dxf](dxf/inner_support_mesh36_s.dxf) &middot; [svg](svg/inner_support_mesh36_s.svg) | [dxf](dxf/inner_support_mesh36_s_24mm_buttons.dxf) &middot; [svg](svg/inner_support_mesh36_s_24mm_buttons.svg) |
 | 82 mm | [dxf](dxf/mesh36_s_82mm_spacing.dxf) &middot; [svg](svg/mesh36_s_82mm_spacing.svg) | [dxf](dxf/mesh36_s_82mm_spacing_24mm_buttons.dxf) &middot; [svg](svg/mesh36_s_82mm_spacing_24mm_buttons.svg) |
+| 82 mm, inner support | [dxf](dxf/inner_support_mesh36_s_82mm_spacing.dxf) &middot; [svg](svg/inner_support_mesh36_s_82mm_spacing.svg) | [dxf](dxf/inner_support_mesh36_s_82mm_spacing_24mm_buttons.dxf) &middot; [svg](svg/inner_support_mesh36_s_82mm_spacing_24mm_buttons.svg) |
 | 95 mm | [dxf](dxf/mesh36_s_95mm_spacing.dxf) &middot; [svg](svg/mesh36_s_95mm_spacing.svg) | [dxf](dxf/mesh36_s_95mm_spacing_24mm_buttons.dxf) &middot; [svg](svg/mesh36_s_95mm_spacing_24mm_buttons.svg) |
+| 95 mm, inner support | [dxf](dxf/inner_support_mesh36_s_95mm_spacing.dxf) &middot; [svg](svg/inner_support_mesh36_s_95mm_spacing.svg) | [dxf](dxf/inner_support_mesh36_s_95mm_spacing_24mm_buttons.dxf) &middot; [svg](svg/inner_support_mesh36_s_95mm_spacing_24mm_buttons.svg) |
 
 
 ### Rhombus template
 
-<img src="preview/rhombus36_s.png" alt="rhombus36_s" width="760">
+<img src="preview/rhombus36_s.png" alt="rhombus36_s" width="380"> <img src="preview/inner_support_rhombus36_s.png" alt="inner_support_rhombus36_s" width="380">
+
+*Left: standard. Right: inner support, with the hole and its Sanwa OBSF ear relief merged into one profile.*
 
 > Diagonal square template from which various layouts can be made.
 >
@@ -678,16 +854,23 @@ A square lattice turned 45 degrees, with pairs above and below the centreline al
 
 **9 buttons**  |  stock lever at **95 mm**  |  closest button pitch 36.1 mm at 30 mm, 28.8 mm at 24 mm  |  cut envelope 276 x 91 mm
 
-| Lever spacing | 30 mm buttons | 24 mm buttons |
+More previews: [24 mm buttons](preview/rhombus36_s_24mm_buttons.png) &middot; [24 mm inner support](preview/inner_support_rhombus36_s_24mm_buttons.png)
+
+| Version | 30 mm buttons | 24 mm buttons |
 |---|---|---|
 | Stock | [dxf](dxf/rhombus36_s.dxf) &middot; [svg](svg/rhombus36_s.svg) | [dxf](dxf/rhombus36_s_24mm_buttons.dxf) &middot; [svg](svg/rhombus36_s_24mm_buttons.svg) |
+| Stock, inner support | [dxf](dxf/inner_support_rhombus36_s.dxf) &middot; [svg](svg/inner_support_rhombus36_s.svg) | [dxf](dxf/inner_support_rhombus36_s_24mm_buttons.dxf) &middot; [svg](svg/inner_support_rhombus36_s_24mm_buttons.svg) |
 | 82 mm | [dxf](dxf/rhombus36_s_82mm_spacing.dxf) &middot; [svg](svg/rhombus36_s_82mm_spacing.svg) | [dxf](dxf/rhombus36_s_82mm_spacing_24mm_buttons.dxf) &middot; [svg](svg/rhombus36_s_82mm_spacing_24mm_buttons.svg) |
+| 82 mm, inner support | [dxf](dxf/inner_support_rhombus36_s_82mm_spacing.dxf) &middot; [svg](svg/inner_support_rhombus36_s_82mm_spacing.svg) | [dxf](dxf/inner_support_rhombus36_s_82mm_spacing_24mm_buttons.dxf) &middot; [svg](svg/inner_support_rhombus36_s_82mm_spacing_24mm_buttons.svg) |
 | 95 mm | [dxf](dxf/rhombus36_s_95mm_spacing.dxf) &middot; [svg](svg/rhombus36_s_95mm_spacing.svg) | [dxf](dxf/rhombus36_s_95mm_spacing_24mm_buttons.dxf) &middot; [svg](svg/rhombus36_s_95mm_spacing_24mm_buttons.svg) |
+| 95 mm, inner support | [dxf](dxf/inner_support_rhombus36_s_95mm_spacing.dxf) &middot; [svg](svg/inner_support_rhombus36_s_95mm_spacing.svg) | [dxf](dxf/inner_support_rhombus36_s_95mm_spacing_24mm_buttons.dxf) &middot; [svg](svg/inner_support_rhombus36_s_95mm_spacing_24mm_buttons.svg) |
 
 
 ### Zigzag template
 
-<img src="preview/zigzag36_s.png" alt="zigzag36_s" width="760">
+<img src="preview/zigzag36_s.png" alt="zigzag36_s" width="380"> <img src="preview/inner_support_zigzag36_s.png" alt="inner_support_zigzag36_s" width="380">
+
+*Left: standard. Right: inner support, with the hole and its Sanwa OBSF ear relief merged into one profile.*
 
 > Zigzag template from which various layouts can be made.
 >
@@ -697,11 +880,16 @@ Alternating high and low on a tight horizontal step. The widest template of the 
 
 **12 buttons**  |  stock lever at **95 mm**  |  closest button pitch 36.0 mm at 30 mm, 28.8 mm at 24 mm  |  cut envelope 275 x 92 mm
 
-| Lever spacing | 30 mm buttons | 24 mm buttons |
+More previews: [24 mm buttons](preview/zigzag36_s_24mm_buttons.png) &middot; [24 mm inner support](preview/inner_support_zigzag36_s_24mm_buttons.png)
+
+| Version | 30 mm buttons | 24 mm buttons |
 |---|---|---|
 | Stock | [dxf](dxf/zigzag36_s.dxf) &middot; [svg](svg/zigzag36_s.svg) | [dxf](dxf/zigzag36_s_24mm_buttons.dxf) &middot; [svg](svg/zigzag36_s_24mm_buttons.svg) |
+| Stock, inner support | [dxf](dxf/inner_support_zigzag36_s.dxf) &middot; [svg](svg/inner_support_zigzag36_s.svg) | [dxf](dxf/inner_support_zigzag36_s_24mm_buttons.dxf) &middot; [svg](svg/inner_support_zigzag36_s_24mm_buttons.svg) |
 | 82 mm | [dxf](dxf/zigzag36_s_82mm_spacing.dxf) &middot; [svg](svg/zigzag36_s_82mm_spacing.svg) | [dxf](dxf/zigzag36_s_82mm_spacing_24mm_buttons.dxf) &middot; [svg](svg/zigzag36_s_82mm_spacing_24mm_buttons.svg) |
+| 82 mm, inner support | [dxf](dxf/inner_support_zigzag36_s_82mm_spacing.dxf) &middot; [svg](svg/inner_support_zigzag36_s_82mm_spacing.svg) | [dxf](dxf/inner_support_zigzag36_s_82mm_spacing_24mm_buttons.dxf) &middot; [svg](svg/inner_support_zigzag36_s_82mm_spacing_24mm_buttons.svg) |
 | 95 mm | [dxf](dxf/zigzag36_s_95mm_spacing.dxf) &middot; [svg](svg/zigzag36_s_95mm_spacing.svg) | [dxf](dxf/zigzag36_s_95mm_spacing_24mm_buttons.dxf) &middot; [svg](svg/zigzag36_s_95mm_spacing_24mm_buttons.svg) |
+| 95 mm, inner support | [dxf](dxf/inner_support_zigzag36_s_95mm_spacing.dxf) &middot; [svg](svg/inner_support_zigzag36_s_95mm_spacing.svg) | [dxf](dxf/inner_support_zigzag36_s_95mm_spacing_24mm_buttons.dxf) &middot; [svg](svg/inner_support_zigzag36_s_95mm_spacing_24mm_buttons.svg) |
 
 
 ---
@@ -759,87 +947,108 @@ Hole diameters are normalised to exactly 24.00 mm and 30.00 mm. The source drawi
 
 ### Traditional
 
-<img src="preview/traditional_all_button.png" alt="traditional_all_button" width="760">
+<img src="preview/traditional_all_button.png" alt="traditional_all_button" width="380"> <img src="preview/inner_support_traditional_all_button.png" alt="inner_support_traditional_all_button" width="380">
+
+*Left: standard. Right: inner support, with the hole and its Sanwa OBSF ear relief merged into one profile.*
 
 The baseline all button layout. A four button directional cluster on the left, eight action buttons in two staggered rows on the right, and a single 30 mm thumb button below. If someone is building their first leverless and does not know what they want, this is the one to print and feel first.
 
 **12 buttons**  |  11 x 24 mm and 1 x 30 mm  |  closest pitch 28.7 mm  |  cut envelope 199 x 103 mm
 
-| DXF | SVG |
+| Version | Files |
 |---|---|
-| [`traditional_all_button.dxf`](dxf/traditional_all_button.dxf) | [`traditional_all_button.svg`](svg/traditional_all_button.svg) |
+| Standard | [dxf](dxf/traditional_all_button.dxf) &middot; [svg](svg/traditional_all_button.svg) |
+| Inner support | [dxf](dxf/inner_support_traditional_all_button.dxf) &middot; [svg](svg/inner_support_traditional_all_button.svg) |
 
 ### Modern
 
-<img src="preview/modern_all_button.png" alt="modern_all_button" width="760">
+<img src="preview/modern_all_button.png" alt="modern_all_button" width="380"> <img src="preview/inner_support_modern_all_button.png" alt="inner_support_modern_all_button" width="380">
+
+*Left: standard. Right: inner support, with the hole and its Sanwa OBSF ear relief merged into one profile.*
 
 The Traditional shape opened out, with an extra pair of buttons on the right hand cluster and a taller stagger between the rows. More reach for the ring and pinky, and more room to sit your hand deeper into the panel.
 
 **15 buttons**  |  14 x 24 mm and 1 x 30 mm  |  closest pitch 28.3 mm  |  cut envelope 199 x 134 mm
 
-| DXF | SVG |
+| Version | Files |
 |---|---|
-| [`modern_all_button.dxf`](dxf/modern_all_button.dxf) | [`modern_all_button.svg`](svg/modern_all_button.svg) |
+| Standard | [dxf](dxf/modern_all_button.dxf) &middot; [svg](svg/modern_all_button.svg) |
+| Inner support | [dxf](dxf/inner_support_modern_all_button.dxf) &middot; [svg](svg/inner_support_modern_all_button.svg) |
 
 ### Tomahawk
 
-<img src="preview/tomahawk_all_button.png" alt="tomahawk_all_button" width="760">
+<img src="preview/tomahawk_all_button.png" alt="tomahawk_all_button" width="380"> <img src="preview/inner_support_tomahawk_all_button.png" alt="inner_support_tomahawk_all_button" width="380">
+
+*Left: standard. Right: inner support, with the hole and its Sanwa OBSF ear relief merged into one profile.*
 
 A compact take on the Traditional idea. Same footprint width, one fewer button, and the right hand cluster pulled in slightly so the whole thing sits comfortably on a smaller panel.
 
 **13 buttons**  |  12 x 24 mm and 1 x 30 mm  |  closest pitch 28.7 mm  |  cut envelope 199 x 103 mm
 
-| DXF | SVG |
+| Version | Files |
 |---|---|
-| [`tomahawk_all_button.dxf`](dxf/tomahawk_all_button.dxf) | [`tomahawk_all_button.svg`](svg/tomahawk_all_button.svg) |
+| Standard | [dxf](dxf/tomahawk_all_button.dxf) &middot; [svg](svg/tomahawk_all_button.svg) |
+| Inner support | [dxf](dxf/inner_support_tomahawk_all_button.dxf) &middot; [svg](svg/inner_support_tomahawk_all_button.svg) |
 
 ### Aegis
 
-<img src="preview/aegis_all_button.png" alt="aegis_all_button" width="760">
+<img src="preview/aegis_all_button.png" alt="aegis_all_button" width="380"> <img src="preview/inner_support_aegis_all_button.png" alt="inner_support_aegis_all_button" width="380">
+
+*Left: standard. Right: inner support, with the hole and its Sanwa OBSF ear relief merged into one profile.*
 
 A wide, shallow arc. The buttons spread further across the panel and the arc through the action cluster is flatter than the Traditional, which suits players who keep their hand low and flat rather than curled.
 
 **15 buttons**  |  13 x 24 mm and 2 x 30 mm  |  closest pitch 28.7 mm  |  cut envelope 226 x 108 mm
 
-| DXF | SVG |
+| Version | Files |
 |---|---|
-| [`aegis_all_button.dxf`](dxf/aegis_all_button.dxf) | [`aegis_all_button.svg`](svg/aegis_all_button.svg) |
+| Standard | [dxf](dxf/aegis_all_button.dxf) &middot; [svg](svg/aegis_all_button.svg) |
+| Inner support | [dxf](dxf/inner_support_aegis_all_button.dxf) &middot; [svg](svg/inner_support_aegis_all_button.svg) |
 
 ### Shiokenstar
 
-<img src="preview/shiokenstar_all_button.png" alt="shiokenstar_all_button" width="760">
+<img src="preview/shiokenstar_all_button.png" alt="shiokenstar_all_button" width="380"> <img src="preview/inner_support_shiokenstar_all_button.png" alt="inner_support_shiokenstar_all_button" width="380">
+
+*Left: standard. Right: inner support, with the hole and its Sanwa OBSF ear relief merged into one profile.*
 
 The 30 mm layout of the set. Nine of the twelve holes are 30 mm rather than 24 mm, with only the directional cluster left at 24 mm. If you want the feel of full size buttons on a leverless panel, this is the one built for it.
 
 **12 buttons**  |  3 x 24 mm and 9 x 30 mm  |  closest pitch 28.9 mm  |  cut envelope 231 x 118 mm
 
-| DXF | SVG |
+| Version | Files |
 |---|---|
-| [`shiokenstar_all_button.dxf`](dxf/shiokenstar_all_button.dxf) | [`shiokenstar_all_button.svg`](svg/shiokenstar_all_button.svg) |
+| Standard | [dxf](dxf/shiokenstar_all_button.dxf) &middot; [svg](svg/shiokenstar_all_button.svg) |
+| Inner support | [dxf](dxf/inner_support_shiokenstar_all_button.dxf) &middot; [svg](svg/inner_support_shiokenstar_all_button.svg) |
 
 ### Slab Split
 
-<img src="preview/slab_split_all_button.png" alt="slab_split_all_button" width="760">
+<img src="preview/slab_split_all_button.png" alt="slab_split_all_button" width="380"> <img src="preview/inner_support_slab_split_all_button.png" alt="inner_support_slab_split_all_button" width="380">
+
+*Left: standard. Right: inner support, with the hole and its Sanwa OBSF ear relief merged into one profile.*
 
 A split layout. The directional and action clusters sit close together up top while the two 30 mm thumb buttons drop well below the main cluster, giving the thumbs their own dedicated space instead of tucking them under the hand.
 
 **15 buttons**  |  13 x 24 mm and 2 x 30 mm  |  closest pitch 27.3 mm  |  cut envelope 212 x 148 mm
 
-| DXF | SVG |
+| Version | Files |
 |---|---|
-| [`slab_split_all_button.dxf`](dxf/slab_split_all_button.dxf) | [`slab_split_all_button.svg`](svg/slab_split_all_button.svg) |
+| Standard | [dxf](dxf/slab_split_all_button.dxf) &middot; [svg](svg/slab_split_all_button.svg) |
+| Inner support | [dxf](dxf/inner_support_slab_split_all_button.dxf) &middot; [svg](svg/inner_support_slab_split_all_button.svg) |
 
 ### Split Modern
 
-<img src="preview/split_modern_all_button.png" alt="split_modern_all_button" width="760">
+<img src="preview/split_modern_all_button.png" alt="split_modern_all_button" width="380"> <img src="preview/inner_support_split_modern_all_button.png" alt="inner_support_split_modern_all_button" width="380">
+
+*Left: standard. Right: inner support, with the hole and its Sanwa OBSF ear relief merged into one profile.*
 
 The largest layout here at 17 buttons, and a true split. Left and right clusters are separated across the panel with a pair of 30 mm thumb buttons in the middle, so each hand gets its own island. Widest cut envelope of the set.
 
 **17 buttons**  |  15 x 24 mm and 2 x 30 mm  |  closest pitch 29.0 mm  |  cut envelope 258 x 121 mm
 
-| DXF | SVG |
+| Version | Files |
 |---|---|
-| [`split_modern_all_button.dxf`](dxf/split_modern_all_button.dxf) | [`split_modern_all_button.svg`](svg/split_modern_all_button.svg) |
+| Standard | [dxf](dxf/split_modern_all_button.dxf) &middot; [svg](svg/split_modern_all_button.svg) |
+| Inner support | [dxf](dxf/inner_support_split_modern_all_button.dxf) &middot; [svg](svg/inner_support_split_modern_all_button.svg) |
 
 ---
 
@@ -864,6 +1073,7 @@ The largest layout here at 17 buttons, and a true split. Left and right clusters
 - **Pick one joystick bore**, 24 mm or 35.25 mm, and delete the other layer.
 - **Delete the `REFERENCE` layer** before sending anything to CAM. Those crosshairs are alignment aids, not cuts.
 - **Check your nuts.** On the 30 mm files, `vewlix_s`, `vewlix_s_8button`, `shift36_s` and `sega1_s` have closest button pairs just under 36 mm, and standard Sanwa screw in nuts are about that wide. On the 24 mm files the equivalent pairs land around 28.4 to 28.8 mm, which suits snap ins better than screw ins.
+- **On inner support files**, each button is already a single closed profile. Cut it as one contour, inside offset, same as any other hole.
 - **Cut a test piece in scrap** before you commit to your real panel material.
 - **Check the file yourself.** These were traced carefully and verified against the originals, but it is far better to find a problem in CAD than in aluminium.
 
