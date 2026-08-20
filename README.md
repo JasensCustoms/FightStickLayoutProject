@@ -29,7 +29,7 @@ Every one of those also ships in an **inner support** version, where each button
 >
 > Every layout in the founding set is traced from Slagcoin's own to scale diagrams, and each of those catalogue entries quotes his description. If you build anything from these files, go read [the original pages](https://www.slagcoin.com/joystick/layout.html) first. There is a lot of reasoning there about *why* the layouts are shaped the way they are, and it will make you better at picking one.
 
-The all button layouts come from a different place. They were created by [JasensCustoms.com](https://www.jasenscustoms.com) and members of the Panzer user community, and are credited in [their own section](#all-button-layouts). The S24, S30 and B30 layouts belong to [ASI](#asi-s24).
+The all button layouts come from a different place. They were created by [JasensCustoms.com](https://www.jasenscustoms.com) and members of the Panzer user community, and are credited in [their own section](#all-button-layouts). The S24, S30 and B30 layouts belong to [ASI](#asi-s24). The Mortal Kombat 3 panel, and its Japanese hardware variant, are traced from a dimensioned drawing by **Twistedsymphony**, hosted at [classicarcadecabinets.com](https://www.classicarcadecabinets.com/mortal-kombat-3.html).
 
 **Where a layout came from is recorded with the layout.** Every catalogue entry names its origin, and [NOTICE.md](NOTICE.md) is the full register of sources. Nothing in here silently claims someone else's design work.
 
@@ -68,6 +68,9 @@ The all button layouts come from a different place. They were created by [Jasens
   - [ASI S24](#asi-s24)
   - [ASI S30](#asi-s30)
   - [ASI B30](#asi-b30)
+- [Cabinet layouts](#cabinet-layouts)
+  - [Mortal Kombat 3 / Ultimate MK3](#mortal-kombat-3--ultimate-mk3)
+  - [Mortal Kombat 3, Japanese hardware](#mortal-kombat-3-japanese-hardware)
 - [Before you cut](#before-you-cut)
 - [How these were made](#how-these-were-made)
 - [Licence and attribution](#licence-and-attribution)
@@ -91,13 +94,13 @@ The all button layouts come from a different place. They were created by [Jasens
 ## What is in the box
 
 ```
-dxf/        272 layouts as .dxf   (R2010, millimetres, $INSUNITS = 4)
-svg/        the same 272 layouts as .svg  (1 user unit = 1 mm)
+dxf/        276 layouts as .dxf   (R2010, millimetres, $INSUNITS = 4)
+svg/        the same 276 layouts as .svg  (1 user unit = 1 mm)
 preview/    per layout PNG previews plus contact sheets and diagrams
 README.md   this file
 ```
 
-Joystick arrangements are built out to 6 files per format: 3 lever positions, each at 30 mm and 24 mm button sizes. The 21 of them come to 126 per format. All button layouts ship as a single file each, adding 7 more, and manufacturer layouts likewise, adding 3, for 136. Each of those then has an inner support twin, doubling the count to 272 per format and 544 in total.
+Joystick arrangements are built out to 6 files per format: 3 lever positions, each at 30 mm and 24 mm button sizes. The 21 of them come to 126 per format. All button layouts ship as a single file each, adding 7 more, manufacturer layouts likewise, adding 3, and the Mortal Kombat cabinet panel adds 2, one per hardware set, for 138. Each of those then has an inner support twin, doubling the count to 276 per format and 552 in total.
 
 New layouts follow the same naming and layer conventions, so anything you script against the current set keeps working.
 
@@ -123,6 +126,11 @@ vewlix_s_82mm_spacing_24mm_buttons   both at once
 
 traditional_all_button     a leverless layout. No lever, so no spacing or
                            button size variants, just the one file.
+
+mk3_umk3_dedicated_jp      "_jp" is the Japanese hardware cut of a layout that
+                           was drawn for American parts. Same hole positions,
+                           but 30 mm Sanwa holes and the GL lever plate instead
+                           of 1.125 in holes and a manufacturer specific lever.
 
 inner_support_traditional_all_button       any file, with Sanwa OBSF ear
 inner_support_vewlix_s_82mm_spacing        relief slots added on every button
@@ -151,6 +159,8 @@ There is no text, no title block and no border. Cut geometry only.
 On inner support files the button layers carry closed profiles rather than plain circles. No extra layer is added.
 
 All button layouts use a different set, since they have no lever and mix hole sizes: `BUTTONS_24`, `BUTTONS_30` and `REFERENCE`. See [All button layouts](#all-button-layouts).
+
+The Mortal Kombat cabinet panel runs different lever hardware again, so it carries `JOYSTICK_BORE_35` and `IL_PLATE_HOLES` in place of the two bores and `GL_PLATE_HOLES`. Its `_jp` twin uses the standard five layers like everything else. See [Cabinet layouts](#cabinet-layouts).
 
 ### The two joystick bores
 
@@ -1172,6 +1182,108 @@ Measured from ASI's published render the same way as the other two, with the sam
 
 ---
 
+## Cabinet layouts
+
+Panels from real cabinets, traced from published drawings rather than from a stick. Cabinet only features, meaning second player halves and Start buttons, are left out so the layouts drop straight into a single player stick.
+
+### Mortal Kombat 3 / Ultimate MK3
+
+<img src="preview/mk3_umk3_dedicated.png" alt="mk3_umk3_dedicated" width="380"> <img src="preview/inner_support_mk3_umk3_dedicated.png" alt="inner_support_mk3_umk3_dedicated" width="380">
+
+*Left: standard. Right: inner support, which on this layout is an identical copy. See below.*
+
+One player's worth of the control panel from the dedicated **Mortal Kombat 3 / Ultimate Mortal Kombat 3** cabinet, from the dimensioned drawing by **Twistedsymphony** on [classicarcadecabinets.com](https://www.classicarcadecabinets.com/mortal-kombat-3.html).
+
+A lever and six buttons: the classic five button Mortal Kombat block, meaning two columns of two with Block sitting between them on the lever centreline, plus Run down at the front left.
+
+**6 buttons**  |  1.125 in (28.575 mm)  |  closest pitch 48.5 mm  |  lever to nearest button 77.5 mm  |  cut envelope 215 x 119 mm
+
+**Two things on the cabinet drawing are not built here**, because neither belongs on a stick. The original is a two player panel, so the mirrored second half, 11.625 in to the right, is dropped. So is the seventh button per player, which sits well away from the cluster at 1.500 across and 3.750 back and is the cabinet Start button.
+
+> ### This layout is imperial
+>
+> **Everything about it is designed in inches.** The panel, the button spacing and the hole size are all whole sixteenths: 1.125 in holes on a grid of 1.000, 1.500, 1.625, 2.500 and 3.250 in. Nothing here was conceived in millimetres, and it is the only layout in the repository like that.
+>
+> The files themselves are still millimetres, because every file here is, and DXF has no way to say "this drawing thinks in inches" that CAM software reliably honours. So the coordinates convert exactly: **1 in = 25.4 mm**, no rounding anywhere. What that means in practice is that the metric numbers look wrong when they are right. Buttons sit at 44.45, 82.55, 123.825 and 165.10 mm across and at 25.40, 0 and -63.50 mm up and down. Holes are 28.575 mm, not 28.6 and not 28.5.
+>
+> **If you are editing this file, switch your CAD to inches.** Every dimension becomes a clean number and stays that way. Work in millimetres and you will be tempted to round 123.825 to 123.8, which is a real 0.025 mm error introduced for no reason. Nothing in this file should ever be rounded to a tidier millimetre value.
+>
+> The one exception is the lever, which is genuinely metric because the hardware is. See [Lever hardware](#mortal-kombat-3--ultimate-mk3) below: 35 mm bore, 5.9 mm holes, 65.6 by 75.9 mm. Those are IL's numbers and they are not derived from anything on the MK3 drawing. So this file honestly mixes both systems, imperial for the panel and metric for the lever, which is exactly what building this panel with an IL stick involves.
+
+> **This one is exact, not measured.** Every coordinate below is a printed dimension from the drawing, converted by a factor of exactly 25.4. Nothing is snapped, rounded or inferred. Sub pixel circle fitting on the source drawing was used only to *confirm* the reading: every built hole lands within **0.07 mm** of its fitted centre, and all 16 holes on the drawing are accounted for, 7 built and 9 deliberately left out.
+
+Hole positions in inches from the player one lever centre, which is the origin:
+
+| X | Y | Position | Likely function |
+|---|---|---|---|
+| 3.250 | 1.000 | first column, upper | High punch |
+| 3.250 | -1.000 | first column, lower | Low punch |
+| 4.875 | 0.000 | midway between the columns, on the centreline | Block |
+| 6.500 | 1.000 | second column, upper | High kick |
+| 6.500 | -1.000 | second column, lower | Low kick |
+| 1.750 | -2.500 | front, inboard of the lever | Run |
+
++Y is toward the back, away from the player. The millimetre equivalents are in the imperial note above.
+
+The five in the block are certain, since two columns with Block in the middle is the Mortal Kombat signature. The sixth is an inference, since the drawing labels nothing: it sits 1.5 by 1.5 in off the low punch corner, close enough to read as part of the cluster, which is where Run goes. Wire them however you like.
+
+**Lever hardware is IL, not GL.** This panel is built for an **Industrias Lorenzo Eurojoystick 2**, so it does not carry the universal plate pattern the rest of the repository uses. From IL's own panel mounting drawing:
+
+| Feature | Size | Position |
+|---|---|---|
+| Bore | 35 mm | on the lever centre |
+| Screw holes | 4 x 5.9 mm | 65.6 mm across by 75.9 mm front to back |
+
+> **The bore deliberately disagrees with the source drawing.** Twistedsymphony calls the lever hole 1.1875 in, which is the Happ and American shaft size the cabinet originally shipped with. An IL boss will not pass through 30.16 mm, so these files carry IL's 35 mm instead. If you are fitting an American lever, change that one circle back to 30.1625 mm and leave everything else alone.
+>
+> IL also shows a second set of four 9.9 mm reliefs on a 46.3 by 77.4 mm rectangle, for the bosses on the underside of the joystick. Those are not included. On a normal thickness panel the bosses clear; on a thick panel you may want them.
+
+**The inner support file is a plain copy.** These are 1.125 in American style buttons. They bolt in with a nut and have no snap-in retention ears, so there is nothing for an ear relief slot to relieve. The `inner_support_` file is provided so the naming stays consistent across the library, but its geometry is identical to the standard file.
+
+**Panel outline is not included**, in keeping with every other layout here. For reference, the cabinet panel is 26.625 by 13.125 in, with the player one lever 5.000 in from the left edge and 6.875 in up from the front edge. That is enough to rebuild the full two player panel from these coordinates if you ever want it.
+
+| Version | DXF | SVG |
+|---|---|---|
+| Standard | [`mk3_umk3_dedicated.dxf`](dxf/mk3_umk3_dedicated.dxf) | [`mk3_umk3_dedicated.svg`](svg/mk3_umk3_dedicated.svg) |
+| Inner support | [`inner_support_mk3_umk3_dedicated.dxf`](dxf/inner_support_mk3_umk3_dedicated.dxf) | [`inner_support_mk3_umk3_dedicated.svg`](svg/inner_support_mk3_umk3_dedicated.svg) |
+
+Want this spacing with Sanwa parts instead? See [Mortal Kombat 3, Japanese hardware](#mortal-kombat-3-japanese-hardware).
+
+### Mortal Kombat 3, Japanese hardware
+
+<img src="preview/mk3_umk3_dedicated_jp.png" alt="mk3_umk3_dedicated_jp" width="380"> <img src="preview/inner_support_mk3_umk3_dedicated_jp.png" alt="inner_support_mk3_umk3_dedicated_jp" width="380">
+
+*Left: standard. Right: inner support, with real ear relief slots on this one.*
+
+The same Mortal Kombat spacing, built for Japanese parts. **Every button centre is identical to the imperial file above, down to the last decimal.** What changes is the hardware that goes in the holes.
+
+| | `mk3_umk3_dedicated` | `mk3_umk3_dedicated_jp` |
+|---|---|---|
+| Button hole | 1.125 in (28.575 mm) | **30 mm** |
+| Button style | American, nut mount | **Sanwa OBSF snap in** |
+| Lever | IL Eurojoystick 2 | **Universal GL plate** |
+| Bore | 35 mm | **24 mm and 35.25 mm, pick one** |
+| Lever mounting | 4 x 5.9 mm on 65.6 x 75.9 mm | **the full GL pattern** |
+| Inner support | plain copy, no ears to relieve | **real ear relief slots** |
+| Button centres | identical | identical |
+
+**6 buttons**  |  30 mm  |  closest pitch 48.5 mm  |  lever to nearest button 77.5 mm  |  cut envelope 219 x 124 mm
+
+**Why it fits comfortably.** MK spacing is generous by modern standards, so going up from 28.575 to 30 mm costs almost nothing. The closest pair of holes still leaves **18.5 mm** of material between them, against 19.9 mm on the imperial file. There is no crowding anywhere on this panel.
+
+**The ear slots do not fight each other.** Buttons here sit 48.5 mm apart at the closest, and a 35 mm slot only reaches 17.5 mm from its own centre, so no two slots come near each other. Every slot on this layout stays at the default 30 degrees clockwise from vertical, and the thinnest web of material is **17.1 mm**. That is the widest margin of any inner support file in the repository, and by a long way. Nothing had to be rotated. See [Inner support versions](#inner-support-versions) for what that machinery does on the tighter layouts.
+
+**The lever hardware clears everything.** The GL plate is physically larger than the IL cut it replaces, so it is worth stating the numbers: the closest GL feature to any button edge is **14.5 mm**, and to the tip of an ear slot **12.0 mm**. The 35.25 mm bore sits **44.9 mm** clear of the nearest button.
+
+**This file is still imperial underneath.** The centres come straight from the Twistedsymphony drawing, so 44.45, 82.55, 123.825 and 165.10 mm still apply and still should not be rounded. Only the hole diameter is a round metric number. Everything in the imperial note above applies here too.
+
+| Version | DXF | SVG |
+|---|---|---|
+| Standard | [`mk3_umk3_dedicated_jp.dxf`](dxf/mk3_umk3_dedicated_jp.dxf) | [`mk3_umk3_dedicated_jp.svg`](svg/mk3_umk3_dedicated_jp.svg) |
+| Inner support | [`inner_support_mk3_umk3_dedicated_jp.dxf`](dxf/inner_support_mk3_umk3_dedicated_jp.dxf) | [`inner_support_mk3_umk3_dedicated_jp.svg`](svg/inner_support_mk3_umk3_dedicated_jp.svg) |
+
+---
+
 ## Before you cut
 
 - **Test print first.** Print the SVG at 100 percent scale and rest your hand on it. Slagcoin's advice, *"Feeling these can give you an idea of what layout will likely suit you"*, is the single most valuable line on the whole site. A sheet of paper costs nothing. A mis-drilled panel costs a weekend.
@@ -1207,7 +1319,7 @@ Layouts added later may come from a different source, a manufacturer drawing, a 
 
 **24 mm versions.** Generated by reading the shipped 30 mm DXF back off disk, scaling the button cluster by 0.8 about the first button column horizontally and the joystick centreline vertically, and setting the hole diameter to 24.00 mm. All 63 were then re read and checked: every hole exactly 24.00 mm, every pairwise button distance exactly 0.8 times the original, and the bores, plate holes and lever spacing identical to their 30 mm parent.
 
-**Lever mounting holes.** Taken from the GL lever mounting plate DXF by [ASI](https://asindo.pro/), symmetrised about the joystick centre. The plate outline and the four holes on the 45 mm cross immediately flanking the bore were deliberately left out.
+**Lever mounting holes.** Taken from a universal mounting plate DXF, symmetrised about the joystick centre. The plate outline and the four holes on the 45 mm cross immediately flanking the bore were deliberately left out.
 
 </details>
 
@@ -1223,13 +1335,9 @@ Layouts in this repository come from more than one place, so credit is tracked p
 
 **The S24, S30 and B30 layouts are ASI's.** They were measured from their published product renders rather than supplied as files, and these are not official ASI files. Credit for the layouts belongs to ASI.
 
-**Thank you to [ASI](https://asindo.pro/)** for the GL lever layout used for the joystick mounting holes. The `GL_PLATE_HOLES` pattern in every joystick layout is based on their GL lever mounting plate.
-
 If the live site is unreachable, the original pages are preserved on the [Wayback Machine](https://web.archive.org/web/*/slagcoin.com/joystick/layout.html).
 
 The conversion work, the mounting hardware geometry and the variant generation are shared freely. Use them, remix them, build things with them, sell the panels you cut from them. When you publish something derived from a layout in here, credit whoever that layout came from.
-
-Everything this repository adds is licensed under [Creative Commons Attribution-ShareAlike 4.0 International](LICENSE) (CC BY-SA 4.0). In short: use, share, adapt and sell the files for any purpose, provided you give credit as described above and in [NOTICE.md](NOTICE.md), and release any modified versions of the files under the same licence. Physical panels cut from the files carry no licence obligations beyond the credit.
 
 ---
 

@@ -43,10 +43,8 @@ mounting holes and other cutouts from the original working drawings were left ou
 ### ASI
 
 Covers: the S24, S30 and B30 layouts: `asi_s24`, `asi_s30`, `asi_b30` and
-their `inner_support_` twins, plus the lever mounting hole pattern on the
-`GL_PLATE_HOLES` layer in every joystick layout.
+their `inner_support_` twins.
 
-  https://asindo.pro/
   https://www.arcadeshock.com
 
 The S24, S30 and B30 layouts are ASI's designs, taken from their commercial
@@ -61,9 +59,44 @@ stick first.
 
 Credit for the layouts belongs to ASI.
 
-ASI is also the source of the lever mounting hole pattern: the `GL_PLATE_HOLES`
-layer in every joystick layout is based on the mounting plate of their GL lever,
-symmetrised about the joystick centre. Thank you to ASI for the GL lever layout.
+### Twistedsymphony / classicarcadecabinets.com
+
+Covers: the Mortal Kombat 3 / Ultimate Mortal Kombat 3 dedicated cabinet panel:
+`mk3_umk3_dedicated`, `mk3_umk3_dedicated_jp` and both `inner_support_` twins.
+
+  https://www.classicarcadecabinets.com/mortal-kombat-3.html
+
+The control panel layout drawing is by Twistedsymphony, published on
+classicarcadecabinets.com as a fully dimensioned reference for people restoring
+or reproducing the dedicated MK3 cabinet. The hole positions and sizes in these
+files are read directly off that drawing.
+
+Unlike the ASI layouts, nothing here was estimated. Every coordinate is a printed
+dimension converted by an exact factor of 25.4. Circle fitting on the drawing was
+used only to confirm the reading of the dimension chains, not to derive it.
+
+The file is one player's half of that panel. The drawing is a two player cabinet
+panel; the mirrored second half and the Start button are cabinet only features and
+are not part of this layout. The six buttons and the lever that are here match the
+drawing exactly.
+
+The layout is imperial throughout. Holes are 1.125 in and every spacing is a whole
+sixteenth of an inch. The files are millimetres because every file here is, so the
+conversion is an exact factor of 25.4 with no rounding at any point.
+
+`mk3_umk3_dedicated_jp` keeps Twistedsymphony's button centres unchanged and only
+swaps the hardware, to 30 mm Sanwa holes and the universal GL lever plate. The
+spacing credit is his; the hardware choices are not from his drawing.
+
+### Industrias Lorenzo
+
+Covers: the lever bore and mounting pattern on `mk3_umk3_dedicated` only.
+
+The 35 mm bore and the four 5.9 mm screw holes on a 65.6 by 75.9 mm rectangle are
+taken from Industrias Lorenzo's own Eurojoystick 2 panel mounting drawing. The
+dimensions are IL's. They replace the 1.1875 in Happ style lever hole shown on the
+Twistedsymphony drawing, because that panel was originally built for an American
+lever and an IL boss will not pass through it.
 
 <!--
 ### Next source
@@ -83,7 +116,7 @@ Terms:  is it published freely, or given with permission
 On top of the source layouts:
 
 - conversion into true scale vector geometry usable directly in CAD and CAM
-- joystick mounting hardware, taken from the GL lever mounting plate by ASI
+- joystick mounting hardware, taken from a universal lever mounting plate
 - the 82 mm and 95 mm lever spacing variants
 - the 24 mm button variants, scaled 0.8 in both axes
 - for the all button layouts, extraction of the button pattern from the original
