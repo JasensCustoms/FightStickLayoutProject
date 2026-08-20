@@ -42,13 +42,22 @@ mounting holes and other cutouts from the original working drawings were left ou
 
 ### ASI
 
-Covers: the lever mounting hole pattern on the `GL_PLATE_HOLES` layer in every
-joystick layout.
+Covers: the S24, S30 and B30 layouts: `asi_s24`, `asi_s30`, `asi_b30` and
+their `inner_support_` twins.
 
-  https://asindo.pro/
+  https://www.arcadeshock.com
 
-The pattern is based on the mounting plate of the GL lever by ASI, symmetrised
-about the joystick centre. Thank you to ASI for the GL lever layout.
+The S24, S30 and B30 layouts are ASI's designs, taken from their commercial
+arcade sticks. The B30 is leverless.
+
+IMPORTANT: these layouts were not supplied as files. They were measured by circle
+fitting ASI's published product renders, calibrated on the button holes and cross
+checked against the lever plate bore and, on the S30, against a second button
+size. They are accurate to roughly a third of a millimetre, not exact, and they
+are not official ASI files. Anyone cutting from them should verify against a real
+stick first.
+
+Credit for the layouts belongs to ASI.
 
 <!--
 ### Next source
@@ -68,13 +77,15 @@ Terms:  is it published freely, or given with permission
 On top of the source layouts:
 
 - conversion into true scale vector geometry usable directly in CAD and CAM
-- joystick mounting hardware, taken from the GL lever mounting plate by ASI
+- joystick mounting hardware, taken from a universal lever mounting plate
 - the 82 mm and 95 mm lever spacing variants
 - the 24 mm button variants, scaled 0.8 in both axes
 - for the all button layouts, extraction of the button pattern from the original
   working drawings and normalisation of hole sizes to 24.00 and 30.00 mm
 - the inner support variants, adding Sanwa OBSF snap in button ear relief slots
   to every button hole
+- for the ASI layouts, recovery of the hole pattern from a product render by sub
+  pixel circle fitting
 - consistent units, origin, layer structure and file naming across the whole set
 
 That work is shared freely. Use it, modify it, cut panels from it, sell those

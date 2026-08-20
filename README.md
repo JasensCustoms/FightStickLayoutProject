@@ -6,13 +6,14 @@ The founding set is converted from [slagcoin.com](https://www.slagcoin.com/joyst
 
 ![Layout formats](https://img.shields.io/badge/formats-DXF%20%2B%20SVG-blue)
 ![Units](https://img.shields.io/badge/units-millimetres-informational)
-![Layouts](https://img.shields.io/badge/layouts-266-success)
-![Files](https://img.shields.io/badge/files-532-lightgrey)
+![Layouts](https://img.shields.io/badge/layouts-272-success)
+![Files](https://img.shields.io/badge/files-544-lightgrey)
 
 Everything is drawn 1:1 in millimetres, ready to send to a laser, router or CNC. Two families:
 
 - **Joystick layouts**, 21 button arrangements, each supplied at 3 different lever positions and in both 30 mm and 24 mm button sizes, with the lever mounting hardware included.
 - **All button layouts**, 7 leverless panels, drawn as designed with their native mix of 24 mm and 30 mm holes.
+- **Manufacturer layouts**, taken from commercial sticks. Three so far, the ASI S24, S30 and B30.
 
 Every one of those also ships in an **inner support** version, where each button hole is merged with a relief slot for Sanwa OBSF snap in button ears. That comes to 266 layouts per format, 532 files.
 
@@ -28,7 +29,7 @@ Every one of those also ships in an **inner support** version, where each button
 >
 > Every layout in the founding set is traced from Slagcoin's own to scale diagrams, and each of those catalogue entries quotes his description. If you build anything from these files, go read [the original pages](https://www.slagcoin.com/joystick/layout.html) first. There is a lot of reasoning there about *why* the layouts are shaped the way they are, and it will make you better at picking one.
 
-The all button layouts come from a different place. They were created by [JasensCustoms.com](https://www.jasenscustoms.com) and members of the Panzer user community, and are credited in [their own section](#all-button-layouts).
+The all button layouts come from a different place. They were created by [JasensCustoms.com](https://www.jasenscustoms.com) and members of the Panzer user community, and are credited in [their own section](#all-button-layouts). The S24, S30 and B30 layouts belong to [ASI](#asi-s24).
 
 **Where a layout came from is recorded with the layout.** Every catalogue entry names its origin, and [NOTICE.md](NOTICE.md) is the full register of sources. Nothing in here silently claims someone else's design work.
 
@@ -63,6 +64,10 @@ The all button layouts come from a different place. They were created by [Jasens
   - [Slab Split](#slab-split)
   - [Split Modern](#split-modern)
   - [All button index](#all-button-index)
+- [Manufacturer layouts](#manufacturer-layouts)
+  - [ASI S24](#asi-s24)
+  - [ASI S30](#asi-s30)
+  - [ASI B30](#asi-b30)
 - [Before you cut](#before-you-cut)
 - [How these were made](#how-these-were-made)
 - [Licence and attribution](#licence-and-attribution)
@@ -86,13 +91,13 @@ The all button layouts come from a different place. They were created by [Jasens
 ## What is in the box
 
 ```
-dxf/        266 layouts as .dxf   (R2010, millimetres, $INSUNITS = 4)
-svg/        the same 266 layouts as .svg  (1 user unit = 1 mm)
+dxf/        272 layouts as .dxf   (R2010, millimetres, $INSUNITS = 4)
+svg/        the same 272 layouts as .svg  (1 user unit = 1 mm)
 preview/    per layout PNG previews plus contact sheets and diagrams
 README.md   this file
 ```
 
-Joystick arrangements are built out to 6 files per format: 3 lever positions, each at 30 mm and 24 mm button sizes. The 21 of them come to 126 per format. All button layouts ship as a single file each, adding 7 more, for 133. Each of those then has an inner support twin, doubling the count to 266 per format and 532 in total.
+Joystick arrangements are built out to 6 files per format: 3 lever positions, each at 30 mm and 24 mm button sizes. The 21 of them come to 126 per format. All button layouts ship as a single file each, adding 7 more, and manufacturer layouts likewise, adding 3, for 136. Each of those then has an inner support twin, doubling the count to 272 per format and 544 in total.
 
 New layouts follow the same naming and layer conventions, so anything you script against the current set keeps working.
 
@@ -243,7 +248,7 @@ Every layout in the repository has an inner support twin, named by putting `inne
 
 <img src="preview/_inner_support_explained.png" alt="Inner support ear slots" width="820">
 
-An inner support file is the complete original layout with every button hole replaced by a single closed profile: the hole unioned with a rectangular ear relief slot. The slot is centred on the hole and its long axis is rotated **30 degrees clockwise from vertical**, so it runs from roughly 7 o'clock up to 1 o'clock.
+An inner support file is the complete original layout with every button hole replaced by a single closed profile: the hole unioned with a rectangular ear relief slot. The slot is centred on the hole and its long axis is rotated **30 degrees from vertical**, clockwise by default, so it runs from roughly 7 o'clock up to 1 o'clock.
 
 | Button | Slot size | Sticks out past the hole |
 |---|---|---|
@@ -253,6 +258,23 @@ An inner support file is the complete original layout with every button hole rep
 **The slots are modelled on the retention ears of Sanwa OBSF snap in buttons.** Those buttons have a pair of sprung tabs on the body that need somewhere to sit. On a stacked panel the top sheet takes the plain hole and the sheet underneath, the inner support, needs the ear clearance cut into it as well.
 
 **One profile per button.** The circle and the slot are boolean unioned into a single closed outline, so there is exactly one contour to cut per button and no overlapping shapes to clean up. In DXF it is a closed `LWPOLYLINE` with true arc segments carried as bulges, not a polygon approximation. In SVG it is a closed `path` using `A` arc commands.
+
+**Slot direction is not uniform.** The default is 30 degrees clockwise from vertical, but on tightly packed layouts two neighbouring buttons pointing their ears at each other leaves a dangerously thin web of material, and on the tightest layouts the two slots actually cut into one another. Where that happens the slot is turned to whichever direction opens the gap back up. Slots are allowed to sit at any multiple of 15 degrees, so a crowded button has eleven alternatives to the default rather than just its mirror image.
+
+<img src="preview/_inner_support_mirrored.png" alt="One fixed slot angle versus the solved angles" width="900">
+
+The angles are solved per layout rather than picked by eye. For every pair of neighbouring buttons the exact clearance between the two finished profiles is computed in closed form, for all 144 combinations of their angles. The solver then searches for the assignment that maximises the *smallest* web anywhere on the panel, and once it has found that maximum it makes a second pass pulling every button that can afford it back to the default angle. So a panel only carries a rotated slot where the rotation is actually buying material.
+
+63 of the 136 layouts needed at least one rotated slot, 404 slots out of 1186 in total. 73 layouts are untouched at the default angle throughout.
+
+The result across the whole library:
+
+| | worst web on any layout | layouts under 2 mm | layouts with slots that overlap |
+|---|---|---|---|
+| Every slot at 30 deg clockwise | 0.00 mm | 10 | 3 |
+| Solved angles | **3.33 mm** | **0** | **0** |
+
+No layout now has a web under 3.3 mm. The tightest is `slab_split_all_button` at 3.33 mm; everything else is 3.83 mm or better. On 25 of the 52 distinct button patterns the slots stop being the limiting factor entirely, meaning the thinnest material on the panel is the plain hole to hole gap and adding the ear slots costs nothing at all.
 
 **Buttons only.** Nothing is added to a joystick bore or to any mounting hole. The union is keyed off the button layers rather than off hole diameter, so the 24 mm `JOYSTICK_BORE_24` circle is never mistaken for a 24 mm button.
 
@@ -1067,13 +1089,96 @@ The largest layout here at 17 buttons, and a true split. Left and right clusters
 
 ---
 
+## Manufacturer layouts
+
+Layouts taken from commercial arcade sticks. Each one names its maker and says how it was obtained.
+
+### ASI S24
+
+<img src="preview/asi_s24.png" alt="asi_s24" width="380"> <img src="preview/inner_support_asi_s24.png" alt="inner_support_asi_s24" width="380">
+
+*Left: standard. Right: inner support.*
+
+The S24 layout from **ASI**. A lever on the left, ten 24 mm buttons in two arcs of four with a pair dropping down to the left, and a single 30 mm button below the cluster.
+
+**11 buttons**  |  10 x 24 mm and 1 x 30 mm  |  closest pitch 29.4 mm  |  lever to nearest button 74 mm  |  cut envelope 229 x 128 mm
+
+> **This one was measured from a render, not supplied as a file.** Everything else in this repository comes from a dimensioned drawing or a vector source. This layout was recovered by circle fitting ASI's published product render, so treat it as accurate to roughly a third of a millimetre rather than exact. Print it and check it against a real S24 before cutting anything expensive.
+
+<img src="preview/_asi_s24_verification.png" alt="ASI S24 verification" width="900">
+
+**Positions are snapped to a 0.5 mm grid.** Real panel layouts are laid out on whole or half millimetre spacings, so the raw measured decimals are measurement noise rather than design intent. Every hole was moved to the nearest 0.5 mm node, which shifted each one by at most 0.22 mm. All horizontal and vertical spacings between holes are now exact multiples of 0.5 mm.
+
+Worth being straight about what that does and does not buy. My measurement scatter is around 0.12 mm per coordinate, which is not fine enough to *detect* a 0.5 mm grid on its own: the residuals before snapping sit at 0.122 mm against the 0.144 mm you would expect from no grid at all. So the snap rests on how these panels are actually designed, not on the render proving it. If the grid holds, most coordinates are now exactly right instead of slightly off. A small number sitting near a midpoint could have landed one 0.5 mm step away, and the render cannot tell me which. The scale itself was **not** adjusted to fit the grid, since doing so pushed the measured hole diameters away from nominal.
+
+How it was measured. The ten 24 mm holes came out 101.30 px across with a standard deviation of 0.17 px, which says the render is effectively orthographic and gives the scale at 4.221 px per mm. That scale is corroborated independently by the lever plate bore, which then measures 60.13 mm and is almost certainly a true 60 mm. Every generated hole was projected back onto the render and checked against the drawn edge.
+
+**Lever treatment.** The render shows ASI's own mounting plate with roughly a 60 mm bore. These files instead carry the repository's standard treatment: concentric 24 mm and 35.25 mm bores plus the universal plate pattern. If you are fitting ASI's actual plate you will want their bore, not either of these.
+
+The 30 mm button sits on its own sub plate in the render, a 46 mm disc with a tab below it. That sub plate and its screw are not included, in keeping with how every other layout here drops panel outlines and mounting hardware.
+
+| Version | DXF | SVG |
+|---|---|---|
+| Standard | [`asi_s24.dxf`](dxf/asi_s24.dxf) | [`asi_s24.svg`](svg/asi_s24.svg) |
+| Inner support | [`inner_support_asi_s24.dxf`](dxf/inner_support_asi_s24.dxf) | [`inner_support_asi_s24.svg`](svg/inner_support_asi_s24.svg) |
+
+### ASI S30
+
+<img src="preview/asi_s30.png" alt="asi_s30" width="380"> <img src="preview/inner_support_asi_s30.png" alt="inner_support_asi_s30" width="380">
+
+*Left: standard. Right: inner support.*
+
+The S30 from **ASI**, the 30 mm sibling of the S24. Same overall shape, scaled up for full size buttons: eight 30 mm in two arcs of four, a 24 mm at the top of the cluster and another below it, and a 30 mm on its own sub plate at the bottom left.
+
+**11 buttons**  |  9 x 30 mm and 2 x 24 mm  |  closest pitch 32.9 mm  |  lever to nearest button 74 mm  |  cut envelope 247 x 134 mm
+
+> **Measured from a render, same as the S24.** Accurate to roughly a third of a millimetre rather than exact. Print it and check it against a real S30 before cutting.
+
+<img src="preview/_asi_s30_verification.png" alt="ASI S30 verification" width="900">
+
+**Positions are snapped to a 0.5 mm grid.** Real panel layouts are laid out on whole or half millimetre spacings, so the raw measured decimals are measurement noise rather than design intent. Every hole was moved to the nearest 0.5 mm node, which shifted each one by at most 0.20 mm. All horizontal and vertical spacings between holes are now exact multiples of 0.5 mm.
+
+Worth being straight about what that does and does not buy. My measurement scatter is around 0.12 mm per coordinate, which is not fine enough to *detect* a 0.5 mm grid on its own: the residuals before snapping sit at 0.124 mm against the 0.144 mm you would expect from no grid at all. So the snap rests on how these panels are actually designed, not on the render proving it. If the grid holds, most coordinates are now exactly right instead of slightly off. A small number sitting near a midpoint could have landed one 0.5 mm step away, and the render cannot tell me which. The scale itself was **not** adjusted to fit the grid, since doing so pushed the measured hole diameters away from nominal.
+
+This one carries an unusually strong internal check. Calibrating the scale on the eight 30 mm holes alone makes two other features fall out correctly without being fitted to: the pair of small buttons measure **23.98 mm** and the lever bore measures **60.09 mm**. Three independent features agreeing at that level means the render is orthographic and the scale is right. Every hole then measured within 0.1 mm of its nominal size before being normalised.
+
+Same lever treatment and the same dropped sub plate as the S24 above.
+
+| Version | DXF | SVG |
+|---|---|---|
+| Standard | [`asi_s30.dxf`](dxf/asi_s30.dxf) | [`asi_s30.svg`](svg/asi_s30.svg) |
+| Inner support | [`inner_support_asi_s30.dxf`](dxf/inner_support_asi_s30.dxf) | [`inner_support_asi_s30.svg`](svg/inner_support_asi_s30.svg) |
+
+### ASI B30
+
+<img src="preview/asi_b30.png" alt="asi_b30" width="380"> <img src="preview/inner_support_asi_b30.png" alt="inner_support_asi_b30" width="380">
+
+*Left: standard. Right: inner support.*
+
+The B30 from **ASI**. The B is for buttons: this one is leverless, so it follows the all button conventions rather than the S24 and S30 above. No lever, no joystick bores, no plate pattern, and the origin is the centre of the button cluster rather than a lever centre.
+
+Fifteen holes in a wide sweeping arc: nine at 30 mm including the one on the gold sub plate, and six at 24 mm running out to the left and marking the ends of the cluster.
+
+**15 buttons**  |  9 x 30 mm and 6 x 24 mm  |  closest pitch 28.5 mm  |  cut envelope 212 x 150 mm
+
+<img src="preview/_asi_b30_verification.png" alt="ASI B30 verification" width="900">
+
+Measured from ASI's published render the same way as the other two, with the same three way agreement: calibrating the scale on the eight 30 mm cluster holes makes the six 24 mm holes read **23.99 mm** and the sub plate button read **30.08 mm**, neither of which was fitted to. Positions are snapped to the 0.5 mm grid, moving each hole by at most 0.23 mm. The gold sub plate and its screw are dropped, keeping only the button inside it. Accurate to roughly a third of a millimetre; check it against a real B30 before cutting.
+
+| Version | DXF | SVG |
+|---|---|---|
+| Standard | [`asi_b30.dxf`](dxf/asi_b30.dxf) | [`asi_b30.svg`](svg/asi_b30.svg) |
+| Inner support | [`inner_support_asi_b30.dxf`](dxf/inner_support_asi_b30.dxf) | [`inner_support_asi_b30.svg`](svg/inner_support_asi_b30.svg) |
+
+---
+
 ## Before you cut
 
 - **Test print first.** Print the SVG at 100 percent scale and rest your hand on it. Slagcoin's advice, *"Feeling these can give you an idea of what layout will likely suit you"*, is the single most valuable line on the whole site. A sheet of paper costs nothing. A mis-drilled panel costs a weekend.
 - **Pick one joystick bore**, 24 mm or 35.25 mm, and delete the other layer.
 - **Delete the `REFERENCE` layer** before sending anything to CAM. Those crosshairs are alignment aids, not cuts.
 - **Check your nuts.** On the 30 mm files, `vewlix_s`, `vewlix_s_8button`, `shift36_s` and `sega1_s` have closest button pairs just under 36 mm, and standard Sanwa screw in nuts are about that wide. On the 24 mm files the equivalent pairs land around 28.4 to 28.8 mm, which suits snap ins better than screw ins.
-- **On inner support files**, each button is already a single closed profile. Cut it as one contour, inside offset, same as any other hole.
+- **On inner support files**, each button is already a single closed profile. Cut it as one contour, inside offset, same as any other hole. Slot direction varies across a panel by design; see [Inner support versions](#inner-support-versions).
 - **Cut a test piece in scrap** before you commit to your real panel material.
 - **Check the file yourself.** These were traced carefully and verified against the originals, but it is far better to find a problem in CAD than in aluminium.
 
@@ -1102,7 +1207,7 @@ Layouts added later may come from a different source, a manufacturer drawing, a 
 
 **24 mm versions.** Generated by reading the shipped 30 mm DXF back off disk, scaling the button cluster by 0.8 about the first button column horizontally and the joystick centreline vertically, and setting the hole diameter to 24.00 mm. All 63 were then re read and checked: every hole exactly 24.00 mm, every pairwise button distance exactly 0.8 times the original, and the bores, plate holes and lever spacing identical to their 30 mm parent.
 
-**Lever mounting holes.** Taken from the GL lever mounting plate DXF by [ASI](https://asindo.pro/), symmetrised about the joystick centre. The plate outline and the four holes on the 45 mm cross immediately flanking the bore were deliberately left out.
+**Lever mounting holes.** Taken from a universal mounting plate DXF, symmetrised about the joystick centre. The plate outline and the four holes on the 45 mm cross immediately flanking the bore were deliberately left out.
 
 </details>
 
@@ -1116,13 +1221,11 @@ Layouts in this repository come from more than one place, so credit is tracked p
 
 **The 7 all button layouts come from [JasensCustoms.com](https://www.jasenscustoms.com) and members of the Panzer user community.** They may draw inspiration from other all button layouts, but they are not exact replicas of any of them.
 
-**Thank you to [ASI](https://asindo.pro/)** for the GL lever layout used for the joystick mounting holes. The `GL_PLATE_HOLES` pattern in every joystick layout is based on their GL lever mounting plate.
+**The S24, S30 and B30 layouts are ASI's.** They were measured from their published product renders rather than supplied as files, and these are not official ASI files. Credit for the layouts belongs to ASI.
 
 If the live site is unreachable, the original pages are preserved on the [Wayback Machine](https://web.archive.org/web/*/slagcoin.com/joystick/layout.html).
 
 The conversion work, the mounting hardware geometry and the variant generation are shared freely. Use them, remix them, build things with them, sell the panels you cut from them. When you publish something derived from a layout in here, credit whoever that layout came from.
-
-Everything this repository adds is licensed under [Creative Commons Attribution-ShareAlike 4.0 International](LICENSE) (CC BY-SA 4.0). In short: use, share, adapt and sell the files for any purpose, provided you give credit as described above and in [NOTICE.md](NOTICE.md), and release any modified versions of the files under the same licence. Physical panels cut from the files carry no licence obligations beyond the credit.
 
 ---
 
