@@ -43,8 +43,10 @@ mounting holes and other cutouts from the original working drawings were left ou
 ### ASI
 
 Covers: the S24, S30 and B30 layouts: `asi_s24`, `asi_s30`, `asi_b30` and
-their `inner_support_` twins.
+their `inner_support_` twins, plus the lever mounting hole pattern on the
+`GL_PLATE_HOLES` layer in every joystick layout.
 
+  https://asindo.pro/
   https://www.arcadeshock.com
 
 The S24, S30 and B30 layouts are ASI's designs, taken from their commercial
@@ -58,6 +60,10 @@ are not official ASI files. Anyone cutting from them should verify against a rea
 stick first.
 
 Credit for the layouts belongs to ASI.
+
+ASI is also the source of the lever mounting hole pattern: the `GL_PLATE_HOLES`
+layer in every joystick layout is based on the mounting plate of their GL lever,
+symmetrised about the joystick centre. Thank you to ASI for the GL lever layout.
 
 <!--
 ### Next source
@@ -77,7 +83,7 @@ Terms:  is it published freely, or given with permission
 On top of the source layouts:
 
 - conversion into true scale vector geometry usable directly in CAD and CAM
-- joystick mounting hardware, taken from a universal lever mounting plate
+- joystick mounting hardware, taken from the GL lever mounting plate by ASI
 - the 82 mm and 95 mm lever spacing variants
 - the 24 mm button variants, scaled 0.8 in both axes
 - for the all button layouts, extraction of the button pattern from the original
