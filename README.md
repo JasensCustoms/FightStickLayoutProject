@@ -1120,6 +1120,8 @@ If the live site is unreachable, the original pages are preserved on the [Waybac
 
 The conversion work, the mounting hardware geometry and the variant generation are shared freely. Use them, remix them, build things with them, sell the panels you cut from them. When you publish something derived from a layout in here, credit whoever that layout came from.
 
+Everything this repository adds is licensed under [Creative Commons Attribution-ShareAlike 4.0 International](LICENSE) (CC BY-SA 4.0). In short: use, share, adapt and sell the files for any purpose, provided you give credit as described above and in [NOTICE.md](NOTICE.md), and release any modified versions of the files under the same licence. Physical panels cut from the files carry no licence obligations beyond the credit.
+
 ---
 
 ## Contributing
