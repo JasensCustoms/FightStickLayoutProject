@@ -13,7 +13,8 @@ layout, add its source here.
 ### slagcoin.com
 
 Covers: the 21 joystick button arrangements, meaning every file that is not
-named `_all_button`.
+named `_all_button`. That includes `american_s_american_parts`, which is the same
+Capcom USA arrangement cut for American hardware.
 
   https://www.slagcoin.com/joystick/layout.html
 
@@ -68,7 +69,7 @@ symmetrised about the joystick centre. Thank you to ASI for the GL lever layout.
 ### Twistedsymphony / classicarcadecabinets.com
 
 Covers: the Mortal Kombat 3 / Ultimate Mortal Kombat 3 dedicated cabinet panel:
-`mk3_umk3_dedicated`, `mk3_umk3_dedicated_jp` and both `inner_support_` twins.
+`mk3_umk3_dedicated_american_parts`, `mk3_umk3_dedicated_japanese_parts` and both `inner_support_` twins.
 
   https://www.classicarcadecabinets.com/mortal-kombat-3.html
 
@@ -90,13 +91,13 @@ The layout is imperial throughout. Holes are 1.125 in and every spacing is a who
 sixteenth of an inch. The files are millimetres because every file here is, so the
 conversion is an exact factor of 25.4 with no rounding at any point.
 
-`mk3_umk3_dedicated_jp` keeps Twistedsymphony's button centres unchanged and only
+`mk3_umk3_dedicated_japanese_parts` keeps Twistedsymphony's button centres unchanged and only
 swaps the hardware, to 30 mm Sanwa holes and the universal GL lever plate. The
 spacing credit is his; the hardware choices are not from his drawing.
 
 ### Crowquilll
 
-Covers: the Neo Geo MVS layouts: `neogeo_mvs`, `neogeo_mvs_american` and both
+Covers: the Neo Geo MVS layouts: `neogeo_mvs_japanese_parts`, `neogeo_mvs_american_parts` and both
 `inner_support_` twins.
 
 Source files: "MVS CPO 1P CURVED template.pdf" and "MVS CPO 2P CURVED template.pdf",
@@ -111,16 +112,18 @@ you know where they were originally posted, please open an issue and it will be
 added.
 
 The hole positions in both files come from that template, unchanged between them.
-The hardware differs: `neogeo_mvs` carries 30 mm holes and the GL lever pattern,
-`neogeo_mvs_american` carries the template's own 1.1875 in holes with an IL
-Eurojoystick 2 lever cut in place of its 1.875 in American lever hole.
+The hardware differs: `neogeo_mvs_japanese_parts` carries 30 mm holes and the GL lever pattern,
+`neogeo_mvs_american_parts` carries 1.125 in holes with an IL Eurojoystick 2 lever
+cut. The template's own 1.1875 in buttons and 1.875 in American lever hole are
+recorded here as what the original called for, but American Parts means 1.125 in
+and IL's 35 mm bore consistently across this library.
 
 The three lone buttons along the top of the CPO, labelled 1P Start, 2P Start and
 Select Game on the template, are not included in either file.
 
 ### Industrias Lorenzo
 
-Covers: the lever bore and mounting pattern on `mk3_umk3_dedicated` only.
+Covers: the lever bore and mounting pattern on `mk3_umk3_dedicated_american_parts` only.
 
 The 35 mm bore and the four 5.9 mm screw holes on a 65.6 by 75.9 mm rectangle are
 taken from Industrias Lorenzo's own Eurojoystick 2 panel mounting drawing. The

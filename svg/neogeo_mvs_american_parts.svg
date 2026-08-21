@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="259.3mm" height="97.8mm" viewBox="0 0 259.3313 97.8000">
-<desc>1 SVG user unit = 1 mm. Inner support: button hole unioned with a Sanwa OBSF ear relief slot.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="258.5mm" height="97.8mm" viewBox="0 0 258.5375 97.8000">
+<desc>1 SVG user unit = 1 mm. Origin = lever centre.</desc>
 <g id="BUTTONS" fill="none" stroke="#d40000" stroke-width="0.2">
-<circle cx="120.7500" cy="71.9000" r="15.0813"/>
-<circle cx="155.7500" cy="50.4000" r="15.0813"/>
-<circle cx="195.2500" cy="37.9000" r="15.0813"/>
-<circle cx="236.2500" cy="37.9000" r="15.0813"/>
+<circle cx="120.7500" cy="71.9000" r="14.2875"/>
+<circle cx="155.7500" cy="50.4000" r="14.2875"/>
+<circle cx="195.2500" cy="37.9000" r="14.2875"/>
+<circle cx="236.2500" cy="37.9000" r="14.2875"/>
 </g>
-<g id="JOYSTICK_BORE_35" fill="none" stroke="#000" stroke-width="0.2">
+<g id="JOYSTICK_BORE_35" fill="none" stroke="#00a000" stroke-width="0.2">
 <circle cx="43.7500" cy="48.9000" r="17.5000"/>
 </g>
-<g id="IL_PLATE_HOLES" fill="none" stroke="#000" stroke-width="0.2">
+<g id="IL_PLATE_HOLES" fill="none" stroke="#0050d0" stroke-width="0.2">
 <circle cx="76.5500" cy="10.9500" r="2.9500"/>
 <circle cx="76.5500" cy="86.8500" r="2.9500"/>
 <circle cx="10.9500" cy="10.9500" r="2.9500"/>

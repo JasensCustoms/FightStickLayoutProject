@@ -489,19 +489,19 @@ $SKPOLY
   9
 $TDCREATE
  40
-2458849.5
+2451545.0
   9
 $TDUCREATE
  40
-2458849.5
+2451545.0
   9
 $TDUPDATE
  40
-2458849.5
+2451545.0
   9
 $TDUUPDATE
  40
-2458849.5
+2451545.0
   9
 $TDINDWG
  40
@@ -549,7 +549,7 @@ $SPLINESEGS
   9
 $HANDSEED
   5
-A4
+BE
   9
 $SURFTAB1
  70
@@ -933,7 +933,7 @@ $FINGERPRINTGUID
   9
 $VERSIONGUID
   2
-{00000000-0000-0000-0000-000000000001}
+{00000000-0000-0000-0000-000000000000}
   9
 $EXTNAMES
 290
@@ -2233,7 +2233,7 @@ LAYER
 100
 AcDbSymbolTable
  70
-6
+7
   0
 LAYER
   5
@@ -2319,11 +2319,11 @@ AcDbSymbolTableRecord
 100
 AcDbLayerTableRecord
   2
-JOYSTICK_BORE_35
+JOYSTICK_BORE_24
  70
 0
  62
-7
+5
   6
 Continuous
 370
@@ -2343,11 +2343,11 @@ AcDbSymbolTableRecord
 100
 AcDbLayerTableRecord
   2
-IL_PLATE_HOLES
+JOYSTICK_BORE_35.25
  70
 0
  62
-7
+3
   6
 Continuous
 370
@@ -2360,6 +2360,30 @@ Continuous
 LAYER
   5
 8D
+330
+1
+100
+AcDbSymbolTableRecord
+100
+AcDbLayerTableRecord
+  2
+GL_PLATE_HOLES
+ 70
+0
+ 62
+2
+  6
+Continuous
+370
+-3
+390
+13
+347
+21
+  0
+LAYER
+  5
+8E
 330
 1
 100
@@ -3181,7 +3205,7 @@ ACAD
   0
 APPID
   5
-A1
+BB
 330
 3
 100
@@ -3195,7 +3219,7 @@ HATCHBACKGROUNDCOLOR
   0
 APPID
   5
-A2
+BC
 330
 3
 100
@@ -5307,7 +5331,7 @@ ENTITIES
   0
 CIRCLE
   5
-8E
+8F
 330
 17
 100
@@ -5323,11 +5347,11 @@ AcDbCircle
  30
 0.0
  40
-15.08125
+15.0
   0
 CIRCLE
   5
-8F
+90
 330
 17
 100
@@ -5343,11 +5367,11 @@ AcDbCircle
  30
 0.0
  40
-15.08125
+15.0
   0
 CIRCLE
   5
-90
+91
 330
 17
 100
@@ -5363,11 +5387,11 @@ AcDbCircle
  30
 0.0
  40
-15.08125
+15.0
   0
 CIRCLE
   5
-91
+92
 330
 17
 100
@@ -5383,27 +5407,7 @@ AcDbCircle
  30
 0.0
  40
-15.08125
-  0
-CIRCLE
-  5
-92
-330
-17
-100
-AcDbEntity
-  8
-JOYSTICK_BORE_35
-100
-AcDbCircle
- 10
-0.0
- 20
-0.0
- 30
-0.0
- 40
-17.5
+15.0
   0
 CIRCLE
   5
@@ -5413,17 +5417,17 @@ CIRCLE
 100
 AcDbEntity
   8
-IL_PLATE_HOLES
+JOYSTICK_BORE_24
 100
 AcDbCircle
  10
-32.8
+0.0
  20
-37.95
+0.0
  30
 0.0
  40
-2.95
+12.0
   0
 CIRCLE
   5
@@ -5433,17 +5437,17 @@ CIRCLE
 100
 AcDbEntity
   8
-IL_PLATE_HOLES
+JOYSTICK_BORE_35.25
 100
 AcDbCircle
  10
-32.8
+0.0
  20
--37.95
+0.0
  30
 0.0
  40
-2.95
+17.625
   0
 CIRCLE
   5
@@ -5453,17 +5457,17 @@ CIRCLE
 100
 AcDbEntity
   8
-IL_PLATE_HOLES
+GL_PLATE_HOLES
 100
 AcDbCircle
  10
--32.8
+0.0
  20
-37.95
+42.5
  30
 0.0
  40
-2.95
+3.0
   0
 CIRCLE
   5
@@ -5473,19 +5477,19 @@ CIRCLE
 100
 AcDbEntity
   8
-IL_PLATE_HOLES
+GL_PLATE_HOLES
 100
 AcDbCircle
  10
--32.8
+0.0
  20
--37.95
+-42.5
  30
 0.0
  40
-2.95
+3.0
   0
-LINE
+CIRCLE
   5
 97
 330
@@ -5493,6 +5497,606 @@ LINE
 100
 AcDbEntity
   8
+GL_PLATE_HOLES
+100
+AcDbCircle
+ 10
+10.0
+ 20
+42.5
+ 30
+0.0
+ 40
+2.5
+  0
+CIRCLE
+  5
+98
+330
+17
+100
+AcDbEntity
+  8
+GL_PLATE_HOLES
+100
+AcDbCircle
+ 10
+10.0
+ 20
+-42.5
+ 30
+0.0
+ 40
+2.5
+  0
+CIRCLE
+  5
+99
+330
+17
+100
+AcDbEntity
+  8
+GL_PLATE_HOLES
+100
+AcDbCircle
+ 10
+-10.0
+ 20
+42.5
+ 30
+0.0
+ 40
+2.5
+  0
+CIRCLE
+  5
+9A
+330
+17
+100
+AcDbEntity
+  8
+GL_PLATE_HOLES
+100
+AcDbCircle
+ 10
+-10.0
+ 20
+-42.5
+ 30
+0.0
+ 40
+2.5
+  0
+CIRCLE
+  5
+9B
+330
+17
+100
+AcDbEntity
+  8
+GL_PLATE_HOLES
+100
+AcDbCircle
+ 10
+0.0
+ 20
+32.75
+ 30
+0.0
+ 40
+2.25
+  0
+CIRCLE
+  5
+9C
+330
+17
+100
+AcDbEntity
+  8
+GL_PLATE_HOLES
+100
+AcDbCircle
+ 10
+0.0
+ 20
+-32.75
+ 30
+0.0
+ 40
+2.25
+  0
+CIRCLE
+  5
+9D
+330
+17
+100
+AcDbEntity
+  8
+GL_PLATE_HOLES
+100
+AcDbCircle
+ 10
+36.5
+ 20
+25.0
+ 30
+0.0
+ 40
+2.25
+  0
+CIRCLE
+  5
+9E
+330
+17
+100
+AcDbEntity
+  8
+GL_PLATE_HOLES
+100
+AcDbCircle
+ 10
+36.5
+ 20
+-25.0
+ 30
+0.0
+ 40
+2.25
+  0
+CIRCLE
+  5
+9F
+330
+17
+100
+AcDbEntity
+  8
+GL_PLATE_HOLES
+100
+AcDbCircle
+ 10
+-36.5
+ 20
+25.0
+ 30
+0.0
+ 40
+2.25
+  0
+CIRCLE
+  5
+A0
+330
+17
+100
+AcDbEntity
+  8
+GL_PLATE_HOLES
+100
+AcDbCircle
+ 10
+-36.5
+ 20
+-25.0
+ 30
+0.0
+ 40
+2.25
+  0
+LINE
+  5
+A1
+330
+17
+100
+AcDbEntity
+  8
+GL_PLATE_HOLES
+100
+AcDbLine
+ 10
+17.25
+ 20
+40.0
+ 30
+0.0
+ 11
+17.25
+ 21
+42.5
+ 31
+0.0
+  0
+LINE
+  5
+A2
+330
+17
+100
+AcDbEntity
+  8
+GL_PLATE_HOLES
+100
+AcDbLine
+ 10
+22.75
+ 20
+40.0
+ 30
+0.0
+ 11
+22.75
+ 21
+42.5
+ 31
+0.0
+  0
+ARC
+  5
+A3
+330
+17
+100
+AcDbEntity
+  8
+GL_PLATE_HOLES
+100
+AcDbCircle
+ 10
+20.0
+ 20
+42.5
+ 30
+0.0
+ 40
+2.75
+100
+AcDbArc
+ 50
+0.0
+ 51
+180.0
+  0
+ARC
+  5
+A4
+330
+17
+100
+AcDbEntity
+  8
+GL_PLATE_HOLES
+100
+AcDbCircle
+ 10
+20.0
+ 20
+40.0
+ 30
+0.0
+ 40
+2.75
+100
+AcDbArc
+ 50
+180.0
+ 51
+360.0
+  0
+LINE
+  5
+A5
+330
+17
+100
+AcDbEntity
+  8
+GL_PLATE_HOLES
+100
+AcDbLine
+ 10
+22.75
+ 20
+-40.0
+ 30
+0.0
+ 11
+22.75
+ 21
+-42.5
+ 31
+0.0
+  0
+LINE
+  5
+A6
+330
+17
+100
+AcDbEntity
+  8
+GL_PLATE_HOLES
+100
+AcDbLine
+ 10
+17.25
+ 20
+-40.0
+ 30
+0.0
+ 11
+17.25
+ 21
+-42.5
+ 31
+0.0
+  0
+ARC
+  5
+A7
+330
+17
+100
+AcDbEntity
+  8
+GL_PLATE_HOLES
+100
+AcDbCircle
+ 10
+20.0
+ 20
+-42.5
+ 30
+0.0
+ 40
+2.75
+100
+AcDbArc
+ 50
+-180.0
+ 51
+0.0
+  0
+ARC
+  5
+A8
+330
+17
+100
+AcDbEntity
+  8
+GL_PLATE_HOLES
+100
+AcDbCircle
+ 10
+20.0
+ 20
+-40.0
+ 30
+0.0
+ 40
+2.75
+100
+AcDbArc
+ 50
+0.0
+ 51
+180.0
+  0
+LINE
+  5
+A9
+330
+17
+100
+AcDbEntity
+  8
+GL_PLATE_HOLES
+100
+AcDbLine
+ 10
+-22.75
+ 20
+40.0
+ 30
+0.0
+ 11
+-22.75
+ 21
+42.5
+ 31
+0.0
+  0
+LINE
+  5
+AA
+330
+17
+100
+AcDbEntity
+  8
+GL_PLATE_HOLES
+100
+AcDbLine
+ 10
+-17.25
+ 20
+40.0
+ 30
+0.0
+ 11
+-17.25
+ 21
+42.5
+ 31
+0.0
+  0
+ARC
+  5
+AB
+330
+17
+100
+AcDbEntity
+  8
+GL_PLATE_HOLES
+100
+AcDbCircle
+ 10
+-20.0
+ 20
+42.5
+ 30
+0.0
+ 40
+2.75
+100
+AcDbArc
+ 50
+0.0
+ 51
+180.0
+  0
+ARC
+  5
+AC
+330
+17
+100
+AcDbEntity
+  8
+GL_PLATE_HOLES
+100
+AcDbCircle
+ 10
+-20.0
+ 20
+40.0
+ 30
+0.0
+ 40
+2.75
+100
+AcDbArc
+ 50
+180.0
+ 51
+360.0
+  0
+LINE
+  5
+AD
+330
+17
+100
+AcDbEntity
+  8
+GL_PLATE_HOLES
+100
+AcDbLine
+ 10
+-17.25
+ 20
+-40.0
+ 30
+0.0
+ 11
+-17.25
+ 21
+-42.5
+ 31
+0.0
+  0
+LINE
+  5
+AE
+330
+17
+100
+AcDbEntity
+  8
+GL_PLATE_HOLES
+100
+AcDbLine
+ 10
+-22.75
+ 20
+-40.0
+ 30
+0.0
+ 11
+-22.75
+ 21
+-42.5
+ 31
+0.0
+  0
+ARC
+  5
+AF
+330
+17
+100
+AcDbEntity
+  8
+GL_PLATE_HOLES
+100
+AcDbCircle
+ 10
+-20.0
+ 20
+-42.5
+ 30
+0.0
+ 40
+2.75
+100
+AcDbArc
+ 50
+-180.0
+ 51
+0.0
+  0
+ARC
+  5
+B0
+330
+17
+100
+AcDbEntity
+  8
+GL_PLATE_HOLES
+100
+AcDbCircle
+ 10
+-20.0
+ 20
+-40.0
+ 30
+0.0
+ 40
+2.75
+100
+AcDbArc
+ 50
+0.0
+ 51
+180.0
+  0
+LINE
+  5
+B1
+330
+17
+100
+AcDbEntity
+  8
 REFERENCE
 100
 AcDbLine
@@ -5511,7 +6115,7 @@ AcDbLine
   0
 LINE
   5
-98
+B2
 330
 17
 100
@@ -5535,7 +6139,7 @@ AcDbLine
   0
 LINE
   5
-99
+B3
 330
 17
 100
@@ -5559,7 +6163,7 @@ AcDbLine
   0
 LINE
   5
-9A
+B4
 330
 17
 100
@@ -5583,7 +6187,7 @@ AcDbLine
   0
 LINE
   5
-9B
+B5
 330
 17
 100
@@ -5607,7 +6211,7 @@ AcDbLine
   0
 LINE
   5
-9C
+B6
 330
 17
 100
@@ -5631,7 +6235,7 @@ AcDbLine
   0
 LINE
   5
-9D
+B7
 330
 17
 100
@@ -5655,7 +6259,7 @@ AcDbLine
   0
 LINE
   5
-9E
+B8
 330
 17
 100
@@ -5679,7 +6283,7 @@ AcDbLine
   0
 LINE
   5
-9F
+B9
 330
 17
 100
@@ -5703,7 +6307,7 @@ AcDbLine
   0
 LINE
   5
-A0
+BA
 330
 17
 100
@@ -6815,7 +7419,7 @@ CREATED_BY_EZDXF
   3
 WRITTEN_BY_EZDXF
 350
-A3
+BD
   0
 DICTIONARYVAR
   5
@@ -6827,7 +7431,7 @@ DictionaryVariables
 280
 0
   1
-arcade-panel-layouts
+0.0 @ 2000-01-01T00:00:00.000000+00:00
   0
 VISUALSTYLE
   5
@@ -7531,7 +8135,7 @@ X-Ray
   0
 DICTIONARYVAR
   5
-A3
+BD
 330
 2D
 100
@@ -7539,7 +8143,7 @@ DictionaryVariables
 280
 0
   1
-arcade-panel-layouts
+0.0 @ 2000-01-01T00:00:00.000000+00:00
   0
 ENDSEC
   0

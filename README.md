@@ -6,8 +6,8 @@ The founding set is converted from [slagcoin.com](https://www.slagcoin.com/joyst
 
 ![Layout formats](https://img.shields.io/badge/formats-DXF%20%2B%20SVG-blue)
 ![Units](https://img.shields.io/badge/units-millimetres-informational)
-![Layouts](https://img.shields.io/badge/layouts-280-success)
-![Files](https://img.shields.io/badge/files-560-lightgrey)
+![Layouts](https://img.shields.io/badge/layouts-282-success)
+![Files](https://img.shields.io/badge/files-564-lightgrey)
 
 Everything is drawn 1:1 in millimetres, ready to send to a laser, router or CNC. Two families:
 
@@ -73,6 +73,7 @@ The all button layouts come from a different place. They were created by [Jasens
   - [Mortal Kombat 3, Japanese hardware](#mortal-kombat-3-japanese-hardware)
   - [Neo Geo MVS](#neo-geo-mvs)
   - [Neo Geo MVS, American hardware](#neo-geo-mvs-american-hardware)
+  - [Capcom USA Street Fighter, American Parts](#capcom-usa-street-fighter-american-parts)
 - [Before you cut](#before-you-cut)
 - [How these were made](#how-these-were-made)
 - [Licence and attribution](#licence-and-attribution)
@@ -96,13 +97,13 @@ The all button layouts come from a different place. They were created by [Jasens
 ## What is in the box
 
 ```
-dxf/        280 layouts as .dxf   (R2010, millimetres, $INSUNITS = 4)
-svg/        the same 280 layouts as .svg  (1 user unit = 1 mm)
+dxf/        282 layouts as .dxf   (R2010, millimetres, $INSUNITS = 4)
+svg/        the same 282 layouts as .svg  (1 user unit = 1 mm)
 preview/    per layout PNG previews plus contact sheets and diagrams
 README.md   this file
 ```
 
-Joystick arrangements are built out to 6 files per format: 3 lever positions, each at 30 mm and 24 mm button sizes. The 21 of them come to 126 per format. All button layouts ship as a single file each, adding 7 more, manufacturer layouts likewise, adding 3, and the cabinet layouts add 4, two Mortal Kombat hardware sets and two Neo Geo, for 140. Each of those then has an inner support twin, doubling the count to 280 per format and 560 in total.
+Joystick arrangements are built out to 6 files per format: 3 lever positions, each at 30 mm and 24 mm button sizes. The 21 of them come to 126 per format. All button layouts ship as a single file each, adding 7 more, manufacturer layouts likewise, adding 3, and the cabinet layouts add 4, two Mortal Kombat hardware sets and two Neo Geo, for 140. The Capcom layout also ships an American Parts cut, making 141. Each of those then has an inner support twin, doubling the count to 282 per format and 564 in total.
 
 New layouts follow the same naming and layer conventions, so anything you script against the current set keeps working.
 
@@ -129,15 +130,17 @@ vewlix_s_82mm_spacing_24mm_buttons   both at once
 traditional_all_button     a leverless layout. No lever, so no spacing or
                            button size variants, just the one file.
 
-mk3_umk3_dedicated_jp      "_jp" is the Japanese hardware cut of a layout that
-                           was drawn for American parts. Same hole positions,
-                           but 30 mm Sanwa holes and the GL lever plate instead
-                           of 1.125 in holes and a manufacturer specific lever.
+<name>_japanese_parts      GL mounting system, 30 mm or 24 mm snap in buttons,
+                           inner support panel with ear relief tabs.
 
-neogeo_mvs_american        "_american" is the same idea pointing the other way:
-                           the American hardware cut of a layout whose base file
-                           is Japanese. Imperial holes and an IL lever. Whichever
-                           suffix a pair carries, the button centres are shared.
+<name>_american_parts      IL Eurojoystick 2 lever, 1.125 in nut mount buttons,
+                           inner support panel that is a plain copy.
+
+                           Where a layout ships both fits, BOTH carry a suffix
+                           and the button centres are identical between them.
+                           One panel drilling pattern, two sets of hardware.
+                           Anything without a parts suffix is Japanese Parts,
+                           which is the default throughout the library.
 
 inner_support_traditional_all_button       any file, with Sanwa OBSF ear
 inner_support_vewlix_s_82mm_spacing        relief slots added on every button
@@ -836,6 +839,10 @@ Slagcoin does not recommend it. It is here because it is history, and because if
 
 More previews: [24 mm buttons](preview/american_s_24mm_buttons.png) &middot; [24 mm inner support](preview/inner_support_american_s_24mm_buttons.png)
 
+**Parts: Japanese** | 30 mm or 24 mm snap in buttons | GL mounting system | 24 and 35.25 mm bores, alternatives
+
+For the hardware these cabinets actually shipped with, see [Capcom USA Street Fighter, American Parts](#capcom-usa-street-fighter-american-parts).
+
 | Version | 30 mm buttons | 24 mm buttons |
 |---|---|---|
 | Stock | [dxf](dxf/american_s.dxf) &middot; [svg](svg/american_s.svg) | [dxf](dxf/american_s_24mm_buttons.dxf) &middot; [svg](svg/american_s_24mm_buttons.svg) |
@@ -845,6 +852,31 @@ More previews: [24 mm buttons](preview/american_s_24mm_buttons.png) &middot; [24
 | 95 mm | [dxf](dxf/american_s_95mm_spacing.dxf) &middot; [svg](svg/american_s_95mm_spacing.svg) | [dxf](dxf/american_s_95mm_spacing_24mm_buttons.dxf) &middot; [svg](svg/american_s_95mm_spacing_24mm_buttons.svg) |
 | 95 mm, inner support | [dxf](dxf/inner_support_american_s_95mm_spacing.dxf) &middot; [svg](svg/inner_support_american_s_95mm_spacing.svg) | [dxf](dxf/inner_support_american_s_95mm_spacing_24mm_buttons.dxf) &middot; [svg](svg/inner_support_american_s_95mm_spacing_24mm_buttons.svg) |
 
+
+### Capcom USA Street Fighter, American Parts
+
+<img src="preview/american_s_american_parts.png" alt="american_s_american_parts" width="380"> <img src="preview/inner_support_american_s_american_parts.png" alt="inner_support_american_s_american_parts" width="380">
+
+*Left: standard. Right: inner support, which on this layout is an identical copy. See below.*
+
+The Capcom block cut for the hardware the cabinets actually shipped with. **Every button centre is identical to [the standard file](#capcom-usa-street-fighter)**, which is the whole point: one panel drilling pattern, two sets of hardware.
+
+**Parts: American** | 1.125 in (28.575 mm) buttons, nut mount | IL Eurojoystick 2 | 35 mm bore | 4 x 5.9 mm on 65.6 x 75.9 mm
+
+**6 buttons** | closest pitch 34.9 mm | cut envelope 221 x 82 mm
+
+**Two senses of the word American are in play here**, and the file names invite confusion, so it is worth stating plainly. `american_s` is American because the *layout* is: it is the arrangement Capcom USA specified. `_american_parts` is about the *hardware*. So this file is the American layout with American hardware, where the base file is the American layout with Japanese hardware, which is what most people building one of these today actually fit.
+
+**It is the roomier of the two.** Dropping from 30 mm to 1.125 in holes on the same centres gains 1.4 mm of material: closest pair goes from 4.92 mm edge to edge up to **6.35 mm**. That matters on this layout, because the Capcom block is not generously spaced to begin with.
+
+**The inner support file is a plain copy.** American buttons bolt in with a nut and have no snap-in retention ears, so there is nothing for a relief slot to relieve. It ships so the naming stays consistent, but its geometry is identical to the standard file, and that is intentional rather than an oversight.
+
+**No spacing or 24 mm variants.** Those belong to the Japanese Parts side, where the button size scales. American Parts is one hole size by definition, and the lever spacing variants remain available on the standard file if you need them.
+
+| Version | DXF | SVG |
+|---|---|---|
+| Standard | [`american_s_american_parts.dxf`](dxf/american_s_american_parts.dxf) | [`american_s_american_parts.svg`](svg/american_s_american_parts.svg) |
+| Inner support | [`inner_support_american_s_american_parts.dxf`](dxf/inner_support_american_s_american_parts.dxf) | [`inner_support_american_s_american_parts.svg`](svg/inner_support_american_s_american_parts.svg) |
 
 ---
 
@@ -1195,7 +1227,7 @@ Panels from real cabinets, traced from published drawings rather than from a sti
 
 ### Mortal Kombat 3 / Ultimate MK3
 
-<img src="preview/mk3_umk3_dedicated.png" alt="mk3_umk3_dedicated" width="380"> <img src="preview/inner_support_mk3_umk3_dedicated.png" alt="inner_support_mk3_umk3_dedicated" width="380">
+<img src="preview/mk3_umk3_dedicated_american_parts.png" alt="mk3_umk3_dedicated_american_parts" width="380"> <img src="preview/inner_support_mk3_umk3_dedicated_american_parts.png" alt="inner_support_mk3_umk3_dedicated_american_parts" width="380">
 
 *Left: standard. Right: inner support, which on this layout is an identical copy. See below.*
 
@@ -1251,20 +1283,20 @@ The five in the block are certain, since two columns with Block in the middle is
 
 | Version | DXF | SVG |
 |---|---|---|
-| Standard | [`mk3_umk3_dedicated.dxf`](dxf/mk3_umk3_dedicated.dxf) | [`mk3_umk3_dedicated.svg`](svg/mk3_umk3_dedicated.svg) |
-| Inner support | [`inner_support_mk3_umk3_dedicated.dxf`](dxf/inner_support_mk3_umk3_dedicated.dxf) | [`inner_support_mk3_umk3_dedicated.svg`](svg/inner_support_mk3_umk3_dedicated.svg) |
+| Standard | [`mk3_umk3_dedicated_american_parts.dxf`](dxf/mk3_umk3_dedicated_american_parts.dxf) | [`mk3_umk3_dedicated_american_parts.svg`](svg/mk3_umk3_dedicated_american_parts.svg) |
+| Inner support | [`inner_support_mk3_umk3_dedicated_american_parts.dxf`](dxf/inner_support_mk3_umk3_dedicated_american_parts.dxf) | [`inner_support_mk3_umk3_dedicated_american_parts.svg`](svg/inner_support_mk3_umk3_dedicated_american_parts.svg) |
 
 Want this spacing with Sanwa parts instead? See [Mortal Kombat 3, Japanese hardware](#mortal-kombat-3-japanese-hardware).
 
 ### Mortal Kombat 3, Japanese hardware
 
-<img src="preview/mk3_umk3_dedicated_jp.png" alt="mk3_umk3_dedicated_jp" width="380"> <img src="preview/inner_support_mk3_umk3_dedicated_jp.png" alt="inner_support_mk3_umk3_dedicated_jp" width="380">
+<img src="preview/mk3_umk3_dedicated_japanese_parts.png" alt="mk3_umk3_dedicated_japanese_parts" width="380"> <img src="preview/inner_support_mk3_umk3_dedicated_japanese_parts.png" alt="inner_support_mk3_umk3_dedicated_japanese_parts" width="380">
 
 *Left: standard. Right: inner support, with real ear relief slots on this one.*
 
 The same Mortal Kombat spacing, built for Japanese parts. **Every button centre is identical to the imperial file above, down to the last decimal.** What changes is the hardware that goes in the holes.
 
-| | `mk3_umk3_dedicated` | `mk3_umk3_dedicated_jp` |
+| | `mk3_umk3_dedicated_american_parts` | `mk3_umk3_dedicated_japanese_parts` |
 |---|---|---|
 | Button hole | 1.125 in (28.575 mm) | **30 mm** |
 | Button style | American, nut mount | **Sanwa OBSF snap in** |
@@ -1286,12 +1318,12 @@ The same Mortal Kombat spacing, built for Japanese parts. **Every button centre 
 
 | Version | DXF | SVG |
 |---|---|---|
-| Standard | [`mk3_umk3_dedicated_jp.dxf`](dxf/mk3_umk3_dedicated_jp.dxf) | [`mk3_umk3_dedicated_jp.svg`](svg/mk3_umk3_dedicated_jp.svg) |
-| Inner support | [`inner_support_mk3_umk3_dedicated_jp.dxf`](dxf/inner_support_mk3_umk3_dedicated_jp.dxf) | [`inner_support_mk3_umk3_dedicated_jp.svg`](svg/inner_support_mk3_umk3_dedicated_jp.svg) |
+| Standard | [`mk3_umk3_dedicated_japanese_parts.dxf`](dxf/mk3_umk3_dedicated_japanese_parts.dxf) | [`mk3_umk3_dedicated_japanese_parts.svg`](svg/mk3_umk3_dedicated_japanese_parts.svg) |
+| Inner support | [`inner_support_mk3_umk3_dedicated_japanese_parts.dxf`](dxf/inner_support_mk3_umk3_dedicated_japanese_parts.dxf) | [`inner_support_mk3_umk3_dedicated_japanese_parts.svg`](svg/inner_support_mk3_umk3_dedicated_japanese_parts.svg) |
 
 ### Neo Geo MVS
 
-<img src="preview/neogeo_mvs.png" alt="neogeo_mvs" width="380"> <img src="preview/inner_support_neogeo_mvs.png" alt="inner_support_neogeo_mvs" width="380">
+<img src="preview/neogeo_mvs_japanese_parts.png" alt="neogeo_mvs_japanese_parts" width="380"> <img src="preview/inner_support_neogeo_mvs_japanese_parts.png" alt="inner_support_neogeo_mvs_japanese_parts" width="380">
 
 *Left: standard. Right: inner support.*
 
@@ -1305,11 +1337,15 @@ Four buttons sweeping up and to the right in a shallow curve, which is what make
 
 **Read out of the artwork, not measured off pixels.** Both templates are true scale vector PDFs, so the hole centres come straight from the page geometry. The 2P sheet is exactly 1710 by 630 points, which is precisely the 23.75 by 8.75 in the artwork states, so no scale calibration was needed at all.
 
-> **One layout, not two.** There is a 1P sheet and a 2P sheet, and it is worth being clear that they describe the same cluster. Player two is not mirrored, it is player one translated **288.102 mm** to the right, and the two sheets agree with each other to 0.001 points. One file cuts either side. To lay out the full two player panel, place this file twice at that spacing.
+> **One layout, not two.** There is a 1P sheet and a 2P sheet, and it is worth being clear that they describe the same cluster. Player two is not mirrored, it is player one translated to the right, and the two sheets agree with each other to 0.001 points. One file cuts either side. To lay out the full two player panel, place this file twice **288.0 mm** apart.
+>
+> That spacing is worth a note. The raw trace gives 288.102 mm, but snapping both clusters to the grid together lands all five matching pairs on exactly 288.0 mm, which is what the panel was almost certainly drawn to. Use 288.0.
 
 **Positions are snapped to the 0.5 mm grid.** The template is a trace of a scan, so the raw decimals are tracing noise rather than design intent. One global phase was fitted across all five holes and every hole moved to its nearest 0.5 mm node, the largest single move being 0.27 mm, well inside the 0.354 mm the grid allows.
 
-Two things say this snap is recovering the design rather than inventing one. The chord spacing between neighbouring buttons gets *tighter*, from a spread of 0.62 mm down to 0.43 mm, and the exactly equal height of the last two holes, which the tracer clearly intended, survives. Every horizontal and vertical gap between holes is now an exact multiple of 0.5 mm.
+Three things say this snap is recovering the design rather than inventing one. The chord spacing between neighbouring buttons gets *tighter*, from a spread of 0.62 mm down to 0.43 mm. The exactly equal height of the last two holes, which the tracer clearly intended, survives. And snapping both player clusters together lands the player two offset on exactly 288.0 mm across all five matching pairs, from a raw 288.102, which is a clean design number falling out of a fit that was not aiming at it. Every horizontal and vertical gap between holes is now an exact multiple of 0.5 mm.
+
+> **One hole is genuinely a coin toss, and you should know which.** The front button's raw height is 22.768 mm below the centreline, which sits 0.018 mm from the exact midpoint between the 22.5 and 23.0 grid nodes. The phase fit puts it at **23.0** and that is what these files carry, but the source cannot really distinguish the two. If you have a physical panel to measure, that is the one hole worth checking. Every other hole sits comfortably nearer one node than the other.
 
 **The ear slots need one rotation.** At 41 mm centres, two 35 mm slots pointed at each other leave only 9.9 mm of material. Turning the two lower buttons to 75 degrees lifts that to **11.0 mm**, which is the circle to circle limit, so on this layout the slots stop being the constraint entirely.
 
@@ -1317,20 +1353,20 @@ Two things say this snap is recovering the design rather than inventing one. The
 
 | Version | DXF | SVG |
 |---|---|---|
-| Standard | [`neogeo_mvs.dxf`](dxf/neogeo_mvs.dxf) | [`neogeo_mvs.svg`](svg/neogeo_mvs.svg) |
-| Inner support | [`inner_support_neogeo_mvs.dxf`](dxf/inner_support_neogeo_mvs.dxf) | [`inner_support_neogeo_mvs.svg`](svg/inner_support_neogeo_mvs.svg) |
+| Standard | [`neogeo_mvs_japanese_parts.dxf`](dxf/neogeo_mvs_japanese_parts.dxf) | [`neogeo_mvs_japanese_parts.svg`](svg/neogeo_mvs_japanese_parts.svg) |
+| Inner support | [`inner_support_neogeo_mvs_japanese_parts.dxf`](dxf/inner_support_neogeo_mvs_japanese_parts.dxf) | [`inner_support_neogeo_mvs_japanese_parts.svg`](svg/inner_support_neogeo_mvs_japanese_parts.svg) |
 
 Want this with American parts instead? See [Neo Geo MVS, American hardware](#neo-geo-mvs-american-hardware).
 
 ### Neo Geo MVS, American hardware
 
-<img src="preview/neogeo_mvs_american.png" alt="neogeo_mvs_american" width="380"> <img src="preview/inner_support_neogeo_mvs_american.png" alt="inner_support_neogeo_mvs_american" width="380">
+<img src="preview/neogeo_mvs_american_parts.png" alt="neogeo_mvs_american_parts" width="380"> <img src="preview/inner_support_neogeo_mvs_american_parts.png" alt="inner_support_neogeo_mvs_american_parts" width="380">
 
 *Left: standard. Right: inner support, which on this layout is an identical copy. See below.*
 
 The same Neo Geo curve cut for American parts, using the hole sizes the template itself calls for. **Every button centre is identical to the Japanese file above.**
 
-| | `neogeo_mvs` | `neogeo_mvs_american` |
+| | `neogeo_mvs_japanese_parts` | `neogeo_mvs_american_parts` |
 |---|---|---|
 | Button hole | 30 mm | **1.1875 in (30.1625 mm)** |
 | Button style | Sanwa OBSF snap in | **American, nut mount** |
@@ -1350,12 +1386,12 @@ The same Neo Geo curve cut for American parts, using the hole sizes the template
 
 **The inner support file is a plain copy.** American buttons bolt in with a nut and have no snap-in retention ears, so there is nothing for a relief slot to relieve. It exists so the naming stays consistent, but its geometry is identical to the standard file. Same as the [Mortal Kombat American file](#mortal-kombat-3--ultimate-mk3).
 
-Everything else, the 150 mm radius arc, the 0.5 mm snap and the reasoning behind it, the excluded top buttons and the 288.102 mm player two spacing, is covered in [Neo Geo MVS](#neo-geo-mvs) above and applies here unchanged.
+Everything else, the 150 mm radius arc, the 0.5 mm snap and the reasoning behind it, the excluded top buttons and the 288.0 mm player two spacing, is covered in [Neo Geo MVS](#neo-geo-mvs) above and applies here unchanged.
 
 | Version | DXF | SVG |
 |---|---|---|
-| Standard | [`neogeo_mvs_american.dxf`](dxf/neogeo_mvs_american.dxf) | [`neogeo_mvs_american.svg`](svg/neogeo_mvs_american.svg) |
-| Inner support | [`inner_support_neogeo_mvs_american.dxf`](dxf/inner_support_neogeo_mvs_american.dxf) | [`inner_support_neogeo_mvs_american.svg`](svg/inner_support_neogeo_mvs_american.svg) |
+| Standard | [`neogeo_mvs_american_parts.dxf`](dxf/neogeo_mvs_american_parts.dxf) | [`neogeo_mvs_american_parts.svg`](svg/neogeo_mvs_american_parts.svg) |
+| Inner support | [`inner_support_neogeo_mvs_american_parts.dxf`](dxf/inner_support_neogeo_mvs_american_parts.dxf) | [`inner_support_neogeo_mvs_american_parts.svg`](svg/inner_support_neogeo_mvs_american_parts.svg) |
 
 ---
 
