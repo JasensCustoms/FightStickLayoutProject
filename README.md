@@ -6,8 +6,8 @@ The founding set is converted from [slagcoin.com](https://www.slagcoin.com/joyst
 
 ![Layout formats](https://img.shields.io/badge/formats-DXF%20%2B%20SVG-blue)
 ![Units](https://img.shields.io/badge/units-millimetres-informational)
-![Layouts](https://img.shields.io/badge/layouts-282-success)
-![Files](https://img.shields.io/badge/files-564-lightgrey)
+![Layouts](https://img.shields.io/badge/layouts-286-success)
+![Files](https://img.shields.io/badge/files-572-lightgrey)
 
 Everything is drawn 1:1 in millimetres, ready to send to a laser, router or CNC. Two families:
 
@@ -74,6 +74,7 @@ The all button layouts come from a different place. They were created by [Jasens
   - [Neo Geo MVS](#neo-geo-mvs)
   - [Neo Geo MVS, American hardware](#neo-geo-mvs-american-hardware)
   - [Capcom USA Street Fighter, American Parts](#capcom-usa-street-fighter-american-parts)
+  - [Vewlix 4+4 plus four, modern](#vewlix-44-plus-four-modern)
 - [Before you cut](#before-you-cut)
 - [How these were made](#how-these-were-made)
 - [Licence and attribution](#licence-and-attribution)
@@ -97,13 +98,13 @@ The all button layouts come from a different place. They were created by [Jasens
 ## What is in the box
 
 ```
-dxf/        282 layouts as .dxf   (R2010, millimetres, $INSUNITS = 4)
-svg/        the same 282 layouts as .svg  (1 user unit = 1 mm)
+dxf/        286 layouts as .dxf   (R2010, millimetres, $INSUNITS = 4)
+svg/        the same 286 layouts as .svg  (1 user unit = 1 mm)
 preview/    per layout PNG previews plus contact sheets and diagrams
 README.md   this file
 ```
 
-Joystick arrangements are built out to 6 files per format: 3 lever positions, each at 30 mm and 24 mm button sizes. The 21 of them come to 126 per format. All button layouts ship as a single file each, adding 7 more, manufacturer layouts likewise, adding 3, and the cabinet layouts add 4, two Mortal Kombat hardware sets and two Neo Geo, for 140. The Capcom layout also ships an American Parts cut, making 141. Each of those then has an inner support twin, doubling the count to 282 per format and 564 in total.
+Joystick arrangements are built out to 6 files per format: 3 lever positions, each at 30 mm and 24 mm button sizes. The 21 of them come to 126 per format. All button layouts ship as a single file each, adding 7 more, manufacturer layouts likewise, adding 3, and the cabinet layouts add 4, two Mortal Kombat hardware sets and two Neo Geo, for 140. The Capcom layout also ships an American Parts cut, and the Vewlix has a twelve button community variant at two lever spacings, making 143. Each of those then has an inner support twin, doubling the count to 286 per format and 572 in total.
 
 New layouts follow the same naming and layer conventions, so anything you script against the current set keeps working.
 
@@ -1392,6 +1393,48 @@ Everything else, the 150 mm radius arc, the 0.5 mm snap and the reasoning behind
 |---|---|---|
 | Standard | [`neogeo_mvs_american_parts.dxf`](dxf/neogeo_mvs_american_parts.dxf) | [`neogeo_mvs_american_parts.svg`](svg/neogeo_mvs_american_parts.svg) |
 | Inner support | [`inner_support_neogeo_mvs_american_parts.dxf`](dxf/inner_support_neogeo_mvs_american_parts.dxf) | [`inner_support_neogeo_mvs_american_parts.svg`](svg/inner_support_neogeo_mvs_american_parts.svg) |
+
+### Vewlix 4+4 plus four, modern
+
+<img src="preview/vewlix_12button_modern_82mm_spacing.png" alt="vewlix_12button_modern_82mm_spacing" width="380"> <img src="preview/inner_support_vewlix_12button_modern_82mm_spacing.png" alt="inner_support_vewlix_12button_modern_82mm_spacing" width="380">
+
+*Left: standard. Right: inner support. Both at 82 mm lever spacing.*
+
+The Vewlix 4+4 cluster with four extra holes, for the inputs modern fighting games ask for that a six or eight button panel has nowhere to put. Seen on Twitter, posted by [@Nikogel360](https://x.com/Nikogel360).
+
+**Parts: Japanese** | 12 x 24 mm snap in buttons | GL mounting system | 24 and 35.25 mm bores, alternatives
+
+**12 buttons** | 24 mm | closest pitch 28.3 mm | **82 mm and 95 mm lever spacings only** | cut envelope 199 x 115 mm
+
+> **There is no stock Vewlix spacing for this layout, on purpose.** One of the four additions sits to the left of the whole cluster, so at the stock 59 mm the lever bore ends up **5.9 mm** from a button edge, which is not something you can build. At 82 mm that becomes 52.4 mm, and at 95 mm, 65.4 mm.
+>
+> The spacing is measured to the left most button column, which on this layout is that added hole rather than the original Vewlix first column. That is the right thing to measure because it is the hole nearest the lever, which is what the spacing exists to control. It does mean the Vewlix cluster itself sits 23.6 mm further right than it does in the eight button file at the same nominal spacing.
+
+**The eight original holes are untouched.** This is built from [`vewlix_s_8button_24mm_buttons`](#vewlix-44-8-button) read straight back off disk, so the Vewlix cluster is bit for bit the same one the rest of the library ships. Only the four additions are new.
+
+**Where the four go**, and why they are constructed rather than measured. The reference is a photograph taken at an angle, which is the least trustworthy thing you can measure: perspective alone would cost more accuracy than a cut file can afford. So the additions come from the existing geometry instead, following what the picture plainly shows:
+
+| Added hole | Construction |
+|---|---|
+| Above the upper left button | extend the left column line by one of its own steps |
+| Below the lower left button | the same, downward |
+| Left of the two left most | apex of an equilateral triangle on those two |
+| Below right of the lower pair | apex of an equilateral triangle on the lower left button and the hole below it |
+
+That puts **four holes in a dead straight line** down the left side, exactly collinear and evenly spaced at 30.911 mm, which is the Vewlix column step. The two triangles come out with sides of **30.911, 30.935 and 30.997 mm**, so "almost equilateral" is the honest description: the 0.086 mm inequality is inherited from the Vewlix stagger rather than introduced here.
+
+Positions are set on the **0.2 mm grid** the 24 mm family already uses, being the Slagcoin quarter millimetre grid scaled by 0.8. That moved each triangle apex by at most 0.08 mm and left the four in line exactly collinear.
+
+**It is tight, and that is inherent to the idea.** The closest pair sits at 28.3 mm, leaving **4.31 mm** of material, marginally tighter than the 4.38 mm of the eight button original. Snap in buttons are fine at that spacing; screw in nuts will not be. The ear relief tabs need no rotation anywhere on this layout, and the thinnest web is 4.31 mm, which is exactly the plain hole to hole gap, so the tabs are not the limiting factor at all.
+
+> **This is a recreation, not a measured copy.** The geometry follows the description of what the reference shows, built on known good Vewlix numbers. If you have the real panel or better numbers, the four additions are the only thing worth checking; the eight originals are already exact.
+
+More previews: [95 mm spacing](preview/vewlix_12button_modern_95mm_spacing.png) &middot; [95 mm inner support](preview/inner_support_vewlix_12button_modern_95mm_spacing.png)
+
+| Version | 82 mm | 95 mm |
+|---|---|---|
+| Standard | [dxf](dxf/vewlix_12button_modern_82mm_spacing.dxf) &middot; [svg](svg/vewlix_12button_modern_82mm_spacing.svg) | [dxf](dxf/vewlix_12button_modern_95mm_spacing.dxf) &middot; [svg](svg/vewlix_12button_modern_95mm_spacing.svg) |
+| Inner support | [dxf](dxf/inner_support_vewlix_12button_modern_82mm_spacing.dxf) &middot; [svg](svg/inner_support_vewlix_12button_modern_82mm_spacing.svg) | [dxf](dxf/inner_support_vewlix_12button_modern_95mm_spacing.dxf) &middot; [svg](svg/inner_support_vewlix_12button_modern_95mm_spacing.svg) |
 
 ---
 

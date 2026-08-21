@@ -95,6 +95,23 @@ conversion is an exact factor of 25.4 with no rounding at any point.
 swaps the hardware, to 30 mm Sanwa holes and the universal GL lever plate. The
 spacing credit is his; the hardware choices are not from his drawing.
 
+### @Nikogel360, and the Vewlix twelve button variant
+
+Covers: `vewlix_12button_modern` and its `inner_support_` twin.
+
+  https://x.com/Nikogel360
+
+The layout was seen on Twitter, posted by @Nikogel360, as a photograph of a built
+panel. Credit for surfacing it belongs there. Whether @Nikogel360 originated the
+arrangement or was showing someone else's is not known, and no claim either way is
+made here; if you know the designer, please open an issue so this can name them.
+
+The eight original holes are Slagcoin's Vewlix 4+4 cluster at 24 mm, unchanged,
+and are credited above. The four additions were constructed from that geometry to
+match what the photograph shows, not measured from it, because a photograph taken
+at an angle cannot support the accuracy a cut file needs. The construction is set
+out in README.md so anyone can check it against a real panel.
+
 ### Crowquilll
 
 Covers: the Neo Geo MVS layouts: `neogeo_mvs_japanese_parts`, `neogeo_mvs_american_parts` and both
