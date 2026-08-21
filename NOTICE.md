@@ -94,6 +94,30 @@ conversion is an exact factor of 25.4 with no rounding at any point.
 swaps the hardware, to 30 mm Sanwa holes and the universal GL lever plate. The
 spacing credit is his; the hardware choices are not from his drawing.
 
+### Crowquilll
+
+Covers: the Neo Geo MVS layouts: `neogeo_mvs`, `neogeo_mvs_american` and both
+`inner_support_` twins.
+
+Source files: "MVS CPO 1P CURVED template.pdf" and "MVS CPO 2P CURVED template.pdf",
+signed Crowquilll and dated 7/07. The artwork states that it was traced from a scan
+of the control panel overlay of a dedicated 2-25 cabinet, and that the original CPO
+is 23.75 x 8.75 inches.
+
+The drilling template, and the work of tracing the original overlay, are
+Crowquilll's. These templates were circulated freely in the arcade restoration
+community. No canonical publication URL was confirmed, so none is claimed here; if
+you know where they were originally posted, please open an issue and it will be
+added.
+
+The hole positions in both files come from that template, unchanged between them.
+The hardware differs: `neogeo_mvs` carries 30 mm holes and the GL lever pattern,
+`neogeo_mvs_american` carries the template's own 1.1875 in holes with an IL
+Eurojoystick 2 lever cut in place of its 1.875 in American lever hole.
+
+The three lone buttons along the top of the CPO, labelled 1P Start, 2P Start and
+Select Game on the template, are not included in either file.
+
 ### Industrias Lorenzo
 
 Covers: the lever bore and mounting pattern on `mk3_umk3_dedicated` only.

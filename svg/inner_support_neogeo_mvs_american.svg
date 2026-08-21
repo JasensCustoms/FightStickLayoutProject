@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="259.3mm" height="97.8mm" viewBox="0 0 259.3313 97.8000">
+<desc>1 SVG user unit = 1 mm. Inner support: button hole unioned with a Sanwa OBSF ear relief slot.</desc>
+<g id="BUTTONS" fill="none" stroke="#d40000" stroke-width="0.2">
+<circle cx="120.7500" cy="71.9000" r="15.0813"/>
+<circle cx="155.7500" cy="50.4000" r="15.0813"/>
+<circle cx="195.2500" cy="37.9000" r="15.0813"/>
+<circle cx="236.2500" cy="37.9000" r="15.0813"/>
+</g>
+<g id="JOYSTICK_BORE_35" fill="none" stroke="#000" stroke-width="0.2">
+<circle cx="43.7500" cy="48.9000" r="17.5000"/>
+</g>
+<g id="IL_PLATE_HOLES" fill="none" stroke="#000" stroke-width="0.2">
+<circle cx="76.5500" cy="10.9500" r="2.9500"/>
+<circle cx="76.5500" cy="86.8500" r="2.9500"/>
+<circle cx="10.9500" cy="10.9500" r="2.9500"/>
+<circle cx="10.9500" cy="86.8500" r="2.9500"/>
+</g>
+<g id="REFERENCE" fill="none" stroke="#909090" stroke-width="0.2">
+<line x1="39.7500" y1="48.9000" x2="47.7500" y2="48.9000"/>
+<line x1="43.7500" y1="52.9000" x2="43.7500" y2="44.9000"/>
+<line x1="116.7500" y1="71.9000" x2="124.7500" y2="71.9000"/>
+<line x1="120.7500" y1="75.9000" x2="120.7500" y2="67.9000"/>
+<line x1="151.7500" y1="50.4000" x2="159.7500" y2="50.4000"/>
+<line x1="155.7500" y1="54.4000" x2="155.7500" y2="46.4000"/>
+<line x1="191.2500" y1="37.9000" x2="199.2500" y2="37.9000"/>
+<line x1="195.2500" y1="41.9000" x2="195.2500" y2="33.9000"/>
+<line x1="232.2500" y1="37.9000" x2="240.2500" y2="37.9000"/>
+<line x1="236.2500" y1="41.9000" x2="236.2500" y2="33.9000"/>
+</g>
+</svg>
