@@ -6,15 +6,16 @@ The founding set is converted from [slagcoin.com](https://www.slagcoin.com/joyst
 
 ![Layout formats](https://img.shields.io/badge/formats-DXF%20%2B%20SVG-blue)
 ![Units](https://img.shields.io/badge/units-millimetres-informational)
-![Layouts](https://img.shields.io/badge/layouts-290-success)
-![Files](https://img.shields.io/badge/files-580-lightgrey)
+![Layouts](https://img.shields.io/badge/layouts-568-success)
+![Files](https://img.shields.io/badge/files-1136-lightgrey)
 
-Everything is drawn 1:1 in millimetres, ready to send to a laser, router or CNC. Two groups:
+Everything is drawn 1:1 in millimetres, ready to send to a laser, router or CNC. Three groups:
 
 - **[Lever Based Layouts](#lever-based-layouts)**, anything with a joystick. The 21 Slagcoin arrangements, each supplied at 3 different lever positions and in both 30 mm and 24 mm button sizes, plus panels taken from commercial sticks, real cabinets and the community.
-- **[Leverless / All Button Layouts](#leverless--all-button-layouts)**, 7 panels with no joystick, drawn as designed with their native mix of 24 mm and 30 mm holes.
+- **[Leverless / All Button Layouts](#leverless--all-button-layouts)**, 8 panels with no joystick, drawn as designed with their native mix of 24 mm and 30 mm holes.
+- **[WASD Layouts](#wasd-layouts)**, every one of those lever layouts again with a four button directional cluster where the joystick was. The action buttons do not move.
 
-Every one of those also ships in an **inner support** version, where each button hole is merged with a relief slot for Sanwa OBSF snap in button ears. That comes to 290 layouts per format, 580 files.
+Every one of those also ships in an **inner support** version, where each button hole is merged with a relief slot for Sanwa OBSF snap in button ears. That comes to 568 layouts per format, 1136 files.
 
 <img src="preview/_all_layouts.png" alt="All layouts" width="900">
 
@@ -68,7 +69,7 @@ The all button layouts come from a different place. They were created by [Jasens
   - [Zigzag template](#zigzag-template)
   - [ASI S24](#asi-s24)
   - [ASI S30](#asi-s30)
-  - [ASI B30](#asi-b30)
+  - [JasensCustoms Sega 2P IMPACT](#jasenscustoms-sega-2p-impact)
   - [Mortal Kombat 3 / Ultimate MK3](#mortal-kombat-3--ultimate-mk3)
   - [Mortal Kombat 3, Japanese hardware](#mortal-kombat-3-japanese-hardware)
   - [Neo Geo MVS](#neo-geo-mvs)
@@ -84,7 +85,39 @@ The all button layouts come from a different place. They were created by [Jasens
   - [Shiokenstar](#shiokenstar)
   - [Slab Split](#slab-split)
   - [Split Modern](#split-modern)
+  - [ASI B30](#asi-b30)
   - [All button index](#all-button-index)
+- [WASD Layouts](#wasd-layouts)
+  - [WASD directional cluster](#wasd-directional-cluster)
+  - [Sega Astro City / Blast City P1, WASD](#sega-astro-city--blast-city-p1-wasd)
+  - [Sega P2, non slanted, WASD](#sega-p2-non-slanted-wasd)
+  - [Vewlix, 7 button as drawn, WASD](#vewlix-7-button-as-drawn-wasd)
+  - [Vewlix 4+4, 8 button, WASD](#vewlix-44-8-button-wasd)
+  - [Generic shift, WASD](#generic-shift-wasd)
+  - [Hori transitioning, WASD](#hori-transitioning-wasd)
+  - [Hori transitioning, spaced rows, WASD](#hori-transitioning-spaced-rows-wasd)
+  - [Clustered arcade, WASD](#clustered-arcade-wasd)
+  - [Clustered arcade, spaced rows, WASD](#clustered-arcade-spaced-rows-wasd)
+  - [Direct slant, WASD](#direct-slant-wasd)
+  - [Direct slant, spaced rows, WASD](#direct-slant-spaced-rows-wasd)
+  - [Moderate / hybrid, WASD](#moderate--hybrid-wasd)
+  - [Moderate / hybrid, spaced rows, WASD](#moderate--hybrid-spaced-rows-wasd)
+  - [Straight incline, WASD](#straight-incline-wasd)
+  - [Straight incline, spaced rows, WASD](#straight-incline-spaced-rows-wasd)
+  - [Square grid, WASD](#square-grid-wasd)
+  - [Square grid, spaced rows, WASD](#square-grid-spaced-rows-wasd)
+  - [Capcom USA Street Fighter, WASD](#capcom-usa-street-fighter-wasd)
+  - [Mesh template, WASD](#mesh-template-wasd)
+  - [Rhombus template, WASD](#rhombus-template-wasd)
+  - [Zigzag template, WASD](#zigzag-template-wasd)
+  - [ASI S24, WASD](#asi-s24-wasd)
+  - [ASI S30, WASD](#asi-s30-wasd)
+  - [JasensCustoms Sega 2P IMPACT, WASD](#jasenscustoms-sega-2p-impact-wasd)
+  - [Mortal Kombat 3, Japanese hardware, WASD](#mortal-kombat-3-japanese-hardware-wasd)
+  - [Neo Geo MVS, WASD](#neo-geo-mvs-wasd)
+  - [Vewlix 4+4 plus four, modern, WASD](#vewlix-44-plus-four-modern-wasd)
+  - [Vewlix 10 button, two 30 mm, WASD](#vewlix-10-button-two-30-mm-wasd)
+  - [WASD index](#wasd-index)
 - [Before you cut](#before-you-cut)
 - [Screw in buttons and nut clearance](#screw-in-buttons-and-nut-clearance)
 - [How these were made](#how-these-were-made)
@@ -109,13 +142,13 @@ The all button layouts come from a different place. They were created by [Jasens
 ## What is in the box
 
 ```
-dxf/        290 layouts as .dxf   (R2010, millimetres, $INSUNITS = 4)
-svg/        the same 290 layouts as .svg  (1 user unit = 1 mm)
+dxf/        568 layouts as .dxf   (R2010, millimetres, $INSUNITS = 4)
+svg/        the same 568 layouts as .svg  (1 user unit = 1 mm)
 preview/    per layout PNG previews plus contact sheets and diagrams
 README.md   this file
 ```
 
-Joystick arrangements are built out to 6 files per format: 3 lever positions, each at 30 mm and 24 mm button sizes. The 21 of them come to 126 per format. All button layouts ship as a single file each, adding 7 more, manufacturer layouts likewise, adding 3, and the cabinet layouts add 4, two Mortal Kombat hardware sets and two Neo Geo, for 140. The Capcom layout also ships an American Parts cut, and the Vewlix has two community variants at two lever spacings each, a twelve button and a ten button, making 145. Each of those then has an inner support twin, doubling the count to 290 per format and 580 in total.
+Joystick arrangements are built out to 6 files per format: 3 lever positions, each at 30 mm and 24 mm button sizes. The 21 of them come to 126 per format. All button layouts ship as a single file each, adding 7 more, manufacturer layouts likewise, adding 3, and the cabinet layouts add 4, two Mortal Kombat hardware sets and two Neo Geo, for 140. The Capcom layout also ships an American Parts cut, and the Vewlix has two community variants at two lever spacings each, a twelve button and a ten button, making 145. The JasensCustoms Sega 2P IMPACT plate adds a 30 mm and a 24 mm cut, for 147, and the WASD directional cluster adds one more, for 148. Every one of the 136 Japanese Parts lever layouts then gets a WASD version, for 284. Each of those has an inner support twin, doubling the count to 568 per format and 1136 in total.
 
 New layouts follow the same naming and layer conventions, so anything you script against the current set keeps working.
 
@@ -331,6 +364,8 @@ Every panel here has a joystick. Leverless panels are in [Leverless / All Button
 Previews show the stock lever position with 30 mm buttons. Red is button holes, green and blue are the two joystick bores, orange is the lever mounting pattern, grey is the non cutting reference layer.
 
 The first 21 entries are converted from Slagcoin diagrams, so each one quotes his description of it. Everything after them comes from a commercial stick, a cabinet drawing or the community, and states its origin and its parts in its own entry.
+
+**All 139 lever layouts on two sheets: [page 1](preview/_sheet_lever_1.png), [page 2](preview/_sheet_lever_2.png).** One family per row, its lever spacings and both button sizes across, every tile at the same scale so tile size means physical size. Standard files only, since the inner support twins are the same holes with a relief slot added.
 
 ---
 
@@ -959,7 +994,7 @@ More previews: [24 mm buttons](preview/zigzag36_s_24mm_buttons.png) &middot; [24
 
 ---
 
-**From commercial arcade sticks.** Each one names its maker and says how it was obtained.
+**From commercial arcade sticks.** Each one names its maker and says how it was obtained. ASI's third layout, the B30, is leverless and lives in [Leverless / All Button Layouts](#leverless--all-button-layouts) instead.
 
 ### ASI S24
 
@@ -1017,26 +1052,36 @@ Same lever treatment and the same dropped sub plate as the S24 above.
 | Standard | [`asi_s30.dxf`](dxf/asi_s30.dxf) | [`asi_s30.svg`](svg/asi_s30.svg) |
 | Inner support | [`inner_support_asi_s30.dxf`](dxf/inner_support_asi_s30.dxf) | [`inner_support_asi_s30.svg`](svg/inner_support_asi_s30.svg) |
 
-### ASI B30
+### JasensCustoms Sega 2P IMPACT
 
-<img src="preview/asi_b30.png" alt="asi_b30" width="380"> <img src="preview/inner_support_asi_b30.png" alt="inner_support_asi_b30" width="380">
+<img src="preview/jasenscustoms_sega2p_impact.png" alt="jasenscustoms_sega2p_impact" width="380"> <img src="preview/inner_support_jasenscustoms_sega2p_impact.png" alt="inner_support_jasenscustoms_sega2p_impact" width="380">
 
 *Left: standard. Right: inner support.*
 
-The B30 from **ASI**. The B is for buttons: this one is leverless, so it follows the all button conventions rather than the S24 and S30 above. No lever, no joystick bores, no plate pattern, and the origin is the centre of the button cluster rather than a lever centre.
+The Sega 2P non slanted cluster at 82 mm lever spacing with one extra 24 mm button tucked below and left of it, between the lever and the first column. Taken from [JasensCustoms.com](https://www.jasenscustoms.com)' cut file `jasenscustoms-pfs4-mczte-sega2p-IMPACT-withbezel.svg` for the IMPACT plate, which fits the Panzer Fight Stick 4 and the Mad Catz TE. The extra button is the part that does not already exist anywhere else in this library.
 
-Fifteen holes in a wide sweeping arc: nine at 30 mm including the one on the gold sub plate, and six at 24 mm running out to the left and marking the ends of the cluster.
+**Parts: Japanese** | 8 x 30 mm and 1 x 24 mm snap in buttons | GL mounting system | 24 and 35.25 mm bores, alternatives
 
-**15 buttons**  |  9 x 30 mm and 6 x 24 mm  |  closest pitch 28.5 mm  |  cut envelope 212 x 150 mm
+**9 buttons** | 8 x 30 mm, 1 x 24 mm | closest pitch 35.9 mm | **82 mm lever spacing only** | cut envelope 238 x 116 mm
 
-<img src="preview/_asi_b30_verification.png" alt="ASI B30 verification" width="900">
+**The plate itself is deliberately not here.** The source draws a complete 322.968 x 176.777 mm panel with 8.894 mm corner radii, six 3/16 in mounting screw holes and a 90.35 x 28.19 mm control strip window at the top left. All of that is specific to that plate and to the two sticks it bolts into. This library ships drilling patterns rather than panels, so the file carries the holes only and drops into any panel like everything else here. If you want the plate, get it from JasensCustoms.
 
-Measured from ASI's published render the same way as the other two, with the same three way agreement: calibrating the scale on the eight 30 mm cluster holes makes the six 24 mm holes read **23.99 mm** and the sub plate button read **30.08 mm**, neither of which was fitted to. Positions are snapped to the 0.5 mm grid, moving each hole by at most 0.23 mm. The gold sub plate and its screw are dropped, keeping only the button inside it. Accurate to roughly a third of a millimetre; check it against a real B30 before cutting.
+**The eight main centres come from this library, not from the SVG.** Seven of the eight matched [`sega2_s_82mm_spacing`](#sega-p2-non-slanted) to within 0.03 mm. The eighth, the upper right, was drawn at x = 184.499 while its own column partner sat at 184.002, so the source is 0.5 mm out on that one hole. That reads as a drafting slip rather than intent, so this file inherits the library's exact centres and the two columns line up again. The 24 mm button is kept exactly as drawn, at **(61.9795, -50.0309)** from the lever centre, because there is nothing in the library to check it against.
 
-| Version | DXF | SVG |
+**Holes are cut nominal.** The source draws every hole 0.25 mm over: buttons at 30.245 mm, the two 24 mm holes at 30.249 and 24.256. That is a cutting clearance and it belongs to whoever is cutting rather than to the drawing, so this file carries 30.000, 24.000 and the two standard bores. The ear relief tab sizes assume nominal holes, which is the other reason.
+
+**One lever spacing, 82 mm**, because that is where the plate puts it. The Sega 2P cluster at other spacings already ships as [`sega2_s`](#sega-p2-non-slanted); what is new here is the extra button, and its position is only known at 82 mm.
+
+**Screw in nuts:** no. The 30 mm cluster is 0.066 mm short at its tightest pair and the 24 mm version is 0.753 mm short, both inherited from the Sega 2P spacing. The added 24 mm button is not the problem: it clears by 9.108 mm at 30 mm and by 4.868 mm at 24 mm. See [Screw in buttons and nut clearance](#screw-in-buttons-and-nut-clearance).
+
+The **24 mm version** scales the cluster by the usual 0.8 about the first button column and the joystick centreline, which lands the eight exactly on `sega2_s_82mm_spacing_24mm_buttons` and carries the added button to (65.9836, -40.0247). All nine holes are then 24 mm, so they share a single `BUTTONS` layer rather than the split pair.
+
+| Version | 30 mm | 24 mm |
 |---|---|---|
-| Standard | [`asi_b30.dxf`](dxf/asi_b30.dxf) | [`asi_b30.svg`](svg/asi_b30.svg) |
-| Inner support | [`inner_support_asi_b30.dxf`](dxf/inner_support_asi_b30.dxf) | [`inner_support_asi_b30.svg`](svg/inner_support_asi_b30.svg) |
+| Standard | [dxf](dxf/jasenscustoms_sega2p_impact.dxf) &middot; [svg](svg/jasenscustoms_sega2p_impact.svg) | [dxf](dxf/jasenscustoms_sega2p_impact_24mm_buttons.dxf) &middot; [svg](svg/jasenscustoms_sega2p_impact_24mm_buttons.svg) |
+| Inner support | [dxf](dxf/inner_support_jasenscustoms_sega2p_impact.dxf) &middot; [svg](svg/inner_support_jasenscustoms_sega2p_impact.svg) | [dxf](dxf/inner_support_jasenscustoms_sega2p_impact_24mm_buttons.dxf) &middot; [svg](svg/inner_support_jasenscustoms_sega2p_impact_24mm_buttons.svg) |
+
+More previews: [24 mm](preview/jasenscustoms_sega2p_impact_24mm_buttons.png) &middot; [24 mm inner support](preview/inner_support_jasenscustoms_sega2p_impact_24mm_buttons.png)
 
 ---
 
@@ -1339,9 +1384,13 @@ Every layout in the table above also exists as `_82mm_spacing` and `_95mm_spacin
 
 ## Leverless / All Button Layouts
 
-Leverless panels. No joystick, so no lever spacing and no joystick bores. These are drawn as designed, with their native mix of 24 mm and 30 mm holes, and they ship as a single file each rather than in spacing and button size variants.
+Panels with no joystick. Eight layouts, drawn as designed with their native mix of 24 mm and 30 mm holes, each shipping as a single file rather than in spacing and button size variants. The ASI B30 is here rather than with the other two ASI layouts because the B is for buttons: it has no lever. Lever layouts converted to button directions are in [WASD Layouts](#wasd-layouts).
 
 <img src="preview/_all_button_layouts.png" alt="All button layouts" width="900">
+
+<img src="preview/_sheet_leverless.png" alt="Leverless layouts, contact sheet" width="900">
+
+*All eight on one sheet, at the same scale as the [lever](preview/_sheet_lever_1.png) and [WASD](preview/_sheet_wasd_1.png) sheets.*
 
 > **Who made these.** The all button layouts were created by [JasensCustoms.com](https://www.jasenscustoms.com) and members of the Panzer user community. They may draw inspiration from other all button layouts out in the world, but they are not exact replicas of any of them.
 
@@ -1461,6 +1510,28 @@ The largest layout here at 17 buttons, and a true split. Left and right clusters
 
 ---
 
+### ASI B30
+
+<img src="preview/asi_b30.png" alt="asi_b30" width="380"> <img src="preview/inner_support_asi_b30.png" alt="inner_support_asi_b30" width="380">
+
+*Left: standard. Right: inner support.*
+
+The B30 from **ASI**. The B is for buttons: this one is leverless, so it follows the all button conventions rather than the S24 and S30 above. No lever, no joystick bores, no plate pattern, and the origin is the centre of the button cluster rather than a lever centre.
+
+Fifteen holes in a wide sweeping arc: nine at 30 mm including the one on the gold sub plate, and six at 24 mm running out to the left and marking the ends of the cluster.
+
+**15 buttons**  |  9 x 30 mm and 6 x 24 mm  |  closest pitch 28.5 mm  |  cut envelope 212 x 150 mm
+
+<img src="preview/_asi_b30_verification.png" alt="ASI B30 verification" width="900">
+
+Measured from ASI's published render the same way as the other two, with the same three way agreement: calibrating the scale on the eight 30 mm cluster holes makes the six 24 mm holes read **23.99 mm** and the sub plate button read **30.08 mm**, neither of which was fitted to. Positions are snapped to the 0.5 mm grid, moving each hole by at most 0.23 mm. The gold sub plate and its screw are dropped, keeping only the button inside it. Accurate to roughly a third of a millimetre; check it against a real B30 before cutting.
+
+| Version | DXF | SVG |
+|---|---|---|
+| Standard | [`asi_b30.dxf`](dxf/asi_b30.dxf) | [`asi_b30.svg`](svg/asi_b30.svg) |
+| Inner support | [`inner_support_asi_b30.dxf`](dxf/inner_support_asi_b30.dxf) | [`inner_support_asi_b30.svg`](svg/inner_support_asi_b30.svg) |
+
+
 ### All button index
 
 | Layout | Buttons | 24 mm | 30 mm | Cut envelope | Screw in nuts |
@@ -1472,6 +1543,679 @@ The largest layout here at 17 buttons, and a true split. Left and right clusters
 | [`shiokenstar_all_button`](#shiokenstar) | 12 | 3 | 9 | 231 x 118 mm | no, -0.610 mm |
 | [`slab_split_all_button`](#slab-split) | 15 | 13 | 2 | 212 x 148 mm | no, -2.174 mm |
 | [`split_modern_all_button`](#split-modern) | 17 | 15 | 2 | 258 x 121 mm | no, -0.499 mm |
+| [`asi_b30`](#asi-b30) | 15 | 6 | 9 | 212 x 150 mm | no, -1.000 mm |
+
+## WASD Layouts
+
+Every lever layout in this repository, with a **four button WASD directional cluster in place of the joystick**. For players who want the directions on buttons without going all the way to a leverless panel.
+
+<img src="preview/wasd_cluster.png" alt="WASD cluster" width="380">
+
+**All 137 WASD layouts on two sheets: [page 1](preview/_sheet_wasd_1.png), [page 2](preview/_sheet_wasd_2.png).** Same shape and the same scale as the lever sheets, so the two sets can be read side by side. Standard files only.
+
+**The centre button of the WASD cluster sits exactly where the joystick shaft centre was**, at (0, 0). That single rule is what makes this section possible: every action button keeps the position it already had, so muscle memory, every published pitch and every cut envelope carry straight across from the lever version. What changes is that `JOYSTICK_BORE_24`, `JOYSTICK_BORE_35.25` and `GL_PLATE_HOLES` are gone, and four 24 mm holes appear at the origin.
+
+The cluster is three buttons in a row with a fourth above the centre one, **29.0 mm** apart in both directions, the whole thing rotated **10 degrees clockwise** about the centre button. It is described in full in [WASD directional cluster](#wasd-directional-cluster) below.
+
+**Everything here is Japanese Parts** and ships in the same shapes as its lever parent: the same lever spacings, the same 30 mm and 24 mm button sizes, and an inner support twin for every file. The three `_american_parts` layouts are not included, because American Parts is a specification for a lever and a lever is exactly what these do not have.
+
+> **Watch the reach on the tight ones.** The cluster extends 28.559 mm to the right of the origin, so on a layout whose lever sat close to the first button column the right hand WASD button ends up close to it. The tightest in the whole section is `sega1_s_wasd` at **4.733 mm** between hole edges. That is buildable, but cut a test piece first. Every entry below states its own tightest gap.
+
+---
+
+### WASD directional cluster
+
+<img src="preview/wasd_cluster.png" alt="wasd_cluster" width="380"> <img src="preview/inner_support_wasd_cluster.png" alt="inner_support_wasd_cluster" width="380">
+
+*Left: standard. Right: inner support.*
+
+Four 24 mm buttons in place of a joystick, for players who want the directions on buttons without going all the way to a leverless panel. Three in a row with a fourth above the centre one, the whole cluster rotated 10 degrees clockwise about that centre button.
+
+**Parts: Japanese** | 4 x 24 mm snap in buttons | no lever, so no bores and no plate holes
+
+**4 buttons** | 24 mm | pitch 29.0 mm | cut envelope 81.1 x 57.6 mm
+
+**The centre button sits exactly where the joystick shaft centre was**, at (0, 0). That is the point of it: any lever layout in this repository becomes a WASD layout by deleting the two bores and the `GL_PLATE_HOLES` layer and dropping this cluster in at the origin. Every action button keeps the position it already had, so muscle memory and every published spacing figure carry straight across.
+
+| Button | Position |
+|---|---|
+| left | (-28.5594, 5.0358) |
+| centre | (0, 0) |
+| right | (28.5594, -5.0358) |
+| up | (5.0358, 28.5594) |
+
+**Pitch is 29.0 mm** along the row and from the centre button up to the fourth, so all three neighbours of the centre are equidistant and the cluster is a symmetric plus before the tilt. That is the same pitch the leverless direction clusters in this repository already use between their two leftmost holes. Diagonals come out at 41.012 mm, and left to right at 58.000.
+
+**The tilt is clockwise**, which in this library's +Y up convention is -10 degrees, so the row falls away to the right. The existing leverless clusters drop to the right too.
+
+**Ear tabs:** two of the four are rotated, the centre and the up button, to 30 degrees rather than the default 60. That takes the thinnest web from 2.752 mm to **4.894 mm**, against a 5.000 mm ceiling set by the plain hole to hole gap, so the tabs cost about a tenth of a millimetre and nothing more.
+
+**Screw in nuts:** no, by 0.5 mm. A 24 mm nut needs 29.50 mm centres and this is 29.00. See [Screw in buttons and nut clearance](#screw-in-buttons-and-nut-clearance).
+
+**Reach, which matters when fitting it to an existing layout:** the cluster extends 28.559 mm to the right of the origin and 28.559 mm up. On a layout with the lever at stock 59 mm from the first button column, the right hand WASD button ends up about 3.4 mm from the edge of the first 30 mm button, which is buildable but thin.
+
+| Version | DXF | SVG |
+|---|---|---|
+| Standard | [`wasd_cluster.dxf`](dxf/wasd_cluster.dxf) | [`wasd_cluster.svg`](svg/wasd_cluster.svg) |
+| Inner support | [`inner_support_wasd_cluster.dxf`](dxf/inner_support_wasd_cluster.dxf) | [`inner_support_wasd_cluster.svg`](svg/inner_support_wasd_cluster.svg) |
+
+---
+
+### Sega Astro City / Blast City P1, WASD
+
+<img src="preview/sega1_s_82mm_spacing_wasd.png" alt="sega1_s_82mm_spacing_wasd" width="380"> <img src="preview/inner_support_sega1_s_82mm_spacing_wasd.png" alt="inner_support_sega1_s_82mm_spacing_wasd" width="380">
+
+*Left: standard. Right: inner support. Both at 82 mm lever spacing.*
+
+The [Sega Astro City / Blast City P1](#sega-astro-city--blast-city-p1) cluster with the four button WASD directional cluster in place of the joystick. Every action button keeps the position it already had; the two joystick bores and the `GL_PLATE_HOLES` layer are gone.
+
+**Parts: Japanese** | 8 x 30 mm and 4 x 24 mm snap in buttons | no lever, so no bores and no plate holes
+
+**12 buttons** | 8 x 30 mm and 4 x 24 mm | the 24 mm files are 12 x 24 mm | tightest WASD to layout gap **4.733 mm**, in `sega1_s_wasd` | thinnest web 4.580 mm | 6 files
+
+| Version | stock | 82 mm | 95 mm |
+|---|---|---|---|
+| 30 mm | [dxf](dxf/sega1_s_wasd.dxf) &middot; [svg](svg/sega1_s_wasd.svg) | [dxf](dxf/sega1_s_82mm_spacing_wasd.dxf) &middot; [svg](svg/sega1_s_82mm_spacing_wasd.svg) | [dxf](dxf/sega1_s_95mm_spacing_wasd.dxf) &middot; [svg](svg/sega1_s_95mm_spacing_wasd.svg) |
+| 30 mm inner support | [dxf](dxf/inner_support_sega1_s_wasd.dxf) &middot; [svg](svg/inner_support_sega1_s_wasd.svg) | [dxf](dxf/inner_support_sega1_s_82mm_spacing_wasd.dxf) &middot; [svg](svg/inner_support_sega1_s_82mm_spacing_wasd.svg) | [dxf](dxf/inner_support_sega1_s_95mm_spacing_wasd.dxf) &middot; [svg](svg/inner_support_sega1_s_95mm_spacing_wasd.svg) |
+| 24 mm | [dxf](dxf/sega1_s_24mm_buttons_wasd.dxf) &middot; [svg](svg/sega1_s_24mm_buttons_wasd.svg) | [dxf](dxf/sega1_s_82mm_spacing_24mm_buttons_wasd.dxf) &middot; [svg](svg/sega1_s_82mm_spacing_24mm_buttons_wasd.svg) | [dxf](dxf/sega1_s_95mm_spacing_24mm_buttons_wasd.dxf) &middot; [svg](svg/sega1_s_95mm_spacing_24mm_buttons_wasd.svg) |
+| 24 mm inner support | [dxf](dxf/inner_support_sega1_s_24mm_buttons_wasd.dxf) &middot; [svg](svg/inner_support_sega1_s_24mm_buttons_wasd.svg) | [dxf](dxf/inner_support_sega1_s_82mm_spacing_24mm_buttons_wasd.dxf) &middot; [svg](svg/inner_support_sega1_s_82mm_spacing_24mm_buttons_wasd.svg) | [dxf](dxf/inner_support_sega1_s_95mm_spacing_24mm_buttons_wasd.dxf) &middot; [svg](svg/inner_support_sega1_s_95mm_spacing_24mm_buttons_wasd.svg) |
+
+---
+
+### Sega P2, non slanted, WASD
+
+<img src="preview/sega2_s_82mm_spacing_wasd.png" alt="sega2_s_82mm_spacing_wasd" width="380"> <img src="preview/inner_support_sega2_s_82mm_spacing_wasd.png" alt="inner_support_sega2_s_82mm_spacing_wasd" width="380">
+
+*Left: standard. Right: inner support. Both at 82 mm lever spacing.*
+
+The [Sega P2, non slanted](#sega-p2-non-slanted) cluster with the four button WASD directional cluster in place of the joystick. Every action button keeps the position it already had; the two joystick bores and the `GL_PLATE_HOLES` layer are gone.
+
+**Parts: Japanese** | 8 x 30 mm and 4 x 24 mm snap in buttons | no lever, so no bores and no plate holes
+
+**12 buttons** | 8 x 30 mm and 4 x 24 mm | the 24 mm files are 12 x 24 mm | tightest WASD to layout gap **10.551 mm**, in `sega2_s_wasd` | thinnest web 4.747 mm | 6 files
+
+| Version | stock | 82 mm | 95 mm |
+|---|---|---|---|
+| 30 mm | [dxf](dxf/sega2_s_wasd.dxf) &middot; [svg](svg/sega2_s_wasd.svg) | [dxf](dxf/sega2_s_82mm_spacing_wasd.dxf) &middot; [svg](svg/sega2_s_82mm_spacing_wasd.svg) | [dxf](dxf/sega2_s_95mm_spacing_wasd.dxf) &middot; [svg](svg/sega2_s_95mm_spacing_wasd.svg) |
+| 30 mm inner support | [dxf](dxf/inner_support_sega2_s_wasd.dxf) &middot; [svg](svg/inner_support_sega2_s_wasd.svg) | [dxf](dxf/inner_support_sega2_s_82mm_spacing_wasd.dxf) &middot; [svg](svg/inner_support_sega2_s_82mm_spacing_wasd.svg) | [dxf](dxf/inner_support_sega2_s_95mm_spacing_wasd.dxf) &middot; [svg](svg/inner_support_sega2_s_95mm_spacing_wasd.svg) |
+| 24 mm | [dxf](dxf/sega2_s_24mm_buttons_wasd.dxf) &middot; [svg](svg/sega2_s_24mm_buttons_wasd.svg) | [dxf](dxf/sega2_s_82mm_spacing_24mm_buttons_wasd.dxf) &middot; [svg](svg/sega2_s_82mm_spacing_24mm_buttons_wasd.svg) | [dxf](dxf/sega2_s_95mm_spacing_24mm_buttons_wasd.dxf) &middot; [svg](svg/sega2_s_95mm_spacing_24mm_buttons_wasd.svg) |
+| 24 mm inner support | [dxf](dxf/inner_support_sega2_s_24mm_buttons_wasd.dxf) &middot; [svg](svg/inner_support_sega2_s_24mm_buttons_wasd.svg) | [dxf](dxf/inner_support_sega2_s_82mm_spacing_24mm_buttons_wasd.dxf) &middot; [svg](svg/inner_support_sega2_s_82mm_spacing_24mm_buttons_wasd.svg) | [dxf](dxf/inner_support_sega2_s_95mm_spacing_24mm_buttons_wasd.dxf) &middot; [svg](svg/inner_support_sega2_s_95mm_spacing_24mm_buttons_wasd.svg) |
+
+---
+
+### Vewlix, 7 button as drawn, WASD
+
+<img src="preview/vewlix_s_82mm_spacing_wasd.png" alt="vewlix_s_82mm_spacing_wasd" width="380"> <img src="preview/inner_support_vewlix_s_82mm_spacing_wasd.png" alt="inner_support_vewlix_s_82mm_spacing_wasd" width="380">
+
+*Left: standard. Right: inner support. Both at 82 mm lever spacing.*
+
+The [Vewlix, 7 button as drawn](#vewlix-7-button-as-drawn) cluster with the four button WASD directional cluster in place of the joystick. Every action button keeps the position it already had; the two joystick bores and the `GL_PLATE_HOLES` layer are gone.
+
+**Parts: Japanese** | 7 x 30 mm and 4 x 24 mm snap in buttons | no lever, so no bores and no plate holes
+
+**11 buttons** | 7 x 30 mm and 4 x 24 mm | the 24 mm files are 11 x 24 mm | tightest WASD to layout gap **11.045 mm**, in `vewlix_s_24mm_buttons_wasd` | thinnest web 4.375 mm | 6 files
+
+| Version | stock | 82 mm | 95 mm |
+|---|---|---|---|
+| 30 mm | [dxf](dxf/vewlix_s_wasd.dxf) &middot; [svg](svg/vewlix_s_wasd.svg) | [dxf](dxf/vewlix_s_82mm_spacing_wasd.dxf) &middot; [svg](svg/vewlix_s_82mm_spacing_wasd.svg) | [dxf](dxf/vewlix_s_95mm_spacing_wasd.dxf) &middot; [svg](svg/vewlix_s_95mm_spacing_wasd.svg) |
+| 30 mm inner support | [dxf](dxf/inner_support_vewlix_s_wasd.dxf) &middot; [svg](svg/inner_support_vewlix_s_wasd.svg) | [dxf](dxf/inner_support_vewlix_s_82mm_spacing_wasd.dxf) &middot; [svg](svg/inner_support_vewlix_s_82mm_spacing_wasd.svg) | [dxf](dxf/inner_support_vewlix_s_95mm_spacing_wasd.dxf) &middot; [svg](svg/inner_support_vewlix_s_95mm_spacing_wasd.svg) |
+| 24 mm | [dxf](dxf/vewlix_s_24mm_buttons_wasd.dxf) &middot; [svg](svg/vewlix_s_24mm_buttons_wasd.svg) | [dxf](dxf/vewlix_s_82mm_spacing_24mm_buttons_wasd.dxf) &middot; [svg](svg/vewlix_s_82mm_spacing_24mm_buttons_wasd.svg) | [dxf](dxf/vewlix_s_95mm_spacing_24mm_buttons_wasd.dxf) &middot; [svg](svg/vewlix_s_95mm_spacing_24mm_buttons_wasd.svg) |
+| 24 mm inner support | [dxf](dxf/inner_support_vewlix_s_24mm_buttons_wasd.dxf) &middot; [svg](svg/inner_support_vewlix_s_24mm_buttons_wasd.svg) | [dxf](dxf/inner_support_vewlix_s_82mm_spacing_24mm_buttons_wasd.dxf) &middot; [svg](svg/inner_support_vewlix_s_82mm_spacing_24mm_buttons_wasd.svg) | [dxf](dxf/inner_support_vewlix_s_95mm_spacing_24mm_buttons_wasd.dxf) &middot; [svg](svg/inner_support_vewlix_s_95mm_spacing_24mm_buttons_wasd.svg) |
+
+---
+
+### Vewlix 4+4, 8 button, WASD
+
+<img src="preview/vewlix_s_8button_82mm_spacing_wasd.png" alt="vewlix_s_8button_82mm_spacing_wasd" width="380"> <img src="preview/inner_support_vewlix_s_8button_82mm_spacing_wasd.png" alt="inner_support_vewlix_s_8button_82mm_spacing_wasd" width="380">
+
+*Left: standard. Right: inner support. Both at 82 mm lever spacing.*
+
+The [Vewlix 4+4, 8 button](#vewlix-44-8-button) cluster with the four button WASD directional cluster in place of the joystick. Every action button keeps the position it already had; the two joystick bores and the `GL_PLATE_HOLES` layer are gone.
+
+**Parts: Japanese** | 8 x 30 mm and 4 x 24 mm snap in buttons | no lever, so no bores and no plate holes
+
+**12 buttons** | 8 x 30 mm and 4 x 24 mm | the 24 mm files are 12 x 24 mm | tightest WASD to layout gap **11.045 mm**, in `vewlix_s_8button_24mm_buttons_wasd` | thinnest web 4.375 mm | 6 files
+
+| Version | stock | 82 mm | 95 mm |
+|---|---|---|---|
+| 30 mm | [dxf](dxf/vewlix_s_8button_wasd.dxf) &middot; [svg](svg/vewlix_s_8button_wasd.svg) | [dxf](dxf/vewlix_s_8button_82mm_spacing_wasd.dxf) &middot; [svg](svg/vewlix_s_8button_82mm_spacing_wasd.svg) | [dxf](dxf/vewlix_s_8button_95mm_spacing_wasd.dxf) &middot; [svg](svg/vewlix_s_8button_95mm_spacing_wasd.svg) |
+| 30 mm inner support | [dxf](dxf/inner_support_vewlix_s_8button_wasd.dxf) &middot; [svg](svg/inner_support_vewlix_s_8button_wasd.svg) | [dxf](dxf/inner_support_vewlix_s_8button_82mm_spacing_wasd.dxf) &middot; [svg](svg/inner_support_vewlix_s_8button_82mm_spacing_wasd.svg) | [dxf](dxf/inner_support_vewlix_s_8button_95mm_spacing_wasd.dxf) &middot; [svg](svg/inner_support_vewlix_s_8button_95mm_spacing_wasd.svg) |
+| 24 mm | [dxf](dxf/vewlix_s_8button_24mm_buttons_wasd.dxf) &middot; [svg](svg/vewlix_s_8button_24mm_buttons_wasd.svg) | [dxf](dxf/vewlix_s_8button_82mm_spacing_24mm_buttons_wasd.dxf) &middot; [svg](svg/vewlix_s_8button_82mm_spacing_24mm_buttons_wasd.svg) | [dxf](dxf/vewlix_s_8button_95mm_spacing_24mm_buttons_wasd.dxf) &middot; [svg](svg/vewlix_s_8button_95mm_spacing_24mm_buttons_wasd.svg) |
+| 24 mm inner support | [dxf](dxf/inner_support_vewlix_s_8button_24mm_buttons_wasd.dxf) &middot; [svg](svg/inner_support_vewlix_s_8button_24mm_buttons_wasd.svg) | [dxf](dxf/inner_support_vewlix_s_8button_82mm_spacing_24mm_buttons_wasd.dxf) &middot; [svg](svg/inner_support_vewlix_s_8button_82mm_spacing_24mm_buttons_wasd.svg) | [dxf](dxf/inner_support_vewlix_s_8button_95mm_spacing_24mm_buttons_wasd.dxf) &middot; [svg](svg/inner_support_vewlix_s_8button_95mm_spacing_24mm_buttons_wasd.svg) |
+
+---
+
+### Generic shift, WASD
+
+<img src="preview/shift36_s_82mm_spacing_wasd.png" alt="shift36_s_82mm_spacing_wasd" width="380"> <img src="preview/inner_support_shift36_s_82mm_spacing_wasd.png" alt="inner_support_shift36_s_82mm_spacing_wasd" width="380">
+
+*Left: standard. Right: inner support. Both at 82 mm lever spacing.*
+
+The [Generic shift](#generic-shift) cluster with the four button WASD directional cluster in place of the joystick. Every action button keeps the position it already had; the two joystick bores and the `GL_PLATE_HOLES` layer are gone.
+
+**Parts: Japanese** | 8 x 30 mm and 4 x 24 mm snap in buttons | no lever, so no bores and no plate holes
+
+**12 buttons** | 8 x 30 mm and 4 x 24 mm | the 24 mm files are 12 x 24 mm | tightest WASD to layout gap **27.187 mm**, in `shift36_s_82mm_spacing_wasd` | thinnest web 4.580 mm | 6 files
+
+| Version | stock | 82 mm | 95 mm |
+|---|---|---|---|
+| 30 mm | [dxf](dxf/shift36_s_wasd.dxf) &middot; [svg](svg/shift36_s_wasd.svg) | [dxf](dxf/shift36_s_82mm_spacing_wasd.dxf) &middot; [svg](svg/shift36_s_82mm_spacing_wasd.svg) | [dxf](dxf/shift36_s_95mm_spacing_wasd.dxf) &middot; [svg](svg/shift36_s_95mm_spacing_wasd.svg) |
+| 30 mm inner support | [dxf](dxf/inner_support_shift36_s_wasd.dxf) &middot; [svg](svg/inner_support_shift36_s_wasd.svg) | [dxf](dxf/inner_support_shift36_s_82mm_spacing_wasd.dxf) &middot; [svg](svg/inner_support_shift36_s_82mm_spacing_wasd.svg) | [dxf](dxf/inner_support_shift36_s_95mm_spacing_wasd.dxf) &middot; [svg](svg/inner_support_shift36_s_95mm_spacing_wasd.svg) |
+| 24 mm | [dxf](dxf/shift36_s_24mm_buttons_wasd.dxf) &middot; [svg](svg/shift36_s_24mm_buttons_wasd.svg) | [dxf](dxf/shift36_s_82mm_spacing_24mm_buttons_wasd.dxf) &middot; [svg](svg/shift36_s_82mm_spacing_24mm_buttons_wasd.svg) | [dxf](dxf/shift36_s_95mm_spacing_24mm_buttons_wasd.dxf) &middot; [svg](svg/shift36_s_95mm_spacing_24mm_buttons_wasd.svg) |
+| 24 mm inner support | [dxf](dxf/inner_support_shift36_s_24mm_buttons_wasd.dxf) &middot; [svg](svg/inner_support_shift36_s_24mm_buttons_wasd.svg) | [dxf](dxf/inner_support_shift36_s_82mm_spacing_24mm_buttons_wasd.dxf) &middot; [svg](svg/inner_support_shift36_s_82mm_spacing_24mm_buttons_wasd.svg) | [dxf](dxf/inner_support_shift36_s_95mm_spacing_24mm_buttons_wasd.dxf) &middot; [svg](svg/inner_support_shift36_s_95mm_spacing_24mm_buttons_wasd.svg) |
+
+---
+
+### Hori transitioning, WASD
+
+<img src="preview/hori36_s_82mm_spacing_wasd.png" alt="hori36_s_82mm_spacing_wasd" width="380"> <img src="preview/inner_support_hori36_s_82mm_spacing_wasd.png" alt="inner_support_hori36_s_82mm_spacing_wasd" width="380">
+
+*Left: standard. Right: inner support. Both at 82 mm lever spacing.*
+
+The [Hori transitioning](#hori-transitioning) cluster with the four button WASD directional cluster in place of the joystick. Every action button keeps the position it already had; the two joystick bores and the `GL_PLATE_HOLES` layer are gone.
+
+**Parts: Japanese** | 8 x 30 mm and 4 x 24 mm snap in buttons | no lever, so no bores and no plate holes
+
+**12 buttons** | 8 x 30 mm and 4 x 24 mm | the 24 mm files are 12 x 24 mm | tightest WASD to layout gap **10.886 mm**, in `hori36_s_wasd` | thinnest web 4.800 mm | 6 files
+
+| Version | stock | 82 mm | 95 mm |
+|---|---|---|---|
+| 30 mm | [dxf](dxf/hori36_s_wasd.dxf) &middot; [svg](svg/hori36_s_wasd.svg) | [dxf](dxf/hori36_s_82mm_spacing_wasd.dxf) &middot; [svg](svg/hori36_s_82mm_spacing_wasd.svg) | [dxf](dxf/hori36_s_95mm_spacing_wasd.dxf) &middot; [svg](svg/hori36_s_95mm_spacing_wasd.svg) |
+| 30 mm inner support | [dxf](dxf/inner_support_hori36_s_wasd.dxf) &middot; [svg](svg/inner_support_hori36_s_wasd.svg) | [dxf](dxf/inner_support_hori36_s_82mm_spacing_wasd.dxf) &middot; [svg](svg/inner_support_hori36_s_82mm_spacing_wasd.svg) | [dxf](dxf/inner_support_hori36_s_95mm_spacing_wasd.dxf) &middot; [svg](svg/inner_support_hori36_s_95mm_spacing_wasd.svg) |
+| 24 mm | [dxf](dxf/hori36_s_24mm_buttons_wasd.dxf) &middot; [svg](svg/hori36_s_24mm_buttons_wasd.svg) | [dxf](dxf/hori36_s_82mm_spacing_24mm_buttons_wasd.dxf) &middot; [svg](svg/hori36_s_82mm_spacing_24mm_buttons_wasd.svg) | [dxf](dxf/hori36_s_95mm_spacing_24mm_buttons_wasd.dxf) &middot; [svg](svg/hori36_s_95mm_spacing_24mm_buttons_wasd.svg) |
+| 24 mm inner support | [dxf](dxf/inner_support_hori36_s_24mm_buttons_wasd.dxf) &middot; [svg](svg/inner_support_hori36_s_24mm_buttons_wasd.svg) | [dxf](dxf/inner_support_hori36_s_82mm_spacing_24mm_buttons_wasd.dxf) &middot; [svg](svg/inner_support_hori36_s_82mm_spacing_24mm_buttons_wasd.svg) | [dxf](dxf/inner_support_hori36_s_95mm_spacing_24mm_buttons_wasd.dxf) &middot; [svg](svg/inner_support_hori36_s_95mm_spacing_24mm_buttons_wasd.svg) |
+
+---
+
+### Hori transitioning, spaced rows, WASD
+
+<img src="preview/horis36_s_82mm_spacing_wasd.png" alt="horis36_s_82mm_spacing_wasd" width="380"> <img src="preview/inner_support_horis36_s_82mm_spacing_wasd.png" alt="inner_support_horis36_s_82mm_spacing_wasd" width="380">
+
+*Left: standard. Right: inner support. Both at 82 mm lever spacing.*
+
+The [Hori transitioning, spaced rows](#hori-transitioning-spaced-rows) cluster with the four button WASD directional cluster in place of the joystick. Every action button keeps the position it already had; the two joystick bores and the `GL_PLATE_HOLES` layer are gone.
+
+**Parts: Japanese** | 8 x 30 mm and 4 x 24 mm snap in buttons | no lever, so no bores and no plate holes
+
+**12 buttons** | 8 x 30 mm and 4 x 24 mm | the 24 mm files are 12 x 24 mm | tightest WASD to layout gap **12.097 mm**, in `horis36_s_wasd` | thinnest web 4.800 mm | 6 files
+
+| Version | stock | 82 mm | 95 mm |
+|---|---|---|---|
+| 30 mm | [dxf](dxf/horis36_s_wasd.dxf) &middot; [svg](svg/horis36_s_wasd.svg) | [dxf](dxf/horis36_s_82mm_spacing_wasd.dxf) &middot; [svg](svg/horis36_s_82mm_spacing_wasd.svg) | [dxf](dxf/horis36_s_95mm_spacing_wasd.dxf) &middot; [svg](svg/horis36_s_95mm_spacing_wasd.svg) |
+| 30 mm inner support | [dxf](dxf/inner_support_horis36_s_wasd.dxf) &middot; [svg](svg/inner_support_horis36_s_wasd.svg) | [dxf](dxf/inner_support_horis36_s_82mm_spacing_wasd.dxf) &middot; [svg](svg/inner_support_horis36_s_82mm_spacing_wasd.svg) | [dxf](dxf/inner_support_horis36_s_95mm_spacing_wasd.dxf) &middot; [svg](svg/inner_support_horis36_s_95mm_spacing_wasd.svg) |
+| 24 mm | [dxf](dxf/horis36_s_24mm_buttons_wasd.dxf) &middot; [svg](svg/horis36_s_24mm_buttons_wasd.svg) | [dxf](dxf/horis36_s_82mm_spacing_24mm_buttons_wasd.dxf) &middot; [svg](svg/horis36_s_82mm_spacing_24mm_buttons_wasd.svg) | [dxf](dxf/horis36_s_95mm_spacing_24mm_buttons_wasd.dxf) &middot; [svg](svg/horis36_s_95mm_spacing_24mm_buttons_wasd.svg) |
+| 24 mm inner support | [dxf](dxf/inner_support_horis36_s_24mm_buttons_wasd.dxf) &middot; [svg](svg/inner_support_horis36_s_24mm_buttons_wasd.svg) | [dxf](dxf/inner_support_horis36_s_82mm_spacing_24mm_buttons_wasd.dxf) &middot; [svg](svg/inner_support_horis36_s_82mm_spacing_24mm_buttons_wasd.svg) | [dxf](dxf/inner_support_horis36_s_95mm_spacing_24mm_buttons_wasd.dxf) &middot; [svg](svg/inner_support_horis36_s_95mm_spacing_24mm_buttons_wasd.svg) |
+
+---
+
+### Clustered arcade, WASD
+
+<img src="preview/cluster36_s_82mm_spacing_wasd.png" alt="cluster36_s_82mm_spacing_wasd" width="380"> <img src="preview/inner_support_cluster36_s_82mm_spacing_wasd.png" alt="inner_support_cluster36_s_82mm_spacing_wasd" width="380">
+
+*Left: standard. Right: inner support. Both at 82 mm lever spacing.*
+
+The [Clustered arcade](#clustered-arcade) cluster with the four button WASD directional cluster in place of the joystick. Every action button keeps the position it already had; the two joystick bores and the `GL_PLATE_HOLES` layer are gone.
+
+**Parts: Japanese** | 8 x 30 mm and 4 x 24 mm snap in buttons | no lever, so no bores and no plate holes
+
+**12 buttons** | 8 x 30 mm and 4 x 24 mm | the 24 mm files are 12 x 24 mm | tightest WASD to layout gap **27.991 mm**, in `cluster36_s_82mm_spacing_wasd` | thinnest web 4.800 mm | 6 files
+
+| Version | stock | 82 mm | 95 mm |
+|---|---|---|---|
+| 30 mm | [dxf](dxf/cluster36_s_wasd.dxf) &middot; [svg](svg/cluster36_s_wasd.svg) | [dxf](dxf/cluster36_s_82mm_spacing_wasd.dxf) &middot; [svg](svg/cluster36_s_82mm_spacing_wasd.svg) | [dxf](dxf/cluster36_s_95mm_spacing_wasd.dxf) &middot; [svg](svg/cluster36_s_95mm_spacing_wasd.svg) |
+| 30 mm inner support | [dxf](dxf/inner_support_cluster36_s_wasd.dxf) &middot; [svg](svg/inner_support_cluster36_s_wasd.svg) | [dxf](dxf/inner_support_cluster36_s_82mm_spacing_wasd.dxf) &middot; [svg](svg/inner_support_cluster36_s_82mm_spacing_wasd.svg) | [dxf](dxf/inner_support_cluster36_s_95mm_spacing_wasd.dxf) &middot; [svg](svg/inner_support_cluster36_s_95mm_spacing_wasd.svg) |
+| 24 mm | [dxf](dxf/cluster36_s_24mm_buttons_wasd.dxf) &middot; [svg](svg/cluster36_s_24mm_buttons_wasd.svg) | [dxf](dxf/cluster36_s_82mm_spacing_24mm_buttons_wasd.dxf) &middot; [svg](svg/cluster36_s_82mm_spacing_24mm_buttons_wasd.svg) | [dxf](dxf/cluster36_s_95mm_spacing_24mm_buttons_wasd.dxf) &middot; [svg](svg/cluster36_s_95mm_spacing_24mm_buttons_wasd.svg) |
+| 24 mm inner support | [dxf](dxf/inner_support_cluster36_s_24mm_buttons_wasd.dxf) &middot; [svg](svg/inner_support_cluster36_s_24mm_buttons_wasd.svg) | [dxf](dxf/inner_support_cluster36_s_82mm_spacing_24mm_buttons_wasd.dxf) &middot; [svg](svg/inner_support_cluster36_s_82mm_spacing_24mm_buttons_wasd.svg) | [dxf](dxf/inner_support_cluster36_s_95mm_spacing_24mm_buttons_wasd.dxf) &middot; [svg](svg/inner_support_cluster36_s_95mm_spacing_24mm_buttons_wasd.svg) |
+
+---
+
+### Clustered arcade, spaced rows, WASD
+
+<img src="preview/clusters36_s_82mm_spacing_wasd.png" alt="clusters36_s_82mm_spacing_wasd" width="380"> <img src="preview/inner_support_clusters36_s_82mm_spacing_wasd.png" alt="inner_support_clusters36_s_82mm_spacing_wasd" width="380">
+
+*Left: standard. Right: inner support. Both at 82 mm lever spacing.*
+
+The [Clustered arcade, spaced rows](#clustered-arcade-spaced-rows) cluster with the four button WASD directional cluster in place of the joystick. Every action button keeps the position it already had; the two joystick bores and the `GL_PLATE_HOLES` layer are gone.
+
+**Parts: Japanese** | 8 x 30 mm and 4 x 24 mm snap in buttons | no lever, so no bores and no plate holes
+
+**12 buttons** | 8 x 30 mm and 4 x 24 mm | the 24 mm files are 12 x 24 mm | tightest WASD to layout gap **27.991 mm**, in `clusters36_s_82mm_spacing_wasd` | thinnest web 4.800 mm | 6 files
+
+| Version | stock | 82 mm | 95 mm |
+|---|---|---|---|
+| 30 mm | [dxf](dxf/clusters36_s_wasd.dxf) &middot; [svg](svg/clusters36_s_wasd.svg) | [dxf](dxf/clusters36_s_82mm_spacing_wasd.dxf) &middot; [svg](svg/clusters36_s_82mm_spacing_wasd.svg) | [dxf](dxf/clusters36_s_95mm_spacing_wasd.dxf) &middot; [svg](svg/clusters36_s_95mm_spacing_wasd.svg) |
+| 30 mm inner support | [dxf](dxf/inner_support_clusters36_s_wasd.dxf) &middot; [svg](svg/inner_support_clusters36_s_wasd.svg) | [dxf](dxf/inner_support_clusters36_s_82mm_spacing_wasd.dxf) &middot; [svg](svg/inner_support_clusters36_s_82mm_spacing_wasd.svg) | [dxf](dxf/inner_support_clusters36_s_95mm_spacing_wasd.dxf) &middot; [svg](svg/inner_support_clusters36_s_95mm_spacing_wasd.svg) |
+| 24 mm | [dxf](dxf/clusters36_s_24mm_buttons_wasd.dxf) &middot; [svg](svg/clusters36_s_24mm_buttons_wasd.svg) | [dxf](dxf/clusters36_s_82mm_spacing_24mm_buttons_wasd.dxf) &middot; [svg](svg/clusters36_s_82mm_spacing_24mm_buttons_wasd.svg) | [dxf](dxf/clusters36_s_95mm_spacing_24mm_buttons_wasd.dxf) &middot; [svg](svg/clusters36_s_95mm_spacing_24mm_buttons_wasd.svg) |
+| 24 mm inner support | [dxf](dxf/inner_support_clusters36_s_24mm_buttons_wasd.dxf) &middot; [svg](svg/inner_support_clusters36_s_24mm_buttons_wasd.svg) | [dxf](dxf/inner_support_clusters36_s_82mm_spacing_24mm_buttons_wasd.dxf) &middot; [svg](svg/inner_support_clusters36_s_82mm_spacing_24mm_buttons_wasd.svg) | [dxf](dxf/inner_support_clusters36_s_95mm_spacing_24mm_buttons_wasd.dxf) &middot; [svg](svg/inner_support_clusters36_s_95mm_spacing_24mm_buttons_wasd.svg) |
+
+---
+
+### Direct slant, WASD
+
+<img src="preview/slant36_s_82mm_spacing_wasd.png" alt="slant36_s_82mm_spacing_wasd" width="380"> <img src="preview/inner_support_slant36_s_82mm_spacing_wasd.png" alt="inner_support_slant36_s_82mm_spacing_wasd" width="380">
+
+*Left: standard. Right: inner support. Both at 82 mm lever spacing.*
+
+The [Direct slant](#direct-slant) cluster with the four button WASD directional cluster in place of the joystick. Every action button keeps the position it already had; the two joystick bores and the `GL_PLATE_HOLES` layer are gone.
+
+**Parts: Japanese** | 8 x 30 mm and 4 x 24 mm snap in buttons | no lever, so no bores and no plate holes
+
+**12 buttons** | 8 x 30 mm and 4 x 24 mm | the 24 mm files are 12 x 24 mm | tightest WASD to layout gap **27.991 mm**, in `slant36_s_82mm_spacing_wasd` | thinnest web 4.800 mm | 6 files
+
+| Version | stock | 82 mm | 95 mm |
+|---|---|---|---|
+| 30 mm | [dxf](dxf/slant36_s_wasd.dxf) &middot; [svg](svg/slant36_s_wasd.svg) | [dxf](dxf/slant36_s_82mm_spacing_wasd.dxf) &middot; [svg](svg/slant36_s_82mm_spacing_wasd.svg) | [dxf](dxf/slant36_s_95mm_spacing_wasd.dxf) &middot; [svg](svg/slant36_s_95mm_spacing_wasd.svg) |
+| 30 mm inner support | [dxf](dxf/inner_support_slant36_s_wasd.dxf) &middot; [svg](svg/inner_support_slant36_s_wasd.svg) | [dxf](dxf/inner_support_slant36_s_82mm_spacing_wasd.dxf) &middot; [svg](svg/inner_support_slant36_s_82mm_spacing_wasd.svg) | [dxf](dxf/inner_support_slant36_s_95mm_spacing_wasd.dxf) &middot; [svg](svg/inner_support_slant36_s_95mm_spacing_wasd.svg) |
+| 24 mm | [dxf](dxf/slant36_s_24mm_buttons_wasd.dxf) &middot; [svg](svg/slant36_s_24mm_buttons_wasd.svg) | [dxf](dxf/slant36_s_82mm_spacing_24mm_buttons_wasd.dxf) &middot; [svg](svg/slant36_s_82mm_spacing_24mm_buttons_wasd.svg) | [dxf](dxf/slant36_s_95mm_spacing_24mm_buttons_wasd.dxf) &middot; [svg](svg/slant36_s_95mm_spacing_24mm_buttons_wasd.svg) |
+| 24 mm inner support | [dxf](dxf/inner_support_slant36_s_24mm_buttons_wasd.dxf) &middot; [svg](svg/inner_support_slant36_s_24mm_buttons_wasd.svg) | [dxf](dxf/inner_support_slant36_s_82mm_spacing_24mm_buttons_wasd.dxf) &middot; [svg](svg/inner_support_slant36_s_82mm_spacing_24mm_buttons_wasd.svg) | [dxf](dxf/inner_support_slant36_s_95mm_spacing_24mm_buttons_wasd.dxf) &middot; [svg](svg/inner_support_slant36_s_95mm_spacing_24mm_buttons_wasd.svg) |
+
+---
+
+### Direct slant, spaced rows, WASD
+
+<img src="preview/slants36_s_82mm_spacing_wasd.png" alt="slants36_s_82mm_spacing_wasd" width="380"> <img src="preview/inner_support_slants36_s_82mm_spacing_wasd.png" alt="inner_support_slants36_s_82mm_spacing_wasd" width="380">
+
+*Left: standard. Right: inner support. Both at 82 mm lever spacing.*
+
+The [Direct slant, spaced rows](#direct-slant-spaced-rows) cluster with the four button WASD directional cluster in place of the joystick. Every action button keeps the position it already had; the two joystick bores and the `GL_PLATE_HOLES` layer are gone.
+
+**Parts: Japanese** | 8 x 30 mm and 4 x 24 mm snap in buttons | no lever, so no bores and no plate holes
+
+**12 buttons** | 8 x 30 mm and 4 x 24 mm | the 24 mm files are 12 x 24 mm | tightest WASD to layout gap **27.991 mm**, in `slants36_s_82mm_spacing_wasd` | thinnest web 4.851 mm | 6 files
+
+| Version | stock | 82 mm | 95 mm |
+|---|---|---|---|
+| 30 mm | [dxf](dxf/slants36_s_wasd.dxf) &middot; [svg](svg/slants36_s_wasd.svg) | [dxf](dxf/slants36_s_82mm_spacing_wasd.dxf) &middot; [svg](svg/slants36_s_82mm_spacing_wasd.svg) | [dxf](dxf/slants36_s_95mm_spacing_wasd.dxf) &middot; [svg](svg/slants36_s_95mm_spacing_wasd.svg) |
+| 30 mm inner support | [dxf](dxf/inner_support_slants36_s_wasd.dxf) &middot; [svg](svg/inner_support_slants36_s_wasd.svg) | [dxf](dxf/inner_support_slants36_s_82mm_spacing_wasd.dxf) &middot; [svg](svg/inner_support_slants36_s_82mm_spacing_wasd.svg) | [dxf](dxf/inner_support_slants36_s_95mm_spacing_wasd.dxf) &middot; [svg](svg/inner_support_slants36_s_95mm_spacing_wasd.svg) |
+| 24 mm | [dxf](dxf/slants36_s_24mm_buttons_wasd.dxf) &middot; [svg](svg/slants36_s_24mm_buttons_wasd.svg) | [dxf](dxf/slants36_s_82mm_spacing_24mm_buttons_wasd.dxf) &middot; [svg](svg/slants36_s_82mm_spacing_24mm_buttons_wasd.svg) | [dxf](dxf/slants36_s_95mm_spacing_24mm_buttons_wasd.dxf) &middot; [svg](svg/slants36_s_95mm_spacing_24mm_buttons_wasd.svg) |
+| 24 mm inner support | [dxf](dxf/inner_support_slants36_s_24mm_buttons_wasd.dxf) &middot; [svg](svg/inner_support_slants36_s_24mm_buttons_wasd.svg) | [dxf](dxf/inner_support_slants36_s_82mm_spacing_24mm_buttons_wasd.dxf) &middot; [svg](svg/inner_support_slants36_s_82mm_spacing_24mm_buttons_wasd.svg) | [dxf](dxf/inner_support_slants36_s_95mm_spacing_24mm_buttons_wasd.dxf) &middot; [svg](svg/inner_support_slants36_s_95mm_spacing_24mm_buttons_wasd.svg) |
+
+---
+
+### Moderate / hybrid, WASD
+
+<img src="preview/hybrid36_s_82mm_spacing_wasd.png" alt="hybrid36_s_82mm_spacing_wasd" width="380"> <img src="preview/inner_support_hybrid36_s_82mm_spacing_wasd.png" alt="inner_support_hybrid36_s_82mm_spacing_wasd" width="380">
+
+*Left: standard. Right: inner support. Both at 82 mm lever spacing.*
+
+The [Moderate / hybrid](#moderate--hybrid) cluster with the four button WASD directional cluster in place of the joystick. Every action button keeps the position it already had; the two joystick bores and the `GL_PLATE_HOLES` layer are gone.
+
+**Parts: Japanese** | 8 x 30 mm and 4 x 24 mm snap in buttons | no lever, so no bores and no plate holes
+
+**12 buttons** | 8 x 30 mm and 4 x 24 mm | the 24 mm files are 12 x 24 mm | tightest WASD to layout gap **27.187 mm**, in `hybrid36_s_82mm_spacing_wasd` | thinnest web 4.678 mm | 6 files
+
+| Version | stock | 82 mm | 95 mm |
+|---|---|---|---|
+| 30 mm | [dxf](dxf/hybrid36_s_wasd.dxf) &middot; [svg](svg/hybrid36_s_wasd.svg) | [dxf](dxf/hybrid36_s_82mm_spacing_wasd.dxf) &middot; [svg](svg/hybrid36_s_82mm_spacing_wasd.svg) | [dxf](dxf/hybrid36_s_95mm_spacing_wasd.dxf) &middot; [svg](svg/hybrid36_s_95mm_spacing_wasd.svg) |
+| 30 mm inner support | [dxf](dxf/inner_support_hybrid36_s_wasd.dxf) &middot; [svg](svg/inner_support_hybrid36_s_wasd.svg) | [dxf](dxf/inner_support_hybrid36_s_82mm_spacing_wasd.dxf) &middot; [svg](svg/inner_support_hybrid36_s_82mm_spacing_wasd.svg) | [dxf](dxf/inner_support_hybrid36_s_95mm_spacing_wasd.dxf) &middot; [svg](svg/inner_support_hybrid36_s_95mm_spacing_wasd.svg) |
+| 24 mm | [dxf](dxf/hybrid36_s_24mm_buttons_wasd.dxf) &middot; [svg](svg/hybrid36_s_24mm_buttons_wasd.svg) | [dxf](dxf/hybrid36_s_82mm_spacing_24mm_buttons_wasd.dxf) &middot; [svg](svg/hybrid36_s_82mm_spacing_24mm_buttons_wasd.svg) | [dxf](dxf/hybrid36_s_95mm_spacing_24mm_buttons_wasd.dxf) &middot; [svg](svg/hybrid36_s_95mm_spacing_24mm_buttons_wasd.svg) |
+| 24 mm inner support | [dxf](dxf/inner_support_hybrid36_s_24mm_buttons_wasd.dxf) &middot; [svg](svg/inner_support_hybrid36_s_24mm_buttons_wasd.svg) | [dxf](dxf/inner_support_hybrid36_s_82mm_spacing_24mm_buttons_wasd.dxf) &middot; [svg](svg/inner_support_hybrid36_s_82mm_spacing_24mm_buttons_wasd.svg) | [dxf](dxf/inner_support_hybrid36_s_95mm_spacing_24mm_buttons_wasd.dxf) &middot; [svg](svg/inner_support_hybrid36_s_95mm_spacing_24mm_buttons_wasd.svg) |
+
+---
+
+### Moderate / hybrid, spaced rows, WASD
+
+<img src="preview/hybrids36_s_82mm_spacing_wasd.png" alt="hybrids36_s_82mm_spacing_wasd" width="380"> <img src="preview/inner_support_hybrids36_s_82mm_spacing_wasd.png" alt="inner_support_hybrids36_s_82mm_spacing_wasd" width="380">
+
+*Left: standard. Right: inner support. Both at 82 mm lever spacing.*
+
+The [Moderate / hybrid, spaced rows](#moderate--hybrid-spaced-rows) cluster with the four button WASD directional cluster in place of the joystick. Every action button keeps the position it already had; the two joystick bores and the `GL_PLATE_HOLES` layer are gone.
+
+**Parts: Japanese** | 8 x 30 mm and 4 x 24 mm snap in buttons | no lever, so no bores and no plate holes
+
+**12 buttons** | 8 x 30 mm and 4 x 24 mm | the 24 mm files are 12 x 24 mm | tightest WASD to layout gap **27.187 mm**, in `hybrids36_s_82mm_spacing_wasd` | thinnest web 4.678 mm | 6 files
+
+| Version | stock | 82 mm | 95 mm |
+|---|---|---|---|
+| 30 mm | [dxf](dxf/hybrids36_s_wasd.dxf) &middot; [svg](svg/hybrids36_s_wasd.svg) | [dxf](dxf/hybrids36_s_82mm_spacing_wasd.dxf) &middot; [svg](svg/hybrids36_s_82mm_spacing_wasd.svg) | [dxf](dxf/hybrids36_s_95mm_spacing_wasd.dxf) &middot; [svg](svg/hybrids36_s_95mm_spacing_wasd.svg) |
+| 30 mm inner support | [dxf](dxf/inner_support_hybrids36_s_wasd.dxf) &middot; [svg](svg/inner_support_hybrids36_s_wasd.svg) | [dxf](dxf/inner_support_hybrids36_s_82mm_spacing_wasd.dxf) &middot; [svg](svg/inner_support_hybrids36_s_82mm_spacing_wasd.svg) | [dxf](dxf/inner_support_hybrids36_s_95mm_spacing_wasd.dxf) &middot; [svg](svg/inner_support_hybrids36_s_95mm_spacing_wasd.svg) |
+| 24 mm | [dxf](dxf/hybrids36_s_24mm_buttons_wasd.dxf) &middot; [svg](svg/hybrids36_s_24mm_buttons_wasd.svg) | [dxf](dxf/hybrids36_s_82mm_spacing_24mm_buttons_wasd.dxf) &middot; [svg](svg/hybrids36_s_82mm_spacing_24mm_buttons_wasd.svg) | [dxf](dxf/hybrids36_s_95mm_spacing_24mm_buttons_wasd.dxf) &middot; [svg](svg/hybrids36_s_95mm_spacing_24mm_buttons_wasd.svg) |
+| 24 mm inner support | [dxf](dxf/inner_support_hybrids36_s_24mm_buttons_wasd.dxf) &middot; [svg](svg/inner_support_hybrids36_s_24mm_buttons_wasd.svg) | [dxf](dxf/inner_support_hybrids36_s_82mm_spacing_24mm_buttons_wasd.dxf) &middot; [svg](svg/inner_support_hybrids36_s_82mm_spacing_24mm_buttons_wasd.svg) | [dxf](dxf/inner_support_hybrids36_s_95mm_spacing_24mm_buttons_wasd.dxf) &middot; [svg](svg/inner_support_hybrids36_s_95mm_spacing_24mm_buttons_wasd.svg) |
+
+---
+
+### Straight incline, WASD
+
+<img src="preview/incline36_s_82mm_spacing_wasd.png" alt="incline36_s_82mm_spacing_wasd" width="380"> <img src="preview/inner_support_incline36_s_82mm_spacing_wasd.png" alt="inner_support_incline36_s_82mm_spacing_wasd" width="380">
+
+*Left: standard. Right: inner support. Both at 82 mm lever spacing.*
+
+The [Straight incline](#straight-incline) cluster with the four button WASD directional cluster in place of the joystick. Every action button keeps the position it already had; the two joystick bores and the `GL_PLATE_HOLES` layer are gone.
+
+**Parts: Japanese** | 8 x 30 mm and 4 x 24 mm snap in buttons | no lever, so no bores and no plate holes
+
+**12 buttons** | 8 x 30 mm and 4 x 24 mm | the 24 mm files are 12 x 24 mm | tightest WASD to layout gap **28.008 mm**, in `incline36_s_82mm_spacing_wasd` | thinnest web 4.678 mm | 6 files
+
+| Version | stock | 82 mm | 95 mm |
+|---|---|---|---|
+| 30 mm | [dxf](dxf/incline36_s_wasd.dxf) &middot; [svg](svg/incline36_s_wasd.svg) | [dxf](dxf/incline36_s_82mm_spacing_wasd.dxf) &middot; [svg](svg/incline36_s_82mm_spacing_wasd.svg) | [dxf](dxf/incline36_s_95mm_spacing_wasd.dxf) &middot; [svg](svg/incline36_s_95mm_spacing_wasd.svg) |
+| 30 mm inner support | [dxf](dxf/inner_support_incline36_s_wasd.dxf) &middot; [svg](svg/inner_support_incline36_s_wasd.svg) | [dxf](dxf/inner_support_incline36_s_82mm_spacing_wasd.dxf) &middot; [svg](svg/inner_support_incline36_s_82mm_spacing_wasd.svg) | [dxf](dxf/inner_support_incline36_s_95mm_spacing_wasd.dxf) &middot; [svg](svg/inner_support_incline36_s_95mm_spacing_wasd.svg) |
+| 24 mm | [dxf](dxf/incline36_s_24mm_buttons_wasd.dxf) &middot; [svg](svg/incline36_s_24mm_buttons_wasd.svg) | [dxf](dxf/incline36_s_82mm_spacing_24mm_buttons_wasd.dxf) &middot; [svg](svg/incline36_s_82mm_spacing_24mm_buttons_wasd.svg) | [dxf](dxf/incline36_s_95mm_spacing_24mm_buttons_wasd.dxf) &middot; [svg](svg/incline36_s_95mm_spacing_24mm_buttons_wasd.svg) |
+| 24 mm inner support | [dxf](dxf/inner_support_incline36_s_24mm_buttons_wasd.dxf) &middot; [svg](svg/inner_support_incline36_s_24mm_buttons_wasd.svg) | [dxf](dxf/inner_support_incline36_s_82mm_spacing_24mm_buttons_wasd.dxf) &middot; [svg](svg/inner_support_incline36_s_82mm_spacing_24mm_buttons_wasd.svg) | [dxf](dxf/inner_support_incline36_s_95mm_spacing_24mm_buttons_wasd.dxf) &middot; [svg](svg/inner_support_incline36_s_95mm_spacing_24mm_buttons_wasd.svg) |
+
+---
+
+### Straight incline, spaced rows, WASD
+
+<img src="preview/inclines36_s_82mm_spacing_wasd.png" alt="inclines36_s_82mm_spacing_wasd" width="380"> <img src="preview/inner_support_inclines36_s_82mm_spacing_wasd.png" alt="inner_support_inclines36_s_82mm_spacing_wasd" width="380">
+
+*Left: standard. Right: inner support. Both at 82 mm lever spacing.*
+
+The [Straight incline, spaced rows](#straight-incline-spaced-rows) cluster with the four button WASD directional cluster in place of the joystick. Every action button keeps the position it already had; the two joystick bores and the `GL_PLATE_HOLES` layer are gone.
+
+**Parts: Japanese** | 8 x 30 mm and 4 x 24 mm snap in buttons | no lever, so no bores and no plate holes
+
+**12 buttons** | 8 x 30 mm and 4 x 24 mm | the 24 mm files are 12 x 24 mm | tightest WASD to layout gap **28.795 mm**, in `inclines36_s_82mm_spacing_wasd` | thinnest web 4.678 mm | 6 files
+
+| Version | stock | 82 mm | 95 mm |
+|---|---|---|---|
+| 30 mm | [dxf](dxf/inclines36_s_wasd.dxf) &middot; [svg](svg/inclines36_s_wasd.svg) | [dxf](dxf/inclines36_s_82mm_spacing_wasd.dxf) &middot; [svg](svg/inclines36_s_82mm_spacing_wasd.svg) | [dxf](dxf/inclines36_s_95mm_spacing_wasd.dxf) &middot; [svg](svg/inclines36_s_95mm_spacing_wasd.svg) |
+| 30 mm inner support | [dxf](dxf/inner_support_inclines36_s_wasd.dxf) &middot; [svg](svg/inner_support_inclines36_s_wasd.svg) | [dxf](dxf/inner_support_inclines36_s_82mm_spacing_wasd.dxf) &middot; [svg](svg/inner_support_inclines36_s_82mm_spacing_wasd.svg) | [dxf](dxf/inner_support_inclines36_s_95mm_spacing_wasd.dxf) &middot; [svg](svg/inner_support_inclines36_s_95mm_spacing_wasd.svg) |
+| 24 mm | [dxf](dxf/inclines36_s_24mm_buttons_wasd.dxf) &middot; [svg](svg/inclines36_s_24mm_buttons_wasd.svg) | [dxf](dxf/inclines36_s_82mm_spacing_24mm_buttons_wasd.dxf) &middot; [svg](svg/inclines36_s_82mm_spacing_24mm_buttons_wasd.svg) | [dxf](dxf/inclines36_s_95mm_spacing_24mm_buttons_wasd.dxf) &middot; [svg](svg/inclines36_s_95mm_spacing_24mm_buttons_wasd.svg) |
+| 24 mm inner support | [dxf](dxf/inner_support_inclines36_s_24mm_buttons_wasd.dxf) &middot; [svg](svg/inner_support_inclines36_s_24mm_buttons_wasd.svg) | [dxf](dxf/inner_support_inclines36_s_82mm_spacing_24mm_buttons_wasd.dxf) &middot; [svg](svg/inner_support_inclines36_s_82mm_spacing_24mm_buttons_wasd.svg) | [dxf](dxf/inner_support_inclines36_s_95mm_spacing_24mm_buttons_wasd.dxf) &middot; [svg](svg/inner_support_inclines36_s_95mm_spacing_24mm_buttons_wasd.svg) |
+
+---
+
+### Square grid, WASD
+
+<img src="preview/matrix36_s_82mm_spacing_wasd.png" alt="matrix36_s_82mm_spacing_wasd" width="380"> <img src="preview/inner_support_matrix36_s_82mm_spacing_wasd.png" alt="inner_support_matrix36_s_82mm_spacing_wasd" width="380">
+
+*Left: standard. Right: inner support. Both at 82 mm lever spacing.*
+
+The [Square grid](#square-grid) cluster with the four button WASD directional cluster in place of the joystick. Every action button keeps the position it already had; the two joystick bores and the `GL_PLATE_HOLES` layer are gone.
+
+**Parts: Japanese** | 8 x 30 mm and 4 x 24 mm snap in buttons | no lever, so no bores and no plate holes
+
+**12 buttons** | 8 x 30 mm and 4 x 24 mm | the 24 mm files are 12 x 24 mm | tightest WASD to layout gap **27.991 mm**, in `matrix36_s_82mm_spacing_wasd` | thinnest web 4.800 mm | 6 files
+
+| Version | stock | 82 mm | 95 mm |
+|---|---|---|---|
+| 30 mm | [dxf](dxf/matrix36_s_wasd.dxf) &middot; [svg](svg/matrix36_s_wasd.svg) | [dxf](dxf/matrix36_s_82mm_spacing_wasd.dxf) &middot; [svg](svg/matrix36_s_82mm_spacing_wasd.svg) | [dxf](dxf/matrix36_s_95mm_spacing_wasd.dxf) &middot; [svg](svg/matrix36_s_95mm_spacing_wasd.svg) |
+| 30 mm inner support | [dxf](dxf/inner_support_matrix36_s_wasd.dxf) &middot; [svg](svg/inner_support_matrix36_s_wasd.svg) | [dxf](dxf/inner_support_matrix36_s_82mm_spacing_wasd.dxf) &middot; [svg](svg/inner_support_matrix36_s_82mm_spacing_wasd.svg) | [dxf](dxf/inner_support_matrix36_s_95mm_spacing_wasd.dxf) &middot; [svg](svg/inner_support_matrix36_s_95mm_spacing_wasd.svg) |
+| 24 mm | [dxf](dxf/matrix36_s_24mm_buttons_wasd.dxf) &middot; [svg](svg/matrix36_s_24mm_buttons_wasd.svg) | [dxf](dxf/matrix36_s_82mm_spacing_24mm_buttons_wasd.dxf) &middot; [svg](svg/matrix36_s_82mm_spacing_24mm_buttons_wasd.svg) | [dxf](dxf/matrix36_s_95mm_spacing_24mm_buttons_wasd.dxf) &middot; [svg](svg/matrix36_s_95mm_spacing_24mm_buttons_wasd.svg) |
+| 24 mm inner support | [dxf](dxf/inner_support_matrix36_s_24mm_buttons_wasd.dxf) &middot; [svg](svg/inner_support_matrix36_s_24mm_buttons_wasd.svg) | [dxf](dxf/inner_support_matrix36_s_82mm_spacing_24mm_buttons_wasd.dxf) &middot; [svg](svg/inner_support_matrix36_s_82mm_spacing_24mm_buttons_wasd.svg) | [dxf](dxf/inner_support_matrix36_s_95mm_spacing_24mm_buttons_wasd.dxf) &middot; [svg](svg/inner_support_matrix36_s_95mm_spacing_24mm_buttons_wasd.svg) |
+
+---
+
+### Square grid, spaced rows, WASD
+
+<img src="preview/matrixs36_s_82mm_spacing_wasd.png" alt="matrixs36_s_82mm_spacing_wasd" width="380"> <img src="preview/inner_support_matrixs36_s_82mm_spacing_wasd.png" alt="inner_support_matrixs36_s_82mm_spacing_wasd" width="380">
+
+*Left: standard. Right: inner support. Both at 82 mm lever spacing.*
+
+The [Square grid, spaced rows](#square-grid-spaced-rows) cluster with the four button WASD directional cluster in place of the joystick. Every action button keeps the position it already had; the two joystick bores and the `GL_PLATE_HOLES` layer are gone.
+
+**Parts: Japanese** | 8 x 30 mm and 4 x 24 mm snap in buttons | no lever, so no bores and no plate holes
+
+**12 buttons** | 8 x 30 mm and 4 x 24 mm | the 24 mm files are 12 x 24 mm | tightest WASD to layout gap **28.363 mm**, in `matrixs36_s_82mm_spacing_wasd` | thinnest web 4.800 mm | 6 files
+
+| Version | stock | 82 mm | 95 mm |
+|---|---|---|---|
+| 30 mm | [dxf](dxf/matrixs36_s_wasd.dxf) &middot; [svg](svg/matrixs36_s_wasd.svg) | [dxf](dxf/matrixs36_s_82mm_spacing_wasd.dxf) &middot; [svg](svg/matrixs36_s_82mm_spacing_wasd.svg) | [dxf](dxf/matrixs36_s_95mm_spacing_wasd.dxf) &middot; [svg](svg/matrixs36_s_95mm_spacing_wasd.svg) |
+| 30 mm inner support | [dxf](dxf/inner_support_matrixs36_s_wasd.dxf) &middot; [svg](svg/inner_support_matrixs36_s_wasd.svg) | [dxf](dxf/inner_support_matrixs36_s_82mm_spacing_wasd.dxf) &middot; [svg](svg/inner_support_matrixs36_s_82mm_spacing_wasd.svg) | [dxf](dxf/inner_support_matrixs36_s_95mm_spacing_wasd.dxf) &middot; [svg](svg/inner_support_matrixs36_s_95mm_spacing_wasd.svg) |
+| 24 mm | [dxf](dxf/matrixs36_s_24mm_buttons_wasd.dxf) &middot; [svg](svg/matrixs36_s_24mm_buttons_wasd.svg) | [dxf](dxf/matrixs36_s_82mm_spacing_24mm_buttons_wasd.dxf) &middot; [svg](svg/matrixs36_s_82mm_spacing_24mm_buttons_wasd.svg) | [dxf](dxf/matrixs36_s_95mm_spacing_24mm_buttons_wasd.dxf) &middot; [svg](svg/matrixs36_s_95mm_spacing_24mm_buttons_wasd.svg) |
+| 24 mm inner support | [dxf](dxf/inner_support_matrixs36_s_24mm_buttons_wasd.dxf) &middot; [svg](svg/inner_support_matrixs36_s_24mm_buttons_wasd.svg) | [dxf](dxf/inner_support_matrixs36_s_82mm_spacing_24mm_buttons_wasd.dxf) &middot; [svg](svg/inner_support_matrixs36_s_82mm_spacing_24mm_buttons_wasd.svg) | [dxf](dxf/inner_support_matrixs36_s_95mm_spacing_24mm_buttons_wasd.dxf) &middot; [svg](svg/inner_support_matrixs36_s_95mm_spacing_24mm_buttons_wasd.svg) |
+
+---
+
+### Capcom USA Street Fighter, WASD
+
+<img src="preview/american_s_82mm_spacing_wasd.png" alt="american_s_82mm_spacing_wasd" width="380"> <img src="preview/inner_support_american_s_82mm_spacing_wasd.png" alt="inner_support_american_s_82mm_spacing_wasd" width="380">
+
+*Left: standard. Right: inner support. Both at 82 mm lever spacing.*
+
+The [Capcom USA Street Fighter](#capcom-usa-street-fighter) cluster with the four button WASD directional cluster in place of the joystick. Every action button keeps the position it already had; the two joystick bores and the `GL_PLATE_HOLES` layer are gone.
+
+**Parts: Japanese** | 6 x 30 mm and 4 x 24 mm snap in buttons | no lever, so no bores and no plate holes
+
+**10 buttons** | 6 x 30 mm and 4 x 24 mm | the 24 mm files are 10 x 24 mm | tightest WASD to layout gap **27.866 mm**, in `american_s_82mm_spacing_wasd` | thinnest web 3.940 mm | 6 files
+
+| Version | stock | 82 mm | 95 mm |
+|---|---|---|---|
+| 30 mm | [dxf](dxf/american_s_wasd.dxf) &middot; [svg](svg/american_s_wasd.svg) | [dxf](dxf/american_s_82mm_spacing_wasd.dxf) &middot; [svg](svg/american_s_82mm_spacing_wasd.svg) | [dxf](dxf/american_s_95mm_spacing_wasd.dxf) &middot; [svg](svg/american_s_95mm_spacing_wasd.svg) |
+| 30 mm inner support | [dxf](dxf/inner_support_american_s_wasd.dxf) &middot; [svg](svg/inner_support_american_s_wasd.svg) | [dxf](dxf/inner_support_american_s_82mm_spacing_wasd.dxf) &middot; [svg](svg/inner_support_american_s_82mm_spacing_wasd.svg) | [dxf](dxf/inner_support_american_s_95mm_spacing_wasd.dxf) &middot; [svg](svg/inner_support_american_s_95mm_spacing_wasd.svg) |
+| 24 mm | [dxf](dxf/american_s_24mm_buttons_wasd.dxf) &middot; [svg](svg/american_s_24mm_buttons_wasd.svg) | [dxf](dxf/american_s_82mm_spacing_24mm_buttons_wasd.dxf) &middot; [svg](svg/american_s_82mm_spacing_24mm_buttons_wasd.svg) | [dxf](dxf/american_s_95mm_spacing_24mm_buttons_wasd.dxf) &middot; [svg](svg/american_s_95mm_spacing_24mm_buttons_wasd.svg) |
+| 24 mm inner support | [dxf](dxf/inner_support_american_s_24mm_buttons_wasd.dxf) &middot; [svg](svg/inner_support_american_s_24mm_buttons_wasd.svg) | [dxf](dxf/inner_support_american_s_82mm_spacing_24mm_buttons_wasd.dxf) &middot; [svg](svg/inner_support_american_s_82mm_spacing_24mm_buttons_wasd.svg) | [dxf](dxf/inner_support_american_s_95mm_spacing_24mm_buttons_wasd.dxf) &middot; [svg](svg/inner_support_american_s_95mm_spacing_24mm_buttons_wasd.svg) |
+
+---
+
+### Mesh template, WASD
+
+<img src="preview/mesh36_s_82mm_spacing_wasd.png" alt="mesh36_s_82mm_spacing_wasd" width="380"> <img src="preview/inner_support_mesh36_s_82mm_spacing_wasd.png" alt="inner_support_mesh36_s_82mm_spacing_wasd" width="380">
+
+*Left: standard. Right: inner support. Both at 82 mm lever spacing.*
+
+The [Mesh template](#mesh-template) cluster with the four button WASD directional cluster in place of the joystick. Every action button keeps the position it already had; the two joystick bores and the `GL_PLATE_HOLES` layer are gone.
+
+**Parts: Japanese** | 13 x 30 mm and 4 x 24 mm snap in buttons | no lever, so no bores and no plate holes
+
+**17 buttons** | 13 x 30 mm and 4 x 24 mm | the 24 mm files are 17 x 24 mm | tightest WASD to layout gap **26.677 mm**, in `mesh36_s_82mm_spacing_wasd` | thinnest web 4.800 mm | 6 files
+
+| Version | stock | 82 mm | 95 mm |
+|---|---|---|---|
+| 30 mm | [dxf](dxf/mesh36_s_wasd.dxf) &middot; [svg](svg/mesh36_s_wasd.svg) | [dxf](dxf/mesh36_s_82mm_spacing_wasd.dxf) &middot; [svg](svg/mesh36_s_82mm_spacing_wasd.svg) | [dxf](dxf/mesh36_s_95mm_spacing_wasd.dxf) &middot; [svg](svg/mesh36_s_95mm_spacing_wasd.svg) |
+| 30 mm inner support | [dxf](dxf/inner_support_mesh36_s_wasd.dxf) &middot; [svg](svg/inner_support_mesh36_s_wasd.svg) | [dxf](dxf/inner_support_mesh36_s_82mm_spacing_wasd.dxf) &middot; [svg](svg/inner_support_mesh36_s_82mm_spacing_wasd.svg) | [dxf](dxf/inner_support_mesh36_s_95mm_spacing_wasd.dxf) &middot; [svg](svg/inner_support_mesh36_s_95mm_spacing_wasd.svg) |
+| 24 mm | [dxf](dxf/mesh36_s_24mm_buttons_wasd.dxf) &middot; [svg](svg/mesh36_s_24mm_buttons_wasd.svg) | [dxf](dxf/mesh36_s_82mm_spacing_24mm_buttons_wasd.dxf) &middot; [svg](svg/mesh36_s_82mm_spacing_24mm_buttons_wasd.svg) | [dxf](dxf/mesh36_s_95mm_spacing_24mm_buttons_wasd.dxf) &middot; [svg](svg/mesh36_s_95mm_spacing_24mm_buttons_wasd.svg) |
+| 24 mm inner support | [dxf](dxf/inner_support_mesh36_s_24mm_buttons_wasd.dxf) &middot; [svg](svg/inner_support_mesh36_s_24mm_buttons_wasd.svg) | [dxf](dxf/inner_support_mesh36_s_82mm_spacing_24mm_buttons_wasd.dxf) &middot; [svg](svg/inner_support_mesh36_s_82mm_spacing_24mm_buttons_wasd.svg) | [dxf](dxf/inner_support_mesh36_s_95mm_spacing_24mm_buttons_wasd.dxf) &middot; [svg](svg/inner_support_mesh36_s_95mm_spacing_24mm_buttons_wasd.svg) |
+
+---
+
+### Rhombus template, WASD
+
+<img src="preview/rhombus36_s_82mm_spacing_wasd.png" alt="rhombus36_s_82mm_spacing_wasd" width="380"> <img src="preview/inner_support_rhombus36_s_82mm_spacing_wasd.png" alt="inner_support_rhombus36_s_82mm_spacing_wasd" width="380">
+
+*Left: standard. Right: inner support. Both at 82 mm lever spacing.*
+
+The [Rhombus template](#rhombus-template) cluster with the four button WASD directional cluster in place of the joystick. Every action button keeps the position it already had; the two joystick bores and the `GL_PLATE_HOLES` layer are gone.
+
+**Parts: Japanese** | 9 x 30 mm and 4 x 24 mm snap in buttons | no lever, so no bores and no plate holes
+
+**13 buttons** | 9 x 30 mm and 4 x 24 mm | the 24 mm files are 13 x 24 mm | tightest WASD to layout gap **30.225 mm**, in `rhombus36_s_82mm_spacing_wasd` | thinnest web 4.850 mm | 6 files
+
+| Version | stock | 82 mm | 95 mm |
+|---|---|---|---|
+| 30 mm | [dxf](dxf/rhombus36_s_wasd.dxf) &middot; [svg](svg/rhombus36_s_wasd.svg) | [dxf](dxf/rhombus36_s_82mm_spacing_wasd.dxf) &middot; [svg](svg/rhombus36_s_82mm_spacing_wasd.svg) | [dxf](dxf/rhombus36_s_95mm_spacing_wasd.dxf) &middot; [svg](svg/rhombus36_s_95mm_spacing_wasd.svg) |
+| 30 mm inner support | [dxf](dxf/inner_support_rhombus36_s_wasd.dxf) &middot; [svg](svg/inner_support_rhombus36_s_wasd.svg) | [dxf](dxf/inner_support_rhombus36_s_82mm_spacing_wasd.dxf) &middot; [svg](svg/inner_support_rhombus36_s_82mm_spacing_wasd.svg) | [dxf](dxf/inner_support_rhombus36_s_95mm_spacing_wasd.dxf) &middot; [svg](svg/inner_support_rhombus36_s_95mm_spacing_wasd.svg) |
+| 24 mm | [dxf](dxf/rhombus36_s_24mm_buttons_wasd.dxf) &middot; [svg](svg/rhombus36_s_24mm_buttons_wasd.svg) | [dxf](dxf/rhombus36_s_82mm_spacing_24mm_buttons_wasd.dxf) &middot; [svg](svg/rhombus36_s_82mm_spacing_24mm_buttons_wasd.svg) | [dxf](dxf/rhombus36_s_95mm_spacing_24mm_buttons_wasd.dxf) &middot; [svg](svg/rhombus36_s_95mm_spacing_24mm_buttons_wasd.svg) |
+| 24 mm inner support | [dxf](dxf/inner_support_rhombus36_s_24mm_buttons_wasd.dxf) &middot; [svg](svg/inner_support_rhombus36_s_24mm_buttons_wasd.svg) | [dxf](dxf/inner_support_rhombus36_s_82mm_spacing_24mm_buttons_wasd.dxf) &middot; [svg](svg/inner_support_rhombus36_s_82mm_spacing_24mm_buttons_wasd.svg) | [dxf](dxf/inner_support_rhombus36_s_95mm_spacing_24mm_buttons_wasd.dxf) &middot; [svg](svg/inner_support_rhombus36_s_95mm_spacing_24mm_buttons_wasd.svg) |
+
+---
+
+### Zigzag template, WASD
+
+<img src="preview/zigzag36_s_82mm_spacing_wasd.png" alt="zigzag36_s_82mm_spacing_wasd" width="380"> <img src="preview/inner_support_zigzag36_s_82mm_spacing_wasd.png" alt="inner_support_zigzag36_s_82mm_spacing_wasd" width="380">
+
+*Left: standard. Right: inner support. Both at 82 mm lever spacing.*
+
+The [Zigzag template](#zigzag-template) cluster with the four button WASD directional cluster in place of the joystick. Every action button keeps the position it already had; the two joystick bores and the `GL_PLATE_HOLES` layer are gone.
+
+**Parts: Japanese** | 12 x 30 mm and 4 x 24 mm snap in buttons | no lever, so no bores and no plate holes
+
+**16 buttons** | 12 x 30 mm and 4 x 24 mm | the 24 mm files are 16 x 24 mm | tightest WASD to layout gap **32.524 mm**, in `zigzag36_s_82mm_spacing_wasd` | thinnest web 4.800 mm | 6 files
+
+| Version | stock | 82 mm | 95 mm |
+|---|---|---|---|
+| 30 mm | [dxf](dxf/zigzag36_s_wasd.dxf) &middot; [svg](svg/zigzag36_s_wasd.svg) | [dxf](dxf/zigzag36_s_82mm_spacing_wasd.dxf) &middot; [svg](svg/zigzag36_s_82mm_spacing_wasd.svg) | [dxf](dxf/zigzag36_s_95mm_spacing_wasd.dxf) &middot; [svg](svg/zigzag36_s_95mm_spacing_wasd.svg) |
+| 30 mm inner support | [dxf](dxf/inner_support_zigzag36_s_wasd.dxf) &middot; [svg](svg/inner_support_zigzag36_s_wasd.svg) | [dxf](dxf/inner_support_zigzag36_s_82mm_spacing_wasd.dxf) &middot; [svg](svg/inner_support_zigzag36_s_82mm_spacing_wasd.svg) | [dxf](dxf/inner_support_zigzag36_s_95mm_spacing_wasd.dxf) &middot; [svg](svg/inner_support_zigzag36_s_95mm_spacing_wasd.svg) |
+| 24 mm | [dxf](dxf/zigzag36_s_24mm_buttons_wasd.dxf) &middot; [svg](svg/zigzag36_s_24mm_buttons_wasd.svg) | [dxf](dxf/zigzag36_s_82mm_spacing_24mm_buttons_wasd.dxf) &middot; [svg](svg/zigzag36_s_82mm_spacing_24mm_buttons_wasd.svg) | [dxf](dxf/zigzag36_s_95mm_spacing_24mm_buttons_wasd.dxf) &middot; [svg](svg/zigzag36_s_95mm_spacing_24mm_buttons_wasd.svg) |
+| 24 mm inner support | [dxf](dxf/inner_support_zigzag36_s_24mm_buttons_wasd.dxf) &middot; [svg](svg/inner_support_zigzag36_s_24mm_buttons_wasd.svg) | [dxf](dxf/inner_support_zigzag36_s_82mm_spacing_24mm_buttons_wasd.dxf) &middot; [svg](svg/inner_support_zigzag36_s_82mm_spacing_24mm_buttons_wasd.svg) | [dxf](dxf/inner_support_zigzag36_s_95mm_spacing_24mm_buttons_wasd.dxf) &middot; [svg](svg/inner_support_zigzag36_s_95mm_spacing_24mm_buttons_wasd.svg) |
+
+---
+
+### ASI S24, WASD
+
+<img src="preview/asi_s24_wasd.png" alt="asi_s24_wasd" width="380"> <img src="preview/inner_support_asi_s24_wasd.png" alt="inner_support_asi_s24_wasd" width="380">
+
+*Left: standard. Right: inner support.*
+
+The [ASI S24](#asi-s24) cluster with the four button WASD directional cluster in place of the joystick. Every action button keeps the position it already had; the two joystick bores and the `GL_PLATE_HOLES` layer are gone.
+
+**Parts: Japanese** | 1 x 30 mm and 14 x 24 mm snap in buttons | no lever, so no bores and no plate holes
+
+**15 buttons** | 1 x 30 mm and 14 x 24 mm | tightest WASD to layout gap **41.452 mm** | thinnest web 5.000 mm | 1 files
+
+| Version | stock |
+|---|---|
+| 30 mm | [dxf](dxf/asi_s24_wasd.dxf) &middot; [svg](svg/asi_s24_wasd.svg) |
+| 30 mm inner support | [dxf](dxf/inner_support_asi_s24_wasd.dxf) &middot; [svg](svg/inner_support_asi_s24_wasd.svg) |
+
+---
+
+### ASI S30, WASD
+
+<img src="preview/asi_s30_wasd.png" alt="asi_s30_wasd" width="380"> <img src="preview/inner_support_asi_s30_wasd.png" alt="inner_support_asi_s30_wasd" width="380">
+
+*Left: standard. Right: inner support.*
+
+The [ASI S30](#asi-s30) cluster with the four button WASD directional cluster in place of the joystick. Every action button keeps the position it already had; the two joystick bores and the `GL_PLATE_HOLES` layer are gone.
+
+**Parts: Japanese** | 9 x 30 mm and 6 x 24 mm snap in buttons | no lever, so no bores and no plate holes
+
+**15 buttons** | 9 x 30 mm and 6 x 24 mm | tightest WASD to layout gap **36.894 mm** | thinnest web 5.000 mm | 1 files
+
+| Version | stock |
+|---|---|
+| 30 mm | [dxf](dxf/asi_s30_wasd.dxf) &middot; [svg](svg/asi_s30_wasd.svg) |
+| 30 mm inner support | [dxf](dxf/inner_support_asi_s30_wasd.dxf) &middot; [svg](svg/inner_support_asi_s30_wasd.svg) |
+
+---
+
+### JasensCustoms Sega 2P IMPACT, WASD
+
+<img src="preview/jasenscustoms_sega2p_impact_wasd.png" alt="jasenscustoms_sega2p_impact_wasd" width="380"> <img src="preview/inner_support_jasenscustoms_sega2p_impact_wasd.png" alt="inner_support_jasenscustoms_sega2p_impact_wasd" width="380">
+
+*Left: standard. Right: inner support.*
+
+The [JasensCustoms Sega 2P IMPACT](#jasenscustoms-sega-2p-impact) cluster with the four button WASD directional cluster in place of the joystick. Every action button keeps the position it already had; the two joystick bores and the `GL_PLATE_HOLES` layer are gone.
+
+**Parts: Japanese** | 8 x 30 mm and 5 x 24 mm snap in buttons | no lever, so no bores and no plate holes
+
+**13 buttons** | 8 x 30 mm and 5 x 24 mm | the 24 mm files are 13 x 24 mm | tightest WASD to layout gap **27.233 mm**, in `jasenscustoms_sega2p_impact_24mm_buttons_wasd` | thinnest web 4.747 mm | 2 files
+
+| Version | stock |
+|---|---|
+| 30 mm | [dxf](dxf/jasenscustoms_sega2p_impact_wasd.dxf) &middot; [svg](svg/jasenscustoms_sega2p_impact_wasd.svg) |
+| 30 mm inner support | [dxf](dxf/inner_support_jasenscustoms_sega2p_impact_wasd.dxf) &middot; [svg](svg/inner_support_jasenscustoms_sega2p_impact_wasd.svg) |
+| 24 mm | [dxf](dxf/jasenscustoms_sega2p_impact_24mm_buttons_wasd.dxf) &middot; [svg](svg/jasenscustoms_sega2p_impact_24mm_buttons_wasd.svg) |
+| 24 mm inner support | [dxf](dxf/inner_support_jasenscustoms_sega2p_impact_24mm_buttons_wasd.dxf) &middot; [svg](svg/inner_support_jasenscustoms_sega2p_impact_24mm_buttons_wasd.svg) |
+
+---
+
+### Mortal Kombat 3, Japanese hardware, WASD
+
+<img src="preview/mk3_umk3_dedicated_japanese_parts_wasd.png" alt="mk3_umk3_dedicated_japanese_parts_wasd" width="380"> <img src="preview/inner_support_mk3_umk3_dedicated_japanese_parts_wasd.png" alt="inner_support_mk3_umk3_dedicated_japanese_parts_wasd" width="380">
+
+*Left: standard. Right: inner support.*
+
+The [Mortal Kombat 3, Japanese hardware](#mortal-kombat-3-japanese-hardware) cluster with the four button WASD directional cluster in place of the joystick. Every action button keeps the position it already had; the two joystick bores and the `GL_PLATE_HOLES` layer are gone.
+
+**Parts: Japanese** | 6 x 30 mm and 4 x 24 mm snap in buttons | no lever, so no bores and no plate holes
+
+**10 buttons** | 6 x 30 mm and 4 x 24 mm | tightest WASD to layout gap **30.703 mm** | thinnest web 5.000 mm | 1 files
+
+| Version | stock |
+|---|---|
+| 30 mm | [dxf](dxf/mk3_umk3_dedicated_japanese_parts_wasd.dxf) &middot; [svg](svg/mk3_umk3_dedicated_japanese_parts_wasd.svg) |
+| 30 mm inner support | [dxf](dxf/inner_support_mk3_umk3_dedicated_japanese_parts_wasd.dxf) &middot; [svg](svg/inner_support_mk3_umk3_dedicated_japanese_parts_wasd.svg) |
+
+---
+
+### Neo Geo MVS, WASD
+
+<img src="preview/neogeo_mvs_japanese_parts_wasd.png" alt="neogeo_mvs_japanese_parts_wasd" width="380"> <img src="preview/inner_support_neogeo_mvs_japanese_parts_wasd.png" alt="inner_support_neogeo_mvs_japanese_parts_wasd" width="380">
+
+*Left: standard. Right: inner support.*
+
+The [Neo Geo MVS](#neo-geo-mvs) cluster with the four button WASD directional cluster in place of the joystick. Every action button keeps the position it already had; the two joystick bores and the `GL_PLATE_HOLES` layer are gone.
+
+**Parts: Japanese** | 4 x 30 mm and 4 x 24 mm snap in buttons | no lever, so no bores and no plate holes
+
+**8 buttons** | 4 x 30 mm and 4 x 24 mm | tightest WASD to layout gap **24.664 mm** | thinnest web 5.000 mm | 1 files
+
+| Version | stock |
+|---|---|
+| 30 mm | [dxf](dxf/neogeo_mvs_japanese_parts_wasd.dxf) &middot; [svg](svg/neogeo_mvs_japanese_parts_wasd.svg) |
+| 30 mm inner support | [dxf](dxf/inner_support_neogeo_mvs_japanese_parts_wasd.dxf) &middot; [svg](svg/inner_support_neogeo_mvs_japanese_parts_wasd.svg) |
+
+---
+
+### Vewlix 4+4 plus four, modern, WASD
+
+<img src="preview/vewlix_12button_modern_82mm_spacing_wasd.png" alt="vewlix_12button_modern_82mm_spacing_wasd" width="380"> <img src="preview/inner_support_vewlix_12button_modern_82mm_spacing_wasd.png" alt="inner_support_vewlix_12button_modern_82mm_spacing_wasd" width="380">
+
+*Left: standard. Right: inner support. Both at 82 mm lever spacing.*
+
+The [Vewlix 4+4 plus four, modern](#vewlix-44-plus-four-modern) cluster with the four button WASD directional cluster in place of the joystick. Every action button keeps the position it already had; the two joystick bores and the `GL_PLATE_HOLES` layer are gone.
+
+**Parts: Japanese** | 16 x 24 mm snap in buttons | no lever, so no bores and no plate holes
+
+**16 buttons** | 16 x 24 mm | tightest WASD to layout gap **29.506 mm**, in `vewlix_12button_modern_82mm_spacing_wasd` | thinnest web 4.307 mm | 2 files
+
+| Version | 82 mm | 95 mm |
+|---|---|---|
+| 30 mm | [dxf](dxf/vewlix_12button_modern_82mm_spacing_wasd.dxf) &middot; [svg](svg/vewlix_12button_modern_82mm_spacing_wasd.svg) | [dxf](dxf/vewlix_12button_modern_95mm_spacing_wasd.dxf) &middot; [svg](svg/vewlix_12button_modern_95mm_spacing_wasd.svg) |
+| 30 mm inner support | [dxf](dxf/inner_support_vewlix_12button_modern_82mm_spacing_wasd.dxf) &middot; [svg](svg/inner_support_vewlix_12button_modern_82mm_spacing_wasd.svg) | [dxf](dxf/inner_support_vewlix_12button_modern_95mm_spacing_wasd.dxf) &middot; [svg](svg/inner_support_vewlix_12button_modern_95mm_spacing_wasd.svg) |
+
+---
+
+### Vewlix 10 button, two 30 mm, WASD
+
+<img src="preview/vewlix_okayama_10button_82mm_spacing_wasd.png" alt="vewlix_okayama_10button_82mm_spacing_wasd" width="380"> <img src="preview/inner_support_vewlix_okayama_10button_82mm_spacing_wasd.png" alt="inner_support_vewlix_okayama_10button_82mm_spacing_wasd" width="380">
+
+*Left: standard. Right: inner support. Both at 82 mm lever spacing.*
+
+The [Vewlix 10 button, two 30 mm](#vewlix-10-button-two-30-mm) cluster with the four button WASD directional cluster in place of the joystick. Every action button keeps the position it already had; the two joystick bores and the `GL_PLATE_HOLES` layer are gone.
+
+**Parts: Japanese** | 2 x 30 mm and 12 x 24 mm snap in buttons | no lever, so no bores and no plate holes
+
+**14 buttons** | 2 x 30 mm and 12 x 24 mm | tightest WASD to layout gap **29.508 mm**, in `vewlix_okayama_10button_82mm_spacing_wasd` | thinnest web 3.887 mm | 2 files
+
+| Version | 82 mm | 95 mm |
+|---|---|---|
+| 30 mm | [dxf](dxf/vewlix_okayama_10button_82mm_spacing_wasd.dxf) &middot; [svg](svg/vewlix_okayama_10button_82mm_spacing_wasd.svg) | [dxf](dxf/vewlix_okayama_10button_95mm_spacing_wasd.dxf) &middot; [svg](svg/vewlix_okayama_10button_95mm_spacing_wasd.svg) |
+| 30 mm inner support | [dxf](dxf/inner_support_vewlix_okayama_10button_82mm_spacing_wasd.dxf) &middot; [svg](svg/inner_support_vewlix_okayama_10button_82mm_spacing_wasd.svg) | [dxf](dxf/inner_support_vewlix_okayama_10button_95mm_spacing_wasd.dxf) &middot; [svg](svg/inner_support_vewlix_okayama_10button_95mm_spacing_wasd.svg) |
+
+---
+
+### WASD index
+
+One row per layout family. Cut envelope is for the file shown in that entry's preview; the other spacings and the 24 mm versions differ, and each entry lists them all.
+
+| Layout | Buttons | Tightest WASD gap | Files | Cut envelope |
+|---|---:|---:|---:|---|
+| [Sega Astro City / Blast City P1, WASD](#sega-astro-city--blast-city-p1-wasd) | 12 | 4.733 mm | 6 | 247.06 x 89.5 mm |
+| [Sega P2, non slanted, WASD](#sega-p2-non-slanted-wasd) | 12 | 10.551 mm | 6 | 239.56 x 89 mm |
+| [Vewlix, 7 button as drawn, WASD](#vewlix-7-button-as-drawn-wasd) | 11 | 11.045 mm | 6 | 249.56 x 83.56 mm |
+| [Vewlix 4+4, 8 button, WASD](#vewlix-44-8-button-wasd) | 12 | 11.045 mm | 6 | 249.56 x 83.56 mm |
+| [Generic shift, WASD](#generic-shift-wasd) | 12 | 27.187 mm | 6 | 249.56 x 82.5 mm |
+| [Hori transitioning, WASD](#hori-transitioning-wasd) | 12 | 10.886 mm | 6 | 239.81 x 93 mm |
+| [Hori transitioning, spaced rows, WASD](#hori-transitioning-spaced-rows-wasd) | 12 | 12.097 mm | 6 | 239.81 x 96 mm |
+| [Clustered arcade, WASD](#clustered-arcade-wasd) | 12 | 27.991 mm | 6 | 239.81 x 84 mm |
+| [Clustered arcade, spaced rows, WASD](#clustered-arcade-spaced-rows-wasd) | 12 | 27.991 mm | 6 | 239.81 x 87 mm |
+| [Direct slant, WASD](#direct-slant-wasd) | 12 | 27.991 mm | 6 | 238.81 x 84 mm |
+| [Direct slant, spaced rows, WASD](#direct-slant-spaced-rows-wasd) | 12 | 27.991 mm | 6 | 238.81 x 87 mm |
+| [Moderate / hybrid, WASD](#moderate--hybrid-wasd) | 12 | 27.187 mm | 6 | 241.81 x 80 mm |
+| [Moderate / hybrid, spaced rows, WASD](#moderate--hybrid-spaced-rows-wasd) | 12 | 27.187 mm | 6 | 241.81 x 83 mm |
+| [Straight incline, WASD](#straight-incline-wasd) | 12 | 28.008 mm | 6 | 239.56 x 94 mm |
+| [Straight incline, spaced rows, WASD](#straight-incline-spaced-rows-wasd) | 12 | 28.795 mm | 6 | 239.56 x 97 mm |
+| [Square grid, WASD](#square-grid-wasd) | 12 | 27.991 mm | 6 | 245.56 x 73.56 mm |
+| [Square grid, spaced rows, WASD](#square-grid-spaced-rows-wasd) | 12 | 28.363 mm | 6 | 245.56 x 75.06 mm |
+| [Capcom USA Street Fighter, WASD](#capcom-usa-street-fighter-wasd) | 10 | 27.866 mm | 6 | 213.76 x 73.02 mm |
+| [Mesh template, WASD](#mesh-template-wasd) | 17 | 26.677 mm | 6 | 262.56 x 102 mm |
+| [Rhombus template, WASD](#rhombus-template-wasd) | 13 | 30.225 mm | 6 | 265.06 x 81.06 mm |
+| [Zigzag template, WASD](#zigzag-template-wasd) | 16 | 32.524 mm | 6 | 263.56 x 92.5 mm |
+| [ASI S24, WASD](#asi-s24-wasd) | 15 | 41.452 mm | 1 | 230.56 x 128 mm |
+| [ASI S30, WASD](#asi-s30-wasd) | 15 | 36.894 mm | 1 | 249.06 x 134.5 mm |
+| [JasensCustoms Sega 2P IMPACT, WASD](#jasenscustoms-sega-2p-impact-wasd) | 13 | 27.233 mm | 2 | 239.56 x 116.03 mm |
+| [Mortal Kombat 3, Japanese hardware, WASD](#mortal-kombat-3-japanese-hardware-wasd) | 10 | 30.703 mm | 1 | 220.66 x 119.06 mm |
+| [Neo Geo MVS, WASD](#neo-geo-mvs-wasd) | 8 | 24.664 mm | 1 | 248.06 x 78.56 mm |
+| [Vewlix 4+4 plus four, modern, WASD](#vewlix-44-plus-four-modern-wasd) | 16 | 29.506 mm | 2 | 247.76 x 115.2 mm |
+| [Vewlix 10 button, two 30 mm, WASD](#vewlix-10-button-two-30-mm-wasd) | 14 | 29.508 mm | 2 | 246.11 x 121.45 mm |
+
+136 files in this section, 28 layout families, plus the standalone cluster. Every one of them also has an `inner_support_` twin.
+
+
+---
 
 
 ---
@@ -1517,12 +2261,16 @@ Where each family lands, as the tightest margin on any layout in it. A negative 
 |---|---:|---:|---:|
 | Joystick, 30 mm | 63 | 33 | +0.063 down to -1.075 mm |
 | Joystick, 24 mm | 63 | 0 | -0.649 down to -1.560 mm |
-| All button | 7 | 0 | -0.499 down to -2.174 mm |
-| Manufacturer, ASI | 3 | 0 | -0.072 down to -1.000 mm |
+| Leverless / all button | 8 | 0 | -0.499 down to -2.174 mm |
+| ASI, with a lever | 2 | 0 | -0.072 down to -0.489 mm |
 | Community, Vewlix variants | 4 | 0 | -1.193 down to -1.863 mm |
+| Commercial plate, Sega 2P IMPACT | 2 | 0 | -0.066 and -0.753 mm |
 | Cabinet, Japanese Parts | 2 | 2 | +5.000 and +12.464 mm |
+| WASD | 137 | 0 | -0.500 down to -1.863 mm |
 
 The 33 clear 30 mm layouts are `cluster36_s`, `clusters36_s`, `hori36_s`, `horis36_s`, `matrix36_s`, `matrixs36_s`, `mesh36_s`, `slant36_s` and `zigzag36_s` at 36.000 mm exactly, plus `rhombus36_s` at +0.062 and `slants36_s` at +0.063, each across its three lever spacings. The generously spaced pair are [Neo Geo MVS](#neo-geo-mvs) at +5.000 mm and [Mortal Kombat 3, Japanese hardware](#mortal-kombat-3-japanese-hardware) at +12.464 mm, both of which came from cabinet drawings rather than from the Japanese 36 mm convention.
+
+**No WASD layout takes screw ins**, and that one is unavoidable rather than inherited: the cluster's own 29.0 mm pitch is 0.5 mm short of what a 24 mm nut needs, so even a WASD version of a roomy layout fails on the cluster itself. See [WASD Layouts](#wasd-layouts).
 
 **If you are fitting screw ins, check your own nuts against the table above rather than trusting the family.** Nut diameters vary a little between Sanwa, Seimitsu and the various clones, and 0.06 mm of margin is not margin.
 

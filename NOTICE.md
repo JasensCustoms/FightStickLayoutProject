@@ -30,7 +30,9 @@ Machine:
 
 ### JasensCustoms.com and the Panzer user community
 
-Covers: the 7 all button (leverless) layouts, every file ending `_all_button`.
+Covers: the 7 all button (leverless) layouts, every file ending `_all_button`,
+and the Sega 2P IMPACT layouts `jasenscustoms_sega2p_impact` and
+`jasenscustoms_sega2p_impact_24mm_buttons`, with their `inner_support_` twins.
 
   https://www.jasenscustoms.com
 
@@ -40,6 +42,14 @@ world, but they are not exact replicas of any of them.
 
 Shared here with the button patterns preserved as designed. Panel outlines,
 mounting holes and other cutouts from the original working drawings were left out.
+
+The Sega 2P IMPACT layouts come from `jasenscustoms-pfs4-mczte-sega2p-IMPACT-withbezel.svg`,
+a JasensCustoms cut file for the IMPACT plate that fits the Panzer Fight Stick 4
+and the Mad Catz TE. The same rule was applied: the plate outline, its six 3/16 in
+mounting screw holes and the control strip window were all left out, and only the
+button and lever pattern was kept. The eight main button centres already existed
+in this library as the Slagcoin Sega 2P cluster and are credited to slagcoin.com
+above; the 24 mm button below the lever is JasensCustoms' addition.
 
 ### ASI
 
