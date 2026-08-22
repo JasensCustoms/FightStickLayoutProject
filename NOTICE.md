@@ -112,6 +112,27 @@ match what the photograph shows, not measured from it, because a photograph take
 at an angle cannot support the accuracy a cut file needs. The construction is set
 out in README.md so anyone can check it against a real panel.
 
+### @GAMING_okayama, and the Vewlix ten button variant
+
+Covers: `vewlix_okayama_10button` and its `inner_support_` twin.
+
+  https://x.com/GAMING_okayama
+
+The layout was seen on Twitter, posted by @GAMING_okayama, as a photograph of a
+built panel. Credit for surfacing it belongs there. Whether @GAMING_okayama
+originated the arrangement or was showing someone else's is not known, and no
+claim either way is made here; if you know the designer, please open an issue so
+this can name them.
+
+The six inherited holes are Slagcoin's Vewlix 4+4 cluster at 24 mm, unchanged,
+and are credited above. The fourth column is deleted and four holes are added,
+two of them 30 mm. None of the four was measured from the photograph, because a
+photograph taken at an angle cannot support the accuracy a cut file needs. Two
+are equilateral triangle apexes on the existing column pairs; the other two are
+placed by exact edge alignments supplied by the person who spotted the layout.
+The construction is set out in README.md so anyone can check it against a real
+panel.
+
 ### Crowquilll
 
 Covers: the Neo Geo MVS layouts: `neogeo_mvs_japanese_parts`, `neogeo_mvs_american_parts` and both

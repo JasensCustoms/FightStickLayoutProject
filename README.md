@@ -6,16 +6,15 @@ The founding set is converted from [slagcoin.com](https://www.slagcoin.com/joyst
 
 ![Layout formats](https://img.shields.io/badge/formats-DXF%20%2B%20SVG-blue)
 ![Units](https://img.shields.io/badge/units-millimetres-informational)
-![Layouts](https://img.shields.io/badge/layouts-286-success)
-![Files](https://img.shields.io/badge/files-572-lightgrey)
+![Layouts](https://img.shields.io/badge/layouts-290-success)
+![Files](https://img.shields.io/badge/files-580-lightgrey)
 
-Everything is drawn 1:1 in millimetres, ready to send to a laser, router or CNC. Two families:
+Everything is drawn 1:1 in millimetres, ready to send to a laser, router or CNC. Two groups:
 
-- **Joystick layouts**, 21 button arrangements, each supplied at 3 different lever positions and in both 30 mm and 24 mm button sizes, with the lever mounting hardware included.
-- **All button layouts**, 7 leverless panels, drawn as designed with their native mix of 24 mm and 30 mm holes.
-- **Manufacturer layouts**, taken from commercial sticks. Three so far, the ASI S24, S30 and B30.
+- **[Lever Based Layouts](#lever-based-layouts)**, anything with a joystick. The 21 Slagcoin arrangements, each supplied at 3 different lever positions and in both 30 mm and 24 mm button sizes, plus panels taken from commercial sticks, real cabinets and the community.
+- **[Leverless / All Button Layouts](#leverless--all-button-layouts)**, 7 panels with no joystick, drawn as designed with their native mix of 24 mm and 30 mm holes.
 
-Every one of those also ships in an **inner support** version, where each button hole is merged with a relief slot for Sanwa OBSF snap in button ears. That comes to 266 layouts per format, 532 files.
+Every one of those also ships in an **inner support** version, where each button hole is merged with a relief slot for Sanwa OBSF snap in button ears. That comes to 290 layouts per format, 580 files.
 
 <img src="preview/_all_layouts.png" alt="All layouts" width="900">
 
@@ -29,7 +28,7 @@ Every one of those also ships in an **inner support** version, where each button
 >
 > Every layout in the founding set is traced from Slagcoin's own to scale diagrams, and each of those catalogue entries quotes his description. If you build anything from these files, go read [the original pages](https://www.slagcoin.com/joystick/layout.html) first. There is a lot of reasoning there about *why* the layouts are shaped the way they are, and it will make you better at picking one.
 
-The all button layouts come from a different place. They were created by [JasensCustoms.com](https://www.jasenscustoms.com) and members of the Panzer user community, and are credited in [their own section](#all-button-layouts). The S24, S30 and B30 layouts belong to [ASI](#asi-s24). The Mortal Kombat 3 panel, and its Japanese hardware variant, are traced from a dimensioned drawing by **Twistedsymphony**, hosted at [classicarcadecabinets.com](https://www.classicarcadecabinets.com/mortal-kombat-3.html). The Neo Geo MVS panel comes from a drilling template by **Crowquilll**.
+The all button layouts come from a different place. They were created by [JasensCustoms.com](https://www.jasenscustoms.com) and members of the Panzer user community, and are credited in [their own section](#leverless--all-button-layouts). The S24, S30 and B30 layouts belong to [ASI](#asi-s24). The Mortal Kombat 3 panel, and its Japanese hardware variant, are traced from a dimensioned drawing by **Twistedsymphony**, hosted at [classicarcadecabinets.com](https://www.classicarcadecabinets.com/mortal-kombat-3.html). The Neo Geo MVS panel comes from a drilling template by **Crowquilll**.
 
 **Where a layout came from is recorded with the layout.** Every catalogue entry names its origin, and [NOTICE.md](NOTICE.md) is the full register of sources. Nothing in here silently claims someone else's design work.
 
@@ -44,18 +43,40 @@ The all button layouts come from a different place. They were created by [Jasens
 - [Joystick spacing](#joystick-spacing)
 - [24 mm button versions](#24-mm-button-versions)
 - [Inner support versions](#inner-support-versions)
-- [Layout catalogue](#layout-catalogue)
-  - [Japanese arcade standards](#japanese-arcade-standards)
-  - [Vewlix family](#vewlix-family)
+- [Lever Based Layouts](#lever-based-layouts)
+  - [Sega Astro City / Blast City P1](#sega-astro-city--blast-city-p1)
+  - [Sega P2, non slanted](#sega-p2-non-slanted)
+  - [Vewlix, 7 button as drawn](#vewlix-7-button-as-drawn)
+  - [Vewlix 4+4, 8 button](#vewlix-44-8-button)
+  - [Generic shift](#generic-shift)
   - [Hori transitioning](#hori-transitioning)
+  - [Hori transitioning, spaced rows](#hori-transitioning-spaced-rows)
   - [Clustered arcade](#clustered-arcade)
+  - [Clustered arcade, spaced rows](#clustered-arcade-spaced-rows)
   - [Direct slant](#direct-slant)
-  - [Moderate and hybrid](#moderate-and-hybrid)
+  - [Direct slant, spaced rows](#direct-slant-spaced-rows)
+  - [Moderate / hybrid](#moderate--hybrid)
+  - [Moderate / hybrid, spaced rows](#moderate--hybrid-spaced-rows)
   - [Straight incline](#straight-incline)
-  - [Grids and squares](#grids-and-squares)
-  - [Templates](#templates)
-- [Full index](#full-index)
-- [All button layouts](#all-button-layouts)
+  - [Straight incline, spaced rows](#straight-incline-spaced-rows)
+  - [Square grid](#square-grid)
+  - [Square grid, spaced rows](#square-grid-spaced-rows)
+  - [Capcom USA Street Fighter](#capcom-usa-street-fighter)
+  - [Capcom USA Street Fighter, American Parts](#capcom-usa-street-fighter-american-parts)
+  - [Mesh template](#mesh-template)
+  - [Rhombus template](#rhombus-template)
+  - [Zigzag template](#zigzag-template)
+  - [ASI S24](#asi-s24)
+  - [ASI S30](#asi-s30)
+  - [ASI B30](#asi-b30)
+  - [Mortal Kombat 3 / Ultimate MK3](#mortal-kombat-3--ultimate-mk3)
+  - [Mortal Kombat 3, Japanese hardware](#mortal-kombat-3-japanese-hardware)
+  - [Neo Geo MVS](#neo-geo-mvs)
+  - [Neo Geo MVS, American hardware](#neo-geo-mvs-american-hardware)
+  - [Vewlix 4+4 plus four, modern](#vewlix-44-plus-four-modern)
+  - [Vewlix 10 button, two 30 mm](#vewlix-10-button-two-30-mm)
+  - [Full index](#full-index)
+- [Leverless / All Button Layouts](#leverless--all-button-layouts)
   - [Traditional](#traditional)
   - [Modern](#modern)
   - [Tomahawk](#tomahawk)
@@ -64,18 +85,8 @@ The all button layouts come from a different place. They were created by [Jasens
   - [Slab Split](#slab-split)
   - [Split Modern](#split-modern)
   - [All button index](#all-button-index)
-- [Manufacturer layouts](#manufacturer-layouts)
-  - [ASI S24](#asi-s24)
-  - [ASI S30](#asi-s30)
-  - [ASI B30](#asi-b30)
-- [Cabinet layouts](#cabinet-layouts)
-  - [Mortal Kombat 3 / Ultimate MK3](#mortal-kombat-3--ultimate-mk3)
-  - [Mortal Kombat 3, Japanese hardware](#mortal-kombat-3-japanese-hardware)
-  - [Neo Geo MVS](#neo-geo-mvs)
-  - [Neo Geo MVS, American hardware](#neo-geo-mvs-american-hardware)
-  - [Capcom USA Street Fighter, American Parts](#capcom-usa-street-fighter-american-parts)
-  - [Vewlix 4+4 plus four, modern](#vewlix-44-plus-four-modern)
 - [Before you cut](#before-you-cut)
+- [Screw in buttons and nut clearance](#screw-in-buttons-and-nut-clearance)
 - [How these were made](#how-these-were-made)
 - [Licence and attribution](#licence-and-attribution)
 
@@ -98,13 +109,13 @@ The all button layouts come from a different place. They were created by [Jasens
 ## What is in the box
 
 ```
-dxf/        286 layouts as .dxf   (R2010, millimetres, $INSUNITS = 4)
-svg/        the same 286 layouts as .svg  (1 user unit = 1 mm)
+dxf/        290 layouts as .dxf   (R2010, millimetres, $INSUNITS = 4)
+svg/        the same 290 layouts as .svg  (1 user unit = 1 mm)
 preview/    per layout PNG previews plus contact sheets and diagrams
 README.md   this file
 ```
 
-Joystick arrangements are built out to 6 files per format: 3 lever positions, each at 30 mm and 24 mm button sizes. The 21 of them come to 126 per format. All button layouts ship as a single file each, adding 7 more, manufacturer layouts likewise, adding 3, and the cabinet layouts add 4, two Mortal Kombat hardware sets and two Neo Geo, for 140. The Capcom layout also ships an American Parts cut, and the Vewlix has a twelve button community variant at two lever spacings, making 143. Each of those then has an inner support twin, doubling the count to 286 per format and 572 in total.
+Joystick arrangements are built out to 6 files per format: 3 lever positions, each at 30 mm and 24 mm button sizes. The 21 of them come to 126 per format. All button layouts ship as a single file each, adding 7 more, manufacturer layouts likewise, adding 3, and the cabinet layouts add 4, two Mortal Kombat hardware sets and two Neo Geo, for 140. The Capcom layout also ships an American Parts cut, and the Vewlix has two community variants at two lever spacings each, a twelve button and a ten button, making 145. Each of those then has an inner support twin, doubling the count to 290 per format and 580 in total.
 
 New layouts follow the same naming and layer conventions, so anything you script against the current set keeps working.
 
@@ -169,9 +180,9 @@ There is no text, no title block and no border. Cut geometry only.
 
 On inner support files the button layers carry closed profiles rather than plain circles. No extra layer is added.
 
-All button layouts use a different set, since they have no lever and mix hole sizes: `BUTTONS_24`, `BUTTONS_30` and `REFERENCE`. See [All button layouts](#all-button-layouts).
+All button layouts use a different set, since they have no lever and mix hole sizes: `BUTTONS_24`, `BUTTONS_30` and `REFERENCE`. See [Leverless / All Button Layouts](#leverless--all-button-layouts).
 
-The Mortal Kombat cabinet panel runs different lever hardware again, so it carries `JOYSTICK_BORE_35` and `IL_PLATE_HOLES` in place of the two bores and `GL_PLATE_HOLES`. Its `_jp` twin uses the standard five layers like everything else. See [Cabinet layouts](#cabinet-layouts).
+The Mortal Kombat cabinet panel runs different lever hardware again, so it carries `JOYSTICK_BORE_35` and `IL_PLATE_HOLES` in place of the two bores and `GL_PLATE_HOLES`. Its `_jp` twin uses the standard five layers like everything else. See [Mortal Kombat 3 / Ultimate MK3](#mortal-kombat-3--ultimate-mk3).
 
 ### The two joystick bores
 
@@ -313,19 +324,17 @@ Every layout has its own inner support preview in `preview/`, and each catalogue
 
 ---
 
-## Layout catalogue
+## Lever Based Layouts
 
-This section covers the joystick layouts. Leverless panels are in [All button layouts](#all-button-layouts).
+Every panel here has a joystick. Leverless panels are in [Leverless / All Button Layouts](#leverless--all-button-layouts).
 
 Previews show the stock lever position with 30 mm buttons. Red is button holes, green and blue are the two joystick bores, orange is the lever mounting pattern, grey is the non cutting reference layer.
 
-Every entry below is converted from a Slagcoin diagram, so each one quotes his description of it. Layouts added from other sources, or drawn from scratch, state their origin in their own entry.
+The first 21 entries are converted from Slagcoin diagrams, so each one quotes his description of it. Everything after them comes from a commercial stick, a cabinet drawing or the community, and states its origin and its parts in its own entry.
 
 ---
 
-## Japanese arcade standards
-
-The most used layouts on earth. Slanted rows that follow the natural arch of your fingers.
+**Japanese arcade standards.** The most used layouts on earth. Slanted rows that follow the natural arch of your fingers.
 
 ### Sega Astro City / Blast City P1
 
@@ -383,9 +392,7 @@ More previews: [24 mm buttons](preview/sega2_s_24mm_buttons.png) &middot; [24 mm
 
 ---
 
-## Vewlix family
-
-The modern tournament standard. The top row is shifted right relative to the bottom row.
+**Vewlix family.** The modern tournament standard. The top row is shifted right relative to the bottom row.
 
 
 ### Vewlix, 7 button as drawn
@@ -476,8 +483,6 @@ More previews: [24 mm buttons](preview/shift36_s_24mm_buttons.png) &middot; [24 
 
 ---
 
-## Hori transitioning
-
 
 ### Hori transitioning
 
@@ -535,8 +540,6 @@ More previews: [24 mm buttons](preview/horis36_s_24mm_buttons.png) &middot; [24 
 
 ---
 
-## Clustered arcade
-
 
 ### Clustered arcade
 
@@ -592,8 +595,6 @@ More previews: [24 mm buttons](preview/clusters36_s_24mm_buttons.png) &middot; [
 
 ---
 
-## Direct slant
-
 
 ### Direct slant
 
@@ -648,8 +649,6 @@ More previews: [24 mm buttons](preview/slants36_s_24mm_buttons.png) &middot; [24
 
 
 ---
-
-## Moderate and hybrid
 
 
 ### Moderate / hybrid
@@ -708,8 +707,6 @@ More previews: [24 mm buttons](preview/hybrids36_s_24mm_buttons.png) &middot; [2
 
 ---
 
-## Straight incline
-
 
 ### Straight incline
 
@@ -765,9 +762,7 @@ More previews: [24 mm buttons](preview/inclines36_s_24mm_buttons.png) &middot; [
 
 ---
 
-## Grids and squares
-
-Slagcoin is openly not a fan of these, but they are historically important and some people genuinely like them.
+**Grids and squares.** Slagcoin is openly not a fan of these, but they are historically important and some people genuinely like them.
 
 
 ### Square grid
@@ -881,9 +876,7 @@ The Capcom block cut for the hardware the cabinets actually shipped with. **Ever
 
 ---
 
-## Templates
-
-These are not layouts to cut as they are. They are grids of candidate positions on a consistent 36 mm pitch. Cut only the holes you want, or use them to design something custom. They carry the most holes of anything in the repository, so read them as a menu rather than a finished panel.
+**Templates.** These are not layouts to cut as they are. They are grids of candidate positions on a consistent 36 mm pitch. Cut only the holes you want, or use them to design something custom. They carry the most holes of anything in the repository, so read them as a menu rather than a finished panel.
 
 
 ### Mesh template
@@ -966,182 +959,7 @@ More previews: [24 mm buttons](preview/zigzag36_s_24mm_buttons.png) &middot; [24
 
 ---
 
-## Full index
-
-Cut envelope is the outermost cut geometry with the lever mounting holes included. Add your own margin on top of that for palm rest. Slagcoin is emphatic that you want plenty of panel in front of and beside the devices.
-
-
-| Layout | What it is | Buttons | Stock lever | Cut envelope |
-|---|---|---:|---:|---|
-| [`sega1_s`](#sega-astro-city--blast-city-p1) | Sega Astro City / Blast City P1 | 8 | 59 mm | 222 x 99 mm |
-| [`sega2_s`](#sega-p2-non-slanted) | Sega P2, non slanted | 8 | 63 mm | 219 x 100 mm |
-| [`vewlix_s`](#vewlix-7-button-as-drawn) | Vewlix, 7 button as drawn | 7 | 59 mm | 225 x 91 mm |
-| [`vewlix_s_8button`](#vewlix-44-8-button) | Vewlix 4+4, 8 button | 8 | 59 mm | 225 x 91 mm |
-| [`shift36_s`](#generic-shift) | Generic shift | 8 | 95 mm | 261 x 99 mm |
-| [`hori36_s`](#hori-transitioning-1) | Hori transitioning | 8 | 63.75 mm | 220 x 96 mm |
-| [`horis36_s`](#hori-transitioning-spaced-rows) | Hori transitioning, spaced rows | 8 | 63.75 mm | 220 x 100 mm |
-| [`cluster36_s`](#clustered-arcade-1) | Clustered arcade | 8 | 95 mm | 251 x 96 mm |
-| [`clusters36_s`](#clustered-arcade-spaced-rows) | Clustered arcade, spaced rows | 8 | 95 mm | 251 x 100 mm |
-| [`slant36_s`](#direct-slant-1) | Direct slant | 8 | 95 mm | 250 x 96 mm |
-| [`slants36_s`](#direct-slant-spaced-rows) | Direct slant, spaced rows | 8 | 95 mm | 250 x 100 mm |
-| [`hybrid36_s`](#moderate--hybrid) | Moderate / hybrid | 8 | 95 mm | 253 x 96 mm |
-| [`hybrids36_s`](#moderate--hybrid-spaced-rows) | Moderate / hybrid, spaced rows | 8 | 95 mm | 253 x 100 mm |
-| [`incline36_s`](#straight-incline-1) | Straight incline | 8 | 95 mm | 251 x 96 mm |
-| [`inclines36_s`](#straight-incline-spaced-rows) | Straight incline, spaced rows | 8 | 95 mm | 251 x 100 mm |
-| [`matrix36_s`](#square-grid) | Square grid | 8 | 95 mm | 257 x 91 mm |
-| [`matrixs36_s`](#square-grid-spaced-rows) | Square grid, spaced rows | 8 | 95 mm | 257 x 91 mm |
-| [`american_s`](#capcom-usa-street-fighter) | Capcom USA Street Fighter | 6 | 95 mm | 225 x 91 mm |
-| [`mesh36_s`](#mesh-template) | Mesh template | 13 | 95 mm | 274 x 102 mm |
-| [`rhombus36_s`](#rhombus-template) | Rhombus template | 9 | 95 mm | 276 x 91 mm |
-| [`zigzag36_s`](#zigzag-template) | Zigzag template | 12 | 95 mm | 275 x 92 mm |
-
-
-Every layout above also exists as `_82mm_spacing` and `_95mm_spacing`, in both DXF and SVG.
-
----
-
-## All button layouts
-
-Leverless panels. No joystick, so no lever spacing and no joystick bores. These are drawn as designed, with their native mix of 24 mm and 30 mm holes, and they ship as a single file each rather than in spacing and button size variants.
-
-<img src="preview/_all_button_layouts.png" alt="All button layouts" width="900">
-
-> **Who made these.** The all button layouts were created by [JasensCustoms.com](https://www.jasenscustoms.com) and members of the Panzer user community. They may draw inspiration from other all button layouts out in the world, but they are not exact replicas of any of them.
-
-Two things differ from the joystick layouts:
-
-- **Layers.** Holes are split across `BUTTONS_24` and `BUTTONS_30` rather than a single `BUTTONS` layer, because these layouts mix the two sizes and you will likely want a different tool for each. There are no joystick or plate layers.
-- **Origin.** (0,0) is the centre of the button cluster bounding box, since there is no joystick to reference.
-
-Panel outlines, mounting screw holes, USB and cable cutouts from the source drawings were deliberately left out. What you get is the button pattern, to drop onto whatever panel you are building.
-
-Hole diameters are normalised to exactly 24.00 mm and 30.00 mm. The source drawings carry between 0.00 and 0.21 mm of clearance depending on which file they came from, which is a cutting decision better made at CAM time for your own machine and material. Button positions are preserved exactly as drawn.
-
-### Traditional
-
-<img src="preview/traditional_all_button.png" alt="traditional_all_button" width="380"> <img src="preview/inner_support_traditional_all_button.png" alt="inner_support_traditional_all_button" width="380">
-
-*Left: standard. Right: inner support, with the hole and its Sanwa OBSF ear relief merged into one profile.*
-
-The baseline all button layout. A four button directional cluster on the left, eight action buttons in two staggered rows on the right, and a single 30 mm thumb button below. If someone is building their first leverless and does not know what they want, this is the one to print and feel first.
-
-**12 buttons**  |  11 x 24 mm and 1 x 30 mm  |  closest pitch 28.7 mm  |  cut envelope 199 x 103 mm
-
-| Version | Files |
-|---|---|
-| Standard | [dxf](dxf/traditional_all_button.dxf) &middot; [svg](svg/traditional_all_button.svg) |
-| Inner support | [dxf](dxf/inner_support_traditional_all_button.dxf) &middot; [svg](svg/inner_support_traditional_all_button.svg) |
-
-### Modern
-
-<img src="preview/modern_all_button.png" alt="modern_all_button" width="380"> <img src="preview/inner_support_modern_all_button.png" alt="inner_support_modern_all_button" width="380">
-
-*Left: standard. Right: inner support, with the hole and its Sanwa OBSF ear relief merged into one profile.*
-
-The Traditional shape opened out, with an extra pair of buttons on the right hand cluster and a taller stagger between the rows. More reach for the ring and pinky, and more room to sit your hand deeper into the panel.
-
-**15 buttons**  |  14 x 24 mm and 1 x 30 mm  |  closest pitch 28.3 mm  |  cut envelope 199 x 134 mm
-
-| Version | Files |
-|---|---|
-| Standard | [dxf](dxf/modern_all_button.dxf) &middot; [svg](svg/modern_all_button.svg) |
-| Inner support | [dxf](dxf/inner_support_modern_all_button.dxf) &middot; [svg](svg/inner_support_modern_all_button.svg) |
-
-### Tomahawk
-
-<img src="preview/tomahawk_all_button.png" alt="tomahawk_all_button" width="380"> <img src="preview/inner_support_tomahawk_all_button.png" alt="inner_support_tomahawk_all_button" width="380">
-
-*Left: standard. Right: inner support, with the hole and its Sanwa OBSF ear relief merged into one profile.*
-
-A compact take on the Traditional idea. Same footprint width, one fewer button, and the right hand cluster pulled in slightly so the whole thing sits comfortably on a smaller panel.
-
-**13 buttons**  |  12 x 24 mm and 1 x 30 mm  |  closest pitch 28.7 mm  |  cut envelope 199 x 103 mm
-
-| Version | Files |
-|---|---|
-| Standard | [dxf](dxf/tomahawk_all_button.dxf) &middot; [svg](svg/tomahawk_all_button.svg) |
-| Inner support | [dxf](dxf/inner_support_tomahawk_all_button.dxf) &middot; [svg](svg/inner_support_tomahawk_all_button.svg) |
-
-### Aegis
-
-<img src="preview/aegis_all_button.png" alt="aegis_all_button" width="380"> <img src="preview/inner_support_aegis_all_button.png" alt="inner_support_aegis_all_button" width="380">
-
-*Left: standard. Right: inner support, with the hole and its Sanwa OBSF ear relief merged into one profile.*
-
-A wide, shallow arc. The buttons spread further across the panel and the arc through the action cluster is flatter than the Traditional, which suits players who keep their hand low and flat rather than curled.
-
-**15 buttons**  |  13 x 24 mm and 2 x 30 mm  |  closest pitch 28.7 mm  |  cut envelope 226 x 108 mm
-
-| Version | Files |
-|---|---|
-| Standard | [dxf](dxf/aegis_all_button.dxf) &middot; [svg](svg/aegis_all_button.svg) |
-| Inner support | [dxf](dxf/inner_support_aegis_all_button.dxf) &middot; [svg](svg/inner_support_aegis_all_button.svg) |
-
-### Shiokenstar
-
-<img src="preview/shiokenstar_all_button.png" alt="shiokenstar_all_button" width="380"> <img src="preview/inner_support_shiokenstar_all_button.png" alt="inner_support_shiokenstar_all_button" width="380">
-
-*Left: standard. Right: inner support, with the hole and its Sanwa OBSF ear relief merged into one profile.*
-
-The 30 mm layout of the set. Nine of the twelve holes are 30 mm rather than 24 mm, with only the directional cluster left at 24 mm. If you want the feel of full size buttons on a leverless panel, this is the one built for it.
-
-**12 buttons**  |  3 x 24 mm and 9 x 30 mm  |  closest pitch 28.9 mm  |  cut envelope 231 x 118 mm
-
-| Version | Files |
-|---|---|
-| Standard | [dxf](dxf/shiokenstar_all_button.dxf) &middot; [svg](svg/shiokenstar_all_button.svg) |
-| Inner support | [dxf](dxf/inner_support_shiokenstar_all_button.dxf) &middot; [svg](svg/inner_support_shiokenstar_all_button.svg) |
-
-### Slab Split
-
-<img src="preview/slab_split_all_button.png" alt="slab_split_all_button" width="380"> <img src="preview/inner_support_slab_split_all_button.png" alt="inner_support_slab_split_all_button" width="380">
-
-*Left: standard. Right: inner support, with the hole and its Sanwa OBSF ear relief merged into one profile.*
-
-A split layout. The directional and action clusters sit close together up top while the two 30 mm thumb buttons drop well below the main cluster, giving the thumbs their own dedicated space instead of tucking them under the hand.
-
-**15 buttons**  |  13 x 24 mm and 2 x 30 mm  |  closest pitch 27.3 mm  |  cut envelope 212 x 148 mm
-
-| Version | Files |
-|---|---|
-| Standard | [dxf](dxf/slab_split_all_button.dxf) &middot; [svg](svg/slab_split_all_button.svg) |
-| Inner support | [dxf](dxf/inner_support_slab_split_all_button.dxf) &middot; [svg](svg/inner_support_slab_split_all_button.svg) |
-
-### Split Modern
-
-<img src="preview/split_modern_all_button.png" alt="split_modern_all_button" width="380"> <img src="preview/inner_support_split_modern_all_button.png" alt="inner_support_split_modern_all_button" width="380">
-
-*Left: standard. Right: inner support, with the hole and its Sanwa OBSF ear relief merged into one profile.*
-
-The largest layout here at 17 buttons, and a true split. Left and right clusters are separated across the panel with a pair of 30 mm thumb buttons in the middle, so each hand gets its own island. Widest cut envelope of the set.
-
-**17 buttons**  |  15 x 24 mm and 2 x 30 mm  |  closest pitch 29.0 mm  |  cut envelope 258 x 121 mm
-
-| Version | Files |
-|---|---|
-| Standard | [dxf](dxf/split_modern_all_button.dxf) &middot; [svg](svg/split_modern_all_button.svg) |
-| Inner support | [dxf](dxf/inner_support_split_modern_all_button.dxf) &middot; [svg](svg/inner_support_split_modern_all_button.svg) |
-
----
-
-## All button index
-
-| Layout | Buttons | 24 mm | 30 mm | Cut envelope |
-|---|---:|---:|---:|---|
-| [`traditional_all_button`](#traditional) | 12 | 11 | 1 | 199 x 103 mm |
-| [`modern_all_button`](#modern) | 15 | 14 | 1 | 199 x 134 mm |
-| [`tomahawk_all_button`](#tomahawk) | 13 | 12 | 1 | 199 x 103 mm |
-| [`aegis_all_button`](#aegis) | 15 | 13 | 2 | 226 x 108 mm |
-| [`shiokenstar_all_button`](#shiokenstar) | 12 | 3 | 9 | 231 x 118 mm |
-| [`slab_split_all_button`](#slab-split) | 15 | 13 | 2 | 212 x 148 mm |
-| [`split_modern_all_button`](#split-modern) | 17 | 15 | 2 | 258 x 121 mm |
-
-
----
-
-## Manufacturer layouts
-
-Layouts taken from commercial arcade sticks. Each one names its maker and says how it was obtained.
+**From commercial arcade sticks.** Each one names its maker and says how it was obtained.
 
 ### ASI S24
 
@@ -1222,9 +1040,7 @@ Measured from ASI's published render the same way as the other two, with the sam
 
 ---
 
-## Cabinet layouts
-
-Panels from real cabinets, traced from published drawings rather than from a stick. Cabinet only features, meaning second player halves and Start buttons, are left out so the layouts drop straight into a single player stick.
+**From real cabinets.** Traced from published drawings rather than from a stick. Cabinet only features, meaning second player halves and Start buttons, are left out so the layouts drop straight into a single player stick.
 
 ### Mortal Kombat 3 / Ultimate MK3
 
@@ -1425,7 +1241,7 @@ That puts **four holes in a dead straight line** down the left side, exactly col
 
 Positions are set on the **0.2 mm grid** the 24 mm family already uses, being the Slagcoin quarter millimetre grid scaled by 0.8. That moved each triangle apex by at most 0.08 mm and left the four in line exactly collinear.
 
-**It is tight, and that is inherent to the idea.** The closest pair sits at 28.3 mm, leaving **4.31 mm** of material, marginally tighter than the 4.38 mm of the eight button original. Snap in buttons are fine at that spacing; screw in nuts will not be. The ear relief tabs need no rotation anywhere on this layout, and the thinnest web is 4.31 mm, which is exactly the plain hole to hole gap, so the tabs are not the limiting factor at all.
+**It is tight, and that is inherent to the idea.** The closest pair sits at 28.3 mm, leaving **4.31 mm** of material, marginally tighter than the 4.38 mm of the eight button original. **Snap in buttons only**: eight pairs are short for screw in nuts, worst by 1.193 mm, which the 24 mm Vewlix base already is before the additions. See [Screw in buttons and nut clearance](#screw-in-buttons-and-nut-clearance). The ear relief tabs need no rotation anywhere on this layout, and the thinnest web is 4.31 mm, which is exactly the plain hole to hole gap, so the tabs are not the limiting factor at all.
 
 > **This is a recreation, not a measured copy.** The geometry follows the description of what the reference shows, built on known good Vewlix numbers. If you have the real panel or better numbers, the four additions are the only thing worth checking; the eight originals are already exact.
 
@@ -1436,6 +1252,228 @@ More previews: [95 mm spacing](preview/vewlix_12button_modern_95mm_spacing.png) 
 | Standard | [dxf](dxf/vewlix_12button_modern_82mm_spacing.dxf) &middot; [svg](svg/vewlix_12button_modern_82mm_spacing.svg) | [dxf](dxf/vewlix_12button_modern_95mm_spacing.dxf) &middot; [svg](svg/vewlix_12button_modern_95mm_spacing.svg) |
 | Inner support | [dxf](dxf/inner_support_vewlix_12button_modern_82mm_spacing.dxf) &middot; [svg](svg/inner_support_vewlix_12button_modern_82mm_spacing.svg) | [dxf](dxf/inner_support_vewlix_12button_modern_95mm_spacing.dxf) &middot; [svg](svg/inner_support_vewlix_12button_modern_95mm_spacing.svg) |
 
+
+### Vewlix 10 button, two 30 mm
+
+<img src="preview/vewlix_okayama_10button_82mm_spacing.png" alt="vewlix_okayama_10button_82mm_spacing" width="380"> <img src="preview/inner_support_vewlix_okayama_10button_82mm_spacing.png" alt="inner_support_vewlix_okayama_10button_82mm_spacing" width="380">
+
+*Left: standard. Right: inner support. Both at 82 mm lever spacing.*
+
+A Vewlix 4+4 reworked into a ten hole modern cluster: the fourth column traded for a single 30 mm button, one 24 mm added on the left, and a 24 mm and a 30 mm hanging below the left of the cluster. The two 30 mm holes are where the thumb and the extra modern inputs go, sized larger than everything around them so they are findable without looking. Seen on Twitter, posted by [@GAMING_okayama](https://x.com/GAMING_okayama).
+
+**Parts: Japanese** | 8 x 24 mm and 2 x 30 mm snap in buttons | GL mounting system | 24 and 35.25 mm bores, alternatives
+
+**10 buttons** | 8 x 24 mm, 2 x 30 mm | closest pitch 28.4 mm | **82 mm and 95 mm lever spacings only** | cut envelope 257 x 126 mm
+
+> **There is no stock Vewlix spacing for this layout, on purpose.** One of the additions sits to the left of the whole cluster, so at the stock 59 mm the lever bore ends up **5.9 mm** from a button edge, which is not something you can build. At 82 mm that becomes 52.4 mm, and at 95 mm, 65.4 mm. Same reasoning, and the same measuring point, as [Vewlix 4+4 plus four, modern](#vewlix-44-plus-four-modern) above.
+
+**The six inherited holes are untouched.** This is built from [`vewlix_s_8button_24mm_buttons`](#vewlix-44-8-button) read straight back off disk, so columns one to three are bit for bit the same Vewlix cluster the rest of the library ships. Column four is deleted outright and everything else is new.
+
+**Where the four new holes go.** The reference is a photograph, and a photograph is the least trustworthy thing you can measure, so nothing here is scaled off the picture. Every added hole is the exact solution of a construction on geometry that was already known:
+
+| Added hole | Diameter | Construction |
+|---|---|---|
+| Right, replacing column four | 30 mm | apex of the equilateral triangle standing on the column three pair |
+| Left of column one | 24 mm | apex of the equilateral triangle standing on the column one pair |
+| Below and right of the lowest left button | 24 mm | its **left edge** on that button's centreline, its centre one column step (30.911 mm) away |
+| Below that | 30 mm | its **right edge** on the lowest left button's centreline, its **top edge** on the new 24 mm hole's centreline |
+
+Both triangles come out exactly equilateral, at **31.699 mm** on the right and **30.911 mm** on the left, because each is built on a single Vewlix column pair rather than across the stagger.
+
+**These four holes are not snapped to the 0.2 mm grid**, unlike the rest of the 24 mm family. They are not measured off anything; they are the exact answers to the rules above, and rounding them to the grid would break the edge alignments and the equal step by up to 0.09 mm in exchange for nothing. The six inherited holes keep the 0.2 mm grid they already sat on.
+
+**The tightest spot is the new 30 mm.** Its edge comes within **3.89 mm** of the new 24 mm above it, which is the thinnest web on the panel and a little tighter than the 4.38 mm the eight button Vewlix already runs at. The right hand 30 mm sits at 4.70 mm from column three, effectively the same as the 4.68 mm already present in the stock cluster.
+
+> **Snap in buttons only.** Eight pairs foul on screw in nuts, and the geometry was left alone on purpose because moving anything cannot fix it. **Five of the eight are inherited** from the Vewlix base: its 24 mm pairs sit at 28.375 mm and a 24 mm nut needs 29.50, so the panel is 1.125 mm short before any of the new holes exist. The other **three involve the two 30 mm holes**: the lower 30 mm to the new 24 mm at 30.887 mm against 32.75 needed, and the right hand 30 mm to each column three button at 31.699 mm against the same 32.75. Opening those three up would still leave the five inherited ones, so the construction was kept exact instead. Both **new 24 mm holes clear comfortably**, at 30.911 mm against 29.50 needed. See [Screw in buttons and nut clearance](#screw-in-buttons-and-nut-clearance).
+
+**Two ear relief tabs are rotated**, the new 24 mm and the new 30 mm below it, to 75 degrees rather than the default 60. That buys the pair back to a **3.83 mm** web, against a 3.89 mm ceiling set by the plain hole to hole gap, so the tabs cost 0.06 mm and nothing more. Everything else stays at the default angle.
+
+> **This is a recreation, not a measured copy.** The construction follows what the reference plainly shows, built on known good Vewlix numbers, and the placement rules for the lower two holes came from the person who spotted the layout rather than from the picture. If you have the real panel or better numbers, the four additions are the only thing worth checking; the six originals are already exact.
+
+More previews: [95 mm spacing](preview/vewlix_okayama_10button_95mm_spacing.png) &middot; [95 mm inner support](preview/inner_support_vewlix_okayama_10button_95mm_spacing.png)
+
+| Version | 82 mm | 95 mm |
+|---|---|---|
+| Standard | [dxf](dxf/vewlix_okayama_10button_82mm_spacing.dxf) &middot; [svg](svg/vewlix_okayama_10button_82mm_spacing.svg) | [dxf](dxf/vewlix_okayama_10button_95mm_spacing.dxf) &middot; [svg](svg/vewlix_okayama_10button_95mm_spacing.svg) |
+| Inner support | [dxf](dxf/inner_support_vewlix_okayama_10button_82mm_spacing.dxf) &middot; [svg](svg/inner_support_vewlix_okayama_10button_82mm_spacing.svg) | [dxf](dxf/inner_support_vewlix_okayama_10button_95mm_spacing.dxf) &middot; [svg](svg/inner_support_vewlix_okayama_10button_95mm_spacing.svg) |
+
+---
+
+### Full index
+
+The 21 Slagcoin joystick arrangements at a glance. The ASI, cabinet and community layouts above each ship as single files and are not repeated here.
+
+Cut envelope is the outermost cut geometry with the lever mounting holes included. Add your own margin on top of that for palm rest. Slagcoin is emphatic that you want plenty of panel in front of and beside the devices.
+
+
+| Layout | What it is | Buttons | Stock lever | Cut envelope | Screw in nuts, 30 mm |
+|---|---|---:|---:|---|---:|
+| [`sega1_s`](#sega-astro-city--blast-city-p1) | Sega Astro City / Blast City P1 | 8 | 59 mm | 222 x 99 mm | no, -0.275 mm |
+| [`sega2_s`](#sega-p2-non-slanted) | Sega P2, non slanted | 8 | 63 mm | 219 x 100 mm | no, -0.066 mm |
+| [`vewlix_s`](#vewlix-7-button-as-drawn) | Vewlix, 7 button as drawn | 7 | 59 mm | 225 x 91 mm | no, -0.532 mm |
+| [`vewlix_s_8button`](#vewlix-44-8-button) | Vewlix 4+4, 8 button | 8 | 59 mm | 225 x 91 mm | no, -0.532 mm |
+| [`shift36_s`](#generic-shift) | Generic shift | 8 | 95 mm | 261 x 99 mm | no, -0.275 mm |
+| [`hori36_s`](#hori-transitioning) | Hori transitioning | 8 | 63.75 mm | 220 x 96 mm | **yes**, +0.000 mm |
+| [`horis36_s`](#hori-transitioning-spaced-rows) | Hori transitioning, spaced rows | 8 | 63.75 mm | 220 x 100 mm | **yes**, +0.000 mm |
+| [`cluster36_s`](#clustered-arcade) | Clustered arcade | 8 | 95 mm | 251 x 96 mm | **yes**, +0.000 mm |
+| [`clusters36_s`](#clustered-arcade-spaced-rows) | Clustered arcade, spaced rows | 8 | 95 mm | 251 x 100 mm | **yes**, +0.000 mm |
+| [`slant36_s`](#direct-slant) | Direct slant | 8 | 95 mm | 250 x 96 mm | **yes**, +0.000 mm |
+| [`slants36_s`](#direct-slant-spaced-rows) | Direct slant, spaced rows | 8 | 95 mm | 250 x 100 mm | **yes**, +0.063 mm |
+| [`hybrid36_s`](#moderate--hybrid) | Moderate / hybrid | 8 | 95 mm | 253 x 96 mm | no, -0.153 mm |
+| [`hybrids36_s`](#moderate--hybrid-spaced-rows) | Moderate / hybrid, spaced rows | 8 | 95 mm | 253 x 100 mm | no, -0.153 mm |
+| [`incline36_s`](#straight-incline) | Straight incline | 8 | 95 mm | 251 x 96 mm | no, -0.153 mm |
+| [`inclines36_s`](#straight-incline-spaced-rows) | Straight incline, spaced rows | 8 | 95 mm | 251 x 100 mm | no, -0.153 mm |
+| [`matrix36_s`](#square-grid) | Square grid | 8 | 95 mm | 257 x 91 mm | **yes**, +0.000 mm |
+| [`matrixs36_s`](#square-grid-spaced-rows) | Square grid, spaced rows | 8 | 95 mm | 257 x 91 mm | **yes**, +0.000 mm |
+| [`american_s`](#capcom-usa-street-fighter) | Capcom USA Street Fighter | 6 | 95 mm | 225 x 91 mm | no, -1.075 mm |
+| [`mesh36_s`](#mesh-template) | Mesh template | 13 | 95 mm | 274 x 102 mm | **yes**, +0.000 mm |
+| [`rhombus36_s`](#rhombus-template) | Rhombus template | 9 | 95 mm | 276 x 91 mm | **yes**, +0.062 mm |
+| [`zigzag36_s`](#zigzag-template) | Zigzag template | 12 | 95 mm | 275 x 92 mm | **yes**, +0.000 mm |
+
+
+Every layout in the table above also exists as `_82mm_spacing` and `_95mm_spacing`, in both DXF and SVG.
+
+**The screw in column is for the 30 mm files.** Every `_24mm_buttons` version of every row is snap in only, between 0.649 and 1.560 mm short, because the 0.8 scale takes the pitch to 28.8 mm and a 24 mm nut needs 29.5. See [Screw in buttons and nut clearance](#screw-in-buttons-and-nut-clearance).
+
+---
+
+## Leverless / All Button Layouts
+
+Leverless panels. No joystick, so no lever spacing and no joystick bores. These are drawn as designed, with their native mix of 24 mm and 30 mm holes, and they ship as a single file each rather than in spacing and button size variants.
+
+<img src="preview/_all_button_layouts.png" alt="All button layouts" width="900">
+
+> **Who made these.** The all button layouts were created by [JasensCustoms.com](https://www.jasenscustoms.com) and members of the Panzer user community. They may draw inspiration from other all button layouts out in the world, but they are not exact replicas of any of them.
+
+Two things differ from the joystick layouts:
+
+- **Layers.** Holes are split across `BUTTONS_24` and `BUTTONS_30` rather than a single `BUTTONS` layer, because these layouts mix the two sizes and you will likely want a different tool for each. There are no joystick or plate layers.
+- **Origin.** (0,0) is the centre of the button cluster bounding box, since there is no joystick to reference.
+
+Panel outlines, mounting screw holes, USB and cable cutouts from the source drawings were deliberately left out. What you get is the button pattern, to drop onto whatever panel you are building.
+
+Hole diameters are normalised to exactly 24.00 mm and 30.00 mm. The source drawings carry between 0.00 and 0.21 mm of clearance depending on which file they came from, which is a cutting decision better made at CAM time for your own machine and material. Button positions are preserved exactly as drawn.
+
+### Traditional
+
+<img src="preview/traditional_all_button.png" alt="traditional_all_button" width="380"> <img src="preview/inner_support_traditional_all_button.png" alt="inner_support_traditional_all_button" width="380">
+
+*Left: standard. Right: inner support, with the hole and its Sanwa OBSF ear relief merged into one profile.*
+
+The baseline all button layout. A four button directional cluster on the left, eight action buttons in two staggered rows on the right, and a single 30 mm thumb button below. If someone is building their first leverless and does not know what they want, this is the one to print and feel first.
+
+**12 buttons**  |  11 x 24 mm and 1 x 30 mm  |  closest pitch 28.7 mm  |  cut envelope 199 x 103 mm
+
+| Version | Files |
+|---|---|
+| Standard | [dxf](dxf/traditional_all_button.dxf) &middot; [svg](svg/traditional_all_button.svg) |
+| Inner support | [dxf](dxf/inner_support_traditional_all_button.dxf) &middot; [svg](svg/inner_support_traditional_all_button.svg) |
+
+### Modern
+
+<img src="preview/modern_all_button.png" alt="modern_all_button" width="380"> <img src="preview/inner_support_modern_all_button.png" alt="inner_support_modern_all_button" width="380">
+
+*Left: standard. Right: inner support, with the hole and its Sanwa OBSF ear relief merged into one profile.*
+
+The Traditional shape opened out, with an extra pair of buttons on the right hand cluster and a taller stagger between the rows. More reach for the ring and pinky, and more room to sit your hand deeper into the panel.
+
+**15 buttons**  |  14 x 24 mm and 1 x 30 mm  |  closest pitch 28.3 mm  |  cut envelope 199 x 134 mm
+
+| Version | Files |
+|---|---|
+| Standard | [dxf](dxf/modern_all_button.dxf) &middot; [svg](svg/modern_all_button.svg) |
+| Inner support | [dxf](dxf/inner_support_modern_all_button.dxf) &middot; [svg](svg/inner_support_modern_all_button.svg) |
+
+### Tomahawk
+
+<img src="preview/tomahawk_all_button.png" alt="tomahawk_all_button" width="380"> <img src="preview/inner_support_tomahawk_all_button.png" alt="inner_support_tomahawk_all_button" width="380">
+
+*Left: standard. Right: inner support, with the hole and its Sanwa OBSF ear relief merged into one profile.*
+
+A compact take on the Traditional idea. Same footprint width, one fewer button, and the right hand cluster pulled in slightly so the whole thing sits comfortably on a smaller panel.
+
+**13 buttons**  |  12 x 24 mm and 1 x 30 mm  |  closest pitch 28.7 mm  |  cut envelope 199 x 103 mm
+
+| Version | Files |
+|---|---|
+| Standard | [dxf](dxf/tomahawk_all_button.dxf) &middot; [svg](svg/tomahawk_all_button.svg) |
+| Inner support | [dxf](dxf/inner_support_tomahawk_all_button.dxf) &middot; [svg](svg/inner_support_tomahawk_all_button.svg) |
+
+### Aegis
+
+<img src="preview/aegis_all_button.png" alt="aegis_all_button" width="380"> <img src="preview/inner_support_aegis_all_button.png" alt="inner_support_aegis_all_button" width="380">
+
+*Left: standard. Right: inner support, with the hole and its Sanwa OBSF ear relief merged into one profile.*
+
+A wide, shallow arc. The buttons spread further across the panel and the arc through the action cluster is flatter than the Traditional, which suits players who keep their hand low and flat rather than curled.
+
+**15 buttons**  |  13 x 24 mm and 2 x 30 mm  |  closest pitch 28.7 mm  |  cut envelope 226 x 108 mm
+
+| Version | Files |
+|---|---|
+| Standard | [dxf](dxf/aegis_all_button.dxf) &middot; [svg](svg/aegis_all_button.svg) |
+| Inner support | [dxf](dxf/inner_support_aegis_all_button.dxf) &middot; [svg](svg/inner_support_aegis_all_button.svg) |
+
+### Shiokenstar
+
+<img src="preview/shiokenstar_all_button.png" alt="shiokenstar_all_button" width="380"> <img src="preview/inner_support_shiokenstar_all_button.png" alt="inner_support_shiokenstar_all_button" width="380">
+
+*Left: standard. Right: inner support, with the hole and its Sanwa OBSF ear relief merged into one profile.*
+
+The 30 mm layout of the set. Nine of the twelve holes are 30 mm rather than 24 mm, with only the directional cluster left at 24 mm. If you want the feel of full size buttons on a leverless panel, this is the one built for it.
+
+**12 buttons**  |  3 x 24 mm and 9 x 30 mm  |  closest pitch 28.9 mm  |  cut envelope 231 x 118 mm
+
+| Version | Files |
+|---|---|
+| Standard | [dxf](dxf/shiokenstar_all_button.dxf) &middot; [svg](svg/shiokenstar_all_button.svg) |
+| Inner support | [dxf](dxf/inner_support_shiokenstar_all_button.dxf) &middot; [svg](svg/inner_support_shiokenstar_all_button.svg) |
+
+### Slab Split
+
+<img src="preview/slab_split_all_button.png" alt="slab_split_all_button" width="380"> <img src="preview/inner_support_slab_split_all_button.png" alt="inner_support_slab_split_all_button" width="380">
+
+*Left: standard. Right: inner support, with the hole and its Sanwa OBSF ear relief merged into one profile.*
+
+A split layout. The directional and action clusters sit close together up top while the two 30 mm thumb buttons drop well below the main cluster, giving the thumbs their own dedicated space instead of tucking them under the hand.
+
+**15 buttons**  |  13 x 24 mm and 2 x 30 mm  |  closest pitch 27.3 mm  |  cut envelope 212 x 148 mm
+
+| Version | Files |
+|---|---|
+| Standard | [dxf](dxf/slab_split_all_button.dxf) &middot; [svg](svg/slab_split_all_button.svg) |
+| Inner support | [dxf](dxf/inner_support_slab_split_all_button.dxf) &middot; [svg](svg/inner_support_slab_split_all_button.svg) |
+
+### Split Modern
+
+<img src="preview/split_modern_all_button.png" alt="split_modern_all_button" width="380"> <img src="preview/inner_support_split_modern_all_button.png" alt="inner_support_split_modern_all_button" width="380">
+
+*Left: standard. Right: inner support, with the hole and its Sanwa OBSF ear relief merged into one profile.*
+
+The largest layout here at 17 buttons, and a true split. Left and right clusters are separated across the panel with a pair of 30 mm thumb buttons in the middle, so each hand gets its own island. Widest cut envelope of the set.
+
+**17 buttons**  |  15 x 24 mm and 2 x 30 mm  |  closest pitch 29.0 mm  |  cut envelope 258 x 121 mm
+
+| Version | Files |
+|---|---|
+| Standard | [dxf](dxf/split_modern_all_button.dxf) &middot; [svg](svg/split_modern_all_button.svg) |
+| Inner support | [dxf](dxf/inner_support_split_modern_all_button.dxf) &middot; [svg](svg/inner_support_split_modern_all_button.svg) |
+
+---
+
+### All button index
+
+| Layout | Buttons | 24 mm | 30 mm | Cut envelope | Screw in nuts |
+|---|---:|---:|---:|---|---:|
+| [`traditional_all_button`](#traditional) | 12 | 11 | 1 | 199 x 103 mm | no, -0.807 mm |
+| [`modern_all_button`](#modern) | 15 | 14 | 1 | 199 x 134 mm | no, -1.213 mm |
+| [`tomahawk_all_button`](#tomahawk) | 13 | 12 | 1 | 199 x 103 mm | no, -0.810 mm |
+| [`aegis_all_button`](#aegis) | 15 | 13 | 2 | 226 x 108 mm | no, -0.815 mm |
+| [`shiokenstar_all_button`](#shiokenstar) | 12 | 3 | 9 | 231 x 118 mm | no, -0.610 mm |
+| [`slab_split_all_button`](#slab-split) | 15 | 13 | 2 | 212 x 148 mm | no, -2.174 mm |
+| [`split_modern_all_button`](#split-modern) | 17 | 15 | 2 | 258 x 121 mm | no, -0.499 mm |
+
+
 ---
 
 ## Before you cut
@@ -1443,12 +1481,52 @@ More previews: [95 mm spacing](preview/vewlix_12button_modern_95mm_spacing.png) 
 - **Test print first.** Print the SVG at 100 percent scale and rest your hand on it. Slagcoin's advice, *"Feeling these can give you an idea of what layout will likely suit you"*, is the single most valuable line on the whole site. A sheet of paper costs nothing. A mis-drilled panel costs a weekend.
 - **Pick one joystick bore**, 24 mm or 35.25 mm, and delete the other layer.
 - **Delete the `REFERENCE` layer** before sending anything to CAM. Those crosshairs are alignment aids, not cuts.
-- **Check your nuts.** On the 30 mm files, `vewlix_s`, `vewlix_s_8button`, `shift36_s` and `sega1_s` have closest button pairs just under 36 mm, and standard Sanwa screw in nuts are about that wide. On the 24 mm files the equivalent pairs land around 28.4 to 28.8 mm, which suits snap ins better than screw ins.
+- **Check your nuts.** Most of this library is **snap in only**, and it is not close. See [Screw in buttons and nut clearance](#screw-in-buttons-and-nut-clearance) below for the numbers and for which files clear.
 - **On inner support files**, each button is already a single closed profile. Cut it as one contour, inside offset, same as any other hole. Slot direction varies across a panel by design; see [Inner support versions](#inner-support-versions).
 - **Cut a test piece in scrap** before you commit to your real panel material.
 - **Check the file yourself.** These were traced carefully and verified against the originals, but it is far better to find a problem in CAD than in aluminium.
 
 ---
+
+## Screw in buttons and nut clearance
+
+A snap in button needs its hole and nothing else. A **screw in** button needs room for the retaining nut on the underside, and the nut is much wider than the hole.
+
+| Button | Hole | Nut outside diameter |
+|---|---|---:|
+| 30 mm | 30.0 mm | **36.0 mm** |
+| 24 mm | 24.0 mm | **29.5 mm** |
+
+Two buttons clear for screw ins only when their **centres** are at least the mean of the two nut diameters apart:
+
+| Pair | Minimum centre distance |
+|---|---:|
+| 30 to 30 | **36.00 mm** |
+| 30 to 24 | **32.75 mm** |
+| 24 to 24 | **29.50 mm** |
+
+This is a harder constraint than hole clearance and harder than the ear relief slots, and **it is invisible in the previews**, because nothing drawn on the file is that big. Every layout here was checked against it.
+
+**The classic 36 mm pitch is exactly zero margin, not comfortable.** The 30 mm Slagcoin layouts sit at 36.000 mm, so the nuts touch. That is the intended design and it works, but there is no headroom in it at all.
+
+**Scaling 30 mm to 24 mm breaks screw ins every time.** The 0.8 scale takes the 36 mm pitch to 28.8 mm, and a 24 mm nut needs 29.5 mm. The holes scale by 0.8 but the nuts do not, so every scaled 24 mm layout is short by about 0.7 mm. This is arithmetic, not bad luck, and no amount of care in the conversion avoids it.
+
+Where each family lands, as the tightest margin on any layout in it. A negative number is how much the two nuts overlap:
+
+| Family | Layouts | Clear for screw ins | Tightest margin |
+|---|---:|---:|---:|
+| Joystick, 30 mm | 63 | 33 | +0.063 down to -1.075 mm |
+| Joystick, 24 mm | 63 | 0 | -0.649 down to -1.560 mm |
+| All button | 7 | 0 | -0.499 down to -2.174 mm |
+| Manufacturer, ASI | 3 | 0 | -0.072 down to -1.000 mm |
+| Community, Vewlix variants | 4 | 0 | -1.193 down to -1.863 mm |
+| Cabinet, Japanese Parts | 2 | 2 | +5.000 and +12.464 mm |
+
+The 33 clear 30 mm layouts are `cluster36_s`, `clusters36_s`, `hori36_s`, `horis36_s`, `matrix36_s`, `matrixs36_s`, `mesh36_s`, `slant36_s` and `zigzag36_s` at 36.000 mm exactly, plus `rhombus36_s` at +0.062 and `slants36_s` at +0.063, each across its three lever spacings. The generously spaced pair are [Neo Geo MVS](#neo-geo-mvs) at +5.000 mm and [Mortal Kombat 3, Japanese hardware](#mortal-kombat-3-japanese-hardware) at +12.464 mm, both of which came from cabinet drawings rather than from the Japanese 36 mm convention.
+
+**If you are fitting screw ins, check your own nuts against the table above rather than trusting the family.** Nut diameters vary a little between Sanwa, Seimitsu and the various clones, and 0.06 mm of margin is not margin.
+
+`_american_parts` files are outside this entirely: American buttons are nut mount by definition and their spacing was set for it.
 
 ## How these were made
 
