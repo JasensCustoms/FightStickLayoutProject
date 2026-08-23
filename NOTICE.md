@@ -44,11 +44,13 @@ Shared here with the button patterns preserved as designed. Panel outlines,
 mounting holes and other cutouts from the original working drawings were left out.
 
 `case/` holds a laser cut acrylic case with 3D printed corner and center supports,
-also created by JasensCustoms.com: twenty four DXF cut profiles, three printed
-parts as STL and STEP, and the SolidWorks sources. Eight of the DXFs came straight
-from SolidWorks with their original filenames kept exactly; the other sixteen are
+also created by JasensCustoms.com: twenty four DXF cut profiles, four printed parts
+as STL and STEP, and the SolidWorks sources. Eight of the DXFs came straight from
+SolidWorks with their original filenames kept exactly; the other sixteen are
 derived from those, with features deleted or added rather than anything being
-redrawn. Same license as everything else here.
+redrawn. The fight board bracket is not from SolidWorks at all: it is modeled
+directly from the panel's own hole pattern. Same license as everything else
+here.
 
 The Sega 2P IMPACT layouts come from `jasenscustoms-pfs4-mczte-sega2p-IMPACT-withbezel.svg`,
 a JasensCustoms cut file for the IMPACT plate that fits the Panzer Fight Stick 4

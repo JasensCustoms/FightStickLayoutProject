@@ -61,6 +61,7 @@ is the fourteen wall slots. Only the inner layer carries them. See below.
 | 4 | Corner support | `CornerSupport.STL` / `.STEP` / `.SLDPRT` / `.DXF` |
 | 1 | Blank center support | `Blank_CenterSupport.STL` / `.STEP` / `.SLDPRT` / `.DXF` |
 | 1 | Neutrik center support | `Neutrik_CenterSupport.STL` / `.STEP` / `.SLDPRT` |
+| 0 to 2 | Fight board bracket, optional | `FightBoardBracket.STL` / `.STEP` |
 
 **Hardware:**
 
@@ -68,6 +69,15 @@ is the fourteen wall slots. Only the inner layer carries them. See below.
 |---:|---|
 | 12 | M4 brass heat set inserts, [ruthex RX-M4x8.1](https://www.amazon.com/dp/B07YSV66Y5) or equivalent |
 | 12 | M4 screws, length to suit your stack |
+
+Per [fight board bracket](#fight-board-bracket), if you print one:
+
+| Qty | Item |
+|---:|---|
+| 4 | M3 brass heat set inserts, [ruthex RX-M3x5.7](https://www.amazon.com/ruthex-M3-Threaded-Inserts-RX-M3x5-7/dp/B08BCRZZS3) |
+| 2 | M3 SHORT brass heat set inserts, [ruthex RX-M3Sx4.0](https://www.amazon.com/ruthex-Threaded-Inserts-Short-RX-M3Sx4-0/dp/B09ZHSGHXD) |
+| 2 | M3 flat head screws, **10 mm**, panel down into the bracket base |
+| 4 | M3 pan head screws, **8 mm**, board up into the pillars |
 
 Two inserts per support, one in each end of its 5.6 mm through bore, which is why
 the panels carry six 4.1 mm clearance holes each: four corners and two centers,
@@ -116,9 +126,15 @@ sets, left and right. Cut the side you want and leave the other out, or cut both
 if you want a screen at each end.
 
 **The 3.3 mm clusters mount a fight board.** There are two of them for the same
-reason: cut both if you like, but only one side is needed. The inner two mounts of
-a cluster are worth having if you plan to 3D print a bracket for the board rather
-than bolting it straight to the panel.
+reason: cut both if you like, but only one side is needed. Each cluster is an
+**88.0 x 37.0 mm** rectangle of four, with two more **50.0 mm** apart on that
+rectangle's centerline, 19.0 mm in from each end. Both clusters are the same
+pattern, so anything that fits one fits the other.
+
+The four outer holes are the board's own mounting pattern, for bolting it straight
+to the panel on standoffs of your choosing. **The two inner holes are for the
+[fight board bracket](#fight-board-bracket) below**, which is the printed
+alternative.
 
 All four features are **inner layer only**; see the outer layer note below.
 
@@ -228,6 +244,63 @@ about 4.8 mm inside a support, so there is plenty left over.
 > which is the whole point of it, but 8.6 mm is at the deep end for a snap in.
 > Cut one wall in scrap and try a button before committing to four.
 
+### Fight board bracket
+
+<img src="preview/fightboardbracket_3d.png" alt="Fight board bracket" width="420">
+
+A printed standoff plate that turns one 3.3 mm cluster into a fight board mount.
+It bolts to the underside of the top inner panel and holds the board 10 mm clear
+of it, so no loose standoffs are needed and nothing shows on the outside of the
+case. Optional, and one per board.
+
+| | |
+|---|---|
+| **Envelope** | 100.0 x 49.0 x 15.0 mm |
+| **Base** | 100.0 x 49.0 x 5.0 mm plate, 6 mm corner radius |
+| **Pillars** | 4 off, 8.0 mm diameter, 10.0 mm tall, on 88.0 x 37.0 mm centers |
+| **Board standoff** | 10.0 mm below the panel |
+| **Print** | PETG, 5 wall loops, base down and pillars up, no supports |
+| **Files** | `FightBoardBracket.STL`, `FightBoardBracket.STEP` |
+
+**Which panel holes it uses.** The two inner holes of the cluster, the ones
+50.0 mm apart. The four outer holes are the alternative, for bolting a board
+straight to the panel on standoffs of your own, and they go unused when the
+bracket is fitted.
+
+#### Threaded inserts
+
+Both are heat set. The four pillar bores are blind, 7.0 mm deep; the two base
+bores go straight through the plate.
+
+| Qty | Insert | Goes in |
+|---:|---|---|
+| 4 | [ruthex RX-M3x5.7](https://www.amazon.com/ruthex-M3-Threaded-Inserts-RX-M3x5-7/dp/B08BCRZZS3) | the top of each pillar |
+| 2 | [ruthex RX-M3Sx4.0 SHORT](https://www.amazon.com/ruthex-Threaded-Inserts-Short-RX-M3Sx4-0/dp/B09ZHSGHXD) | the base, from the face that meets the panel |
+
+Both bores are 4.0 mm. ruthex publishes that figure for the RX-M3x5.7 and does not
+publish one for the short insert, so check the short one against your parts before
+committing to a print.
+
+#### Screws you need to supply
+
+**4 x M3 pan head, 8 mm**, and **2 x M3 flat head, 10 mm.**
+
+| Qty | Screw | Length | Where it goes |
+|---:|---|---|---|
+| 2 | M3 flat head, countersunk | **10 mm** | down through the top inner panel into the base |
+| 4 | M3 pan head | **8 mm** | up through the board into the pillars |
+
+The **flat heads** are what the countersinks in the top inner panel are for. At
+10 mm they take up the full 4.0 mm of the short insert across the whole thickness
+tolerance of 5.6 mm plexi, and their heads finish below the panel surface so the
+3.0 mm outer layer lies flat on top. 8 mm is too short and only reaches half way
+into the insert.
+
+The **pan heads** come up from underneath through a 1.6 mm board and take 6.4 mm
+of the 5.7 mm pillar insert. **Do not go longer than 8 mm**: the pillar bore is
+7.0 mm deep, so a 10 mm screw bottoms out and holds the board off the pillar
+instead of pulling it down.
+
 ### Printed supports
 
 <img src="preview/cornersupport_3d.png" alt="Corner support" width="250"> <img src="preview/blank_centersupport_3d.png" alt="Blank center support" width="250"> <img src="preview/neutrik_centersupport_3d.png" alt="Neutrik center support" width="250">
@@ -274,6 +347,12 @@ filenames exactly as they came. The other sixteen, the four outer panels and the
 twelve button walls, are generated from those eight: features are deleted or added
 and the rest of the geometry is carried across untouched, so a wall in a button
 variant is the same wall, not a redrawn one.
+
+The fight board bracket is the exception, being modeled rather than derived. Its
+mounting pattern is measured off `Top - Outline 1 - Inner - Plexi Case Parts.DXF`,
+not assumed, and the exported STL is checked for watertightness and consistent
+winding, against the solid's own volume, and by firing a ray through every bore to
+confirm its position and depth.
 
 ## License
 
