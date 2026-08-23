@@ -5,15 +5,17 @@
 The founding set is converted from [slagcoin.com](https://www.slagcoin.com/joystick/layout.html). More layouts get added over time, from other sources and drawn fresh, and every one carries its own credit.
 
 ![Layout formats](https://img.shields.io/badge/formats-DXF%20%2B%20SVG-blue)
-![Units](https://img.shields.io/badge/units-millimetres-informational)
+![Units](https://img.shields.io/badge/units-millimeters-informational)
 ![Layouts](https://img.shields.io/badge/layouts-568-success)
 ![Files](https://img.shields.io/badge/files-1136-lightgrey)
 
-Everything is drawn 1:1 in millimetres, ready to send to a laser, router or CNC. Three groups:
+Everything is drawn 1:1 in millimeters, ready to send to a laser, router or CNC. Three groups:
 
 - **[Lever Based Layouts](#lever-based-layouts)**, anything with a joystick. The 21 Slagcoin arrangements, each supplied at 3 different lever positions and in both 30 mm and 24 mm button sizes, plus panels taken from commercial sticks, real cabinets and the community.
 - **[Leverless / All Button Layouts](#leverless--all-button-layouts)**, 8 panels with no joystick, drawn as designed with their native mix of 24 mm and 30 mm holes.
 - **[WASD Layouts](#wasd-layouts)**, every one of those lever layouts again with a four button directional cluster where the joystick was. The action buttons do not move.
+
+There is also a **[case](case/README.md)**: a laser cut acrylic enclosure with 3D printed corner and center supports, 451 x 303 mm inside a 62.2 mm stack, which has room for any layout here several times over. **The case files have not been physically validated yet**, so read the disclaimer at the top of that page before cutting.
 
 Every one of those also ships in an **inner support** version, where each button hole is merged with a relief slot for Sanwa OBSF snap in button ears. That comes to 568 layouts per format, 1136 files.
 
@@ -27,11 +29,11 @@ Every one of those also ships in an **inner support** version, where each button
 >
 > That site has been the reference for arcade stick building for well over fifteen years. The panel layout page, the button and joystick measurement pages, the drilling and wiring guides. It is still the most careful and most useful writeup on the subject that anyone has put on the internet, and it was given away for free.
 >
-> Every layout in the founding set is traced from Slagcoin's own to scale diagrams, and each of those catalogue entries quotes his description. If you build anything from these files, go read [the original pages](https://www.slagcoin.com/joystick/layout.html) first. There is a lot of reasoning there about *why* the layouts are shaped the way they are, and it will make you better at picking one.
+> Every layout in the founding set is traced from Slagcoin's own to scale diagrams, and each of those catalog entries quotes his description. If you build anything from these files, go read [the original pages](https://www.slagcoin.com/joystick/layout.html) first. There is a lot of reasoning there about *why* the layouts are shaped the way they are, and it will make you better at picking one.
 
 The all button layouts come from a different place. They were created by [JasensCustoms.com](https://www.jasenscustoms.com) and members of the Panzer user community, and are credited in [their own section](#leverless--all-button-layouts). The S24, S30 and B30 layouts belong to [ASI](#asi-s24). The Mortal Kombat 3 panel, and its Japanese hardware variant, are traced from a dimensioned drawing by **Twistedsymphony**, hosted at [classicarcadecabinets.com](https://www.classicarcadecabinets.com/mortal-kombat-3.html). The Neo Geo MVS panel comes from a drilling template by **Crowquilll**.
 
-**Where a layout came from is recorded with the layout.** Every catalogue entry names its origin, and [NOTICE.md](NOTICE.md) is the full register of sources. Nothing in here silently claims someone else's design work.
+**Where a layout came from is recorded with the layout.** Every catalog entry names its origin, and [NOTICE.md](NOTICE.md) is the full register of sources. Nothing in here silently claims someone else's design work.
 
 ---
 
@@ -121,7 +123,7 @@ The all button layouts come from a different place. They were created by [Jasens
 - [Before you cut](#before-you-cut)
 - [Screw in buttons and nut clearance](#screw-in-buttons-and-nut-clearance)
 - [How these were made](#how-these-were-made)
-- [Licence and attribution](#licence-and-attribution)
+- [License and attribution](#license-and-attribution)
 
 ---
 
@@ -142,9 +144,10 @@ The all button layouts come from a different place. They were created by [Jasens
 ## What is in the box
 
 ```
-dxf/        568 layouts as .dxf   (R2010, millimetres, $INSUNITS = 4)
+dxf/        568 layouts as .dxf   (R2010, millimeters, $INSUNITS = 4)
 svg/        the same 568 layouts as .svg  (1 user unit = 1 mm)
 preview/    per layout PNG previews plus contact sheets and diagrams
+case/       a laser cut acrylic case with 3D printed supports, DXF, STL and STEP
 README.md   this file
 ```
 
@@ -182,7 +185,7 @@ traditional_all_button     a leverless layout. No lever, so no spacing or
                            inner support panel that is a plain copy.
 
                            Where a layout ships both fits, BOTH carry a suffix
-                           and the button centres are identical between them.
+                           and the button centers are identical between them.
                            One panel drilling pattern, two sets of hardware.
                            Anything without a parts suffix is Japanese Parts,
                            which is the default throughout the library.
@@ -197,19 +200,19 @@ The `inner_support_` prefix goes on the front. Every other suffix keeps its mean
 
 ## What is in every file
 
-Millimetres throughout. In the SVG, 1 user unit equals 1 mm and the width and height are declared in mm, so it imports at true size without scaling. The origin (0,0) is the centre of the joystick shaft hole, with +X toward the buttons and +Y toward the back of the panel.
+Millimeters throughout. In the SVG, 1 user unit equals 1 mm and the width and height are declared in mm, so it imports at true size without scaling. The origin (0,0) is the center of the joystick shaft hole, with +X toward the buttons and +Y toward the back of the panel.
 
 There is no text, no title block and no border. Cut geometry only.
 
 ### Layers
 
-| Layer | DXF colour | Contents |
+| Layer | DXF color | Contents |
 |---|---|---|
 | `BUTTONS` | 1, red | 30 mm button holes |
 | `JOYSTICK_BORE_24` | 5, blue | 24 mm shaft clearance hole |
 | `JOYSTICK_BORE_35.25` | 3, green | 35.25 mm bore matching the mounting plate |
 | `GL_PLATE_HOLES` | 2, yellow | Lever mounting holes and slots |
-| `REFERENCE` | 8, grey | Centre crosshairs only, do not cut |
+| `REFERENCE` | 8, gray | Center crosshairs only, do not cut |
 
 On inner support files the button layers carry closed profiles rather than plain circles. No extra layer is added.
 
@@ -228,7 +231,7 @@ They sit concentrically on top of each other. **Pick one and delete the other.**
 
 ### Lever mounting holes
 
-`GL_PLATE_HOLES` carries the universal mounting plate pattern, so a single panel will accept a range of different levers. You get two ear holes and two slots at the top and bottom, a pair on the centreline, and four corner holes. Drill only the ones your lever actually needs and ignore the rest.
+`GL_PLATE_HOLES` carries the universal mounting plate pattern, so a single panel will accept a range of different levers. You get two ear holes and two slots at the top and bottom, a pair on the centerline, and four corner holes. Drill only the ones your lever actually needs and ignore the rest.
 
 The plate runs tall rather than wide, so rotate that layer 90 degrees if your lever mounts sideways.
 
@@ -240,7 +243,7 @@ Button holes are 30 mm unless the file name says `_24mm_buttons`. See [24 mm but
 
 This section applies to the joystick layouts. All button layouts have no lever, so they have no spacing variants.
 
-Slagcoin dimensions every diagram from the centreline of the first (left most) button column. That is the reference point. When the original drawings put "59mm / 63mm / 95mm" next to the stick, that is the horizontal distance from the stick centre back to that column.
+Slagcoin dimensions every diagram from the centerline of the first (left most) button column. That is the reference point. When the original drawings put "59mm / 63mm / 95mm" next to the stick, that is the horizontal distance from the stick center back to that column.
 
 > A horizontal distance of about 5.9, 6.3, or 9.5 centimeters between the middle of the joystick and the middle of the leftmost button are common standards.
 >
@@ -301,7 +304,7 @@ These are not simply the same drawing with smaller holes punched in it. The whol
 
 **What stays fixed.** The joystick sits at the origin in both versions, the mounting plate holes and both bores are byte for byte identical, and the distance from the lever to the first button column does not move. A `_95mm_spacing_24mm_buttons` file still has its lever at exactly 95 mm.
 
-**How the shrink is anchored.** Horizontally the cluster is scaled about the first button column, which is the datum the lever spacing is measured to, so that distance is preserved exactly. Vertically it is scaled about the joystick centreline, which is the datum Slagcoin's own vertical callouts use, so the lever keeps the same proportional position relative to the rows.
+**How the shrink is anchored.** Horizontally the cluster is scaled about the first button column, which is the datum the lever spacing is measured to, so that distance is preserved exactly. Vertically it is scaled about the joystick centerline, which is the datum Slagcoin's own vertical callouts use, so the lever keeps the same proportional position relative to the rows.
 
 > **Check your button clearance before cutting.** A 36 mm pitch becomes 28.8 mm, and on the tighter layouts the closest pair lands around 28.4 mm. Snap in 24 mm buttons are usually fine at that spacing. Screw in 24 mm buttons have wider nuts and may not be, so measure yours first. Each layout below lists its closest pitch at both sizes.
 
@@ -313,22 +316,22 @@ Every layout in the repository has an inner support twin, named by putting `inne
 
 <img src="preview/_inner_support_explained.png" alt="Inner support ear slots" width="820">
 
-An inner support file is the complete original layout with every button hole replaced by a single closed profile: the hole unioned with a rectangular ear relief slot. The slot is centred on the hole and its long axis is rotated **30 degrees from vertical**, clockwise by default, so it runs from roughly 7 o'clock up to 1 o'clock.
+An inner support file is the complete original layout with every button hole replaced by a single closed profile: the hole unioned with a rectangular ear relief slot. The slot is centered on the hole and its long axis is rotated **30 degrees from vertical**, clockwise by default, so it runs from roughly 7 o'clock up to 1 o'clock.
 
 | Button | Slot size | Sticks out past the hole |
 |---|---|---|
 | 30 mm | 6 mm wide x 35 mm long | 2.5 mm each end |
 | 24 mm | 5 mm wide x 29 mm long | 2.5 mm each end |
 
-**The slots are modelled on the retention ears of Sanwa OBSF snap in buttons.** Those buttons have a pair of sprung tabs on the body that need somewhere to sit. On a stacked panel the top sheet takes the plain hole and the sheet underneath, the inner support, needs the ear clearance cut into it as well.
+**The slots are modeled on the retention ears of Sanwa OBSF snap in buttons.** Those buttons have a pair of sprung tabs on the body that need somewhere to sit. On a stacked panel the top sheet takes the plain hole and the sheet underneath, the inner support, needs the ear clearance cut into it as well.
 
 **One profile per button.** The circle and the slot are boolean unioned into a single closed outline, so there is exactly one contour to cut per button and no overlapping shapes to clean up. In DXF it is a closed `LWPOLYLINE` with true arc segments carried as bulges, not a polygon approximation. In SVG it is a closed `path` using `A` arc commands.
 
-**Slot direction is not uniform.** The default is 30 degrees clockwise from vertical, but on tightly packed layouts two neighbouring buttons pointing their ears at each other leaves a dangerously thin web of material, and on the tightest layouts the two slots actually cut into one another. Where that happens the slot is turned to whichever direction opens the gap back up. Slots are allowed to sit at any multiple of 15 degrees, so a crowded button has eleven alternatives to the default rather than just its mirror image.
+**Slot direction is not uniform.** The default is 30 degrees clockwise from vertical, but on tightly packed layouts two neighboring buttons pointing their ears at each other leaves a dangerously thin web of material, and on the tightest layouts the two slots actually cut into one another. Where that happens the slot is turned to whichever direction opens the gap back up. Slots are allowed to sit at any multiple of 15 degrees, so a crowded button has eleven alternatives to the default rather than just its mirror image.
 
 <img src="preview/_inner_support_mirrored.png" alt="One fixed slot angle versus the solved angles" width="900">
 
-The angles are solved per layout rather than picked by eye. For every pair of neighbouring buttons the exact clearance between the two finished profiles is computed in closed form, for all 144 combinations of their angles. The solver then searches for the assignment that maximises the *smallest* web anywhere on the panel, and once it has found that maximum it makes a second pass pulling every button that can afford it back to the default angle. So a panel only carries a rotated slot where the rotation is actually buying material.
+The angles are solved per layout rather than picked by eye. For every pair of neighboring buttons the exact clearance between the two finished profiles is computed in closed form, for all 144 combinations of their angles. The solver then searches for the assignment that maximises the *smallest* web anywhere on the panel, and once it has found that maximum it makes a second pass pulling every button that can afford it back to the default angle. So a panel only carries a rotated slot where the rotation is actually buying material.
 
 63 of the 136 layouts needed at least one rotated slot, 404 slots out of 1186 in total. 73 layouts are untouched at the default angle throughout.
 
@@ -347,7 +350,7 @@ Profiles stay on the same layer their circle was on, and every other entity in t
 
 <img src="preview/_inner_support_example.png" alt="Standard versus inner support" width="900">
 
-Every layout has its own inner support preview in `preview/`, and each catalogue entry below shows it beside the standard version. Contact sheets for the whole family:
+Every layout has its own inner support preview in `preview/`, and each catalog entry below shows it beside the standard version. Contact sheets for the whole family:
 
 <img src="preview/_inner_support_joystick.png" alt="Inner support, joystick layouts" width="900">
 
@@ -361,7 +364,7 @@ Every layout has its own inner support preview in `preview/`, and each catalogue
 
 Every panel here has a joystick. Leverless panels are in [Leverless / All Button Layouts](#leverless--all-button-layouts).
 
-Previews show the stock lever position with 30 mm buttons. Red is button holes, green and blue are the two joystick bores, orange is the lever mounting pattern, grey is the non cutting reference layer.
+Previews show the stock lever position with 30 mm buttons. Red is button holes, green and blue are the two joystick bores, orange is the lever mounting pattern, gray is the non cutting reference layer.
 
 The first 21 entries are converted from Slagcoin diagrams, so each one quotes his description of it. Everything after them comes from a commercial stick, a cabinet drawing or the community, and states its origin and its parts in its own entry.
 
@@ -442,7 +445,7 @@ More previews: [24 mm buttons](preview/sega2_s_24mm_buttons.png) &middot; [24 mm
 
 This is Slagcoin's diagram traced literally, and the original only draws 7 holes. The 8th position is marked on the source as a small optional dot rather than a real hole, so it lives in its own file below.
 
-> **Nut clearance, and this one is real:** the closest button pair sits about 35.5 mm apart centre to centre. Standard Sanwa screw in nuts are roughly 35 to 36 mm across and they will fight each other. Use the thinner Seimitsu nuts, use snap in buttons, or plan on filing a nut flat.
+> **Nut clearance, and this one is real:** the closest button pair sits about 35.5 mm apart center to center. Standard Sanwa screw in nuts are roughly 35 to 36 mm across and they will fight each other. Use the thinner Seimitsu nuts, use snap in buttons, or plan on filing a nut flat.
 
 **7 buttons**  |  stock lever at **59 mm**  |  closest button pitch 35.5 mm at 30 mm, 28.4 mm at 24 mm  |  cut envelope 225 x 91 mm
 
@@ -586,7 +589,7 @@ More previews: [24 mm buttons](preview/horis36_s_24mm_buttons.png) &middot; [24 
 >
 > *Slagcoin*
 
-The Japanese arcade feel, but rationalised. The geometry is built out of equilateral triangles, so neighbouring buttons all sit a consistent 36 mm apart in every direction. This is the tightest and most packed of the slanted family.
+The Japanese arcade feel, but rationalised. The geometry is built out of equilateral triangles, so neighboring buttons all sit a consistent 36 mm apart in every direction. This is the tightest and most packed of the slanted family.
 
 **8 buttons**  |  stock lever at **95 mm**  |  closest button pitch 36.0 mm at 30 mm, 28.8 mm at 24 mm  |  cut envelope 251 x 96 mm
 
@@ -862,7 +865,7 @@ More previews: [24 mm buttons](preview/matrixs36_s_24mm_buttons.png) &middot; [2
 >
 > *Slagcoin*
 
-The classic US cab 6 button block. This is the only layout in the set that was dimensioned in inches rather than millimetres, an inch and a half between columns and an inch and three eighths between rows, so the metric numbers look odd because they are exact conversions rather than rounded values.
+The classic US cab 6 button block. This is the only layout in the set that was dimensioned in inches rather than millimeters, an inch and a half between columns and an inch and three eighths between rows, so the metric numbers look odd because they are exact conversions rather than rounded values.
 
 Slagcoin does not recommend it. It is here because it is history, and because if you are restoring an American cabinet you need it to be right.
 
@@ -890,7 +893,7 @@ For the hardware these cabinets actually shipped with, see [Capcom USA Street Fi
 
 *Left: standard. Right: inner support, which on this layout is an identical copy. See below.*
 
-The Capcom block cut for the hardware the cabinets actually shipped with. **Every button centre is identical to [the standard file](#capcom-usa-street-fighter)**, which is the whole point: one panel drilling pattern, two sets of hardware.
+The Capcom block cut for the hardware the cabinets actually shipped with. **Every button center is identical to [the standard file](#capcom-usa-street-fighter)**, which is the whole point: one panel drilling pattern, two sets of hardware.
 
 **Parts: American** | 1.125 in (28.575 mm) buttons, nut mount | IL Eurojoystick 2 | 35 mm bore | 4 x 5.9 mm on 65.6 x 75.9 mm
 
@@ -898,7 +901,7 @@ The Capcom block cut for the hardware the cabinets actually shipped with. **Ever
 
 **Two senses of the word American are in play here**, and the file names invite confusion, so it is worth stating plainly. `american_s` is American because the *layout* is: it is the arrangement Capcom USA specified. `_american_parts` is about the *hardware*. So this file is the American layout with American hardware, where the base file is the American layout with Japanese hardware, which is what most people building one of these today actually fit.
 
-**It is the roomier of the two.** Dropping from 30 mm to 1.125 in holes on the same centres gains 1.4 mm of material: closest pair goes from 4.92 mm edge to edge up to **6.35 mm**. That matters on this layout, because the Capcom block is not generously spaced to begin with.
+**It is the roomier of the two.** Dropping from 30 mm to 1.125 in holes on the same centers gains 1.4 mm of material: closest pair goes from 4.92 mm edge to edge up to **6.35 mm**. That matters on this layout, because the Capcom block is not generously spaced to begin with.
 
 **The inner support file is a plain copy.** American buttons bolt in with a nut and have no snap-in retention ears, so there is nothing for a relief slot to relieve. It ships so the naming stays consistent, but its geometry is identical to the standard file, and that is intentional rather than an oversight.
 
@@ -924,7 +927,7 @@ The Capcom block cut for the hardware the cabinets actually shipped with. **Ever
 >
 > *Slagcoin*
 
-A honeycomb style offset grid. Columns alternate between three high and two high, and everything sits a consistent 36 mm from its neighbours. Almost any slanted or arched layout can be carved out of this one.
+A honeycomb style offset grid. Columns alternate between three high and two high, and everything sits a consistent 36 mm from its neighbors. Almost any slanted or arched layout can be carved out of this one.
 
 **13 buttons**  |  stock lever at **95 mm**  |  closest button pitch 36.0 mm at 30 mm, 28.8 mm at 24 mm  |  cut envelope 274 x 102 mm
 
@@ -950,7 +953,7 @@ More previews: [24 mm buttons](preview/mesh36_s_24mm_buttons.png) &middot; [24 m
 >
 > *Slagcoin*
 
-A square lattice turned 45 degrees, with pairs above and below the centreline alternating with singles on it. Good for diamond shapes and Neo Geo style arrangements.
+A square lattice turned 45 degrees, with pairs above and below the centerline alternating with singles on it. Good for diamond shapes and Neo Geo style arrangements.
 
 **9 buttons**  |  stock lever at **95 mm**  |  closest button pitch 36.1 mm at 30 mm, 28.8 mm at 24 mm  |  cut envelope 276 x 91 mm
 
@@ -1006,11 +1009,11 @@ The S24 layout from **ASI**. A lever on the left, ten 24 mm buttons in two arcs 
 
 **11 buttons**  |  10 x 24 mm and 1 x 30 mm  |  closest pitch 29.4 mm  |  lever to nearest button 74 mm  |  cut envelope 229 x 128 mm
 
-> **This one was measured from a render, not supplied as a file.** Everything else in this repository comes from a dimensioned drawing or a vector source. This layout was recovered by circle fitting ASI's published product render, so treat it as accurate to roughly a third of a millimetre rather than exact. Print it and check it against a real S24 before cutting anything expensive.
+> **This one was measured from a render, not supplied as a file.** Everything else in this repository comes from a dimensioned drawing or a vector source. This layout was recovered by circle fitting ASI's published product render, so treat it as accurate to roughly a third of a millimeter rather than exact. Print it and check it against a real S24 before cutting anything expensive.
 
 <img src="preview/_asi_s24_verification.png" alt="ASI S24 verification" width="900">
 
-**Positions are snapped to a 0.5 mm grid.** Real panel layouts are laid out on whole or half millimetre spacings, so the raw measured decimals are measurement noise rather than design intent. Every hole was moved to the nearest 0.5 mm node, which shifted each one by at most 0.22 mm. All horizontal and vertical spacings between holes are now exact multiples of 0.5 mm.
+**Positions are snapped to a 0.5 mm grid.** Real panel layouts are laid out on whole or half millimeter spacings, so the raw measured decimals are measurement noise rather than design intent. Every hole was moved to the nearest 0.5 mm node, which shifted each one by at most 0.22 mm. All horizontal and vertical spacings between holes are now exact multiples of 0.5 mm.
 
 Worth being straight about what that does and does not buy. My measurement scatter is around 0.12 mm per coordinate, which is not fine enough to *detect* a 0.5 mm grid on its own: the residuals before snapping sit at 0.122 mm against the 0.144 mm you would expect from no grid at all. So the snap rests on how these panels are actually designed, not on the render proving it. If the grid holds, most coordinates are now exactly right instead of slightly off. A small number sitting near a midpoint could have landed one 0.5 mm step away, and the render cannot tell me which. The scale itself was **not** adjusted to fit the grid, since doing so pushed the measured hole diameters away from nominal.
 
@@ -1035,15 +1038,15 @@ The S30 from **ASI**, the 30 mm sibling of the S24. Same overall shape, scaled u
 
 **11 buttons**  |  9 x 30 mm and 2 x 24 mm  |  closest pitch 32.9 mm  |  lever to nearest button 74 mm  |  cut envelope 247 x 134 mm
 
-> **Measured from a render, same as the S24.** Accurate to roughly a third of a millimetre rather than exact. Print it and check it against a real S30 before cutting.
+> **Measured from a render, same as the S24.** Accurate to roughly a third of a millimeter rather than exact. Print it and check it against a real S30 before cutting.
 
 <img src="preview/_asi_s30_verification.png" alt="ASI S30 verification" width="900">
 
-**Positions are snapped to a 0.5 mm grid.** Real panel layouts are laid out on whole or half millimetre spacings, so the raw measured decimals are measurement noise rather than design intent. Every hole was moved to the nearest 0.5 mm node, which shifted each one by at most 0.20 mm. All horizontal and vertical spacings between holes are now exact multiples of 0.5 mm.
+**Positions are snapped to a 0.5 mm grid.** Real panel layouts are laid out on whole or half millimeter spacings, so the raw measured decimals are measurement noise rather than design intent. Every hole was moved to the nearest 0.5 mm node, which shifted each one by at most 0.20 mm. All horizontal and vertical spacings between holes are now exact multiples of 0.5 mm.
 
 Worth being straight about what that does and does not buy. My measurement scatter is around 0.12 mm per coordinate, which is not fine enough to *detect* a 0.5 mm grid on its own: the residuals before snapping sit at 0.124 mm against the 0.144 mm you would expect from no grid at all. So the snap rests on how these panels are actually designed, not on the render proving it. If the grid holds, most coordinates are now exactly right instead of slightly off. A small number sitting near a midpoint could have landed one 0.5 mm step away, and the render cannot tell me which. The scale itself was **not** adjusted to fit the grid, since doing so pushed the measured hole diameters away from nominal.
 
-This one carries an unusually strong internal check. Calibrating the scale on the eight 30 mm holes alone makes two other features fall out correctly without being fitted to: the pair of small buttons measure **23.98 mm** and the lever bore measures **60.09 mm**. Three independent features agreeing at that level means the render is orthographic and the scale is right. Every hole then measured within 0.1 mm of its nominal size before being normalised.
+This one carries an unusually strong internal check. Calibrating the scale on the eight 30 mm holes alone makes two other features fall out correctly without being fitted to: the pair of small buttons measure **23.98 mm** and the lever bore measures **60.09 mm**. Three independent features agreeing at that level means the render is orthographic and the scale is right. Every hole then measured within 0.1 mm of its nominal size before being normalized.
 
 Same lever treatment and the same dropped sub plate as the S24 above.
 
@@ -1066,7 +1069,7 @@ The Sega 2P non slanted cluster at 82 mm lever spacing with one extra 24 mm butt
 
 **The plate itself is deliberately not here.** The source draws a complete 322.968 x 176.777 mm panel with 8.894 mm corner radii, six 3/16 in mounting screw holes and a 90.35 x 28.19 mm control strip window at the top left. All of that is specific to that plate and to the two sticks it bolts into. This library ships drilling patterns rather than panels, so the file carries the holes only and drops into any panel like everything else here. If you want the plate, get it from JasensCustoms.
 
-**The eight main centres come from this library, not from the SVG.** Seven of the eight matched [`sega2_s_82mm_spacing`](#sega-p2-non-slanted) to within 0.03 mm. The eighth, the upper right, was drawn at x = 184.499 while its own column partner sat at 184.002, so the source is 0.5 mm out on that one hole. That reads as a drafting slip rather than intent, so this file inherits the library's exact centres and the two columns line up again. The 24 mm button is kept exactly as drawn, at **(61.9795, -50.0309)** from the lever centre, because there is nothing in the library to check it against.
+**The eight main centers come from this library, not from the SVG.** Seven of the eight matched [`sega2_s_82mm_spacing`](#sega-p2-non-slanted) to within 0.03 mm. The eighth, the upper right, was drawn at x = 184.499 while its own column partner sat at 184.002, so the source is 0.5 mm out on that one hole. That reads as a drafting slip rather than intent, so this file inherits the library's exact centers and the two columns line up again. The 24 mm button is kept exactly as drawn, at **(61.9795, -50.0309)** from the lever center, because there is nothing in the library to check it against.
 
 **Holes are cut nominal.** The source draws every hole 0.25 mm over: buttons at 30.245 mm, the two 24 mm holes at 30.249 and 24.256. That is a cutting clearance and it belongs to whoever is cutting rather than to the drawing, so this file carries 30.000, 24.000 and the two standard bores. The ear relief tab sizes assume nominal holes, which is the other reason.
 
@@ -1074,7 +1077,7 @@ The Sega 2P non slanted cluster at 82 mm lever spacing with one extra 24 mm butt
 
 **Screw in nuts:** no. The 30 mm cluster is 0.066 mm short at its tightest pair and the 24 mm version is 0.753 mm short, both inherited from the Sega 2P spacing. The added 24 mm button is not the problem: it clears by 9.108 mm at 30 mm and by 4.868 mm at 24 mm. See [Screw in buttons and nut clearance](#screw-in-buttons-and-nut-clearance).
 
-The **24 mm version** scales the cluster by the usual 0.8 about the first button column and the joystick centreline, which lands the eight exactly on `sega2_s_82mm_spacing_24mm_buttons` and carries the added button to (65.9836, -40.0247). All nine holes are then 24 mm, so they share a single `BUTTONS` layer rather than the split pair.
+The **24 mm version** scales the cluster by the usual 0.8 about the first button column and the joystick centerline, which lands the eight exactly on `sega2_s_82mm_spacing_24mm_buttons` and carries the added button to (65.9836, -40.0247). All nine holes are then 24 mm, so they share a single `BUTTONS` layer rather than the split pair.
 
 | Version | 30 mm | 24 mm |
 |---|---|---|
@@ -1095,7 +1098,7 @@ More previews: [24 mm](preview/jasenscustoms_sega2p_impact_24mm_buttons.png) &mi
 
 One player's worth of the control panel from the dedicated **Mortal Kombat 3 / Ultimate Mortal Kombat 3** cabinet, from the dimensioned drawing by **Twistedsymphony** on [classicarcadecabinets.com](https://www.classicarcadecabinets.com/mortal-kombat-3.html).
 
-A lever and six buttons: the classic five button Mortal Kombat block, meaning two columns of two with Block sitting between them on the lever centreline, plus Run down at the front left.
+A lever and six buttons: the classic five button Mortal Kombat block, meaning two columns of two with Block sitting between them on the lever centerline, plus Run down at the front left.
 
 **6 buttons**  |  1.125 in (28.575 mm)  |  closest pitch 48.5 mm  |  lever to nearest button 77.5 mm  |  cut envelope 215 x 119 mm
 
@@ -1103,28 +1106,28 @@ A lever and six buttons: the classic five button Mortal Kombat block, meaning tw
 
 > ### This layout is imperial
 >
-> **Everything about it is designed in inches.** The panel, the button spacing and the hole size are all whole sixteenths: 1.125 in holes on a grid of 1.000, 1.500, 1.625, 2.500 and 3.250 in. Nothing here was conceived in millimetres, and it is the only layout in the repository like that.
+> **Everything about it is designed in inches.** The panel, the button spacing and the hole size are all whole sixteenths: 1.125 in holes on a grid of 1.000, 1.500, 1.625, 2.500 and 3.250 in. Nothing here was conceived in millimeters, and it is the only layout in the repository like that.
 >
-> The files themselves are still millimetres, because every file here is, and DXF has no way to say "this drawing thinks in inches" that CAM software reliably honours. So the coordinates convert exactly: **1 in = 25.4 mm**, no rounding anywhere. What that means in practice is that the metric numbers look wrong when they are right. Buttons sit at 44.45, 82.55, 123.825 and 165.10 mm across and at 25.40, 0 and -63.50 mm up and down. Holes are 28.575 mm, not 28.6 and not 28.5.
+> The files themselves are still millimeters, because every file here is, and DXF has no way to say "this drawing thinks in inches" that CAM software reliably honors. So the coordinates convert exactly: **1 in = 25.4 mm**, no rounding anywhere. What that means in practice is that the metric numbers look wrong when they are right. Buttons sit at 44.45, 82.55, 123.825 and 165.10 mm across and at 25.40, 0 and -63.50 mm up and down. Holes are 28.575 mm, not 28.6 and not 28.5.
 >
-> **If you are editing this file, switch your CAD to inches.** Every dimension becomes a clean number and stays that way. Work in millimetres and you will be tempted to round 123.825 to 123.8, which is a real 0.025 mm error introduced for no reason. Nothing in this file should ever be rounded to a tidier millimetre value.
+> **If you are editing this file, switch your CAD to inches.** Every dimension becomes a clean number and stays that way. Work in millimeters and you will be tempted to round 123.825 to 123.8, which is a real 0.025 mm error introduced for no reason. Nothing in this file should ever be rounded to a tidier millimeter value.
 >
 > The one exception is the lever, which is genuinely metric because the hardware is. See [Lever hardware](#mortal-kombat-3--ultimate-mk3) below: 35 mm bore, 5.9 mm holes, 65.6 by 75.9 mm. Those are IL's numbers and they are not derived from anything on the MK3 drawing. So this file honestly mixes both systems, imperial for the panel and metric for the lever, which is exactly what building this panel with an IL stick involves.
 
-> **This one is exact, not measured.** Every coordinate below is a printed dimension from the drawing, converted by a factor of exactly 25.4. Nothing is snapped, rounded or inferred. Sub pixel circle fitting on the source drawing was used only to *confirm* the reading: every built hole lands within **0.07 mm** of its fitted centre, and all 16 holes on the drawing are accounted for, 7 built and 9 deliberately left out.
+> **This one is exact, not measured.** Every coordinate below is a printed dimension from the drawing, converted by a factor of exactly 25.4. Nothing is snapped, rounded or inferred. Sub pixel circle fitting on the source drawing was used only to *confirm* the reading: every built hole lands within **0.07 mm** of its fitted center, and all 16 holes on the drawing are accounted for, 7 built and 9 deliberately left out.
 
-Hole positions in inches from the player one lever centre, which is the origin:
+Hole positions in inches from the player one lever center, which is the origin:
 
 | X | Y | Position | Likely function |
 |---|---|---|---|
 | 3.250 | 1.000 | first column, upper | High punch |
 | 3.250 | -1.000 | first column, lower | Low punch |
-| 4.875 | 0.000 | midway between the columns, on the centreline | Block |
+| 4.875 | 0.000 | midway between the columns, on the centerline | Block |
 | 6.500 | 1.000 | second column, upper | High kick |
 | 6.500 | -1.000 | second column, lower | Low kick |
 | 1.750 | -2.500 | front, inboard of the lever | Run |
 
-+Y is toward the back, away from the player. The millimetre equivalents are in the imperial note above.
++Y is toward the back, away from the player. The millimeter equivalents are in the imperial note above.
 
 The five in the block are certain, since two columns with Block in the middle is the Mortal Kombat signature. The sixth is an inference, since the drawing labels nothing: it sits 1.5 by 1.5 in off the low punch corner, close enough to read as part of the cluster, which is where Run goes. Wire them however you like.
 
@@ -1132,7 +1135,7 @@ The five in the block are certain, since two columns with Block in the middle is
 
 | Feature | Size | Position |
 |---|---|---|
-| Bore | 35 mm | on the lever centre |
+| Bore | 35 mm | on the lever center |
 | Screw holes | 4 x 5.9 mm | 65.6 mm across by 75.9 mm front to back |
 
 > **The bore deliberately disagrees with the source drawing.** Twistedsymphony calls the lever hole 1.1875 in, which is the Happ and American shaft size the cabinet originally shipped with. An IL boss will not pass through 30.16 mm, so these files carry IL's 35 mm instead. If you are fitting an American lever, change that one circle back to 30.1625 mm and leave everything else alone.
@@ -1156,7 +1159,7 @@ Want this spacing with Sanwa parts instead? See [Mortal Kombat 3, Japanese hardw
 
 *Left: standard. Right: inner support, with real ear relief slots on this one.*
 
-The same Mortal Kombat spacing, built for Japanese parts. **Every button centre is identical to the imperial file above, down to the last decimal.** What changes is the hardware that goes in the holes.
+The same Mortal Kombat spacing, built for Japanese parts. **Every button center is identical to the imperial file above, down to the last decimal.** What changes is the hardware that goes in the holes.
 
 | | `mk3_umk3_dedicated_american_parts` | `mk3_umk3_dedicated_japanese_parts` |
 |---|---|---|
@@ -1166,17 +1169,17 @@ The same Mortal Kombat spacing, built for Japanese parts. **Every button centre 
 | Bore | 35 mm | **24 mm and 35.25 mm, pick one** |
 | Lever mounting | 4 x 5.9 mm on 65.6 x 75.9 mm | **the full GL pattern** |
 | Inner support | plain copy, no ears to relieve | **real ear relief slots** |
-| Button centres | identical | identical |
+| Button centers | identical | identical |
 
 **6 buttons**  |  30 mm  |  closest pitch 48.5 mm  |  lever to nearest button 77.5 mm  |  cut envelope 219 x 124 mm
 
 **Why it fits comfortably.** MK spacing is generous by modern standards, so going up from 28.575 to 30 mm costs almost nothing. The closest pair of holes still leaves **18.5 mm** of material between them, against 19.9 mm on the imperial file. There is no crowding anywhere on this panel.
 
-**The ear slots do not fight each other.** Buttons here sit 48.5 mm apart at the closest, and a 35 mm slot only reaches 17.5 mm from its own centre, so no two slots come near each other. Every slot on this layout stays at the default 30 degrees clockwise from vertical, and the thinnest web of material is **17.1 mm**. That is the widest margin of any inner support file in the repository, and by a long way. Nothing had to be rotated. See [Inner support versions](#inner-support-versions) for what that machinery does on the tighter layouts.
+**The ear slots do not fight each other.** Buttons here sit 48.5 mm apart at the closest, and a 35 mm slot only reaches 17.5 mm from its own center, so no two slots come near each other. Every slot on this layout stays at the default 30 degrees clockwise from vertical, and the thinnest web of material is **17.1 mm**. That is the widest margin of any inner support file in the repository, and by a long way. Nothing had to be rotated. See [Inner support versions](#inner-support-versions) for what that machinery does on the tighter layouts.
 
 **The lever hardware clears everything.** The GL plate is physically larger than the IL cut it replaces, so it is worth stating the numbers: the closest GL feature to any button edge is **14.5 mm**, and to the tip of an ear slot **12.0 mm**. The 35.25 mm bore sits **44.9 mm** clear of the nearest button.
 
-**This file is still imperial underneath.** The centres come straight from the Twistedsymphony drawing, so 44.45, 82.55, 123.825 and 165.10 mm still apply and still should not be rounded. Only the hole diameter is a round metric number. Everything in the imperial note above applies here too.
+**This file is still imperial underneath.** The centers come straight from the Twistedsymphony drawing, so 44.45, 82.55, 123.825 and 165.10 mm still apply and still should not be rounded. Only the hole diameter is a round metric number. Everything in the imperial note above applies here too.
 
 | Version | DXF | SVG |
 |---|---|---|
@@ -1197,7 +1200,7 @@ Four buttons sweeping up and to the right in a shallow curve, which is what make
 
 **Japanese hardware, not what the cabinet shipped with.** The template calls for 1.1875 in button holes and a 1.875 in lever hole, which are the American drill sizes for the parts SNK fitted to these cabinets. This file carries 30 mm holes and the repository's standard GL lever treatment instead, so it takes Sanwa or Seimitsu parts.
 
-**Read out of the artwork, not measured off pixels.** Both templates are true scale vector PDFs, so the hole centres come straight from the page geometry. The 2P sheet is exactly 1710 by 630 points, which is precisely the 23.75 by 8.75 in the artwork states, so no scale calibration was needed at all.
+**Read out of the artwork, not measured off pixels.** Both templates are true scale vector PDFs, so the hole centers come straight from the page geometry. The 2P sheet is exactly 1710 by 630 points, which is precisely the 23.75 by 8.75 in the artwork states, so no scale calibration was needed at all.
 
 > **One layout, not two.** There is a 1P sheet and a 2P sheet, and it is worth being clear that they describe the same cluster. Player two is not mirrored, it is player one translated to the right, and the two sheets agree with each other to 0.001 points. One file cuts either side. To lay out the full two player panel, place this file twice **288.0 mm** apart.
 >
@@ -1205,11 +1208,11 @@ Four buttons sweeping up and to the right in a shallow curve, which is what make
 
 **Positions are snapped to the 0.5 mm grid.** The template is a trace of a scan, so the raw decimals are tracing noise rather than design intent. One global phase was fitted across all five holes and every hole moved to its nearest 0.5 mm node, the largest single move being 0.27 mm, well inside the 0.354 mm the grid allows.
 
-Three things say this snap is recovering the design rather than inventing one. The chord spacing between neighbouring buttons gets *tighter*, from a spread of 0.62 mm down to 0.43 mm. The exactly equal height of the last two holes, which the tracer clearly intended, survives. And snapping both player clusters together lands the player two offset on exactly 288.0 mm across all five matching pairs, from a raw 288.102, which is a clean design number falling out of a fit that was not aiming at it. Every horizontal and vertical gap between holes is now an exact multiple of 0.5 mm.
+Three things say this snap is recovering the design rather than inventing one. The chord spacing between neighboring buttons gets *tighter*, from a spread of 0.62 mm down to 0.43 mm. The exactly equal height of the last two holes, which the tracer clearly intended, survives. And snapping both player clusters together lands the player two offset on exactly 288.0 mm across all five matching pairs, from a raw 288.102, which is a clean design number falling out of a fit that was not aiming at it. Every horizontal and vertical gap between holes is now an exact multiple of 0.5 mm.
 
-> **One hole is genuinely a coin toss, and you should know which.** The front button's raw height is 22.768 mm below the centreline, which sits 0.018 mm from the exact midpoint between the 22.5 and 23.0 grid nodes. The phase fit puts it at **23.0** and that is what these files carry, but the source cannot really distinguish the two. If you have a physical panel to measure, that is the one hole worth checking. Every other hole sits comfortably nearer one node than the other.
+> **One hole is genuinely a coin toss, and you should know which.** The front button's raw height is 22.768 mm below the centerline, which sits 0.018 mm from the exact midpoint between the 22.5 and 23.0 grid nodes. The phase fit puts it at **23.0** and that is what these files carry, but the source cannot really distinguish the two. If you have a physical panel to measure, that is the one hole worth checking. Every other hole sits comfortably nearer one node than the other.
 
-**The ear slots need one rotation.** At 41 mm centres, two 35 mm slots pointed at each other leave only 9.9 mm of material. Turning the two lower buttons to 75 degrees lifts that to **11.0 mm**, which is the circle to circle limit, so on this layout the slots stop being the constraint entirely.
+**The ear slots need one rotation.** At 41 mm centers, two 35 mm slots pointed at each other leave only 9.9 mm of material. Turning the two lower buttons to 75 degrees lifts that to **11.0 mm**, which is the circle to circle limit, so on this layout the slots stop being the constraint entirely.
 
 **Not included, as asked:** the three lone buttons along the top of the CPO. The artwork labels them itself, as 1P Start, 2P Start and Select Game.
 
@@ -1226,7 +1229,7 @@ Want this with American parts instead? See [Neo Geo MVS, American hardware](#neo
 
 *Left: standard. Right: inner support, which on this layout is an identical copy. See below.*
 
-The same Neo Geo curve cut for American parts, using the hole sizes the template itself calls for. **Every button centre is identical to the Japanese file above.**
+The same Neo Geo curve cut for American parts, using the hole sizes the template itself calls for. **Every button center is identical to the Japanese file above.**
 
 | | `neogeo_mvs_japanese_parts` | `neogeo_mvs_american_parts` |
 |---|---|---|
@@ -1236,11 +1239,11 @@ The same Neo Geo curve cut for American parts, using the hole sizes the template
 | Bore | 24 mm and 35.25 mm, pick one | **35 mm** |
 | Lever mounting | the full GL pattern | **4 x 5.9 mm on 65.6 x 75.9 mm** |
 | Inner support | real ear relief slots | plain copy, no ears to relieve |
-| Button centres | identical | identical |
+| Button centers | identical | identical |
 
 **4 buttons**  |  1.1875 in  |  closest pitch 41.0 mm  |  lever to nearest button 80.4 mm  |  cut envelope 243 x 82 mm
 
-**Why the centres are shared rather than re-derived in inches.** The obvious thing to try was snapping the trace to an imperial grid instead of the metric one, since the source is a PDF measured in points. It fits distinctly worse. On a 1/16 in grid the largest hole has to move **0.72 mm** to reach a node, against **0.26 mm** on the 0.5 mm grid, and the rms more than doubles, 0.239 mm against 0.105 mm. SNK laid this panel out in millimetres. The imperial numbers belong to the American hardware that was bolted into it, not to the design, so this file changes the holes and leaves their positions alone.
+**Why the centers are shared rather than re-derived in inches.** The obvious thing to try was snapping the trace to an imperial grid instead of the metric one, since the source is a PDF measured in points. It fits distinctly worse. On a 1/16 in grid the largest hole has to move **0.72 mm** to reach a node, against **0.26 mm** on the 0.5 mm grid, and the rms more than doubles, 0.239 mm against 0.105 mm. SNK laid this panel out in millimeters. The imperial numbers belong to the American hardware that was bolted into it, not to the design, so this file changes the holes and leaves their positions alone.
 
 **The hole size is the template's own.** 1.1875 in is what Crowquilll drew, and it is a real Happ and IL drill size. Worth knowing before you cut: a lot of American pushbuttons want **1.125 in** instead, and at this pitch there is plenty of room to drop to that if your buttons need it. Nothing else in the file would change.
 
@@ -1284,7 +1287,7 @@ The Vewlix 4+4 cluster with four extra holes, for the inputs modern fighting gam
 
 That puts **four holes in a dead straight line** down the left side, exactly collinear and evenly spaced at 30.911 mm, which is the Vewlix column step. The two triangles come out with sides of **30.911, 30.935 and 30.997 mm**, so "almost equilateral" is the honest description: the 0.086 mm inequality is inherited from the Vewlix stagger rather than introduced here.
 
-Positions are set on the **0.2 mm grid** the 24 mm family already uses, being the Slagcoin quarter millimetre grid scaled by 0.8. That moved each triangle apex by at most 0.08 mm and left the four in line exactly collinear.
+Positions are set on the **0.2 mm grid** the 24 mm family already uses, being the Slagcoin quarter millimeter grid scaled by 0.8. That moved each triangle apex by at most 0.08 mm and left the four in line exactly collinear.
 
 **It is tight, and that is inherent to the idea.** The closest pair sits at 28.3 mm, leaving **4.31 mm** of material, marginally tighter than the 4.38 mm of the eight button original. **Snap in buttons only**: eight pairs are short for screw in nuts, worst by 1.193 mm, which the 24 mm Vewlix base already is before the additions. See [Screw in buttons and nut clearance](#screw-in-buttons-and-nut-clearance). The ear relief tabs need no rotation anywhere on this layout, and the thinnest web is 4.31 mm, which is exactly the plain hole to hole gap, so the tabs are not the limiting factor at all.
 
@@ -1320,8 +1323,8 @@ A Vewlix 4+4 reworked into a ten hole modern cluster: the fourth column traded f
 |---|---|---|
 | Right, replacing column four | 30 mm | apex of the equilateral triangle standing on the column three pair |
 | Left of column one | 24 mm | apex of the equilateral triangle standing on the column one pair |
-| Below and right of the lowest left button | 24 mm | its **left edge** on that button's centreline, its centre one column step (30.911 mm) away |
-| Below that | 30 mm | its **right edge** on the lowest left button's centreline, its **top edge** on the new 24 mm hole's centreline |
+| Below and right of the lowest left button | 24 mm | its **left edge** on that button's centerline, its center one column step (30.911 mm) away |
+| Below that | 30 mm | its **right edge** on the lowest left button's centerline, its **top edge** on the new 24 mm hole's centerline |
 
 Both triangles come out exactly equilateral, at **31.699 mm** on the right and **30.911 mm** on the left, because each is built on a single Vewlix column pair rather than across the stagger.
 
@@ -1397,11 +1400,11 @@ Panels with no joystick. Eight layouts, drawn as designed with their native mix 
 Two things differ from the joystick layouts:
 
 - **Layers.** Holes are split across `BUTTONS_24` and `BUTTONS_30` rather than a single `BUTTONS` layer, because these layouts mix the two sizes and you will likely want a different tool for each. There are no joystick or plate layers.
-- **Origin.** (0,0) is the centre of the button cluster bounding box, since there is no joystick to reference.
+- **Origin.** (0,0) is the center of the button cluster bounding box, since there is no joystick to reference.
 
 Panel outlines, mounting screw holes, USB and cable cutouts from the source drawings were deliberately left out. What you get is the button pattern, to drop onto whatever panel you are building.
 
-Hole diameters are normalised to exactly 24.00 mm and 30.00 mm. The source drawings carry between 0.00 and 0.21 mm of clearance depending on which file they came from, which is a cutting decision better made at CAM time for your own machine and material. Button positions are preserved exactly as drawn.
+Hole diameters are normalized to exactly 24.00 mm and 30.00 mm. The source drawings carry between 0.00 and 0.21 mm of clearance depending on which file they came from, which is a cutting decision better made at CAM time for your own machine and material. Button positions are preserved exactly as drawn.
 
 ### Traditional
 
@@ -1516,7 +1519,7 @@ The largest layout here at 17 buttons, and a true split. Left and right clusters
 
 *Left: standard. Right: inner support.*
 
-The B30 from **ASI**. The B is for buttons: this one is leverless, so it follows the all button conventions rather than the S24 and S30 above. No lever, no joystick bores, no plate pattern, and the origin is the centre of the button cluster rather than a lever centre.
+The B30 from **ASI**. The B is for buttons: this one is leverless, so it follows the all button conventions rather than the S24 and S30 above. No lever, no joystick bores, no plate pattern, and the origin is the center of the button cluster rather than a lever center.
 
 Fifteen holes in a wide sweeping arc: nine at 30 mm including the one on the gold sub plate, and six at 24 mm running out to the left and marking the ends of the cluster.
 
@@ -1524,7 +1527,7 @@ Fifteen holes in a wide sweeping arc: nine at 30 mm including the one on the gol
 
 <img src="preview/_asi_b30_verification.png" alt="ASI B30 verification" width="900">
 
-Measured from ASI's published render the same way as the other two, with the same three way agreement: calibrating the scale on the eight 30 mm cluster holes makes the six 24 mm holes read **23.99 mm** and the sub plate button read **30.08 mm**, neither of which was fitted to. Positions are snapped to the 0.5 mm grid, moving each hole by at most 0.23 mm. The gold sub plate and its screw are dropped, keeping only the button inside it. Accurate to roughly a third of a millimetre; check it against a real B30 before cutting.
+Measured from ASI's published render the same way as the other two, with the same three way agreement: calibrating the scale on the eight 30 mm cluster holes makes the six 24 mm holes read **23.99 mm** and the sub plate button read **30.08 mm**, neither of which was fitted to. Positions are snapped to the 0.5 mm grid, moving each hole by at most 0.23 mm. The gold sub plate and its screw are dropped, keeping only the button inside it. Accurate to roughly a third of a millimeter; check it against a real B30 before cutting.
 
 | Version | DXF | SVG |
 |---|---|---|
@@ -1553,9 +1556,9 @@ Every lever layout in this repository, with a **four button WASD directional clu
 
 **All 137 WASD layouts on two sheets: [page 1](preview/_sheet_wasd_1.png), [page 2](preview/_sheet_wasd_2.png).** Same shape and the same scale as the lever sheets, so the two sets can be read side by side. Standard files only.
 
-**The centre button of the WASD cluster sits exactly where the joystick shaft centre was**, at (0, 0). That single rule is what makes this section possible: every action button keeps the position it already had, so muscle memory, every published pitch and every cut envelope carry straight across from the lever version. What changes is that `JOYSTICK_BORE_24`, `JOYSTICK_BORE_35.25` and `GL_PLATE_HOLES` are gone, and four 24 mm holes appear at the origin.
+**The center button of the WASD cluster sits exactly where the joystick shaft center was**, at (0, 0). That single rule is what makes this section possible: every action button keeps the position it already had, so muscle memory, every published pitch and every cut envelope carry straight across from the lever version. What changes is that `JOYSTICK_BORE_24`, `JOYSTICK_BORE_35.25` and `GL_PLATE_HOLES` are gone, and four 24 mm holes appear at the origin.
 
-The cluster is three buttons in a row with a fourth above the centre one, **29.0 mm** apart in both directions, the whole thing rotated **10 degrees clockwise** about the centre button. It is described in full in [WASD directional cluster](#wasd-directional-cluster) below.
+The cluster is three buttons in a row with a fourth above the center one, **29.0 mm** apart in both directions, the whole thing rotated **10 degrees clockwise** about the center button. It is described in full in [WASD directional cluster](#wasd-directional-cluster) below.
 
 **Everything here is Japanese Parts** and ships in the same shapes as its lever parent: the same lever spacings, the same 30 mm and 24 mm button sizes, and an inner support twin for every file. The three `_american_parts` layouts are not included, because American Parts is a specification for a lever and a lever is exactly what these do not have.
 
@@ -1569,28 +1572,28 @@ The cluster is three buttons in a row with a fourth above the centre one, **29.0
 
 *Left: standard. Right: inner support.*
 
-Four 24 mm buttons in place of a joystick, for players who want the directions on buttons without going all the way to a leverless panel. Three in a row with a fourth above the centre one, the whole cluster rotated 10 degrees clockwise about that centre button.
+Four 24 mm buttons in place of a joystick, for players who want the directions on buttons without going all the way to a leverless panel. Three in a row with a fourth above the center one, the whole cluster rotated 10 degrees clockwise about that center button.
 
 **Parts: Japanese** | 4 x 24 mm snap in buttons | no lever, so no bores and no plate holes
 
 **4 buttons** | 24 mm | pitch 29.0 mm | cut envelope 81.1 x 57.6 mm
 
-**The centre button sits exactly where the joystick shaft centre was**, at (0, 0). That is the point of it: any lever layout in this repository becomes a WASD layout by deleting the two bores and the `GL_PLATE_HOLES` layer and dropping this cluster in at the origin. Every action button keeps the position it already had, so muscle memory and every published spacing figure carry straight across.
+**The center button sits exactly where the joystick shaft center was**, at (0, 0). That is the point of it: any lever layout in this repository becomes a WASD layout by deleting the two bores and the `GL_PLATE_HOLES` layer and dropping this cluster in at the origin. Every action button keeps the position it already had, so muscle memory and every published spacing figure carry straight across.
 
 | Button | Position |
 |---|---|
 | left | (-28.5594, 5.0358) |
-| centre | (0, 0) |
+| center | (0, 0) |
 | right | (28.5594, -5.0358) |
 | up | (5.0358, 28.5594) |
 
-**Pitch is 29.0 mm** along the row and from the centre button up to the fourth, so all three neighbours of the centre are equidistant and the cluster is a symmetric plus before the tilt. That is the same pitch the leverless direction clusters in this repository already use between their two leftmost holes. Diagonals come out at 41.012 mm, and left to right at 58.000.
+**Pitch is 29.0 mm** along the row and from the center button up to the fourth, so all three neighbors of the center are equidistant and the cluster is a symmetric plus before the tilt. That is the same pitch the leverless direction clusters in this repository already use between their two leftmost holes. Diagonals come out at 41.012 mm, and left to right at 58.000.
 
 **The tilt is clockwise**, which in this library's +Y up convention is -10 degrees, so the row falls away to the right. The existing leverless clusters drop to the right too.
 
-**Ear tabs:** two of the four are rotated, the centre and the up button, to 30 degrees rather than the default 60. That takes the thinnest web from 2.752 mm to **4.894 mm**, against a 5.000 mm ceiling set by the plain hole to hole gap, so the tabs cost about a tenth of a millimetre and nothing more.
+**Ear tabs:** two of the four are rotated, the center and the up button, to 30 degrees rather than the default 60. That takes the thinnest web from 2.752 mm to **4.894 mm**, against a 5.000 mm ceiling set by the plain hole to hole gap, so the tabs cost about a tenth of a millimeter and nothing more.
 
-**Screw in nuts:** no, by 0.5 mm. A 24 mm nut needs 29.50 mm centres and this is 29.00. See [Screw in buttons and nut clearance](#screw-in-buttons-and-nut-clearance).
+**Screw in nuts:** no, by 0.5 mm. A 24 mm nut needs 29.50 mm centers and this is 29.00. See [Screw in buttons and nut clearance](#screw-in-buttons-and-nut-clearance).
 
 **Reach, which matters when fitting it to an existing layout:** the cluster extends 28.559 mm to the right of the origin and 28.559 mm up. On a layout with the lever at stock 59 mm from the first button column, the right hand WASD button ends up about 3.4 mm from the edge of the first 30 mm button, which is buildable but thin.
 
@@ -2228,7 +2231,7 @@ One row per layout family. Cut envelope is for the file shown in that entry's pr
 - **Check your nuts.** Most of this library is **snap in only**, and it is not close. See [Screw in buttons and nut clearance](#screw-in-buttons-and-nut-clearance) below for the numbers and for which files clear.
 - **On inner support files**, each button is already a single closed profile. Cut it as one contour, inside offset, same as any other hole. Slot direction varies across a panel by design; see [Inner support versions](#inner-support-versions).
 - **Cut a test piece in scrap** before you commit to your real panel material.
-- **Check the file yourself.** These were traced carefully and verified against the originals, but it is far better to find a problem in CAD than in aluminium.
+- **Check the file yourself.** These were traced carefully and verified against the originals, but it is far better to find a problem in CAD than in aluminum.
 
 ---
 
@@ -2241,9 +2244,9 @@ A snap in button needs its hole and nothing else. A **screw in** button needs ro
 | 30 mm | 30.0 mm | **36.0 mm** |
 | 24 mm | 24.0 mm | **29.5 mm** |
 
-Two buttons clear for screw ins only when their **centres** are at least the mean of the two nut diameters apart:
+Two buttons clear for screw ins only when their **centers** are at least the mean of the two nut diameters apart:
 
-| Pair | Minimum centre distance |
+| Pair | Minimum center distance |
 |---|---:|
 | 30 to 30 | **36.00 mm** |
 | 30 to 24 | **32.75 mm** |
@@ -2278,36 +2281,36 @@ The 33 clear 30 mm layouts are `cluster36_s`, `clusters36_s`, `hori36_s`, `horis
 
 ## How these were made
 
-For the Slagcoin derived layouts, the source images are his own to scale diagrams. Each one was traced by locating every drawn circle to sub pixel accuracy, converting to millimetres, and snapping the result to the same quarter millimetre grid that his printed dimension callouts use. Every generated hole was then projected back onto the original diagram and checked against the drawn ink, and the button counts were re verified independently.
+For the Slagcoin derived layouts, the source images are his own to scale diagrams. Each one was traced by locating every drawn circle to sub pixel accuracy, converting to millimeters, and snapping the result to the same quarter millimeter grid that his printed dimension callouts use. Every generated hole was then projected back onto the original diagram and checked against the drawn ink, and the button counts were re verified independently.
 
-Layouts added later may come from a different source, a manufacturer drawing, a measured panel or an original design. Whatever the source, the same output conventions apply: millimetres, joystick at the origin, the same five layers, and the same set of spacing and button size variants.
+Layouts added later may come from a different source, a manufacturer drawing, a measured panel or an original design. Whatever the source, the same output conventions apply: millimeters, joystick at the origin, the same five layers, and the same set of spacing and button size variants.
 
 <details>
 <summary>Technical detail, for the curious</summary>
 
 <br>
 
-**Tracing.** Device circles were located by an iterated least squares circle fit. For each of 1440 angles around a candidate centre, the darkness weighted radial centroid of the drawn stroke was taken as an edge sample, then a Kasa algebraic fit was run over those samples with outlier rejection. This resolves the drawn circle path rather than the stroke edge, so the diameters come out unbiased.
+**Tracing.** Device circles were located by an iterated least squares circle fit. For each of 1440 angles around a candidate center, the darkness weighted radial centroid of the drawn stroke was taken as an edge sample, then a Kasa algebraic fit was run over those samples with outlier rejection. This resolves the drawn circle path rather than the stroke edge, so the diameters come out unbiased.
 
-**Scale.** The images are labelled 72 PPI. Solving a single global scale across all 20 source diagrams gives an effective 71.871 PPI, or 0.353409 mm per pixel. That value is confirmed independently by the button holes landing on exactly 30.00 mm and by every column pitch landing on its printed callout.
+**Scale.** The images are labeled 72 PPI. Solving a single global scale across all 20 source diagrams gives an effective 71.871 PPI, or 0.353409 mm per pixel. That value is confirmed independently by the button holes landing on exactly 30.00 mm and by every column pitch landing on its printed callout.
 
-**Snapping.** All of Slagcoin's printed dimensions are multiples of 0.25 mm, so measured centres were fitted to that grid. Worst deviation across the whole set after snapping is under 0.11 mm, with an RMS of roughly 0.04 mm. A handful of single grid step slips were resolved by hand against the printed overall width totals, which the source diagrams conveniently include.
+**Snapping.** All of Slagcoin's printed dimensions are multiples of 0.25 mm, so measured centers were fitted to that grid. Worst deviation across the whole set after snapping is under 0.11 mm, with an RMS of roughly 0.04 mm. A handful of single grid step slips were resolved by hand against the printed overall width totals, which the source diagrams conveniently include.
 
 **Imperial exception.** `american_s` is dimensioned in inches on the original (11/16, 1-3/8 and 1-1/2 inch), so it was rebuilt on exact imperial values rather than forced onto the metric grid.
 
 **Verification.** Each generated circle was re projected onto its source PNG and scored on the fraction of its circumference that falls on drawn ink. The minimum score across all 214 holes was 0.986 and the mean was 1.000. Button counts were then re checked with an independent ring matched filter, which agreed on all 20 diagrams. Every spacing variant was re read from disk and checked for exact first column distance, unchanged Y coordinates and unchanged cluster shape.
 
-**24 mm versions.** Generated by reading the shipped 30 mm DXF back off disk, scaling the button cluster by 0.8 about the first button column horizontally and the joystick centreline vertically, and setting the hole diameter to 24.00 mm. All 63 were then re read and checked: every hole exactly 24.00 mm, every pairwise button distance exactly 0.8 times the original, and the bores, plate holes and lever spacing identical to their 30 mm parent.
+**24 mm versions.** Generated by reading the shipped 30 mm DXF back off disk, scaling the button cluster by 0.8 about the first button column horizontally and the joystick centerline vertically, and setting the hole diameter to 24.00 mm. All 63 were then re read and checked: every hole exactly 24.00 mm, every pairwise button distance exactly 0.8 times the original, and the bores, plate holes and lever spacing identical to their 30 mm parent.
 
-**Lever mounting holes.** Taken from the GL lever mounting plate DXF by [ASI](https://asindo.pro/), symmetrised about the joystick centre. The plate outline and the four holes on the 45 mm cross immediately flanking the bore were deliberately left out.
+**Lever mounting holes.** Taken from the GL lever mounting plate DXF by [ASI](https://asindo.pro/), symmetrised about the joystick center. The plate outline and the four holes on the 45 mm cross immediately flanking the bore were deliberately left out.
 
 </details>
 
 ---
 
-## Licence and attribution
+## License and attribution
 
-Layouts in this repository come from more than one place, so credit is tracked per layout rather than claimed in bulk. [NOTICE.md](NOTICE.md) lists every source. The catalogue entry for each layout names its origin.
+Layouts in this repository come from more than one place, so credit is tracked per layout rather than claimed in bulk. [NOTICE.md](NOTICE.md) lists every source. The catalog entry for each layout names its origin.
 
 **The 21 joystick layouts come from [slagcoin.com](https://www.slagcoin.com/joystick/layout.html).** Those layouts are his design work, published free as a resource for people building arcade controllers. What is added here is the conversion into true scale vector geometry, the lever mounting hardware, and the spacing and button size variants. Credit for the underlying layouts belongs to Slagcoin.
 
@@ -2321,7 +2324,7 @@ If the live site is unreachable, the original pages are preserved on the [Waybac
 
 The conversion work, the mounting hardware geometry and the variant generation are shared freely. Use them, remix them, build things with them, sell the panels you cut from them. When you publish something derived from a layout in here, credit whoever that layout came from.
 
-Everything this repository adds is licensed under [Creative Commons Attribution-ShareAlike 4.0 International](LICENSE) (CC BY-SA 4.0). In short: use, share, adapt and sell the files for any purpose, provided you give credit as described above and in [NOTICE.md](NOTICE.md), and release any modified versions of the files under the same licence. Physical panels cut from the files carry no licence obligations beyond the credit.
+Everything this repository adds is licensed under [Creative Commons Attribution-ShareAlike 4.0 International](LICENSE) (CC BY-SA 4.0). In short: use, share, adapt and sell the files for any purpose, provided you give credit as described above and in [NOTICE.md](NOTICE.md), and release any modified versions of the files under the same license. Physical panels cut from the files carry no license obligations beyond the credit.
 
 ---
 
@@ -2335,6 +2338,6 @@ Everything this repository adds is licensed under [Creative Commons Attribution-
 - dimensions or a to scale drawing good enough to work from
 - confirmation that the source is yours to share, or is published freely
 
-Anything added gets the same treatment as the existing set: millimetres, joystick at the origin, the standard five layers, 3 joystick positions, 30 mm and 24 mm button sizes, a catalogue entry naming its source, and a line in [NOTICE.md](NOTICE.md).
+Anything added gets the same treatment as the existing set: millimeters, joystick at the origin, the standard five layers, 3 joystick positions, 30 mm and 24 mm button sizes, a catalog entry naming its source, and a line in [NOTICE.md](NOTICE.md).
 
 **Photos.** If you build a panel from one of these, post it in the issues. It is genuinely nice to see them get used.

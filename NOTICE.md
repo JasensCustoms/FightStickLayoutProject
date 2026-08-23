@@ -3,7 +3,7 @@
 Layouts in this repository come from more than one place. Credit is tracked per
 layout rather than claimed in bulk. This file is the register of sources.
 
-Every layout's catalogue entry in `README.md` names its origin. If you add a
+Every layout's catalog entry in `README.md` names its origin. If you add a
 layout, add its source here.
 
 ---
@@ -43,11 +43,18 @@ world, but they are not exact replicas of any of them.
 Shared here with the button patterns preserved as designed. Panel outlines,
 mounting holes and other cutouts from the original working drawings were left out.
 
+`case/` holds a laser cut acrylic case with 3D printed corner and center supports,
+also created by JasensCustoms.com: twenty four DXF cut profiles, three printed
+parts as STL and STEP, and the SolidWorks sources. Eight of the DXFs came straight
+from SolidWorks with their original filenames kept exactly; the other sixteen are
+generated from those by `case_variants.py`, which deletes or adds features rather
+than redrawing anything. Same license as everything else here.
+
 The Sega 2P IMPACT layouts come from `jasenscustoms-pfs4-mczte-sega2p-IMPACT-withbezel.svg`,
 a JasensCustoms cut file for the IMPACT plate that fits the Panzer Fight Stick 4
 and the Mad Catz TE. The same rule was applied: the plate outline, its six 3/16 in
 mounting screw holes and the control strip window were all left out, and only the
-button and lever pattern was kept. The eight main button centres already existed
+button and lever pattern was kept. The eight main button centers already existed
 in this library as the Slagcoin Sega 2P cluster and are credited to slagcoin.com
 above; the 24 mm button below the lever is JasensCustoms' addition.
 
@@ -66,7 +73,7 @@ arcade sticks. The B30 is leverless.
 IMPORTANT: these layouts were not supplied as files. They were measured by circle
 fitting ASI's published product renders, calibrated on the button holes and cross
 checked against the lever plate bore and, on the S30, against a second button
-size. They are accurate to roughly a third of a millimetre, not exact, and they
+size. They are accurate to roughly a third of a millimeter, not exact, and they
 are not official ASI files. Anyone cutting from them should verify against a real
 stick first.
 
@@ -74,7 +81,7 @@ Credit for the layouts belongs to ASI.
 
 ASI is also the source of the lever mounting hole pattern: the `GL_PLATE_HOLES`
 layer in every joystick layout is based on the mounting plate of their GL lever,
-symmetrised about the joystick centre. Thank you to ASI for the GL lever layout.
+symmetrised about the joystick center. Thank you to ASI for the GL lever layout.
 
 ### Twistedsymphony / classicarcadecabinets.com
 
@@ -98,10 +105,10 @@ are not part of this layout. The six buttons and the lever that are here match t
 drawing exactly.
 
 The layout is imperial throughout. Holes are 1.125 in and every spacing is a whole
-sixteenth of an inch. The files are millimetres because every file here is, so the
+sixteenth of an inch. The files are millimeters because every file here is, so the
 conversion is an exact factor of 25.4 with no rounding at any point.
 
-`mk3_umk3_dedicated_japanese_parts` keeps Twistedsymphony's button centres unchanged and only
+`mk3_umk3_dedicated_japanese_parts` keeps Twistedsymphony's button centers unchanged and only
 swaps the hardware, to 30 mm Sanwa holes and the universal GL lever plate. The
 spacing credit is his; the hardware choices are not from his drawing.
 
@@ -166,7 +173,7 @@ cut. The template's own 1.1875 in buttons and 1.875 in American lever hole are
 recorded here as what the original called for, but American Parts means 1.125 in
 and IL's 35 mm bore consistently across this library.
 
-The three lone buttons along the top of the CPO, labelled 1P Start, 2P Start and
+The three lone buttons along the top of the CPO, labeled 1P Start, 2P Start and
 Select Game on the template, are not included in either file.
 
 ### Industrias Lorenzo
@@ -213,7 +220,7 @@ panels.
 
 ## When you publish something made from these files
 
-Credit whoever the layout came from. Check the layout's catalogue entry in
+Credit whoever the layout came from. Check the layout's catalog entry in
 README.md, or the Sources list above, if you are not sure which that is.
 
 ## Adding a layout
