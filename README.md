@@ -17,6 +17,8 @@ Everything is drawn 1:1 in millimeters, ready to send to a laser, router or CNC.
 
 There is also a **[case](case/README.md)**: a laser cut acrylic enclosure with 3D printed corner and center supports, 451 x 303 mm inside a 62.2 mm stack, which has room for any layout here several times over. **The case files have not been physically validated yet**, so read the disclaimer at the top of that page before cutting.
 
+And a folder of **[support hardware](support%20hardware/README.md)**: cut files for the hardware that goes around a panel rather than in it. Connectors, pass throughs and anything else that needs a hole in a case wall or a plate, drawn 1:1 in DXF and SVG on the same conventions as everything else, with the origin on the main bore so placing one is a single translation. Drop them straight into a case wall or a panel file.
+
 Every one of those also ships in an **inner support** version, where each button hole is merged with a relief slot for Sanwa OBSF snap in button ears. That comes to 584 layouts per format, 1168 files.
 
 <img src="preview/_all_layouts.png" alt="The 21 Slagcoin joystick arrangements" width="900">
@@ -158,6 +160,7 @@ dxf/        584 layouts as .dxf   (R2010, millimeters, $INSUNITS = 4)
 svg/        the same 584 layouts as .svg  (1 user unit = 1 mm)
 preview/    per layout PNG previews plus contact sheets and diagrams
 case/       a laser cut acrylic case with 3D printed supports, DXF, STL and STEP
+support hardware/   connector and pass through cutouts, DXF and SVG
 README.md   this file
 ```
 

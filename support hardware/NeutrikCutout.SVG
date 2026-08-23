@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="32mm" height="35.1mm" viewBox="0 0 32.0000 35.1000">
+<desc>1 SVG user unit = 1 mm. Origin = center of the main bore.</desc>
+<g fill="none" stroke="#c00000" stroke-width="0.2">
+<circle cx="16.0000" cy="17.5500" r="12.0000"/>
+<circle cx="6.5000" cy="5.5500" r="1.5500"/>
+<circle cx="25.5000" cy="29.5500" r="1.5500"/>
+<circle cx="25.5000" cy="5.5500" r="1.5500"/>
+<circle cx="6.5000" cy="29.5500" r="1.5500"/>
+</g>
+</svg>
