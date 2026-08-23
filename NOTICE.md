@@ -47,8 +47,8 @@ mounting holes and other cutouts from the original working drawings were left ou
 also created by JasensCustoms.com: twenty four DXF cut profiles, three printed
 parts as STL and STEP, and the SolidWorks sources. Eight of the DXFs came straight
 from SolidWorks with their original filenames kept exactly; the other sixteen are
-generated from those by `case_variants.py`, which deletes or adds features rather
-than redrawing anything. Same license as everything else here.
+derived from those, with features deleted or added rather than anything being
+redrawn. Same license as everything else here.
 
 The Sega 2P IMPACT layouts come from `jasenscustoms-pfs4-mczte-sega2p-IMPACT-withbezel.svg`,
 a JasensCustoms cut file for the IMPACT plate that fits the Panzer Fight Stick 4
