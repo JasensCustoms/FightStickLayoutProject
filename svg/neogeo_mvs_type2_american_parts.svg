@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="254mm" height="115.2mm" viewBox="0 0 254.0375 115.1875">
+<desc>1 SVG user unit = 1 mm. Origin = lever centre.</desc>
+<g id="BUTTONS" fill="none" stroke="#d40000" stroke-width="0.2">
+<circle cx="113.2500" cy="65.2875" r="14.2875"/>
+<circle cx="149.2500" cy="22.2875" r="14.2875"/>
+<circle cx="190.2500" cy="22.2875" r="14.2875"/>
+<circle cx="231.7500" cy="22.2875" r="14.2875"/>
+</g>
+<g id="JOYSTICK_BORE_35" fill="none" stroke="#00a000" stroke-width="0.2">
+<circle cx="43.7500" cy="66.2875" r="17.5000"/>
+</g>
+<g id="IL_PLATE_HOLES" fill="none" stroke="#0050d0" stroke-width="0.2">
+<circle cx="76.5500" cy="28.3375" r="2.9500"/>
+<circle cx="76.5500" cy="104.2375" r="2.9500"/>
+<circle cx="10.9500" cy="28.3375" r="2.9500"/>
+<circle cx="10.9500" cy="104.2375" r="2.9500"/>
+</g>
+<g id="REFERENCE" fill="none" stroke="#909090" stroke-width="0.2">
+<line x1="39.7500" y1="66.2875" x2="47.7500" y2="66.2875"/>
+<line x1="43.7500" y1="70.2875" x2="43.7500" y2="62.2875"/>
+<line x1="109.2500" y1="65.2875" x2="117.2500" y2="65.2875"/>
+<line x1="113.2500" y1="69.2875" x2="113.2500" y2="61.2875"/>
+<line x1="145.2500" y1="22.2875" x2="153.2500" y2="22.2875"/>
+<line x1="149.2500" y1="26.2875" x2="149.2500" y2="18.2875"/>
+<line x1="186.2500" y1="22.2875" x2="194.2500" y2="22.2875"/>
+<line x1="190.2500" y1="26.2875" x2="190.2500" y2="18.2875"/>
+<line x1="227.7500" y1="22.2875" x2="235.7500" y2="22.2875"/>
+<line x1="231.7500" y1="26.2875" x2="231.7500" y2="18.2875"/>
+</g>
+</svg>

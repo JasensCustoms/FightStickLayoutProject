@@ -329,16 +329,15 @@ because its aperture is an internal feature that a single profile cannot describ
 
 ## What is not here
 
-Stated plainly so nobody hunts for a file that was never in the folder:
+Stated plainly so nobody hunts for something that was never in the folder:
 
-- **`Neutrik_CenterSupport.DXF`** does not exist. See above.
-- **`Top Panel.SLDPRT`** is here without a STEP, STL or DXF companion, so it is
-  only usable in SolidWorks.
-- **`All Plexi Case Parts.SLDPRT`** is the multibody source for the set.
-- **Assembly order and screw lengths** depend on your final stack thickness, which
-  moves with the material tolerance, so measure before you buy screws.
+- **`Neutrik_CenterSupport.DXF`** does not exist. Its aperture is an internal
+  feature, and a single extrusion profile cannot describe it.
 - **Countersink depth** is not in the files. It depends on the flat head screws you
   use, and the DXFs carry the through holes only.
+- **Assembly order and screw lengths for the case itself** depend on your final
+  stack thickness, which moves with the material tolerance, so measure before you
+  buy screws. The bracket's screw lengths are given above and do not move.
 
 ## About these files
 
@@ -353,6 +352,13 @@ mounting pattern is measured off `Top - Outline 1 - Inner - Plexi Case Parts.DXF
 not assumed, and the exported STL is checked for watertightness and consistent
 winding, against the solid's own volume, and by firing a ray through every bore to
 confirm its position and depth.
+
+**The SolidWorks sources ship too**, five `.SLDPRT` files.
+`All Plexi Case Parts.SLDPRT` is the multibody source for the set.
+`CornerSupport.SLDPRT`, `Blank_CenterSupport.SLDPRT` and
+`Neutrik_CenterSupport.SLDPRT` are the printed parts, each with a neutral STEP and
+STL beside it. `Top Panel.SLDPRT` is the one with no neutral companion, so it is
+only usable in SolidWorks.
 
 ## License
 

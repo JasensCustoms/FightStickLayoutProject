@@ -6,8 +6,8 @@ The founding set is converted from [slagcoin.com](https://www.slagcoin.com/joyst
 
 ![Layout formats](https://img.shields.io/badge/formats-DXF%20%2B%20SVG-blue)
 ![Units](https://img.shields.io/badge/units-millimeters-informational)
-![Layouts](https://img.shields.io/badge/layouts-568-success)
-![Files](https://img.shields.io/badge/files-1136-lightgrey)
+![Layouts](https://img.shields.io/badge/layouts-584-success)
+![Files](https://img.shields.io/badge/files-1168-lightgrey)
 
 Everything is drawn 1:1 in millimeters, ready to send to a laser, router or CNC. Three groups:
 
@@ -17,9 +17,11 @@ Everything is drawn 1:1 in millimeters, ready to send to a laser, router or CNC.
 
 There is also a **[case](case/README.md)**: a laser cut acrylic enclosure with 3D printed corner and center supports, 451 x 303 mm inside a 62.2 mm stack, which has room for any layout here several times over. **The case files have not been physically validated yet**, so read the disclaimer at the top of that page before cutting.
 
-Every one of those also ships in an **inner support** version, where each button hole is merged with a relief slot for Sanwa OBSF snap in button ears. That comes to 568 layouts per format, 1136 files.
+Every one of those also ships in an **inner support** version, where each button hole is merged with a relief slot for Sanwa OBSF snap in button ears. That comes to 584 layouts per format, 1168 files.
 
-<img src="preview/_all_layouts.png" alt="All layouts" width="900">
+<img src="preview/_all_layouts.png" alt="The 21 Slagcoin joystick arrangements" width="900">
+
+*The 21 Slagcoin joystick arrangements at their stock lever position. Everything else, including the cabinet, commercial and community panels, is on the [contact sheets](preview/_sheet_lever_1.png) linked from each group below.*
 
 ---
 
@@ -31,7 +33,7 @@ Every one of those also ships in an **inner support** version, where each button
 >
 > Every layout in the founding set is traced from Slagcoin's own to scale diagrams, and each of those catalog entries quotes his description. If you build anything from these files, go read [the original pages](https://www.slagcoin.com/joystick/layout.html) first. There is a lot of reasoning there about *why* the layouts are shaped the way they are, and it will make you better at picking one.
 
-The all button layouts come from a different place. They were created by [JasensCustoms.com](https://www.jasenscustoms.com) and members of the Panzer user community, and are credited in [their own section](#leverless--all-button-layouts). The S24, S30 and B30 layouts belong to [ASI](#asi-s24). The Mortal Kombat 3 panel, and its Japanese hardware variant, are traced from a dimensioned drawing by **Twistedsymphony**, hosted at [classicarcadecabinets.com](https://www.classicarcadecabinets.com/mortal-kombat-3.html). The Neo Geo MVS panel comes from a drilling template by **Crowquilll**.
+The all button layouts come from a different place. They were created by [JasensCustoms.com](https://www.jasenscustoms.com) and members of the Panzer user community, and are credited in [their own section](#leverless--all-button-layouts). The S24, S30 and B30 layouts belong to [ASI](#asi-s24). The Mortal Kombat 3 panel, and its Japanese hardware variant, are traced from a dimensioned drawing by **Twistedsymphony**, hosted at [classicarcadecabinets.com](https://www.classicarcadecabinets.com/mortal-kombat-3.html). The Neo Geo MVS Type 1 panel comes from a drilling template by **Crowquilll**. The other four Neo Geo panels, Type 2, the Mini, the MVS-U4 and the SC19-4, were requested and researched by **KidGamer77** on [issue 3](https://github.com/JasensCustoms/FightStickLayoutProject/issues/3) and measured from the reference art found there. The two IST MakeStick layouts were requested by **lasagnasf** on [issue 4](https://github.com/JasensCustoms/FightStickLayoutProject/issues/4) and recreated from the product photographs supplied with it; the layout is IST Mall's.
 
 **Where a layout came from is recorded with the layout.** Every catalog entry names its origin, and [NOTICE.md](NOTICE.md) is the full register of sources. Nothing in here silently claims someone else's design work.
 
@@ -74,8 +76,16 @@ The all button layouts come from a different place. They were created by [Jasens
   - [JasensCustoms Sega 2P IMPACT](#jasenscustoms-sega-2p-impact)
   - [Mortal Kombat 3 / Ultimate MK3](#mortal-kombat-3--ultimate-mk3)
   - [Mortal Kombat 3, Japanese hardware](#mortal-kombat-3-japanese-hardware)
-  - [Neo Geo MVS](#neo-geo-mvs)
-  - [Neo Geo MVS, American hardware](#neo-geo-mvs-american-hardware)
+  - [Neo Geo MVS Type 1](#neo-geo-mvs-type-1)
+  - [Neo Geo MVS Type 1, American hardware](#neo-geo-mvs-type-1-american-hardware)
+  - [Neo Geo MVS Type 2](#neo-geo-mvs-type-2)
+  - [Neo Geo MVS Type 2, American hardware](#neo-geo-mvs-type-2-american-hardware)
+  - [Neo Geo Mini](#neo-geo-mini)
+  - [Neo Geo Mini, American hardware](#neo-geo-mini-american-hardware)
+  - [Neo Geo MVS-U4](#neo-geo-mvs-u4)
+  - [Neo Geo SC19-4](#neo-geo-sc19-4)
+  - [IST MakeStick Type 1](#ist-makestick-type-1)
+  - [IST MakeStick Type 3](#ist-makestick-type-3)
   - [Vewlix 4+4 plus four, modern](#vewlix-44-plus-four-modern)
   - [Vewlix 10 button, two 30 mm](#vewlix-10-button-two-30-mm)
   - [Full index](#full-index)
@@ -116,7 +126,7 @@ The all button layouts come from a different place. They were created by [Jasens
   - [ASI S30, WASD](#asi-s30-wasd)
   - [JasensCustoms Sega 2P IMPACT, WASD](#jasenscustoms-sega-2p-impact-wasd)
   - [Mortal Kombat 3, Japanese hardware, WASD](#mortal-kombat-3-japanese-hardware-wasd)
-  - [Neo Geo MVS, WASD](#neo-geo-mvs-wasd)
+  - [Neo Geo MVS Type 1, WASD](#neo-geo-mvs-type-1-wasd)
   - [Vewlix 4+4 plus four, modern, WASD](#vewlix-44-plus-four-modern-wasd)
   - [Vewlix 10 button, two 30 mm, WASD](#vewlix-10-button-two-30-mm-wasd)
   - [WASD index](#wasd-index)
@@ -144,14 +154,14 @@ The all button layouts come from a different place. They were created by [Jasens
 ## What is in the box
 
 ```
-dxf/        568 layouts as .dxf   (R2010, millimeters, $INSUNITS = 4)
-svg/        the same 568 layouts as .svg  (1 user unit = 1 mm)
+dxf/        584 layouts as .dxf   (R2010, millimeters, $INSUNITS = 4)
+svg/        the same 584 layouts as .svg  (1 user unit = 1 mm)
 preview/    per layout PNG previews plus contact sheets and diagrams
 case/       a laser cut acrylic case with 3D printed supports, DXF, STL and STEP
 README.md   this file
 ```
 
-Joystick arrangements are built out to 6 files per format: 3 lever positions, each at 30 mm and 24 mm button sizes. The 21 of them come to 126 per format. All button layouts ship as a single file each, adding 7 more, manufacturer layouts likewise, adding 3, and the cabinet layouts add 4, two Mortal Kombat hardware sets and two Neo Geo, for 140. The Capcom layout also ships an American Parts cut, and the Vewlix has two community variants at two lever spacings each, a twelve button and a ten button, making 145. The JasensCustoms Sega 2P IMPACT plate adds a 30 mm and a 24 mm cut, for 147, and the WASD directional cluster adds one more, for 148. Every one of the 136 Japanese Parts lever layouts then gets a WASD version, for 284. Each of those has an inner support twin, doubling the count to 568 per format and 1136 in total.
+Joystick arrangements are built out to 6 files per format: 3 lever positions, each at 30 mm and 24 mm button sizes. The 21 of them come to 126 per format. All button layouts ship as a single file each, adding 7 more, manufacturer layouts likewise, adding 3, and the cabinet layouts add 4, two Mortal Kombat hardware sets and two Neo Geo MVS Type 1, for 140. The Capcom layout also ships an American Parts cut, and the Vewlix has two community variants at two lever spacings each, a twelve button and a ten button, making 145. The JasensCustoms Sega 2P IMPACT plate adds a 30 mm and a 24 mm cut, for 147, and the WASD directional cluster adds one more, for 148. Every one of the 136 Japanese Parts lever layouts then gets a WASD version, for 284. The four Neo Geo panels added from issue 3 bring six more files, two of them American Parts cuts, and the two IST MakeStick layouts bring two, for 292; none of those eight gets a WASD version, because none was asked for. Each of the 292 has an inner support twin, doubling the count to 584 per format and 1168 in total.
 
 New layouts follow the same naming and layer conventions, so anything you script against the current set keeps working.
 
@@ -368,7 +378,7 @@ Previews show the stock lever position with 30 mm buttons. Red is button holes, 
 
 The first 21 entries are converted from Slagcoin diagrams, so each one quotes his description of it. Everything after them comes from a commercial stick, a cabinet drawing or the community, and states its origin and its parts in its own entry.
 
-**All 139 lever layouts on two sheets: [page 1](preview/_sheet_lever_1.png), [page 2](preview/_sheet_lever_2.png).** One family per row, its lever spacings and both button sizes across, every tile at the same scale so tile size means physical size. Standard files only, since the inner support twins are the same holes with a relief slot added.
+**All 147 lever layouts on three sheets: [page 1](preview/_sheet_lever_1.png), [page 2](preview/_sheet_lever_2.png), [page 3](preview/_sheet_lever_3.png).** One family per row, its lever spacings and both button sizes across, every tile at the same scale so tile size means physical size. Standard files only, since the inner support twins are the same holes with a relief slot added.
 
 ---
 
@@ -1186,9 +1196,9 @@ The same Mortal Kombat spacing, built for Japanese parts. **Every button center 
 | Standard | [`mk3_umk3_dedicated_japanese_parts.dxf`](dxf/mk3_umk3_dedicated_japanese_parts.dxf) | [`mk3_umk3_dedicated_japanese_parts.svg`](svg/mk3_umk3_dedicated_japanese_parts.svg) |
 | Inner support | [`inner_support_mk3_umk3_dedicated_japanese_parts.dxf`](dxf/inner_support_mk3_umk3_dedicated_japanese_parts.dxf) | [`inner_support_mk3_umk3_dedicated_japanese_parts.svg`](svg/inner_support_mk3_umk3_dedicated_japanese_parts.svg) |
 
-### Neo Geo MVS
+### Neo Geo MVS Type 1
 
-<img src="preview/neogeo_mvs_japanese_parts.png" alt="neogeo_mvs_japanese_parts" width="380"> <img src="preview/inner_support_neogeo_mvs_japanese_parts.png" alt="inner_support_neogeo_mvs_japanese_parts" width="380">
+<img src="preview/neogeo_mvs_type1_japanese_parts.png" alt="neogeo_mvs_type1_japanese_parts" width="380"> <img src="preview/inner_support_neogeo_mvs_type1_japanese_parts.png" alt="inner_support_neogeo_mvs_type1_japanese_parts" width="380">
 
 *Left: standard. Right: inner support.*
 
@@ -1218,20 +1228,20 @@ Three things say this snap is recovering the design rather than inventing one. T
 
 | Version | DXF | SVG |
 |---|---|---|
-| Standard | [`neogeo_mvs_japanese_parts.dxf`](dxf/neogeo_mvs_japanese_parts.dxf) | [`neogeo_mvs_japanese_parts.svg`](svg/neogeo_mvs_japanese_parts.svg) |
-| Inner support | [`inner_support_neogeo_mvs_japanese_parts.dxf`](dxf/inner_support_neogeo_mvs_japanese_parts.dxf) | [`inner_support_neogeo_mvs_japanese_parts.svg`](svg/inner_support_neogeo_mvs_japanese_parts.svg) |
+| Standard | [`neogeo_mvs_type1_japanese_parts.dxf`](dxf/neogeo_mvs_type1_japanese_parts.dxf) | [`neogeo_mvs_type1_japanese_parts.svg`](svg/neogeo_mvs_type1_japanese_parts.svg) |
+| Inner support | [`inner_support_neogeo_mvs_type1_japanese_parts.dxf`](dxf/inner_support_neogeo_mvs_type1_japanese_parts.dxf) | [`inner_support_neogeo_mvs_type1_japanese_parts.svg`](svg/inner_support_neogeo_mvs_type1_japanese_parts.svg) |
 
-Want this with American parts instead? See [Neo Geo MVS, American hardware](#neo-geo-mvs-american-hardware).
+Want this with American parts instead? See [Neo Geo MVS Type 1, American hardware](#neo-geo-mvs-type-1-american-hardware).
 
-### Neo Geo MVS, American hardware
+### Neo Geo MVS Type 1, American hardware
 
-<img src="preview/neogeo_mvs_american_parts.png" alt="neogeo_mvs_american_parts" width="380"> <img src="preview/inner_support_neogeo_mvs_american_parts.png" alt="inner_support_neogeo_mvs_american_parts" width="380">
+<img src="preview/neogeo_mvs_type1_american_parts.png" alt="neogeo_mvs_type1_american_parts" width="380"> <img src="preview/inner_support_neogeo_mvs_type1_american_parts.png" alt="inner_support_neogeo_mvs_type1_american_parts" width="380">
 
 *Left: standard. Right: inner support, which on this layout is an identical copy. See below.*
 
 The same Neo Geo curve cut for American parts, using the hole sizes the template itself calls for. **Every button center is identical to the Japanese file above.**
 
-| | `neogeo_mvs_japanese_parts` | `neogeo_mvs_american_parts` |
+| | `neogeo_mvs_type1_japanese_parts` | `neogeo_mvs_type1_american_parts` |
 |---|---|---|
 | Button hole | 30 mm | **1.1875 in (30.1625 mm)** |
 | Button style | Sanwa OBSF snap in | **American, nut mount** |
@@ -1251,12 +1261,226 @@ The same Neo Geo curve cut for American parts, using the hole sizes the template
 
 **The inner support file is a plain copy.** American buttons bolt in with a nut and have no snap-in retention ears, so there is nothing for a relief slot to relieve. It exists so the naming stays consistent, but its geometry is identical to the standard file. Same as the [Mortal Kombat American file](#mortal-kombat-3--ultimate-mk3).
 
-Everything else, the 150 mm radius arc, the 0.5 mm snap and the reasoning behind it, the excluded top buttons and the 288.0 mm player two spacing, is covered in [Neo Geo MVS](#neo-geo-mvs) above and applies here unchanged.
+Everything else, the 150 mm radius arc, the 0.5 mm snap and the reasoning behind it, the excluded top buttons and the 288.0 mm player two spacing, is covered in [Neo Geo MVS Type 1](#neo-geo-mvs-type-1) above and applies here unchanged.
 
 | Version | DXF | SVG |
 |---|---|---|
-| Standard | [`neogeo_mvs_american_parts.dxf`](dxf/neogeo_mvs_american_parts.dxf) | [`neogeo_mvs_american_parts.svg`](svg/neogeo_mvs_american_parts.svg) |
-| Inner support | [`inner_support_neogeo_mvs_american_parts.dxf`](dxf/inner_support_neogeo_mvs_american_parts.dxf) | [`inner_support_neogeo_mvs_american_parts.svg`](svg/inner_support_neogeo_mvs_american_parts.svg) |
+| Standard | [`neogeo_mvs_type1_american_parts.dxf`](dxf/neogeo_mvs_type1_american_parts.dxf) | [`neogeo_mvs_type1_american_parts.svg`](svg/neogeo_mvs_type1_american_parts.svg) |
+| Inner support | [`inner_support_neogeo_mvs_type1_american_parts.dxf`](dxf/inner_support_neogeo_mvs_type1_american_parts.dxf) | [`inner_support_neogeo_mvs_type1_american_parts.svg`](svg/inner_support_neogeo_mvs_type1_american_parts.svg) |
+
+### Neo Geo MVS Type 2
+
+<img src="preview/neogeo_mvs_type2_japanese_parts.png" alt="neogeo_mvs_type2_japanese_parts" width="380"> <img src="preview/inner_support_neogeo_mvs_type2_japanese_parts.png" alt="inner_support_neogeo_mvs_type2_japanese_parts" width="380">
+
+*Left: standard. Right: inner support.*
+
+The **Neo Geo MVS Type 2** panel, the one that was everywhere in the United States from the 1990s into the 2000s. A sits low and to the left, and B, C and D run in a **straight horizontal line**. That line is the whole difference from [Type 1](#neo-geo-mvs-type-1), whose four holes follow one continuous arc.
+
+Requested on [issue 3](https://github.com/JasensCustoms/FightStickLayoutProject/issues/3) by **KidGamer77**, who also found the reference art.
+
+**4 buttons**  |  30 mm  |  closest pitch 41.0 mm  |  lever to nearest button 69.5 mm  |  cut envelope 242 x 105 mm
+
+**This one has an independent ruler, and it is the reason the other three can be trusted.** The source is a Phoenix Arcade screen printed reproduction CPO photographed flat and square on, and their listing states the panel is **9.25 by 23.625 inches**. The measured aspect ratio of the panel in the photograph comes out within **0.013 percent** of that, and the two axes then give scales 0.013 percent apart, so the stated size is real and the image is undistorted. Two further checks fall out for free: lever to lever lands **287.83 mm** against the 288.10 mm the Type 1 vector template gives, a difference of 0.27 mm across 288, and the panel's two clusters put B, C and D at the same height as each other to within 0.21 mm.
+
+**Both player clusters were measured and averaged.** They are a screen printed physical panel rather than a drawing, so their holes differ from each other by up to a millimeter and a half. Averaging the pair is the closest thing to the drawing that made them.
+
+**Positions are snapped to the 0.5 mm grid**, the same treatment Type 1 got. Largest move 0.21 mm in x and 0.16 mm in y. The metric grid fits three times better than 1/16 in and roughly one and a half times better than 1/32 in, which says the same thing the Type 1 trace said: SNK laid this out in millimeters.
+
+| | mm from the lever center |
+|---|---|
+| A | (69.5, 1.0) |
+| B | (105.5, 44.0) |
+| C | (146.5, 44.0) |
+| D | (188.0, 44.0) |
+
+B to C is 41.0 mm and C to D is 41.5 mm, which is the same slightly irregular pitch Type 1 carries. A sits 56.1 mm from B, well clear of everything.
+
+**The art hole is not the drill size.** The button holes in this overlay measure 31.22 mm, because a CPO is cut a little over so the artwork is not pinched by the button flange. These files carry 30.00 mm, which is what the part needs.
+
+| Version | DXF | SVG |
+|---|---|---|
+| Standard | [`neogeo_mvs_type2_japanese_parts.dxf`](dxf/neogeo_mvs_type2_japanese_parts.dxf) | [`neogeo_mvs_type2_japanese_parts.svg`](svg/neogeo_mvs_type2_japanese_parts.svg) |
+| Inner support | [`inner_support_neogeo_mvs_type2_japanese_parts.dxf`](dxf/inner_support_neogeo_mvs_type2_japanese_parts.dxf) | [`inner_support_neogeo_mvs_type2_japanese_parts.svg`](svg/inner_support_neogeo_mvs_type2_japanese_parts.svg) |
+
+Want this with American parts instead? See [Neo Geo MVS Type 2, American hardware](#neo-geo-mvs-type-2-american-hardware).
+
+### Neo Geo MVS Type 2, American hardware
+
+<img src="preview/neogeo_mvs_type2_american_parts.png" alt="neogeo_mvs_type2_american_parts" width="380"> <img src="preview/inner_support_neogeo_mvs_type2_american_parts.png" alt="inner_support_neogeo_mvs_type2_american_parts" width="380">
+
+*Left: standard. Right: inner support, which on this layout is an identical copy.*
+
+The same Type 2 arrangement cut for American parts. **Every button center is identical to the Japanese file above.** 1.125 in buttons and an IL Eurojoystick 2 lever, which is what American Parts means everywhere in this repository.
+
+The reference panel was screen printed for cabinets fitted with Industrias Lorenzo buttons, so this is arguably the more period correct of the two cuts.
+
+**4 buttons**  |  1.125 in (28.575 mm)  |  closest pitch 41.0 mm  |  lever to nearest button 69.5 mm  |  cut envelope 238 x 99 mm
+
+The inner support file is a plain copy. American buttons bolt in with a nut and have no snap in retention ears, so there is nothing for a relief slot to relieve. Same as the [Type 1 American file](#neo-geo-mvs-type-1-american-hardware).
+
+| Version | DXF | SVG |
+|---|---|---|
+| Standard | [`neogeo_mvs_type2_american_parts.dxf`](dxf/neogeo_mvs_type2_american_parts.dxf) | [`neogeo_mvs_type2_american_parts.svg`](svg/neogeo_mvs_type2_american_parts.svg) |
+| Inner support | [`inner_support_neogeo_mvs_type2_american_parts.dxf`](dxf/inner_support_neogeo_mvs_type2_american_parts.dxf) | [`inner_support_neogeo_mvs_type2_american_parts.svg`](svg/inner_support_neogeo_mvs_type2_american_parts.svg) |
+
+### Neo Geo Mini
+
+<img src="preview/neogeo_mini_japanese_parts.png" alt="neogeo_mini_japanese_parts" width="380"> <img src="preview/inner_support_neogeo_mini_japanese_parts.png" alt="inner_support_neogeo_mini_japanese_parts" width="380">
+
+*Left: standard. Right: inner support.*
+
+The aggressively curved Neo Geo arrangement, the one whose arc resembles the **AES** pad rather than the shallow sweep of [Type 1](#neo-geo-mvs-type-1). It is sold as a Neo Geo mini CPO. Type 1 climbs 34 mm from A to D across 116 mm of width. This one climbs **65 mm** across 96 mm, so it is both steeper and shorter, and your hand rolls up the curve rather than reaching along it.
+
+Requested on [issue 3](https://github.com/JasensCustoms/FightStickLayoutProject/issues/3) by **KidGamer77**.
+
+**4 buttons**  |  30 mm  |  closest pitch 39.9 mm  |  lever to nearest button 73.8 mm  |  cut envelope 222 x 113 mm
+
+| | mm from the lever center |
+|---|---|
+| A | (72.5, -13.5) |
+| B | (97.0, 20.0) |
+| C | (129.5, 43.5) |
+| D | (168.5, 52.0) |
+
+**The source photograph had real perspective in it, and it was corrected rather than ignored.** The overlay was photographed lying on a stone worktop, slightly off to one side, and the right hand cluster's holes came out **7 percent larger** than the left hand cluster's. Measuring that as it stood would have been worthless. The correction uses only facts about the panel: every button hole is the same size, every lever hole is the same size, and the panel carries the same cluster twice as a sideways translation rather than a mirror, which the Type 1 vector template proves to within a thousandth of a point. Fitting one transformation against both constraints at once brings the cluster size disagreement down to 2 percent and lands the five player one to player two offsets within **0.3 percent** of each other. After that, the two clusters agree hole for hole to **0.6 mm**, and to 0.3 mm on three of the four.
+
+**This panel is smaller than a full size MVS CPO.** With the button holes set to 30 mm, its lever to lever spacing comes out **228 mm** rather than the 288 mm of the Type 1 and Type 2 panels. The artwork is the full size art, but the panel it is printed on is not, which is what the word mini in the product name is doing. If you are laying out a two player panel from this file, use 228 mm, not 288.
+
+**Positions are snapped to the 0.5 mm grid**, largest move 0.24 mm on both axes, and again the metric grid beats 1/16 in by a factor of three.
+
+| Version | DXF | SVG |
+|---|---|---|
+| Standard | [`neogeo_mini_japanese_parts.dxf`](dxf/neogeo_mini_japanese_parts.dxf) | [`neogeo_mini_japanese_parts.svg`](svg/neogeo_mini_japanese_parts.svg) |
+| Inner support | [`inner_support_neogeo_mini_japanese_parts.dxf`](dxf/inner_support_neogeo_mini_japanese_parts.dxf) | [`inner_support_neogeo_mini_japanese_parts.svg`](svg/inner_support_neogeo_mini_japanese_parts.svg) |
+
+Want this with American parts instead? See [Neo Geo Mini, American hardware](#neo-geo-mini-american-hardware).
+
+### Neo Geo Mini, American hardware
+
+<img src="preview/neogeo_mini_american_parts.png" alt="neogeo_mini_american_parts" width="380"> <img src="preview/inner_support_neogeo_mini_american_parts.png" alt="inner_support_neogeo_mini_american_parts" width="380">
+
+*Left: standard. Right: inner support, which on this layout is an identical copy.*
+
+The same steep Neo Geo curve cut for American parts. **Every button center is identical to the Japanese file above.**
+
+**4 buttons**  |  1.125 in (28.575 mm)  |  closest pitch 39.9 mm  |  lever to nearest button 73.8 mm  |  cut envelope 219 x 107 mm
+
+The inner support file is a plain copy, for the same reason as every other American Parts file here.
+
+| Version | DXF | SVG |
+|---|---|---|
+| Standard | [`neogeo_mini_american_parts.dxf`](dxf/neogeo_mini_american_parts.dxf) | [`neogeo_mini_american_parts.svg`](svg/neogeo_mini_american_parts.svg) |
+| Inner support | [`inner_support_neogeo_mini_american_parts.dxf`](dxf/inner_support_neogeo_mini_american_parts.dxf) | [`inner_support_neogeo_mini_american_parts.svg`](svg/inner_support_neogeo_mini_american_parts.svg) |
+
+### Neo Geo MVS-U4
+
+<img src="preview/neogeo_mvs_u4_japanese_parts.png" alt="neogeo_mvs_u4_japanese_parts" width="380"> <img src="preview/inner_support_neogeo_mvs_u4_japanese_parts.png" alt="inner_support_neogeo_mvs_u4_japanese_parts" width="380">
+
+*Left: standard. Right: inner support.*
+
+The **SNK MVS-U4 25** panel. Same idea as [Type 2](#neo-geo-mvs-type-2), A low and left with B, C and D level, but the whole cluster is drawn much tighter: **36 mm** between neighbors instead of 41, and the lever sits only 56 mm from the first button. It is the most compact Neo Geo arrangement here by a wide margin.
+
+Requested on [issue 3](https://github.com/JasensCustoms/FightStickLayoutProject/issues/3) by **KidGamer77**, who supplied the panel name and a flat photograph of a reproduction overlay.
+
+**4 buttons**  |  30 mm  |  closest pitch 36.0 mm  |  lever to nearest button 56.1 mm  |  cut envelope 216 x 91 mm
+
+| | mm from the lever center |
+|---|---|
+| A | (56.0, -3.5) |
+| B | (90.0, 10.5) |
+| C | (126.0, 10.5) |
+| D | (162.5, 10.5) |
+
+**36.0 mm is exactly the screw in nut limit.** Two 30 mm nuts are 36.0 mm across, so B, C and D sit nut edge to nut edge with nothing to spare. Screw in buttons will physically fit and will not tighten comfortably. Treat this layout as snap in, or open the pitch yourself if you need nuts. See [Screw in buttons and nut clearance](#screw-in-buttons-and-nut-clearance).
+
+**Japanese parts only, and the artwork agrees.** The round opening beside each cluster measures **19.8 mm**, far too small for an American lever bore. That is a joystick shaft opening for a lever that mounts underneath the panel, which is how Japanese sticks are built. This file carries the repository's standard GL lever treatment; the 19.8 mm opening is recorded here rather than cut.
+
+**Positions are snapped to the 0.5 mm grid**, largest move 0.18 mm in x and 0.12 mm in y, and the metric grid beats 1/16 in by more than four to one on this panel.
+
+| Version | DXF | SVG |
+|---|---|---|
+| Standard | [`neogeo_mvs_u4_japanese_parts.dxf`](dxf/neogeo_mvs_u4_japanese_parts.dxf) | [`neogeo_mvs_u4_japanese_parts.svg`](svg/neogeo_mvs_u4_japanese_parts.svg) |
+| Inner support | [`inner_support_neogeo_mvs_u4_japanese_parts.dxf`](dxf/inner_support_neogeo_mvs_u4_japanese_parts.dxf) | [`inner_support_neogeo_mvs_u4_japanese_parts.svg`](svg/inner_support_neogeo_mvs_u4_japanese_parts.svg) |
+
+### Neo Geo SC19-4
+
+<img src="preview/neogeo_sc19_4_japanese_parts.png" alt="neogeo_sc19_4_japanese_parts" width="380"> <img src="preview/inner_support_neogeo_sc19_4_japanese_parts.png" alt="inner_support_neogeo_sc19_4_japanese_parts" width="380">
+
+*Left: standard. Right: inner support.*
+
+The **SNK Neo SC19-4** panel, made for a candy cabinet, and the odd one out of the five. It is not a row and it is not an arc: A and C sit low with B raised 10 mm between them, and **D sits 35 mm above, between B and C**, so the four holes form a diamond rather than a line. If you have played a Neo Geo on a Japanese candy cab, this is the shape your hand remembers.
+
+Requested on [issue 3](https://github.com/JasensCustoms/FightStickLayoutProject/issues/3) by **KidGamer77**, who identified the panel by name and found the artwork.
+
+**4 buttons**  |  30 mm  |  closest pitch 36.6 mm  |  lever to nearest button 63.1 mm  |  cut envelope 187 x 91 mm
+
+| | mm from the lever center |
+|---|---|
+| A | (61.5, -14.0) |
+| B | (97.5, -4.0) |
+| C | (133.5, -14.0) |
+| D | (124.5, 21.5) |
+
+Every neighbor sits between 36.6 and 37.4 mm from the next, so the diamond is close to regular.
+
+**The cleanest source in the set.** This one is flat vector style artwork rather than a photograph of a physical panel, and it shows: the eight button holes across both player clusters fit circles whose diameters agree to **0.09 percent**, at a circularity of 0.996 or better. No perspective correction was needed and none was applied. The two clusters agree with each other on hole positions to **0.01 mm**, which is a drawing talking rather than a panel.
+
+**Japanese parts only.** As on the MVS-U4, the opening beside each cluster is a **19.6 mm** joystick shaft hole for an under panel lever, not an American bore.
+
+**Positions are snapped to the 0.5 mm grid**, largest move 0.23 mm in x and 0.19 mm in y.
+
+| Version | DXF | SVG |
+|---|---|---|
+| Standard | [`neogeo_sc19_4_japanese_parts.dxf`](dxf/neogeo_sc19_4_japanese_parts.dxf) | [`neogeo_sc19_4_japanese_parts.svg`](svg/neogeo_sc19_4_japanese_parts.svg) |
+| Inner support | [`inner_support_neogeo_sc19_4_japanese_parts.dxf`](dxf/inner_support_neogeo_sc19_4_japanese_parts.dxf) | [`inner_support_neogeo_sc19_4_japanese_parts.svg`](svg/inner_support_neogeo_sc19_4_japanese_parts.svg) |
+
+### IST MakeStick Type 1
+
+<img src="preview/ist_type1_japanese_parts.png" alt="ist_type1_japanese_parts" width="380"> <img src="preview/inner_support_ist_type1_japanese_parts.png" alt="inner_support_ist_type1_japanese_parts" width="380">
+
+*Left: standard. Right: inner support.*
+
+The standard **8 + 1** layout from the **IST MakeStick**. Eight 30 mm buttons in four columns of two, curving up and to the right, plus one 24 mm button tucked above and to the left of the cluster.
+
+Requested on [issue 4](https://github.com/JasensCustoms/FightStickLayoutProject/issues/4) by **lasagnasf**, who supplied the photographs. The layout is IST Mall's.
+
+**9 buttons**  |  8 x 30 mm, 1 x 24 mm  |  closest pitch 35.9 mm  |  thinnest web 5.92 mm  |  lever to nearest button 106.1 mm  |  cut envelope 270 x 102 mm
+
+> **This is a recreation from product photography, and it is the least precise layout in this repository.** Everything else here came from a drawing, a dimensioned template, a vector PDF or a manufacturer's render. This came from two small photographs of built sticks. It is good to about a millimeter on the arrangement and about a percent on scale, which is fine for cutting a panel you will fit yourself and is not good enough to call official. If IST's own panel template turns up, these files will be redrawn from it. Verify against a real stick before cutting anything you cannot recut.
+
+**How it was scaled.** The part of a button you can see in a photograph is its flange: 33.2 mm across on a 30 mm Sanwa OBSF, 27.0 mm on a 24 mm one. Those are two independent rulers in the same picture and they agree with each other to **0.21 percent**. The four 24 mm flanges fit at radii within four hundredths of a pixel of each other, and the ratio of small flange to large comes out 0.8115 against the 0.8133 the real parts have, which is agreement to a tenth of a percent.
+
+**The panel is not tilted, and that was measured rather than assumed.** The flanges fit as circles at half a pixel rms with axis ratios of 0.991 and no shared direction, so there is no foreshortening to take out, and the panel's own top and bottom edges sit within a third of a degree of horizontal. The joystick position is read from the flat ring around its shaft, not from the ball, which stands about 40 mm proud of the panel and sits visibly to one side of that ring.
+
+**The lever sits a long way out**, 106 mm from the nearest button, which is much wider than the 59 to 95 mm the Slagcoin arrangements use. That is what the stick does; no spacing variants are shipped, because the position is only known where the photographs put it.
+
+**Positions are snapped to the 0.5 mm grid**, largest move 0.17 mm in x and 0.25 mm in y. The metric grid fits four times better than 1/16 in.
+
+| Version | DXF | SVG |
+|---|---|---|
+| Standard | [`ist_type1_japanese_parts.dxf`](dxf/ist_type1_japanese_parts.dxf) | [`ist_type1_japanese_parts.svg`](svg/ist_type1_japanese_parts.svg) |
+| Inner support | [`inner_support_ist_type1_japanese_parts.dxf`](dxf/inner_support_ist_type1_japanese_parts.dxf) | [`inner_support_ist_type1_japanese_parts.svg`](svg/inner_support_ist_type1_japanese_parts.svg) |
+
+### IST MakeStick Type 3
+
+<img src="preview/ist_type3_japanese_parts.png" alt="ist_type3_japanese_parts" width="380"> <img src="preview/inner_support_ist_type3_japanese_parts.png" alt="inner_support_ist_type3_japanese_parts" width="380">
+
+*Left: standard. Right: inner support.*
+
+The same MakeStick cluster with **four** 24 mm buttons instead of one. Three of them continue the top row's arc up and to the left, and the fourth continues the left column down and to the left, so the extra holes wrap around the outside of the eight rather than crowding into them.
+
+Requested on [issue 4](https://github.com/JasensCustoms/FightStickLayoutProject/issues/4) by **lasagnasf**, who asked for the variants with additional buttons as well as the standard 8 + 1.
+
+**12 buttons**  |  8 x 30 mm, 4 x 24 mm  |  closest pitch 35.9 mm  |  thinnest web 5.92 mm  |  lever to nearest button 106.1 mm  |  cut envelope 270 x 144 mm
+
+**The two MakeStick layouts are one arrangement.** The photographs show two different products, a white MakeStick Pro and an older black one, but map the eight button cluster of one onto the other and it lands at **1.02 mm rms** with a third of a degree of rotation, and the Pro's single extra button falls **0.57 mm** from where this stick's matching extra sits. So Type 1 is this layout with three of the four extras left out, and both files are cut from the same measurement, which came from the better of the two photographs. That is the same practice the [Vewlix 10 button](#vewlix-10-button-two-30-mm) layout follows: derive from geometry you already have rather than measuring twice.
+
+The accuracy note on [IST MakeStick Type 1](#ist-makestick-type-1) applies here unchanged, and so does everything about how the pictures were scaled.
+
+| Version | DXF | SVG |
+|---|---|---|
+| Standard | [`ist_type3_japanese_parts.dxf`](dxf/ist_type3_japanese_parts.dxf) | [`ist_type3_japanese_parts.svg`](svg/ist_type3_japanese_parts.svg) |
+| Inner support | [`inner_support_ist_type3_japanese_parts.dxf`](dxf/inner_support_ist_type3_japanese_parts.dxf) | [`inner_support_ist_type3_japanese_parts.svg`](svg/inner_support_ist_type3_japanese_parts.svg) |
 
 ### Vewlix 4+4 plus four, modern
 
@@ -2123,13 +2347,13 @@ The [Mortal Kombat 3, Japanese hardware](#mortal-kombat-3-japanese-hardware) clu
 
 ---
 
-### Neo Geo MVS, WASD
+### Neo Geo MVS Type 1, WASD
 
-<img src="preview/neogeo_mvs_japanese_parts_wasd.png" alt="neogeo_mvs_japanese_parts_wasd" width="380"> <img src="preview/inner_support_neogeo_mvs_japanese_parts_wasd.png" alt="inner_support_neogeo_mvs_japanese_parts_wasd" width="380">
+<img src="preview/neogeo_mvs_type1_japanese_parts_wasd.png" alt="neogeo_mvs_type1_japanese_parts_wasd" width="380"> <img src="preview/inner_support_neogeo_mvs_type1_japanese_parts_wasd.png" alt="inner_support_neogeo_mvs_type1_japanese_parts_wasd" width="380">
 
 *Left: standard. Right: inner support.*
 
-The [Neo Geo MVS](#neo-geo-mvs) cluster with the four button WASD directional cluster in place of the joystick. Every action button keeps the position it already had; the two joystick bores and the `GL_PLATE_HOLES` layer are gone.
+The [Neo Geo MVS Type 1](#neo-geo-mvs-type-1) cluster with the four button WASD directional cluster in place of the joystick. Every action button keeps the position it already had; the two joystick bores and the `GL_PLATE_HOLES` layer are gone.
 
 **Parts: Japanese** | 4 x 30 mm and 4 x 24 mm snap in buttons | no lever, so no bores and no plate holes
 
@@ -2137,8 +2361,8 @@ The [Neo Geo MVS](#neo-geo-mvs) cluster with the four button WASD directional cl
 
 | Version | stock |
 |---|---|
-| 30 mm | [dxf](dxf/neogeo_mvs_japanese_parts_wasd.dxf) &middot; [svg](svg/neogeo_mvs_japanese_parts_wasd.svg) |
-| 30 mm inner support | [dxf](dxf/inner_support_neogeo_mvs_japanese_parts_wasd.dxf) &middot; [svg](svg/inner_support_neogeo_mvs_japanese_parts_wasd.svg) |
+| 30 mm | [dxf](dxf/neogeo_mvs_type1_japanese_parts_wasd.dxf) &middot; [svg](svg/neogeo_mvs_type1_japanese_parts_wasd.svg) |
+| 30 mm inner support | [dxf](dxf/inner_support_neogeo_mvs_type1_japanese_parts_wasd.dxf) &middot; [svg](svg/inner_support_neogeo_mvs_type1_japanese_parts_wasd.svg) |
 
 ---
 
@@ -2211,7 +2435,7 @@ One row per layout family. Cut envelope is for the file shown in that entry's pr
 | [ASI S30, WASD](#asi-s30-wasd) | 15 | 36.894 mm | 1 | 249.06 x 134.5 mm |
 | [JasensCustoms Sega 2P IMPACT, WASD](#jasenscustoms-sega-2p-impact-wasd) | 13 | 27.233 mm | 2 | 239.56 x 116.03 mm |
 | [Mortal Kombat 3, Japanese hardware, WASD](#mortal-kombat-3-japanese-hardware-wasd) | 10 | 30.703 mm | 1 | 220.66 x 119.06 mm |
-| [Neo Geo MVS, WASD](#neo-geo-mvs-wasd) | 8 | 24.664 mm | 1 | 248.06 x 78.56 mm |
+| [Neo Geo MVS Type 1, WASD](#neo-geo-mvs-type-1-wasd) | 8 | 24.664 mm | 1 | 248.06 x 78.56 mm |
 | [Vewlix 4+4 plus four, modern, WASD](#vewlix-44-plus-four-modern-wasd) | 16 | 29.506 mm | 2 | 247.76 x 115.2 mm |
 | [Vewlix 10 button, two 30 mm, WASD](#vewlix-10-button-two-30-mm-wasd) | 14 | 29.508 mm | 2 | 246.11 x 121.45 mm |
 
@@ -2269,9 +2493,26 @@ Where each family lands, as the tightest margin on any layout in it. A negative 
 | Community, Vewlix variants | 4 | 0 | -1.193 down to -1.863 mm |
 | Commercial plate, Sega 2P IMPACT | 2 | 0 | -0.066 and -0.753 mm |
 | Cabinet, Japanese Parts | 2 | 2 | +5.000 and +12.464 mm |
+| Neo Geo, Japanese Parts | 4 | 4 | +5.000 down to +0.000 mm |
+| IST MakeStick | 2 | 0 | -0.080 mm |
 | WASD | 137 | 0 | -0.500 down to -1.863 mm |
 
-The 33 clear 30 mm layouts are `cluster36_s`, `clusters36_s`, `hori36_s`, `horis36_s`, `matrix36_s`, `matrixs36_s`, `mesh36_s`, `slant36_s` and `zigzag36_s` at 36.000 mm exactly, plus `rhombus36_s` at +0.062 and `slants36_s` at +0.063, each across its three lever spacings. The generously spaced pair are [Neo Geo MVS](#neo-geo-mvs) at +5.000 mm and [Mortal Kombat 3, Japanese hardware](#mortal-kombat-3-japanese-hardware) at +12.464 mm, both of which came from cabinet drawings rather than from the Japanese 36 mm convention.
+**39 layouts in the library are clear for screw in nuts.** The 33 Slagcoin ones are `cluster36_s`, `clusters36_s`, `hori36_s`, `horis36_s`, `matrix36_s`, `matrixs36_s`, `mesh36_s`, `slant36_s` and `zigzag36_s` at 36.000 mm exactly, plus `rhombus36_s` at +0.062 and `slants36_s` at +0.063, each across its three lever spacings.
+
+The other six all came from cabinet panels rather than from the Japanese 36 mm convention, and they are the roomiest layouts here:
+
+| Layout | Margin |
+|---|---:|
+| [Mortal Kombat 3, Japanese hardware](#mortal-kombat-3-japanese-hardware) | +12.464 mm |
+| [Neo Geo MVS Type 1](#neo-geo-mvs-type-1) | +5.000 mm |
+| [Neo Geo MVS Type 2](#neo-geo-mvs-type-2) | +5.000 mm |
+| [Neo Geo Mini](#neo-geo-mini) | +3.916 mm |
+| [Neo Geo SC19-4](#neo-geo-sc19-4) | +0.623 mm |
+| [Neo Geo MVS-U4](#neo-geo-mvs-u4) | +0.000 mm |
+
+The MVS-U4 is at exactly zero, the same knife edge the 36 mm Slagcoin layouts sit on: its B, C and D are 36.00 mm apart and two 30 mm nuts are 36.0 mm across, so they touch. It will go together, but nothing about it is comfortable.
+
+**The two [IST MakeStick](#ist-makestick-type-1) layouts miss by 0.080 mm**, on one pair out of ten. That is inside the measurement error of the photographs they were recreated from, so treat it as undecided rather than as a fact: the real stick may well take nuts. Every other pair on both layouts is clear.
 
 **No WASD layout takes screw ins**, and that one is unavoidable rather than inherited: the cluster's own 29.0 mm pitch is 0.5 mm short of what a 24 mm nut needs, so even a WASD version of a roomy layout fails on the cluster itself. See [WASD Layouts](#wasd-layouts).
 

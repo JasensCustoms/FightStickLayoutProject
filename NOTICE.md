@@ -154,8 +154,9 @@ panel.
 
 ### Crowquilll
 
-Covers: the Neo Geo MVS layouts: `neogeo_mvs_japanese_parts`, `neogeo_mvs_american_parts` and both
-`inner_support_` twins.
+Covers: the Neo Geo MVS Type 1 layouts: `neogeo_mvs_type1_japanese_parts`,
+`neogeo_mvs_type1_american_parts` and both `inner_support_` twins. The other four
+Neo Geo panels came from elsewhere and are credited below.
 
 Source files: "MVS CPO 1P CURVED template.pdf" and "MVS CPO 2P CURVED template.pdf",
 signed Crowquilll and dated 7/07. The artwork states that it was traced from a scan
@@ -169,8 +170,9 @@ you know where they were originally posted, please open an issue and it will be
 added.
 
 The hole positions in both files come from that template, unchanged between them.
-The hardware differs: `neogeo_mvs_japanese_parts` carries 30 mm holes and the GL lever pattern,
-`neogeo_mvs_american_parts` carries 1.125 in holes with an IL Eurojoystick 2 lever
+The hardware differs: `neogeo_mvs_type1_japanese_parts` carries 30 mm holes and the
+GL lever pattern, `neogeo_mvs_type1_american_parts` carries 1.125 in holes with an
+IL Eurojoystick 2 lever
 cut. The template's own 1.1875 in buttons and 1.875 in American lever hole are
 recorded here as what the original called for, but American Parts means 1.125 in
 and IL's 35 mm bore consistently across this library.
@@ -178,9 +180,77 @@ and IL's 35 mm bore consistently across this library.
 The three lone buttons along the top of the CPO, labeled 1P Start, 2P Start and
 Select Game on the template, are not included in either file.
 
+### KidGamer77, and four more Neo Geo panels
+
+Covers: `neogeo_mvs_type2_japanese_parts`, `neogeo_mvs_type2_american_parts`,
+`neogeo_mini_japanese_parts`, `neogeo_mini_american_parts`,
+`neogeo_mvs_u4_japanese_parts`, `neogeo_sc19_4_japanese_parts` and their
+`inner_support_` twins.
+
+  https://github.com/JasensCustoms/FightStickLayoutProject/issues/3
+
+KidGamer77 opened the issue asking for the Neo Geo arrangements beyond the Type 1
+panel this repository already had, named them, and then went and found flat,
+square on reference art for each one. Credit for identifying these layouts and for
+sourcing the art belongs there.
+
+The art itself belongs to the people who made it, and none of it is redistributed
+here. What each file names is which piece of art it was measured from:
+
+  Type 2   a Phoenix Arcade screen printed reproduction CPO, photographed flat.
+           Their listing states the panel is 9.25 x 23.625 inches, which is what
+           gives this one an independent scale.
+           https://www.phoenixarcade.com/products/neo-geo/neo-geo-cpo
+  Mini     a flat photograph of a reproduction overlay of the aggressively curved
+           panel, the one whose arc resembles the AES pad.
+  MVS-U4   a flat photograph of an SNK MVS-U4 25 reproduction overlay.
+  SC19-4   artwork for the SNK Neo SC19-4 candy cabinet panel, watermarked
+           ArcadeArtShop.com, who appear to sell the clean version.
+
+The original panel designs are SNK's. The reproduction artwork, and the tracing
+and printing work behind each reproduction, belong to whoever made it. No claim is
+made on any of it. Only the hole pattern, which is functional geometry, is here.
+
+Unlike the Type 1 templates, none of these came as a vector drawing, so the hole
+positions were measured. Two of the four images turned out to have real
+perspective in them, which the measurement catches and corrects using nothing but
+the panel itself: every button hole is the same size, every lever hole is the same
+size, and each panel carries the same cluster twice as a translation rather than a
+mirror. README.md sets out the method, the checks it passed and the accuracy it
+reached, so anyone can judge it. Anyone cutting from these should verify against a
+real panel first.
+
+### lasagnasf, and the IST MakeStick
+
+Covers: `ist_type1_japanese_parts`, `ist_type3_japanese_parts` and their
+`inner_support_` twins.
+
+  https://github.com/JasensCustoms/FightStickLayoutProject/issues/4
+
+lasagnasf asked for the IST MakeStick layouts and supplied the product
+photographs they were recreated from.
+
+The layout is IST Mall's, from their MakeStick sticks.
+
+  https://www.us.istmall.co.kr
+
+RECREATED FROM PRODUCT PHOTOGRAPHY, not from a drawing. Two small photographs of
+built sticks are all that was available, and they are not an official source.
+Scale comes from the buttons themselves: the visible flange of a 30 mm Sanwa OBSF
+is 33.2 mm and of a 24 mm one is 27.0 mm, and those two independent rulers agree
+with each other to 0.21 percent on the better photograph. Both pictures turn out
+to show the same arrangement, mapping onto each other at about a millimeter, and
+the Type 1 file is the Type 3 file with three of the four extra buttons left out.
+About a millimeter on the arrangement and about a percent on scale is the honest
+accuracy; README.md says so in the catalog entry. If IST's own panel template
+turns up, these will be redrawn from it.
+
 ### Industrias Lorenzo
 
-Covers: the lever bore and mounting pattern on `mk3_umk3_dedicated_american_parts` only.
+Covers: the lever bore and mounting pattern on every American Parts file:
+`mk3_umk3_dedicated_american_parts`, `american_s_american_parts`,
+`neogeo_mvs_type1_american_parts`, `neogeo_mvs_type2_american_parts` and
+`neogeo_mini_american_parts`.
 
 The 35 mm bore and the four 5.9 mm screw holes on a 65.6 by 75.9 mm rectangle are
 taken from Industrias Lorenzo's own Eurojoystick 2 panel mounting drawing. The
