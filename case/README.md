@@ -63,6 +63,10 @@ is the fourteen wall slots. Only the inner layer carries them. See below.
 | 1 | Neutrik center support | `Neutrik_CenterSupport.STL` / `.STEP` / `.SLDPRT` |
 | 0 to 2 | Fight board bracket, optional | `FightBoardBracket.STL` / `.STEP` |
 
+**Each support comes in three fits**, and the file above is the loosest of them.
+Measure your acrylic and pick the one that matches before you print; see
+[Three fits](#three-fits-because-the-acrylic-has-a-tolerance).
+
 **Hardware:**
 
 | Qty | Item |
@@ -326,6 +330,52 @@ identical to the blank.
 all they are. If you would rather laminate them from acrylic offcuts than print
 them, cut the profile and stack it to 45 mm. The Neutrik support has no DXF,
 because its aperture is an internal feature that a single profile cannot describe.
+
+### Three fits, because the acrylic has a tolerance
+
+The supports grip the wall in a slot, and the wall is a **laminate**: a 5.6 mm
+inner layer and a 3.0 mm outer layer, each with its own tolerance. Work the stack
+through and the wall can arrive anywhere in a 1.4 mm band:
+
+| | Inner | Outer | Wall |
+|---|---:|---:|---:|
+| Thinnest | 5.2 | 2.7 | **7.9 mm** |
+| Nominal | 5.6 | 3.0 | **8.6 mm** |
+| Thickest | 6.0 | 3.30 | **9.3 mm** |
+
+So the supports come in three fits, differing **only** in the width of that slot.
+Same envelope, same insert bore, same everything else.
+
+| Fit | Slot opening | Print this when |
+|---|---:|---|
+| As supplied, no suffix | **9.3 mm** | you do not know what your acrylic measures. Cut for the thickest the stack can be, so it always goes together |
+| `_NominalFit` | **8.6 mm** | your acrylic measures on the nominal 5.6 and 3.0 |
+| `_TightFit` | **8.2 mm** | your acrylic came in thin, or you want the wall gripped rather than located |
+
+Every one of those numbers is measured back out of the shipped model, and the
+slot runs the full 45 mm through the part with a small lead in at each mouth so
+the wall starts square.
+
+> **Availability:** `_NominalFit` ships for all three supports. `_TightFit`
+> currently ships for the blank center support only; the Neutrik center and
+> corner versions will follow.
+
+**Measure your acrylic before you print.** A caliper on an offcut of each layer
+takes a moment and tells you which one to run. If you are between two, print the
+looser: a support that is a little slack still locates the wall, and one that is
+too tight will not seat at all, or will split along the print layers when you
+force it.
+
+Which fits ship today:
+
+| Part | As supplied, 9.3 | Nominal, 8.6 | Tight, 8.2 |
+|---|---|---|---|
+| Corner support | yes | yes | not yet |
+| Blank center support | yes | yes | yes |
+| Neutrik center support | yes | yes | not yet |
+
+The two missing tight variants are being drawn. Until they are here, print the
+nominal and check the fit on a test piece.
 
 ## What is not here
 
